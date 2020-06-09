@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
 
 // Define fonts for body and headers
-$body-font: "Work Sans", "Helvetica", "sans-serif";
-$headers-font: "Nunito", "Helvetica", "sans-serif";
+$body-font: "Averta-Regular", "Helvetica", "sans-serif";
+$headers-font: "Averta-Semibold", "Helvetica", "sans-serif";
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
@@ -14,3 +14,51 @@ $headers-font: "Nunito", "Helvetica", "sans-serif";
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+
+@font-face {
+    font-family: 'Averta';
+    src: url('Averta-Semibold.eot');
+    src: url('Averta-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('Averta-Semibold.woff2') format('woff2'),
+        url('Averta-Semibold.woff') format('woff'),
+        url('Averta-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta';
+    src: url('Averta-Regular.eot');
+    src: url('Averta-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Averta-Regular.woff2') format('woff2'),
+        url('Averta-Regular.woff') format('woff'),
+        url('Averta-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AvertaStd';
+    src: url('AvertaStd-Thin.eot');
+    src: url('AvertaStd-Thin.eot?#iefix') format('embedded-opentype'),
+        url('AvertaStd-Thin.woff2') format('woff2'),
+        url('AvertaStd-Thin.woff') format('woff'),
+        url('AvertaStd-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta CY W01';
+    src: url('AvertaCYW01-Bold.eot');
+    src: url('AvertaCYW01-Bold.eot?#iefix') format('embedded-opentype'),
+        url('AvertaCYW01-Bold.woff2') format('woff2'),
+        url('AvertaCYW01-Bold.woff') format('woff'),
+        url('AvertaCYW01-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}

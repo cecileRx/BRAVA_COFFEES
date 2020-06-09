@@ -1,12 +1,23 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
-}
+
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+#cart-icon .fa-shopping-cart {
+  color: black;
+
+}
+
+#login-icon .link-style {
+  color: black;
+}
+
+#navbarNav .brava-logo img {
+      width: 160px;
+}
+
+#navbarNav .nav-link {
+      color: $brown;
+      font-family: 'Averta-Semibold';
 }

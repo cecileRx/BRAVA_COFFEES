@@ -1,1 +1,41 @@
 // Specific CSS for your home-page
+
+html {
+  font-size: min(max(1rem, 4vw), 17px);
+}
+.body h2 {
+  color: $brown;
+}
+
+#banner {
+  background-color: $cream;
+}
+
+#banner img {
+  opacity: 0.8;
+}
+
+
+#banner h3 {
+  font-size: 1.4rem;
+  color: $brown;
+}
+
+#banner .main-text {
+  font-family: 'Averta-Semibold';
+}
+
+#banner .secondary-text {
+  font-family: 'Averta-Regular';
+
+}
+
+
+#coffee .card-title  {
+  letter-spacing: 0.8rem;
+
+}
+
+#coffee .btn  {
+  background-color: rgba(251, 247, 228, 0.3);
+}
