@@ -3,6 +3,8 @@ class PagesController < ApplicationController
 
   def home
     @products = Product.all
-    @coffees = Product.joins(:category).where("categories.name = 'coffee'")
+    coffees_items = Product.joins(:category).where("categories.name = 'coffee'")
+    @coffees = coffees_items.select { |coffee| coffee.weight == 250 }
+
   end
 end
