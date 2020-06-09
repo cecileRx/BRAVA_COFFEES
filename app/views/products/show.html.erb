@@ -1,0 +1,16 @@
+<div class="container-fluid px-5">
+   <hr style="color:blue;" >
+  <div class="row pt-4 ">
+    <div class="col-md-6 ">
+      <%= image_tag "photo_3.jpg", class:"img-fluid img-light", height: 50  %>
+    </div>
+    <div class="col-md-6 pr-5">
+      <h2><%= @product.origin.upcase%> - <%= @product.name%></h1>
+        <br>
+        <p>Region: <%=@product.region%> </p>
+        <p>Process: <%=@product.process  %> </p>
+        <p>Cupping notes: <%=@product.cupping_notes%></p>
+        <p><%=@product.description%></p>
+    </div>
+  </div>
+</div>

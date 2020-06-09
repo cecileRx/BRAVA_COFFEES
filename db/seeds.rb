@@ -28,17 +28,6 @@ Product.create!(
    category: coffee)
 
 Product.create!(
-  origin: 'Ethiopia',
-  name:'Tega & Tula farm',
-  region:'Bonga, gifo, Keffa',
-  process:'washed',
-  cupping_notes: 'pear, floral',
-  description:'Tega & Tula speciality Coffee Farm located at Keffa province bio-reserve, takes its name after the two nearby villages in Woreda, Gibo district, Keffa, Ethiopia. The farm spreads out through 500 hectares where 400 hectares are planted with different coffee varieties. Ethiopian varieties, cultivars from the 70s as well as wild coffee from the Keffa forest, together all contribute for the uniqueness of the coffee grown here.
-Coffee harvest and de-pulping always takes place on the same day. The coffee beans are then fermented underwater for 36 hours. Is this anaerobic fermentation that enhances the flavors and aromas of each and every bean. It is then washed in local canals and thereafter, spends between 16 and18 hours soaking in a tank before being spread on the drying tables. It takes washed coffee beans between 7 to 11 days to dry out.',
-photo:'ethiopia.jpg',
-category: coffee)
-
-Product.create!(
   origin: 'Colombia',
   name:'FUDAM',
   region:'La Uniõn, Nariño',
@@ -49,6 +38,17 @@ Product.create!(
   Today, FUDAM's growers still firmly believe in the principles of sustainability, the ideal that brought them together. Recently, when asked why they continue to farm organically, despite the pressure to rely on chemical inputs, the association explained: 'This is just how we live; these are our values and our way of life.'",
   photo: 'columbia_fundam.jpg',
   category: coffee)
+
+Product.create!(
+  origin: 'Ethiopia',
+  name:'Tega & Tula farm',
+  region:'Bonga, gifo, Keffa',
+  process:'washed',
+  cupping_notes: 'pear, floral',
+  description:'Tega & Tula speciality Coffee Farm located at Keffa province bio-reserve, takes its name after the two nearby villages in Woreda, Gibo district, Keffa, Ethiopia. The farm spreads out through 500 hectares where 400 hectares are planted with different coffee varieties. Ethiopian varieties, cultivars from the 70s as well as wild coffee from the Keffa forest, together all contribute for the uniqueness of the coffee grown here.
+Coffee harvest and de-pulping always takes place on the same day. The coffee beans are then fermented underwater for 36 hours. Is this anaerobic fermentation that enhances the flavors and aromas of each and every bean. It is then washed in local canals and thereafter, spends between 16 and18 hours soaking in a tank before being spread on the drying tables. It takes washed coffee beans between 7 to 11 days to dry out.',
+photo:'ethiopia.jpg',
+category: coffee)
 
 Product.create!(
   origin: 'Columbia',
