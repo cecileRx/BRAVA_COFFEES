@@ -5,7 +5,13 @@ Rails.application.routes.draw do
   resources :products, only: [:index, :show] do
 
    get 'coffees', to: 'products#coffee_product', as: :coffees
+ end
 
+ resources :order_items
+
+ resources :orders, only: [:show, :update] do
+    resources :payments, only: :new
+    resources :messages, only: :new
  end
 
 end

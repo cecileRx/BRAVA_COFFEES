@@ -5,12 +5,17 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="flex-column container-fluid">
-      <div class="nav-icons d-flex ml-auto align-items-center">
-          <div id="cart-icon" ><%= link_to root_path do %>
+    <div class="flex-column container-fluid ">
+      <div class="nav-icons d-flex  align-items-center ml-auto ">
+        <% if @current_order %>
+  <!--         <div id="cart-icon" ><%= link_to order_path(@current_order) do %>
                <i class="fa fa-shopping-cart"></i>
-              <% end %>
+              <% end %> -->
+          <div id="cart-icon"><%= link_to "", order_path(@current_order), class: 'fa fa-shopping-cart ml-2 mr-2' %>
           </div>
+          <div id="cart-count"><%= @current_order.order_items.count %></div>
+        <% end %>
+
           <div id="login-icon">
             <% if user_signed_in? %>
 
@@ -22,9 +27,10 @@
 
           <% end %>
           </div>
+
      </div>
 
-          <div class="container-fluid">
+      <div class="container-fluid">
           <div class="collapse navbar-collapse" id="navbarNav">
 
               <ul class="navbar-nav container-fluid justify-content-around">

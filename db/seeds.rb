@@ -17,8 +17,8 @@ equipment = Category.create!(name: 'equipment')
 puts 'Creating products...'
 
 Product.create!(
-  id:1,
   weight: 250,
+  price_cents: 1250,
   origin: 'Nicaragua',
   name:'Cerro de Jesus farm',
   region: 'Jalapa, Neuva Segovia',
@@ -30,8 +30,8 @@ Product.create!(
    category: coffee)
 
 Product.create!(
-  id:2,
   weight: 1000,
+  price_cents: 4366,
   origin: 'Nicaragua',
   name:'Cerro de Jesus farm',
   region: 'Jalapa, Neuva Segovia',
@@ -43,8 +43,8 @@ Product.create!(
    category: coffee)
 
 Product.create!(
-  id:3,
   weight: 250,
+  price_cents: 900,
   origin: 'Colombia',
   name:'FUDAM',
   region:'La Uniõn, Nariño',
@@ -57,8 +57,8 @@ Product.create!(
   category: coffee)
 
 Product.create!(
-  id:4,
   weight: 1000,
+  price_cents: 2960,
   origin: 'Colombia',
   name:'FUDAM',
   region:'La Uniõn, Nariño',
@@ -71,8 +71,8 @@ Product.create!(
   category: coffee)
 
 Product.create!(
-  id:5,
   weight: 250,
+  price_cents: 1130,
   origin: 'Ethiopia',
   name:'Tega & Tula farm',
   region:'Bonga, gifo, Keffa',
@@ -84,7 +84,7 @@ photo:'ethiopia.jpg',
 category: coffee)
 
 Product.create!(
-  id:6,
+  price_cents: 3880,
   weight: 1000,
   origin: 'Ethiopia',
   name:'Tega & Tula farm',
@@ -97,7 +97,7 @@ photo:'ethiopia.jpg',
 category: coffee)
 
 Product.create!(
-  id:7,
+  price_cents: 1041,
   weight: 250,
   origin: 'Columbia',
   name:'AMACA',
@@ -110,7 +110,7 @@ Product.create!(
   category: coffee)
 
 Product.create!(
-  id:8,
+  price_cents: 3524,
   weight: 1000,
   origin: 'Columbia',
   name:'AMACA',

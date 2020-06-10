@@ -1,16 +1,48 @@
-<div class="container-fluid px-5">
+<div id= "products-coffees" class="container-fluid px-5">
    <hr style="color:blue;" >
   <div class="row pt-4 ">
     <div class="col-md-6 ">
       <%= image_tag "photo_3.jpg", class:"img-fluid img-light", height: 50  %>
     </div>
     <div class="col-md-6 pr-5">
-      <h2><%= @product.origin.upcase%> - <%= @product.name%></h1>
+      <h3><%= @product.origin.upcase%> - <%= @product.name%></h3>
+          <% version_product = Product.where({name: @product.name, weight: 1000}).first %>
+      <p>250g: <%= humanized_money_with_symbol(@product.price)%> / 1000g: <%= humanized_money_with_symbol(version_product.price) %></p>
         <br>
         <p>Region: <%=@product.region%> </p>
         <p>Process: <%=@product.process  %> </p>
         <p>Cupping notes: <%=@product.cupping_notes%></p>
         <p><%=@product.description%></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+
+    </div>
+    <div class="col-md-6">
+        <%= form_tag order_items_path do %>
+
+          <%= number_field_tag(:quantity, 1, in: 1.0..20.0, step: 1) %>
+          <br>
+          <% if @product.category.name == 'coffee' %>
+          <%= label_tag 'Grind options'  %>
+          <br>
+          <%= select_tag "grind", raw("<option>Grain</option><option>French press</option><option>Mocha'</option>"), multiple: false  %>
+          <br>
+            <%= select_tag "weight", raw("<option>250gr</option><option>1000gr</option>"), multiple: false  %>
+          <% end %>
+          <br>
+          <% if  params[:weight] == 250 %>
+           <%= hidden_field_tag 'product_id', @product.id %>
+           <% else %>
+           <% @product = Product.where({name: @product.name, weight: 1000}).first %>
+
+           <%= hidden_field_tag 'product_id', @product.id %>
+          <% end %>
+
+          <%= submit_tag 'Add to cart', class: 'btn btn-primary' %>
+      <% end %>
+
     </div>
   </div>
 </div>
