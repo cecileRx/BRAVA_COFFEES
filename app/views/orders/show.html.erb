@@ -1,24 +1,19 @@
 <div class="container order-show-container d-flex justify-content-center">
   <div class="card col-10 col-lg-6">
     <div class="card-body">
-      <h1 class="text-center">My shopping cart</h1>
+      <h2 class="text-center">My shopping cart</h2>
 
       <hr class="mb-3">
       <% @order.order_items.each do |item| %>
       <div id="order-item-id-<%=item.id%>">
         <div class="container mt-4 d-flex justify-content-between align-items-center" >
           <div>
-            <%= item.product.name %>
             <%= item.quantity %>
+            <%= item.product.name %> -
             <%= item.grind %>
-
-
           </div>
           <div>
             <span class="order-item-price"> <%= item.product.price * item.quantity.to_i %> €</span>
-
-
-
             <%= link_to order_item_path(item), method: :delete, remote: true do %>
               <i class="far fa-trash-alt pl-3"></i>
             <% end  %>
@@ -28,12 +23,17 @@
       </div>
       <% end %>
       <div class="text-right pr-5"><b id="total_price_euros">Total: <%= @order.amount_cents %> €</b></div>
-      <span id = "purchase-button">
-      <%= simple_form_for @order do |f| %>
+
+      <div id = "purchase-button" class="text-center">
+        <%= simple_form_for @order do |f| %>
         <%= f.input :amount_cents_cents, as: :hidden %>
         <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
-      <% end %>
-      </span>
+        <% end %>
+      </div>
+
     </div>
   </div>
+</div>
+<div class="container text-left mt-5 ml-5">
+  <%= link_to "Back", root_path, class: "btn btn-primary" %>
 </div>

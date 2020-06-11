@@ -7,6 +7,9 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    @products = Product.all
+    coffees_items = Product.joins(:category).where("categories.name = 'coffee'")
+    @coffees = coffees_items.select { |coffee| coffee.weight == 250 }
   end
 
   def coffee_product

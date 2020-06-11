@@ -23,3 +23,8 @@ $border-radius-lg: 2px;
 $border-radius-sm: 2px;
 
 // Override other variables below!
+.form-control-lg {
+  height: calc(0.8em + 1rem + 2px) !important;
+  padding: 0rem 1rem  !important;
+  font-size: 0.8rem  !important;
+}

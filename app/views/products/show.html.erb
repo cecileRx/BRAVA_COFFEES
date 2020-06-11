@@ -1,10 +1,10 @@
 <div id= "products-coffees" class="container-fluid px-5">
    <hr style="color:blue;" >
   <div class="row pt-4 ">
-    <div class="col-md-6 ">
+    <div class="col-md-6  d-none d-md-block ">
       <%= image_tag "photo_3.jpg", class:"img-fluid img-light", height: 50  %>
     </div>
-    <div class="col-md-6 pr-5">
+    <div class="col-sm-12 col-md-6 pr-5">
       <h3><%= @product.origin.upcase%> - <%= @product.name%></h3>
           <% version_product = Product.where({name: @product.name, weight: 1000}).first %>
       <p>250g: <%= humanized_money_with_symbol(@product.price)%> / 1000g: <%= humanized_money_with_symbol(version_product.price) %></p>
@@ -15,21 +15,50 @@
         <p><%=@product.description%></p>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-6">
 
+  <div class="row my-4">
+
+    <div class="col-md-4 pl-5">
+      <p>You might also like:</p>
+      <div>
+        <% @coffees.each do |product| %>
+          <% @product = Product.find(params[:id]) %>
+          <% if product.id != @product.id %>
+           <%= link_to  product_path(product) do %>
+              <div class="col-sm-12 mb-5 px-0">
+                 <div class="card  text-white ">
+                    <div class="card-img  w-100" alt="">
+                      <%= image_tag "#{product.photo}", class:"img-fluid img-light"  %>
+                    </div>
+                    <div class="card-img-overlay light-overlay row align-items-center pr-5">
+                        <div class="col-sm-8">
+
+                         <h6 class="  my-auto card-title text-right "><%= product.origin.upcase %></h6>
+                        </div>
+                    </div>
+                 </div>
+              </div>
+             <% end %>
+            <% end %>
+        <% end %>
+      </div>
     </div>
-    <div class="col-md-6">
-        <%= form_tag order_items_path do %>
 
-          <%= number_field_tag(:quantity, 1, in: 1.0..20.0, step: 1) %>
+    <div class="col-md-4 offset-md-2">
+      <div class="form-group">
+        <%= form_tag order_items_path class: "coffee_form" do %>
+          <%= label_tag 'Quantity'  %>
+
+          <%= number_field_tag(:quantity, 1, in: 1.0..20.0, step: 1, class:"coffee_form btn-block form-control-lg") %>
+
           <br>
           <% if @product.category.name == 'coffee' %>
           <%= label_tag 'Grind options'  %>
           <br>
-          <%= select_tag "grind", raw("<option>Grain</option><option>French press</option><option>Mocha'</option>"), multiple: false  %>
+          <%= select_tag "grind", raw("<option>Grain</option><option>French press</option><option>Mocha'</option>"), multiple: false, class:"coffee_form btn-block form-control-lg"  %>
           <br>
-            <%= select_tag "weight", raw("<option>250gr</option><option>1000gr</option>"), multiple: false  %>
+          <%= label_tag 'Weight'  %>
+            <%= select_tag "weight", raw("<option>250gr</option><option>1000gr</option>"), multiple: false, class:"coffee_form btn-block form-control-lg"  %>
           <% end %>
           <br>
           <% if  params[:weight] == 250 %>
@@ -41,8 +70,8 @@
           <% end %>
 
           <%= submit_tag 'Add to cart', class: 'btn btn-primary' %>
-      <% end %>
-
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

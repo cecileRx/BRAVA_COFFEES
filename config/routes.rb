@@ -14,4 +14,6 @@ Rails.application.routes.draw do
     resources :messages, only: :new
  end
 
+ mount StripeEvent::Engine, at: '/stripe-webhooks'
+
 end
