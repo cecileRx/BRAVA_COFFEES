@@ -14,7 +14,57 @@ puts 'Creating categories...'
 coffee = Category.create!(name: 'coffee')
 equipment = Category.create!(name: 'equipment')
 
-puts 'Creating products...'
+puts 'Creating equipments...'
+
+Product.create!(
+  name: 'Chemex 3 cups',
+  photo: 'chemex_3_cups.jpg',
+  price_cents: 4369,
+  category: equipment)
+
+Product.create!(
+  name: 'Chemex 6 cups',
+  photo: 'chemex_6_cups.jpg',
+  price_cents: 4949,
+  category: equipment)
+
+Product.create!(
+  name: 'Kit V60',
+  photo: 'Kit_V60.jpg',
+  price_cents: 3999,
+  category: equipment)
+
+Product.create!(
+  name: 'Filtro Chemex 3 cups',
+  photo: 'Filtro_Chemex_3_cups.jpg',
+  price_cents: 1239,
+  category: equipment)
+
+Product.create!(
+  name: 'Filtro Chemex 6 cups',
+  photo: 'Filtro_Chemex_6_cups.jpg',
+  price_cents: 1239,
+  category: equipment)
+
+Product.create!(
+  name: 'Hario V60 Coffee paper filters 01',
+  photo: 'Hario_V60_Filters.jpg',
+  price_cents: 329,
+  category: equipment)
+
+Product.create!(
+  name: 'Hario V60 Coffee paper filters 02',
+  photo: 'Hario_V60_Filters.jpg',
+  price_cents: 349,
+  category: equipment)
+
+Product.create!(
+  name: 'Double Mesh Metal Dripper 1_2 cups',
+  photo: 'Mesh_Metal_Dripper_2_cups.jpg',
+  price_cents: 3289,
+  category: equipment)
+
+puts 'Creating coffees...'
 
 Product.create!(
   weight: 250,

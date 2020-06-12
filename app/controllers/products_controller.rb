@@ -3,6 +3,7 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    @equipment_items = Product.joins(:category).where("categories.name = 'equipment'")
   end
 
   def show
@@ -16,4 +17,6 @@ class ProductsController < ApplicationController
     @coffees = Product.joins(:category).where("categories.name = 'coffee'")
     @product = Product.find(params[:id])
   end
+
+
 end
