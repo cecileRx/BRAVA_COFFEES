@@ -33,3 +33,25 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
 });
+
+/*----------------------------------------------------*/
+/* Scrollspy
+------------------------------------------------------ */
+$('body').scrollspy({ target: '#main-nav'});
+/*----------------------------------------------------*/
+/* Smooth Scrolling
+------------------------------------------------------ */
+ if (document.getElementById("home")) {
+   $('.smoothscroll').on('click',function (e) {
+        e.preventDefault();
+
+        var target = this.hash,
+        $target = $(target);
+
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+        }, 800, 'swing', function () {
+            window.location.hash = target;
+        });
+    });
+ }

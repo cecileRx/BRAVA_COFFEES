@@ -1,4 +1,4 @@
-  <nav class="navbar navbar-expand-sm navbar-light bg-white mb-5" id="main-nav">
+  <nav class="navbar main-nav sticky-top navbar-expand-sm navbar-light bg-white mb-5" id="main-nav">
 
 
     <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
@@ -38,7 +38,7 @@
                     <%= link_to "ABOUT", "#", class: "nav-link" %>
                   </li>
                   <li class="nav-item">
-                      <%= link_to "COFFEES", "#", class: "nav-link" %>
+                      <%= link_to "COFFEES", root_path(:anchor => "coffee-header"), class: "nav-link smoothscroll" %>
                   </li>
                   <li class="nav-item">
                       <%= link_to "BREWING", "#", class: "nav-link" %>

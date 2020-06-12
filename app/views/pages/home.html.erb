@@ -1,5 +1,5 @@
-<div class="container">
-  <div id ="banner" class="row py-5">
+<div id= 'home' class="container">
+  <header id ="banner" class="row py-5">
     <div class="col-md-6 px-0">
       <div class="banner-img d-none d-md-block dark-overlay">
         <%= image_tag "coffee-contour.png",  class:"d-block img-fluid" %>
@@ -7,25 +7,24 @@
     </div>
     <div class="col-md-6 align-self-center">
       <div class="banner-text text-md-right text-sm-center">
-        <h3 class= "main-text pr-4">
-          Brava é uma torrefatora artesanal de cafés
-          de especialidade, que nasce da vontade
-          de encontrar a chávena perfeita.
-        </h3>
+        <h1 class= "h5 main-text pr-4">
+          Brava is an artisanal specialty coffee roaster. We've taken in our own hands the beautiful mission of offering you just the perfect cup of coffee.
+        </h1>
         <br>
         <br>
-        <h3 class= "secondary-text pr-4">
-          Os nossos grãos são escolhidos de entre os melhores cafés do mundo, produzidos por comunidades agrícolas com práticas sustentáveis, ética e ambientalmente.
-        </h3>
+        <h5 class= "secondary-text pr-4">
+          Our beans are chosen among the best in the world, produced by agricultural communities with sustainable practices, ethically and environmentally.
+        </h5>
      </div>
     </div>
-  </div>
+  </header>
 
-
-  <div id="coffee" class="my-5">
-    <div id="coffee-header" class="text-center mb-5">
+  <section id="coffee-header" class="py-5">
+    <div class="text-center ">
       <h2> Our selection of coffees</h2>
     </div>
+  </section >
+  <section id="coffee">
     <div class="row mb-4">
        <% @coffees.each do |product| %>
 
@@ -45,15 +44,13 @@
 
                     </div>
                   </div>
-
               </div>
           </div>
-
-      <% end %>
+       <% end %>
     </div>
-  </div>
+  </section >
 
-  <div id="how-it-works" class="my-5 px-0">
+  <section id="how-it-works" class="my-5 px-0">
     <div class="row px-0">
       <div class="how-it-works-img pt-4">
 
@@ -66,5 +63,6 @@
       </div>
     </div>
 
-  </div>
+  </section >
+</div>
 
