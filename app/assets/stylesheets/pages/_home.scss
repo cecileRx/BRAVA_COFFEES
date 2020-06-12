@@ -40,6 +40,72 @@ html {
   background-color: rgba(251, 247, 228, 0.3);
 }
 
-#how-it-works {
-  background-color: $cream;
+#how-it-works .how-it-works-section {
+  background-color: $dark-cream;
+}
+
+#how-it-works p.main-text  {
+  color: $dark-brown;
+  font-weight: 800;
+  margin: 0px;
+}
+
+#how-it-works p.secondary-text  {
+  color: $light-brown;
+  margin-top: 2px;
+}
+
+.icon-arrow {
+  padding-top: 25px;
+  max-width: 50%
+}
+.col.hit {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+
+    position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col.hit.icon-arrow  {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 50%;
+
+    position: relative;
+  width: 50%;
+  min-height: 1px;
+
+}
+
+.subscribe-text {
+  padding: 0px 83px;
+}
+
+.subscribe-text h2 {
+  font-family: 'Averta-Regular' !important;
+  color: $light-gray;
+}
+
+#brewing .brewing-section {
+  background-color: $dark-cream;
+}
+
+#brewing .brewing-section h2{
+  color: $light-brown;
+  margin-bottom: 2rem;
+}
+
+#brewing .brewing-section h5{
+  font-family: 'Averta-Regular'
 }
