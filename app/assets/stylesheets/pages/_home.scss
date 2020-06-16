@@ -109,3 +109,21 @@ html {
 #brewing .brewing-section h5{
   font-family: 'Averta-Regular'
 }
+
+#brewing .img-fluid.brew-icons {
+  max-width: 70%;
+}
+
+#footer-section {
+  background-color: $dark-brown;
+  color: rgba(251, 247, 228, 0.95);
+}
+
+#footer-section .form-control.footer-form {
+  background-color: rgba(251, 247, 228, 0) !important;
+  color: rgba(251, 247, 228, 0.95) !important;
+}
+
+#footer-section .text-muted  {
+  color: rgba(251, 247, 228, 0.55) !important;
+}

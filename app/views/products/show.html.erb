@@ -26,7 +26,7 @@
         <% @coffees.each do |product| %>
           <% @product = Product.find(params[:id]) %>
           <% if product.id != @product.id %>
-           <%= link_to  product_path(product) do %>
+           <%= link_to  product_path(product), class:"coffee-links" do %>
               <div class="col-sm-12 mb-5 px-0">
                  <div class="card  text-white ">
                     <div class="card-img  w-100" alt="">
