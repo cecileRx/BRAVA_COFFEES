@@ -8,10 +8,12 @@
     <div class="col-md-6 align-self-center">
       <div class="banner-text text-md-right text-sm-center">
         <h1 class= "h5 main-text pr-4">
-          Brava is an artisanal specialty coffee roaster. We've taken in our own hands the beautiful mission of offering you just the perfect cup of coffee.
+          Brava is an artisanal specialty coffee roaster.
         </h1>
-        <br>
-        <br>
+        <h1 class= "h5 main-text pr-4">
+        We've taken in our own hands the beautiful mission of offering you just the perfect cup of coffee.
+        </h1>
+
         <h5 class= "secondary-text pr-4">
           Our beans are chosen among the best in the world, produced by agricultural communities with sustainable practices, ethically and environmentally.
         </h5>
@@ -116,19 +118,24 @@
     <div class="row brewing-section py-5 px-5 align-items-center">
       <div class="col-md-6">
         <h2 class="" >How do you brew?</h2>
-        <h5>Learn the art of<strong> Mocha</strong>, <strong>French press</strong> and other<strong> brewing processes</strong>.
+        <h5>Learn the art of<strong> Mocha</strong>, <strong>French press</strong> and other processes with our <strong>
+        <%= link_to "brewing guides", brewing_path, class:"link-brewing" %>
+        </strong>.
         </h5>
 
         <h5 class="mb-4">Want to try a new way ?
           <br>
-          Check our <strong>brewing equipment!</strong>
+          Check our <strong>
+            <%= link_to "brewing equipment!", products_path, class:"link-brewing" %></strong>
         </h5>
       </div>
 
       <div class="col-md-6 pl-5 text-center">
         <div class="d-flex justify-content-between align-items-center">
           <div class="brewing-pic-icons">
+
             <%= image_tag "espresso_symbol_negative.png",  class:"img-fluid brew-icons mb-2" %>
+
           </div>
           <div class="brewing-pic-icons">
             <%= image_tag "filter_coffee_symbol_negative.png",  class:"img-fluid brew-icons mb-2" %>

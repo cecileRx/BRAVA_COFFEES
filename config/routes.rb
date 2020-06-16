@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get :coffee_product, to: "products#coffee_product"
 
   get :about, to: "pages#about"
+  get :brewing, to: "pages#brewing"
 
 
 

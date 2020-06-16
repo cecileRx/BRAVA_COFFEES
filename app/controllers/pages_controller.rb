@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home, :about ]
+  skip_before_action :authenticate_user!, only: [ :home, :about, :brewing ]
 
   def home
     @products = Product.all
@@ -9,6 +9,9 @@ class PagesController < ApplicationController
   end
 
   def about
+  end
+
+  def brewing
   end
 
 end

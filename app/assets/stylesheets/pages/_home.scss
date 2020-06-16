@@ -114,6 +114,19 @@ html {
   max-width: 70%;
 }
 
+#brewing .link-brewing {
+  color: $dark-brown;
+  }
+
+#brewing .link-brewing:hover {
+    text-decoration: none;
+    font-size: 1.3rem;
+  }
+
+#brewing-section .brewing-icon-section {
+max-width: 25%
+}
+
 #footer-section {
   background-color: $dark-brown;
   color: rgba(251, 247, 228, 0.95);
