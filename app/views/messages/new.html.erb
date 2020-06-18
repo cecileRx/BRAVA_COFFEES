@@ -1,11 +1,12 @@
 <div class="container payment-container d-flex justify-content-center">
   <div class="card col-10 col-lg-6">
     <div class="card-body">
-      <h1 class="text-center">Checkout summary</h1>
-         <h1>Order #<%= @order.id %> <small><span class="badge badge-primary"><%= @order.state %></span></small></h1>
+      <h2 class="text-center">Checkout summary</h2>
+         <p class="text-center">Your command of <%= @order.amount_cents %> € is </p>
+         <h3 class="text-center"><small><span class="badge badge-primary"><%= @order.state %></span></small></h3>
       <hr class="mb-3">
-      <h3 class="mt-3">Thanks for Purchase of <strong>Order #<%= @order.id %></strong> for <strong><%= @order.amount_cents %> €</strong></h3>
-      <p>We are preparing your command right away!</p>
+      <h5 class="mt-4 text-center">Thanks for your purchase,
+      we are preparing your command right away!</h5>
 
     </div>
   </div>
