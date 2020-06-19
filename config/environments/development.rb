@@ -3,16 +3,7 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   config.action_mailer.delivery_method = :smtp
 
-  ActionMailer::Base.smtp_settings = {
-  :user_name => 'xxxxxxx',
-  :api_key => 'xxxxxxxxxxxxxxxxxxxxxxxxxxxx',
-  :address => 'smtp.sendgrid.net',
-  :domain => 'brava-test@brava.com',
-  :port => '465',
-  :ssl => true,
-  :authentication => :plain,
-  :enable_starttls_auto => true
-  }
+
 
   config.action_mailer.perform_deliveries = true
   config.action_mailer.default :charset => "utf-8"
