@@ -6,6 +6,9 @@ html {
 .body h2 {
   color: $brown;
 }
+.hidden {
+ display: none;
+}
 
 #banner {
   background-color: $cream;
@@ -132,8 +135,9 @@ max-width: 25%
   color: rgba(251, 247, 228, 0.95);
 }
 
-#footer-section .form-control.footer-form {
+#footer-section .contact-form {
   background-color: rgba(251, 247, 228, 0) !important;
+  border-color: rgba(251, 247, 228, 0.95);
   color: rgba(251, 247, 228, 0.95) !important;
 }
 

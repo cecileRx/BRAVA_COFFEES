@@ -42,6 +42,7 @@ gem 'devise'
 gem 'money-rails'
 gem 'stripe'
 gem 'stripe_event'
+gem 'mail_form'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'

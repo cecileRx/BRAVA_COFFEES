@@ -3,15 +3,13 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :products, only: [:index, :show]
+  resources :pages, only: [:home, :new, :create, :about, :brewing]
   # get :coffee_product, controller:'products'
   get :coffee_product, to: "products#coffee_product"
 
   get :about, to: "pages#about"
   get :brewing, to: "pages#brewing"
-
-
-
-
+  get :contact, to: 'pages#home'
 
 
  resources :order_items
