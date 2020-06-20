@@ -1,0 +1,6 @@
+meta_product_name: "Brava Coffee Roasters"
+meta_title: "Brava coffee roasters - Coffee is an experience"
+meta_description: "Brava is an artisanal specialty coffee roaster.
+Our beans are produced by agricultural communities with sustainable practices, ethically and environmentally."
+meta_image: "Brava_Logo.png" # should exist in `app/assets/images/`
+# twitter_account: "@product_twitter_account"   # required for Twitter Cards
