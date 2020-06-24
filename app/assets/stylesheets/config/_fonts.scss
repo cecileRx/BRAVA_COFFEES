@@ -17,11 +17,11 @@ $headers-font: "Averta-Semibold", "Helvetica", "sans-serif";
 
 @font-face {
     font-family: 'Averta';
-    src: url('Averta-Semibold.eot');
-    src: url('Averta-Semibold.eot?#iefix') format('embedded-opentype'),
-        url('Averta-Semibold.woff2') format('woff2'),
-        url('Averta-Semibold.woff') format('woff'),
-        url('Averta-Semibold.ttf') format('truetype');
+    src: font-url('Averta-Semibold.eot');
+    src: font-url('Averta-Semibold.eot?#iefix') format('embedded-opentype'),
+        font-url('Averta-Semibold.woff2') format('woff2'),
+        font-url('Averta-Semibold.woff') format('woff'),
+        font-url('Averta-Semibold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -29,11 +29,11 @@ $headers-font: "Averta-Semibold", "Helvetica", "sans-serif";
 
 @font-face {
     font-family: 'Averta';
-    src: url('Averta-Regular.eot');
-    src: url('Averta-Regular.eot?#iefix') format('embedded-opentype'),
-        url('Averta-Regular.woff2') format('woff2'),
-        url('Averta-Regular.woff') format('woff'),
-        url('Averta-Regular.ttf') format('truetype');
+    src: font-url('Averta-Regular.eot');
+    src: font-url('Averta-Regular.eot?#iefix') format('embedded-opentype'),
+        font-url('Averta-Regular.woff2') format('woff2'),
+        font-url('Averta-Regular.woff') format('woff'),
+        font-url('Averta-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -41,11 +41,11 @@ $headers-font: "Averta-Semibold", "Helvetica", "sans-serif";
 
 @font-face {
     font-family: 'AvertaStd';
-    src: url('AvertaStd-Thin.eot');
-    src: url('AvertaStd-Thin.eot?#iefix') format('embedded-opentype'),
-        url('AvertaStd-Thin.woff2') format('woff2'),
-        url('AvertaStd-Thin.woff') format('woff'),
-        url('AvertaStd-Thin.ttf') format('truetype');
+    src: font-url('AvertaStd-Thin.eot');
+    src: font-url('AvertaStd-Thin.eot?#iefix') format('embedded-opentype'),
+        font-url('AvertaStd-Thin.woff2') format('woff2'),
+        font-url('AvertaStd-Thin.woff') format('woff'),
+        font-url('AvertaStd-Thin.ttf') format('truetype');
     font-weight: 100;
     font-style: normal;
     font-display: swap;
@@ -53,11 +53,11 @@ $headers-font: "Averta-Semibold", "Helvetica", "sans-serif";
 
 @font-face {
     font-family: 'Averta CY W01';
-    src: url('AvertaCYW01-Bold.eot');
-    src: url('AvertaCYW01-Bold.eot?#iefix') format('embedded-opentype'),
-        url('AvertaCYW01-Bold.woff2') format('woff2'),
-        url('AvertaCYW01-Bold.woff') format('woff'),
-        url('AvertaCYW01-Bold.ttf') format('truetype');
+    src: font-url('AvertaCYW01-Bold.eot');
+    src: font-url('AvertaCYW01-Bold.eot?#iefix') format('embedded-opentype'),
+        font-url('AvertaCYW01-Bold.woff2') format('woff2'),
+        font-url('AvertaCYW01-Bold.woff') format('woff'),
+        font-url('AvertaCYW01-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
