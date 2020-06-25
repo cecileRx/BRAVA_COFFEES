@@ -65,13 +65,15 @@
             <%= select_tag "weight", raw("<option>250gr</option><option>1000gr</option>"), multiple: false, class:"coffee_form btn-block form-control-lg"  %>
           <% end %>
           <br>
-          <% if  params[:weight] == 250 %>
-           <%= hidden_field_tag 'product_id', @product.id %>
-           <% else %>
+          <% if  params[:weight] == 1000 %>
            <% @product = Product.where({name: @product.name, weight: 1000}).first %>
 
-           <%= hidden_field_tag 'product_id', @product.id %>
+           <% else %>
+           <% @product = Product.where({name: @product.name, weight: 250}).first %>
+
+
           <% end %>
+           <%= hidden_field_tag 'product_id', @product.id %>
 
           <%= submit_tag 'Add to cart', class: 'btn btn-primary' %>
         <% end %>
