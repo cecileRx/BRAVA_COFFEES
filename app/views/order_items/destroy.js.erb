@@ -3,7 +3,14 @@ function deleteOrderItem() {
   console.log('hello')
   const orderItem = document.querySelector("#order-item-id-<%=@order_item.id%>");
   orderItem.innerHTML = "";
-  console.log('hello')
+
+
+}
+
+function calculateItems() {
+ const countItem = document.querySelector("#cart-count")
+ countItem.innerHTML = "<div id='cart-count'><%=@current_order.order_items.count%></div>"
+  console.log(countItem)
 }
 
 function calculateTotalPrice() {
@@ -20,5 +27,6 @@ function calculateTotalPrice() {
 
 
 deleteOrderItem();
+calculateItems();
 calculateTotalPrice();
 

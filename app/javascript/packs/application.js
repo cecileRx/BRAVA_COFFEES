@@ -34,6 +34,16 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
 });
 
+
+// window.onload = function(){
+//       const weightsel = document.querySelector('#weight');
+//       weightsel.onchange =function() {
+//         const weightval = weightsel.value;
+//         console.log(weightval);
+//       }
+
+// };
+
 /*----------------------------------------------------*/
 /* Scrollspy
 ------------------------------------------------------ */
@@ -55,3 +65,9 @@ $('body').scrollspy({ target: '#main-nav'});
         });
     });
  }
+
+
+
+
+
+
