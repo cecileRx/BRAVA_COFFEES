@@ -5,11 +5,12 @@ require_relative 'application'
 Rails.application.initialize!
 
 ActionMailer::Base.smtp_settings = {
-  :user_name => ENV["MG_EMAIL"],
-  :password => ENV["MG_PASSWORD"],
-  :domain => 'protected-escarpment-80325.herokuapp.com',
-  :address => 'smtp.mailgun.org',
-  :port => 587,
+    :port           => ENV['MAILGUN_SMTP_PORT'],
+  :address        => ENV['MAILGUN_SMTP_SERVER'],
+  :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
+  :password       => ENV['MAILGUN_SMTP_PASSWORD'],
+  :domain         => 'protected-escarpment-80325.herokuapp.com',
   :authentication => :plain,
-  :enable_starttls_auto => true
 }
+ActionMailer::Base.delivery_method = :smtp
+
