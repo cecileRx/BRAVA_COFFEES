@@ -28,21 +28,26 @@
         <% @coffees.each do |product| %>
           <% @product = Product.find(params[:id]) %>
           <% if product.id != @product.id %>
-           <%= link_to  product_path(product), class:"coffee-links" do %>
+
               <div class="col-sm-12 mb-5 px-0">
+                <%= link_to product_path(product) do %>
+
                  <div class="card  text-white ">
                     <div class="card-img  w-100" alt="">
-                      <%= image_tag "#{product.photo}", class:"img-fluid img-light"  %>
+                        <% link_to "profile", product_path(product)  %>
+                          <%= image_tag "#{product.photo}", class: "img-fluid img-light"  %>
+
                     </div>
                     <div class="card-img-overlay light-overlay row align-items-center pr-5">
-                        <div class="col-sm-8">
+                        <div class="col-sm-12">
 
-                         <h6 class="  my-auto card-title text-right "><%= product.origin.upcase %></h6>
+                         <h6 class="my-auto card-title text-center "><%= product.origin.upcase %></h6>
                         </div>
                     </div>
                  </div>
+                <% end %>
               </div>
-             <% end %>
+
             <% end %>
         <% end %>
       </div>

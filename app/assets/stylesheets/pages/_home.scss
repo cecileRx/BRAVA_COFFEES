@@ -39,6 +39,19 @@ html {
 
 }
 
+#coffee .box-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 2rem;
+
+}
+
+
+.box-card .link-caf-hidden{
+    visibility: hidden
+}
+
 #coffee .btn  {
   background-color: rgba(251, 247, 228, 0.3);
 }

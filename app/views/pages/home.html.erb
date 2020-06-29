@@ -36,15 +36,20 @@
                   <div class="card-img  w-100" alt="">
                   <%= image_tag "#{product.photo}", class:"img-fluid img-light"  %>
                   </div>
-                  <div class="card-img-overlay light-overlay row align-items-center pr-5">
-                      <div class="col-sm-8">
+                  <div class="card-img-overlay light-overlay box-card">
 
-                       <h4 class="  my-auto card-title text-right "><%= product.origin.upcase %></h4>
+                       <div class="link-caf-hidden">
+                        <%= link_to "Discover", product_path(product), class: "btn btn-outline-secondary text-right" %>
+
                        </div>
-                       <div class="col-sm-4 text-right">
-                        <%= link_to "Discover", product_path(product), class: "btn btn-outline-secondary" %>
 
-                    </div>
+                       <h4 class="card-title text-white"><%= product.origin.upcase %></h4>
+                       <div class="link-caf">
+                        <%= link_to "Discover", product_path(product), class: "btn btn-outline-secondary text-right" %>
+
+                       </div>
+
+
                   </div>
               </div>
           </div>
