@@ -43,7 +43,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-right: 2rem;
+  // margin-right: 2rem;
 
 }
 
@@ -54,6 +54,17 @@ html {
 
 #coffee .btn  {
   background-color: rgba(251, 247, 228, 0.3);
+}
+
+#coffee .btn:hover  {
+  border: 2px solid white;
+}
+
+#coffee .btn.cof-btn:hover{
+
+    font-weight: 800;
+    color: white;
+
 }
 
 #how-it-works .how-it-works-section {

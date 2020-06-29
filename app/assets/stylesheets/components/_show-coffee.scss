@@ -7,3 +7,43 @@
     background-color: black;
   }
 }
+
+#a .card-img-overlay {
+  padding: 0 !important;
+}
+
+@media screen and (max-width: 800px) {
+  #flex-media {
+    display:flex;
+    flex-flow: column;
+  }
+
+  #a{order:2;}
+  #b{
+    order:1;
+    margin-bottom: 2rem;
+  }
+
+}
+
+// @media only screen
+
+//   and (max-device-width: 667px)
+//   and (-webkit-min-device-pixel-ratio: 2)
+//   and (orientation: portrait) {
+//       #flex-media {
+//     display:flex;
+//     flex-flow: column;
+//   }
+
+//   #a{order:2;}
+//   #b{
+//     order:1;
+//     margin-bottom: 2rem;
+//   }
+
+//    h6 {
+//     color: blue;
+//   }
+
+// }

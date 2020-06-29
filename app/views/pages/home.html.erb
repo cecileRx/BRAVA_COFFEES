@@ -45,7 +45,7 @@
 
                        <h4 class="card-title text-white"><%= product.origin.upcase %></h4>
                        <div class="link-caf">
-                        <%= link_to "Discover", product_path(product), class: "btn btn-outline-secondary text-right" %>
+                        <%= link_to "Discover", product_path(product), class: "btn cof-btn btn-outline-secondary text-right" %>
 
                        </div>
 
@@ -101,10 +101,10 @@
   <section class="my-5 container px-0" id="subscribe">
     <div class="row how-it-works-section pt-3 align-items-center">
       <div class="col-md-6">
-        <%= image_tag "subscribe.jpg",  class:"img-fluid mb-2" %>
+        <%= image_tag "subscribe.jpg",  class:"d-none d-lg-block img-fluid mb-2" %>
 
       </div>
-      <div class="col-md-6 subscribe-text">
+      <div class="col-lg-6 subscribe-text">
         <h2 class="mb-5 text-center" >Get your coffee at your doorstep, or offer it</h2>
         <div class="subscribe-buttons d-flex justify-content-around px-5">
           <button class="btn btn-warning">
