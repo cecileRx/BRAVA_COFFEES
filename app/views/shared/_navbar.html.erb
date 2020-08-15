@@ -34,11 +34,11 @@
           <div class="collapse navbar-collapse" id="navbarNav">
 
               <ul class="navbar-nav container-fluid px-0 justify-content-around">
-                  <li class="nav-item active">
-                    <%= link_to "ABOUT", about_path, class: "nav-link" %>
-                  </li>
                   <li class="nav-item">
                       <%= link_to "COFFEES", root_path(:anchor => "coffee-header"), class: "nav-link smoothscroll" %>
+                  </li>
+                  <li class="nav-item">
+                      <%= link_to "EQUIPMENT", products_path, class: "nav-link" %>
                   </li>
                   <li class="nav-item">
                       <%= link_to "BREWING", brewing_path, class: "nav-link" %>
@@ -49,8 +49,8 @@
                  <% end %>
                   </li>
 
-                  <li class="nav-item">
-                      <%= link_to "EQUIPMENT", products_path, class: "nav-link" %>
+                  <li class="nav-item active">
+                    <%= link_to "ABOUT", about_path, class: "nav-link" %>
                   </li>
                   <li class="nav-item">
                       <%= link_to "SUBSCRIBE", "#", class: "nav-link" %>

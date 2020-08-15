@@ -163,7 +163,7 @@ category: coffee)
 Product.create!(
   price_cents: 1041,
   weight: 250,
-  origin: 'Columbia',
+  origin: 'Colombia',
   name:'AMACA',
   region:'El Tambo, Cauca',
   process: 'washed',
@@ -176,7 +176,7 @@ Product.create!(
 Product.create!(
   price_cents: 3524,
   weight: 1000,
-  origin: 'Columbia',
+  origin: 'Colombia',
   name:'AMACA',
   region:'El Tambo, Cauca',
   process: 'washed',

@@ -58,21 +58,20 @@
 
 
           <%= form_tag order_items_path  class: "coffee_form" do %>
-            <%= label_tag 'Quantity'  %>
 
-            <%= number_field_tag(:quantity, 1, in: 1.0..20.0, step: 1, class:"coffee_form btn-block form-control-lg") %>
-
-            <br>
             <% if @product.category.name == 'coffee' %>
-            <%= label_tag 'Grind options'  %>
-            <br>
-            <%= select_tag "grind", raw("<option>Grain</option><option>French press</option><option>Mocha</option>"), multiple: false, class:"coffee_form btn-block form-control-lg"  %>
-            <br>
-            <%= label_tag 'Weight (gr)'  %>
-              <%= select_tag "weight", raw("<option>250</option><option>1000</option>"), multiple: false, class:"coffee_form btn-block form-control-lg"  %>
-
+                <%= label_tag 'Grind options'  %>
+                <br>
+                <%= select_tag "grind", raw("<option>Grain</option><option>French press</option><option>Mocha</option>"), multiple: false, class:"coffee_form btn-block form-control-lg"  %>
+                <br>
+                <%= label_tag 'Weight (gr)'  %>
+                  <%= select_tag "weight", raw("<option>250</option><option>1000</option>"), multiple: false, class:"coffee_form btn-block form-control-lg"  %>
             <% end %>
             <br>
+            <%= label_tag 'Quantity'  %>
+            <%= number_field_tag(:quantity, 1, in: 1.0..20.0, step: 1, class:"coffee_form btn-block form-control-lg") %>
+            <br>
+
              <%= hidden_field_tag 'product_id', @product.id %>
             <%= submit_tag 'Add to cart', class: 'btn btn-primary' %>
           <% end %>
