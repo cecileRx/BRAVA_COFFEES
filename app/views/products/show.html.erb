@@ -62,10 +62,17 @@
             <% if @product.category.name == 'coffee' %>
                 <%= label_tag 'Grind options'  %>
                 <br>
-                <%= select_tag "grind", raw("<option>Grain</option><option>French press</option><option>Mocha</option>"), multiple: false, class:"coffee_form btn-block form-control-lg"  %>
+
+                <% raw_str = [] %>
+                <% @product.grind_options.each do |item| %>
+                  <% raw_str << "<option>#{item}</option>" %>
+                <% end %>
+                <% raw_str = raw_str.join.to_s %>
+                <%= select_tag "grind", raw("#{raw_str}"), multiple: false, class:"coffee_form btn-block form-control-lg"  %>
                 <br>
+
                 <%= label_tag 'Weight (gr)'  %>
-                  <%= select_tag "weight", raw("<option>250</option><option>1000</option>"), multiple: false, class:"coffee_form btn-block form-control-lg"  %>
+                <%= select_tag "weight", raw("<option>250</option><option>1000</option>"), multiple: false, class:"coffee_form btn-block form-control-lg"  %>
             <% end %>
             <br>
             <%= label_tag 'Quantity'  %>
