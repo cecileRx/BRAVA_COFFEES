@@ -91,12 +91,14 @@
 
   <% else %>
       <div id="a" class="row pt-4 ">
-        <div class="col-md-6  d-none d-lg-block text-center">
-          <%= image_tag @product.photo, class:"img-fluid img-light"  %>
+        <div class="col-md-6 img-equipment d-none d-lg-block text-center">
+          <%= image_tag @product.photo, class:"img-equipment" %>
         </div>
         <div class="col-sm-12 col-lg-6 pr-5">
           <h3> <%= @product.name%></h3>
           <p><%= @product.description %></p>
+          <p><%= humanized_money_with_symbol(@product.price) %></p>
+           <%= link_to "Back to Equipment", products_path, class: "btn btn-outline-info" %>
         </div>
     </div>
 

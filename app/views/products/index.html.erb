@@ -9,31 +9,31 @@
       <% @equipment_items.each do |item| %>
         <div class="col-6 col-md-3 mb-5">
           <%= link_to product_path(item), :style=>'color: gray; text-decoration: none;' do %>
-          <div class="card mb-2">
-            <%= image_tag item.photo , class: "card-img-top" %>
-            <div class="card-body text-center">
-              <h5 class="card-title"><%= item.name %></h5>
-              <p><%= humanized_money_with_symbol(item.price) %></p>
+            <div class="card mb-2">
+              <%= image_tag item.photo , class: "card-img-top", size: "260x260" %>
+              <div class="card-body text-center">
+                <h5 class="card-title"><%= item.name %></h5>
+                <p><%= humanized_money_with_symbol(item.price) %></p>
+
+              </div>
 
             </div>
-
-          </div>
             <%= form_tag order_items_path do %>
 
-            <div class="d-flex icon-reverse justify-content-between">
-              <div class="quantity">
-                <%= number_field_tag(:quantity, 1, in: 1.0..20.0, step: 1, class:"") %>
-                <%= hidden_field_tag 'product_id', item.id %>
-              </div>
+              <div class="d-flex icon-reverse justify-content-between">
+                <div class="quantity">
+                  <%= number_field_tag(:quantity, 1, in: 1.0..20.0, step: 1, class:"") %>
+                  <%= hidden_field_tag 'product_id', item.id %>
+                </div>
                 <div class="shop-icon">
-                  <%= button_tag(type: "submit", class: "btn btn-default") do %>
-                   <i class="fa fa-shopping-cart"></i>
+                    <%= button_tag(type: "submit", class: "btn btn-default") do %>
+                       <i class="fa fa-shopping-cart"></i>
                     <% end %>
                 </div>
-
+              </div>
             <% end %>
-            </div>
-         <% end %>
+
+          <% end %>
         </div>
       <% end %>
     </div>
