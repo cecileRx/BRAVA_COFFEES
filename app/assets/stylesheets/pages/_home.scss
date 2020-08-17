@@ -25,11 +25,13 @@ html {
 }
 
 #banner .main-text {
-  font-family: 'Averta-Semibold';
+  font-family: 'Nunito Sans';
+  font-weight: 700;
 }
 
 #banner .secondary-text {
-  font-family: 'Averta-Regular';
+  font-family: 'Nunito Sans';
+  font-weight: 500;
 
 }
 
@@ -120,7 +122,7 @@ html {
 }
 
 .subscribe-text h2 {
-  font-family: 'Averta-Regular' !important;
+  font-family: 'Nunito Sans' !important;
   color: $light-gray;
 }
 
@@ -134,7 +136,7 @@ html {
 }
 
 #brewing .brewing-section h5{
-  font-family: 'Averta-Regular'
+  font-family: 'Nunito Sans'
 }
 
 #brewing .img-fluid.brew-icons {

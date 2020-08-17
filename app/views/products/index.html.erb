@@ -8,12 +8,15 @@
     <div class="row pt-5 mb-5">
       <% @equipment_items.each do |item| %>
         <div class="col-6 col-md-3 mb-5">
+          <%= link_to product_path(item), :style=>'color: gray; text-decoration: none;' do %>
           <div class="card mb-2">
             <%= image_tag item.photo , class: "card-img-top" %>
             <div class="card-body text-center">
               <h5 class="card-title"><%= item.name %></h5>
               <p><%= humanized_money_with_symbol(item.price) %></p>
+
             </div>
+
           </div>
             <%= form_tag order_items_path do %>
 
@@ -30,6 +33,7 @@
 
             <% end %>
             </div>
+         <% end %>
         </div>
       <% end %>
     </div>

@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts 'Cleaning database...'
-Product.destroy_all
-Category.destroy_all
+Product.destroy_all if Rails.env.development?
+Category.destroy_all if Rails.env.development?
 
 puts 'Creating categories...'
 coffee = Category.create!(name: 'coffee')
