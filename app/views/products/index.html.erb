@@ -7,7 +7,7 @@
 
     <div class="row pt-5 mb-5">
       <% @equipment_items.each do |item| %>
-        <div class="col-6 col-md-3 mb-5">
+        <div class="col-lg-3 col-sm-4 col-6 mb-5">
           <%= link_to product_path(item), :style=>'color: gray; text-decoration: none;' do %>
             <div class="card mb-2">
               <%= image_tag item.photo , class: "card-img-top", size: "260x260" %>
