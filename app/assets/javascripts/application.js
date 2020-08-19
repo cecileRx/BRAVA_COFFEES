@@ -18,8 +18,8 @@
 
 function displayPrice() {
   console.log('hello')
-  const selected_weight = document.querySelector("#selected_weight");
-  sel_weight_val = selected_weight.value;
+  const selectedWeight = document.querySelector("#selected_weight");
+  let sel_weight_val = selectedWeight.value;
   console.log(sel_weight_val);
   const totalSelectedPrice = document.querySelector("#display_selected_price");
 
