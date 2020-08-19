@@ -72,8 +72,7 @@ Product.create!(
 Product.create!(
   name: 'Double Mesh Metal Dripper 1_2 cups',
   description: 'Dripper with double mesh filters. It is made solely of stainless steel.
-
-The metal filters allow the coffee oil to slowly pour through, letting you enjoy coffee with a deep aroma.',
+    The metal filters allow the coffee oil to slowly pour through, letting you enjoy coffee with a deep aroma.',
   photo: 'Mesh_Metal_Dripper_2_cups.jpg',
   price_cents: 3289,
   category: equipment)

@@ -12,8 +12,7 @@
       </div>
       <div class="col-sm-12 col-lg-6 pr-5">
         <h3><%= @product.origin.upcase%> - <%= @product.name%></h3>
-            <% version_product = Product.where({name: @product.name, weight: 1000}).first %>
-        <p>250g: <%= humanized_money_with_symbol(@product.price)%> / 1000g: <%= humanized_money_with_symbol(version_product.price) %></p>
+
           <br>
           <p>Region: <%=@product.region%> </p>
           <p>Process: <%=@product.process  %> </p>
@@ -61,10 +60,10 @@
 
           <%= form_tag order_items_path  class: "coffee_form" do %>
 
-            <% if @product.category.name == 'coffee' %>
+
+
                 <%= label_tag 'Grind options'  %>
                 <br>
-
                 <% raw_str = [] %>
                 <% @product.grind_options.each do |item| %>
                   <% raw_str << "<option>#{item}</option>" %>
@@ -74,15 +73,25 @@
                 <br>
 
                 <%= label_tag 'Weight (gr)'  %>
-                <%= select_tag "weight", raw("<option>250</option><option>1000</option>"), multiple: false, class:"coffee_form btn-block form-control-lg"  %>
-            <% end %>
+                <%= select_tag "weight", raw("<option>250</option><option>1000</option>"), multiple: false, class:"coffee_form btn-block form-control-lg", id:"selected_weight", onchange: "displayPrice();"  %>
+
             <br>
-            <%= label_tag 'Quantity'  %>
+
+            <%= label_tag 'Quantity'%>
             <%= number_field_tag(:quantity, 1, in: 1.0..20.0, step: 1, class:"coffee_form btn-block form-control-lg") %>
             <br>
 
              <%= hidden_field_tag 'product_id', @product.id %>
-            <%= submit_tag 'Add to cart', class: 'btn btn-primary' %>
+
+            <div class='d-flex justify-content-between'>
+              <%= submit_tag 'Add to cart', class: 'btn btn-primary' %>
+
+              <% version_product = Product.where({name: @product.name, weight: 1000}).first %>
+              <p class="hidden_value" id= "hidden_price_max"> <%= version_product.price %></p>
+              <p class="hidden_value" id= "hidden_price_min"> <%= @product.price %></p>
+              <p id="display_selected_price"> <%= humanized_money_with_symbol(@product.price) %></p>
+
+          </div>
           <% end %>
 
       </div>
@@ -98,6 +107,21 @@
           <h3> <%= @product.name%></h3>
           <p><%= @product.description %></p>
           <p><%= humanized_money_with_symbol(@product.price) %></p>
+
+            <%= form_tag order_items_path do %>
+
+
+                <div class="quantity">
+                  <%= number_field_tag(:quantity, 1, in: 1.0..20.0, step: 1, class:"") %>
+                  <%= hidden_field_tag 'product_id', @product.id %>
+                </div>
+                <div class="shop-icon">
+                    <%= button_tag(type: "submit", class: "btn btn-default") do %>
+                       <i class="fa fa-shopping-cart"></i>
+                    <% end %>
+                </div>
+
+            <% end %>
            <%= link_to "Back to Equipment", products_path, class: "btn btn-outline-info" %>
         </div>
     </div>

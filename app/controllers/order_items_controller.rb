@@ -8,8 +8,10 @@ class OrderItemsController < ApplicationController
 
      if sel_weight == 250
        @product = Product.where({name: sel_product.name, weight: 250}).first
-     else
+     elsif
        @product = Product.where({name: sel_product.name, weight: 1000}).first
+     else
+      @product = sel_product
      end
 
    if current_user.orders.find_by(state: 'pending')
