@@ -123,13 +123,19 @@
               </div>
 
               <div class="shop-icon">
-                <%= button_tag(type: "submit", class: "btn btn-default") do %>
+                <%= button_tag(type: "submit", class: " btn btn-outline-info") do %>
                     <i class="fa fa-shopping-cart"></i>
                 <% end %>
               </div>
               <br>
-              <%= link_to "<<", products_path, class: "btn btn-outline-info" %>
-            <% end %>
+              <br>
+              <br>
+             <br>
+             <div>
+               <%= link_to "<", products_path, class: "btn btn-outline-info" %>
+             </div>
+
+           <% end %>
         </div>
     </div>
 
