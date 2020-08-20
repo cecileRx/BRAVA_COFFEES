@@ -2,6 +2,8 @@ class OrderItemsController < ApplicationController
 
   before_action :set_order_item, only: %I[destroy]
 
+
+
  def create
    sel_weight = params[:weight].to_i
    sel_product = Product.find(params[:product_id])
@@ -22,7 +24,8 @@ class OrderItemsController < ApplicationController
      OrderItem.create!(product: @product,  quantity: (params[:quantity]), grind: (params[:grind]), order: current_user.orders.find_by(state: 'pending'))
    end
    respond_to do |format|
-     format.html { redirect_to root_path }
+
+     format.html { redirect_back fallback_location: root_path,  notice: "Added to cart, thanks!"}
      format.js
    end
  end
