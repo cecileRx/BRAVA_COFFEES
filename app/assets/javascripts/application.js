@@ -16,6 +16,7 @@
 //= require_tree .
 //= require jquery
 
+
 function displayPrice() {
   console.log('hello')
   const selectedWeight = document.querySelector("#selected_weight");
@@ -38,3 +39,6 @@ function displayPrice() {
 }
 
 displayPrice();
+
+
+
