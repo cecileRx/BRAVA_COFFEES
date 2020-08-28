@@ -58,13 +58,17 @@ function decrementValue(e) {
   }
 }
 
-$('.input-group').on('click', '.button-plus', function(e) {
-  incrementValue(e);
-});
+  $('.input-group').on('click', '.button-plus', function(e) {
+    incrementValue(e);
+  });
 
-$('.input-group').on('click', '.button-minus', function(e) {
-  decrementValue(e);
-});
+  $('.input-group').on('click', '.button-minus', function(e) {
+    decrementValue(e);
+  });
+
+  setTimeout(function() {
+      $('#fade_message').fadeOut('fast');
+  }, 30000);
 
 });
 

@@ -24,7 +24,7 @@ class OrderItemsController < ApplicationController
      OrderItem.create!(product: @product,  quantity: (params[:quantity]), grind: (params[:grind]), order: current_user.orders.find_by(state: 'pending'))
    end
    respond_to do |format|
-
+     # le redirect_back ets géré par la méthide store_action dans l'application controller
      format.html { redirect_back fallback_location: root_path,  notice: "Added to cart, thanks!"}
      format.js
    end

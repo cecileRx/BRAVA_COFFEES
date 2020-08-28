@@ -22,10 +22,10 @@ class PagesController < ApplicationController
         # re-initialize Pages object for cleared form
         @contact = Page.new
         format.html { render 'home' }
-        format.js   { flash.now[:cool] = @message = "Thank you for your message. We'll get back to you soon!" }
+        format.js   { flash[:notice] = "Thank you for your message. We'll get back to you soon!" }
       else
         format.html { render 'home' }
-        format.js   { flash.now[:error] = @message = "Oups! Something went wrong!." }
+        format.js   { flash[:notice] = "Oups! Something went wrong!." }
       end
     end
   end
