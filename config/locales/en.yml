@@ -75,35 +75,65 @@ en:
   # brewing
     brewing:
       french_press: "French press"
-      fp_1: "Grind the coffee beans coarsely (think of breadcrumbs), for each 300gr of water, use 22 gr of coffee."
-      fp_2_html: "Heat the coffee maker with hot water, gradually so as not to break the glass.<br/>
-          The infusion temperature drops quickly if the French press is cold. This, in addition to preventing the coffee from getting lukewarm at the end."
+      fp_1: "Grind the coffee beans coarsely (think of breadcrumbs) and for each 300gr of water use 22 gr of coffee."
+      fp_2: "Heat the coffee maker with hot water, gradually so as not to break the glass (the infusion temperature drops quickly if the French press is cold and prevents the coffee from getting lukewarm at the end)."
       fp_3: "Remove the hot water and add the ground coffee."
       fp_4: "Heat the water to around 96º C. Pour the water and stir a few times."
       fp_5: "Close the lid and press the plunger down to the water level. Leave to infuse for 4 minutes."
-      fp_6: "After 4 minutes, push the plunger all the way, with a slow movement."
+      fp_6: "After those 4 minutes, push slowly the plunger all the way."
       fp_7: "Enjoy your coffee!"
 
       mocha: "Mocha"
-      mocha_guide_html: "<li>Grind the coffee beans using a good grinder.</li>
+      mocha_guide_html: "<li>Grind the coffee beans.</li>
           <br>
-          <li>Fill the base of your mocha with hot water up to the line, or a little below. Never pass the signal.</li>
+          <li>Fill the base of your mocha with hot water up to the line.</li>
            <br>
           <li>Place the funnel in the boiler chamber (the base).</li>
            <br>
-          <li>Fill the funnel filter loosely with coffee grounds without compacting. If you compact, the coffee will not rise in the collector chamber. Or it will go up very slowly and extract too much making it bitter.</li>
+          <li>Fill the funnel filter loosely with coffee grounds without compacting.</li>
            <br>
           <li>Screw the upper chamber into the boiler.</li>
            <br>
-          <li>Place the mocha on the stove over low or medium heat. A gas stove is the best. The electric stove also works, but you will need to use a heat diffuser.</li>
+          <li>Place the mocha on the stove over low or medium heat.</li>
            <br>
-          <li>If you used hot water, after two minutes, the coffee will begin to flow. If you used cold water, wait 6 to 8 minutes until the upper reservoir is full.</li>
+          <li>If you used hot water, after two minutes the coffee will begin to flow; If you used cold water, wait until the upper reservoir is full.</li>
            <br>
-          <li>When the coffee starts to flow in the upper part, immediately remove it from the heat. The residual heat will be sufficient to finish the infusion. Some people leave it on the stove until the coffee is almost completely prepared and then cool the base with cold water to stop the preparation.</li>
-           <br>
-          <li>Stir in the upper chamber with a spoon to mix the different layers of coffee to obtain a uniform flavor.</li>
+          <li>When the coffee starts to flow in the upper part, immediately remove it from the heat. The residual heat will be sufficient to finish the infusion.</li>
            <br>
           <li>Pour into cups immediately and enjoy!</li>"
+
+      v60: "V60"
+      v_guide_html: "<li>Place the filter paper in the cone and boil the water at about 96ºC</li>
+          <br>
+          <li>Rinse the filter paper. This eliminates any paper taste and heats the server.</li>
+          <br>
+          <li>Add coffee</li>
+          <br>
+          <li>Start with a ratio of 22g of coffee to 300ml of water (3 tbs= 21gr)</li>
+          <br>
+          <li>Pre-prepare the coffee: saturate the ground just enough water to cover the ground coffee in a circular motion and wait 30 seconds for the coffee to “bloom”.</li>
+          <br>
+          <li>Pour the remaining water in a circular motion.</li>
+          <br>
+          <li>After finishing the extraction, stir the coffee a little to mix the flavours and serve</li>
+          <br>
+          <li>The goal is a total extraction time (including 30 seconds before infusion) up to about 3 minutes</li>"
+
+      chemex: "CHEMEX"
+      chemex_html: "<li>Fold the CHEMEX® coffee filter, make sure the three thickness of the filter are across the vent.</li>
+          <br>
+          <li>Coffee ratio should be 19 grams per 250ml, into the filter cone (one teaspoon is approximately 5 grams of coffee).</li>
+          <br>
+          <li>Moisten the filter with warm water to rinse and preheat the coffee maker; as soon as the water is completely drained by the filter, pour it from the coffee maker keeping the filter sealed against the wall of the coffee maker.</li>
+          <br>
+          <li>Pour a small amount of water over the grinded coffee (just enough to wet the surface of the coffee, without floating them, as this pre-wetting allows coffee to “bloom,” and prepare for an even infusion) and wait 30 seconds.</li>
+          <br>
+          <li>Pour the rest of the water slowly in a circular motion into the coffee, but keep the water level well below the top of the coffee maker.</li>
+          <br>
+          <li>Once the desired amount of coffee is brewed, lift the filter with spent grounds out of the brewer and discard.</li>
+          <br>
+          <li>Serve and enjoy! </li>"
+
       intro_brewing_html: "There is no correct way to prepare a cup of coffee.
           <br>
           There are so many variables at play when making a great cup of coffee - water, grind, equipment.. -

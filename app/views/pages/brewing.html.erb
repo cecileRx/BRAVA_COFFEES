@@ -1,32 +1,30 @@
 <div id= 'brewing-section' class="container px-5">
-  <hr >
+  <hr>
 
-      <div class="brewing-icon-header-section d-flex justify-content-center mb-4">
+  <div class="brewing-icon-header-section d-flex justify-content-center mb-4">
 
-        <%= image_tag "french_press_symbol_negative.png",  class:"img-fluid brewing-icon-section mb-2" %>
-        <h4 class="align-self-center"><%= t(".french_press") %></h4>
+    <%= image_tag "french_press_symbol_negative.png",  class:"img-fluid brewing-icon-section mb-2" %>
+    <h4 class="align-self-center"><%= t(".french_press") %></h4>
 
-      </div>
+  </div>
 
   <div class="row py-4">
     <div class="col-md-12">
       <div class="brewing-text px-3">
         <ol>
           <li><%= t(".fp_1")%></li>
-
           <br>
-          <li><%= t(".fp_2_html")%></li>
-            <br>
+          <li><%= t(".fp_2")%></li>
+          <br>
           <li><%= t(".fp_3")%></li>
-            <br>
-           <li><%= t(".fp_4")%></li>
-
-            <br>
-           <li><%= t(".fp_5")%></li>
-            <br>
-            <li><%= t(".fp_6")%></li>
-            <br>
-            <li><%= t(".fp_7")%></li>
+          <br>
+          <li><%= t(".fp_4")%></li>
+          <br>
+          <li><%= t(".fp_5")%></li>
+          <br>
+          <li><%= t(".fp_6")%></li>
+          <br>
+          <li><%= t(".fp_7")%></li>
         </ol>
       </div>
     </div>
@@ -45,11 +43,51 @@
   <div class="row py-4">
     <div class="col-md-12">
        <div class="brewing-text px-3">
-        <ol>
-            <%= t(".mocha_guide_html")%>
-        </ol>
-      </div>
-      <br>
+          <ol>
+              <%= t(".mocha_guide_html")%>
+          </ol>
+       </div>
+    </div>
+  </div>
+
+  <hr class='brewing-separation'>
+
+    <div class="brewing-icon-header-section d-flex justify-content-center pt-3 mb-4">
+
+          <%= image_tag "moca_symbol_negative.png",  class:"img-fluid brewing-icon-section mb-2" %>
+          <h4 class="align-self-center"><%= t(".v60") %></h4>
+    </div>
+
+
+  <div class="row py-4">
+    <div class="col-md-12">
+       <div class="brewing-text px-3">
+          <ol>
+              <%= t(".v_guide_html")%>
+          </ol>
+       </div>
+    </div>
+  </div>
+
+    <hr class='brewing-separation'>
+
+    <div class="brewing-icon-header-section d-flex justify-content-center pt-3 mb-4">
+
+          <%= image_tag "moca_symbol_negative.png",  class:"img-fluid brewing-icon-section mb-2" %>
+          <h4 class="align-self-center"><%= t(".chemex") %></h4>
+    </div>
+
+
+  <div class="row py-4">
+    <div class="col-md-12">
+       <div class="brewing-text px-3">
+          <ol>
+              <%= t(".chemex_html")%>
+          </ol>
+       </div>
+    </div>
+  </div>
+
 
     <h6 class= "intro_brewing text-center mt-4 py-4">
       <%= t(".intro_brewing_html")%>

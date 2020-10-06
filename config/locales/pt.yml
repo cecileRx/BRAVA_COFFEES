@@ -1,0 +1,116 @@
+pt:
+
+  # navbar
+  login: "login"
+  logout: "Logout"
+  coffees_nav: "COFFEES"
+  equipment_nav: "EQUIPMENT"
+  brew_nav: "BREWING"
+  about_nav: "ABOUT"
+  subscribe_nav: "SUBSCRIBE"
+  contact_nav: "CONTACT"
+
+  # footer contact_form
+  contact_email: "enter your email"
+  submit_email: "Thanks!"
+
+  pages:
+  # homepage
+    home:
+      brava_intro_1: "Brava é uma torrefatora artesanal de cafés de especialidade."
+      brava_intro_2: "Ela nasce da vontade de encontrar a chávena perfeita."
+      brava_intro_3: "Os nossos grãos são escolhidos de entre os melhores cafés do mundo, produzidos por comunidades agrícolas com práticas sustentáveis, ética e ambientalmente."
+
+      selection: "Our selection of coffees"
+      discover: "Discover"
+
+      subscribe_text: "Get your coffee at your doorstep, or offer it"
+      subscribe: "Subscribe"
+      gift: "Send a gift!"
+
+      brew_title: "How do you brew?"
+      brew_line_html: "Learn the art of<strong> Mocha</strong>, <strong>French press</strong> and other processes with our"
+      brewing_guides: "brewing guides."
+      brew_way: "Want to try a new way ?"
+      check: "Check our"
+      brewing_eq: "brewing equipment!"
+
+  # footer
+      contact: "CONTACT US"
+      follow: "FOLLOW BRAVA"
+      contact_touch: "STAY IN TOUCH"
+
+  # brewing
+    brewing:
+      french_press: "Cafeteira francesa"
+      fp_1: "Moa os grãos de café (tipo pão ralado), usando para cada 300gr de água 22gr de café."
+      fp_2: "Aqueça a cafeteira com água quente, gradualmente para não partir o vidro (a temperatura da infusão baixa rapidamente se a cafeteira estiver fria e, para além de evitar que o café fique morno no final, também ajuda a uma extração adequada)."
+      fp_3: "Remova a água quente e adicione o café moído."
+      fp_4: "Aqueça a água por volta 96ºC, despeje a água e mexa algumas vezes."
+      fp_5: "Feche a tampa e pressione o êmbolo até o nível da água, deixando em infusão 4 minutos."
+      fp_6: "Após esses 4 minutos, empurre lentamente o êmbolo até o fim."
+      fp_7: "Saboreie o seu café!"
+
+      mocha: "Moca"
+      mocha_guide_html: "<li>Moa os grãos de café.</li>
+          <br>
+          <li>Encha a base da sua cafeteira com água quente até a linha.</li>
+           <br>
+          <li>Coloque o funil na base da cafeteira.</li>
+           <br>
+          <li>Encha vagamente o filtro-funil com borra de café sem compactar.</li>
+           <br>
+          <li>Enrosque a câmara superior na caldeira.</li>
+           <br>
+          <li>Coloque a cafeteira no fogão em lume baixo ou médio.</li>
+           <br>
+          <li>Se usou água quente, após dois minutos, o café começará a fluir; se usou água fria, aguarde até o reservatório superior ficar cheio.</li>
+           <br>
+          <li>Quando o café começar a fluir na parte superior, retire-o do lume; o calor residual será suficiente para terminar a infusão.</li>
+           <br>
+          <li>Sirva a chávena e saboreie!</li>"
+
+      v60: "V60"
+      v_guide_html: "<li>Coloque o papel de filtro no cone e ferva a água a cerca de 96ºC</li>
+          <br>
+          <li>Enxague o papel de filtro (assim elimina qualquer gosto de papel e aquece o bule).</li>
+          <br>
+          <li>Adicione o café</li>
+          <br>
+          <li>Comece com uma proporção de 22g de café para 300ml de água (3cs= 21gr)</li>
+          <br>
+          <li>Pré-prepare o café: sature o café com água apenas o suficiente para cobrir o café moído em movimentos circulares e aguarde 30 segundos para café florescer.</li>
+          <br>
+          <li>Deite a restante água em movimentos circulares.</li>
+          <br>
+          <li>Depois de terminar a extração, mexa um pouco o café para misturar os sabores e sirva</li>
+          <br>
+          <li>O objetivo é um tempo total de extração (incluindo 30 segundos antes da infusão) até cerca de 3 minutos</li>"
+
+      chemex: "CHEMEX"
+      chemex_html: "<li>Dobre o filtro de café, certificando-se de que a parte mais espessa do filtro está na abertura </li>
+          <br>
+          <li>Coloque 19gr de café por 250ml de água a 96ºC, no cone do filtro (uma colher de chá equivale a aproximadamente 5gr de café).</li>
+          <br>
+          <li>Humedeça o filtro com água morna para enxaguar e pré-aquecer a Chemex; quando a água for totalmente drenada pelo filtro, despeje-a da cafeteira mantendo o filtro vedado contra a parede da Chemex</li>
+          <br>
+          <li>Despeje um pouco de água sobre o café moído (apenas o suficiente para molhar o café, sem fazê-lo flutuar, o pré-umedecimento permite que o café “floresça” e a infusão seja uniforme) e espere 30 segundos </li>
+          <br>
+          <li>Deite o resto da água lentamente em movimentos circulares, ensopando o café, mas mantendo o nível da água bem abaixo do topo da cafeteira.</li>
+          <br>
+          <li>Uma vez que a quantidade desejada de café é distribuída, retire o filtro e descarte.</li>
+          <br>
+          <li>Sirva e aproveite!</li>"
+
+      intro_brewing_html: "Não há uma maneira certa de se preparar uma chávena de café.
+          <br>
+          Há muitas variáveis em jogo: água, moagem, equipamentos…
+          <br>
+           Estas são apenas sugestões para um ponto de partida.
+          <br><strong>Fique à vontade para experimentar quantidades e tempos de preparação, de forma a obter a “sua” chávena perfeita.</strong>"
+  # about us
+    about:
+      about_text_1_html: "<strong>Brava</strong> é uma micro torrefatora baseada em Lisboa, criada em 2018 por Joana e Susana, que nasce da vontade de encontrar “a chávena perfeita”. Segue princípios rigorosos na escolha do grão, reunindo os melhores cafés e transformando as características do grão em sensações únicas para o palato, através de cuidados especiais no processo de torra."
+      about_text_quote: "Acreditamos que o café não é simplesmente um produto, mas toda uma experiência."
+      about_text_2_html: "Há mais de 20 anos que Joana e Susana estão envolvidas no universo da restauração e bares em Lisboa. Os espaços que criam resultam das múltiplas inspirações que foram recolhendo em várias viagens e das novas experiências que a cidade pode oferecer. Nas viagens que fizeram, confirmaram que o café é muito mais do que uma simples bebida. Ir beber café é, um pouco por todo o mundo, um pretexto para o encontro. O café reúne as pessoas à sua volta, acompanha a conversa, estreita laços. Beber um café de especialidade eleva esta experiência, porque um café de excelência conta uma história, de comunidade, de cultura, dedicação, envolvimento e paixão."
+
