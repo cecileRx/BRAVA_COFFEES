@@ -4,7 +4,7 @@
       <div class="brewing-icon-header-section d-flex justify-content-center mb-4">
 
         <%= image_tag "french_press_symbol_negative.png",  class:"img-fluid brewing-icon-section mb-2" %>
-        <h4 class="align-self-center">French press</h4>
+        <h4 class="align-self-center"><%= t(".french_press") %></h4>
 
       </div>
 
@@ -12,22 +12,21 @@
     <div class="col-md-12">
       <div class="brewing-text px-3">
         <ol>
-          <li>Grind the coffee beans coarsely (think of breadcrumbs), for each 300gr of water, use 22 gr of coffee.</li>
+          <li><%= t(".fp_1")%></li>
 
           <br>
-          <li>Heat the coffee maker with hot water, gradually so as not to break the glass.<br/>
-          The infusion temperature drops quickly if the French press is cold. This, in addition to preventing the coffee from getting lukewarm at the end.</li>
+          <li><%= t(".fp_2_html")%></li>
             <br>
-          <li>Remove the hot water and add the groud coffee</li>
+          <li><%= t(".fp_3")%></li>
             <br>
-           <li>Heat the water to around 96º C. Pour the water and stir a few times.</li>
+           <li><%= t(".fp_4")%></li>
 
             <br>
-           <li>Close the lid and press the plunger down to the water level. Leave to infuse for 4 minutes.</li>
+           <li><%= t(".fp_5")%></li>
             <br>
-            <li>After 4 minutes, push the plunger all the way, with a slow movement.</li>
+            <li><%= t(".fp_6")%></li>
             <br>
-            <li>Enjoy your coffee!</li>
+            <li><%= t(".fp_7")%></li>
         </ol>
       </div>
     </div>
@@ -39,7 +38,7 @@
     <div class="brewing-icon-header-section d-flex justify-content-center pt-3 mb-4">
 
           <%= image_tag "moca_symbol_negative.png",  class:"img-fluid brewing-icon-section mb-2" %>
-          <h4 class="align-self-center">Mocha</h4>
+          <h4 class="align-self-center"><%= t(".mocha") %></h4>
     </div>
 
 
@@ -47,37 +46,13 @@
     <div class="col-md-12">
        <div class="brewing-text px-3">
         <ol>
-          <li>Grind the coffee beans using a good grinder.</li>
-          <br>
-          <li>Fill the base of your mocha with hot water up to the line, or a little below. Never pass the signal.</li>
-           <br>
-          <li>Place the funnel in the boiler chamber (the base).</li>
-           <br>
-          <li>Fill the funnel filter loosely with coffee grounds without compacting. If you compact, the coffee will not rise in the collector chamber. Or it will go up very slowly and extract too much making it bitter.</li>
-           <br>
-          <li>Screw the upper chamber into the boiler.</li>
-           <br>
-          <li>Place the mocha on the stove over low or medium heat. A gas stove is the best. The electric stove also works, but you will need to use a heat diffuser.</li>
-           <br>
-          <li>If you used hot water, after two minutes, the coffee will begin to flow. If you used cold water, wait 6 to 8 minutes until the upper reservoir is full.</li>
-           <br>
-          <li>When the coffee starts to flow in the upper part, immediately remove it from the heat. The residual heat will be sufficient to finish the infusion. Some people leave it on the stove until the coffee is almost completely prepared and then cool the base with cold water to stop the preparation.</li>
-           <br>
-          <li>Stir in the upper chamber with a spoon to mix the different layers of coffee to obtain a uniform flavor.</li>
-           <br>
-          <li>Pour into cups immediately and enjoy!</li>
+            <%= t(".mocha_guide_html")%>
         </ol>
       </div>
       <br>
-      <br>
 
-    <h6 class= "text-center mt-4 pb-5">
-          There is no correct way to prepare a cup of coffee.
-          <br>This is just a suggestion for a starting point.
-          <br>
-          <br>
-          There are so many variables at play when making a great cup of coffee - water, grind, equipment -
-          <br>feel free to play with the weights and preparation times to get the perfect cup.
-  </h5>
+    <h6 class= "intro_brewing text-center mt-4 py-4">
+      <%= t(".intro_brewing_html")%>
+  </h6>
 </div>
 

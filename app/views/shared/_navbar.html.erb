@@ -19,11 +19,11 @@
           <div id="login-icon">
             <% if user_signed_in? %>
 
-                  <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+                  <%= link_to t(".logout"), destroy_user_session_path, method: :delete, class: "dropdown-item" %>
 
           <% else %>
 
-              <%= link_to "Login", new_user_session_path, class: "nav-link link-style" %>
+              <%= link_to t(".login"), new_user_session_path, class: "nav-link link-style" %>
 
           <% end %>
           </div>
@@ -35,7 +35,7 @@
 
               <ul class="navbar-nav container-fluid px-0 justify-content-around">
                   <li class="nav-item">
-                      <%= link_to "COFFEES", root_path(:anchor => "coffee-header"), class: "nav-link smoothscroll" %>
+                      <%= link_to t("coffees_nav"), root_path(:anchor => "coffee-header"), class: "nav-link smoothscroll" %>
                   </li>
                   <li class="nav-item">
                       <%= link_to "EQUIPMENT", products_path, class: "nav-link" %>

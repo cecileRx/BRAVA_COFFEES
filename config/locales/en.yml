@@ -30,4 +30,90 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+
+  # navbar
+  login: "login"
+  logout: "Logout"
+  coffees_nav: "COFFEES"
+  equipment_nav: "EQUIPMENT"
+  brew_nav: "BREWING"
+  about_nav: "ABOUT"
+  subscribe_nav: "SUBSCRIBE"
+  contact_nav: "CONTACT"
+
+  # footer contact_form
+  contact_email: "enter your email"
+  submit_email: "Thanks!"
+
+
+  pages:
+  # homepage
+    home:
+      brava_intro_1: "Brava is an artisanal specialty coffee roaster."
+      brava_intro_2: "We've taken in our own hands the beautiful mission of offering you just the perfect cup of coffee."
+      brava_intro_3: "Our beans are chosen among the best in the world, produced by agricultural communities with sustainable practices, ethically and environmentally."
+
+      selection: "Our selection of coffees"
+      discover: "Discover"
+
+      subscribe_text: "Get your coffee at your doorstep, or offer it"
+      subscribe: "Subscribe"
+      gift: "Send a gift!"
+
+      brew_title: "How do you brew?"
+      brew_line_html: "Learn the art of<strong> Mocha</strong>, <strong>French press</strong> and other processes with our"
+      brewing_guides: "brewing guides."
+      brew_way: "Want to try a new way ?"
+      check: "Check our"
+      brewing_eq: "brewing equipment!"
+
+  # footer
+      contact: "CONTACT US"
+      follow: "FOLLOW BRAVA"
+      contact_touch: "STAY IN TOUCH"
+
+  # brewing
+    brewing:
+      french_press: "French press"
+      fp_1: "Grind the coffee beans coarsely (think of breadcrumbs), for each 300gr of water, use 22 gr of coffee."
+      fp_2_html: "Heat the coffee maker with hot water, gradually so as not to break the glass.<br/>
+          The infusion temperature drops quickly if the French press is cold. This, in addition to preventing the coffee from getting lukewarm at the end."
+      fp_3: "Remove the hot water and add the ground coffee."
+      fp_4: "Heat the water to around 96º C. Pour the water and stir a few times."
+      fp_5: "Close the lid and press the plunger down to the water level. Leave to infuse for 4 minutes."
+      fp_6: "After 4 minutes, push the plunger all the way, with a slow movement."
+      fp_7: "Enjoy your coffee!"
+
+      mocha: "Mocha"
+      mocha_guide_html: "<li>Grind the coffee beans using a good grinder.</li>
+          <br>
+          <li>Fill the base of your mocha with hot water up to the line, or a little below. Never pass the signal.</li>
+           <br>
+          <li>Place the funnel in the boiler chamber (the base).</li>
+           <br>
+          <li>Fill the funnel filter loosely with coffee grounds without compacting. If you compact, the coffee will not rise in the collector chamber. Or it will go up very slowly and extract too much making it bitter.</li>
+           <br>
+          <li>Screw the upper chamber into the boiler.</li>
+           <br>
+          <li>Place the mocha on the stove over low or medium heat. A gas stove is the best. The electric stove also works, but you will need to use a heat diffuser.</li>
+           <br>
+          <li>If you used hot water, after two minutes, the coffee will begin to flow. If you used cold water, wait 6 to 8 minutes until the upper reservoir is full.</li>
+           <br>
+          <li>When the coffee starts to flow in the upper part, immediately remove it from the heat. The residual heat will be sufficient to finish the infusion. Some people leave it on the stove until the coffee is almost completely prepared and then cool the base with cold water to stop the preparation.</li>
+           <br>
+          <li>Stir in the upper chamber with a spoon to mix the different layers of coffee to obtain a uniform flavor.</li>
+           <br>
+          <li>Pour into cups immediately and enjoy!</li>"
+      intro_brewing_html: "There is no correct way to prepare a cup of coffee.
+          <br>
+          There are so many variables at play when making a great cup of coffee - water, grind, equipment.. -
+          <br>
+          This is just a suggestion for a starting point.
+          <br><strong>Feel free to play with the weights and preparation times to get the perfect cup!</strong>"
+  # about us
+    about:
+      about_text_1_html: "<strong>Brava</strong> is a micro coffee roaster based in Lisbon, founded in 2018 by Joana and Susana out of the desire to find “the perfect cup of coffee”. Following strict principles in the choice of beans, bringing together the best coffees and transforming the characteristics of the grain into unique sensations for the palate, through a careful roasting process."
+      about_text_quote: "We believe that coffee is not a product, but an entire experience."
+      about_text_2_html: "For over 20 years, Joana and Susana, have been involved in the world of restaurants and bars in Lisbon, always looking for the balance between the multiple inspirations they have been collecting on various trips and the experiences the city can offer. On their trips they confirmed that coffee is much more than just a drink. Going to drink a coffee has also means an encounter. Coffee gathers people around, it’s a pretext for sharing and creating
+            bonds. Drinking a specialty coffee takes this experience to a higher level, a coffee of excellence tells a story of community, culture, dedication, involvement and passion."
+

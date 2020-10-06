@@ -8,14 +8,14 @@
     <div class="col-md-6 align-self-center">
       <div class="banner-text text-md-right text-sm-center">
         <h1 class= "h5 main-text pr-4">
-          Brava is an artisanal specialty coffee roaster.
+          <%= t(".brava_intro_1") %>
         </h1>
         <h1 class= "h5 main-text pr-4">
-        We've taken in our own hands the beautiful mission of offering you just the perfect cup of coffee.
+          <%= t(".brava_intro_2") %>
         </h1>
 
         <h5 class= "secondary-text pr-4">
-          Our beans are chosen among the best in the world, produced by agricultural communities with sustainable practices, ethically and environmentally.
+           <%= t(".brava_intro_3") %>
         </h5>
      </div>
     </div>
@@ -23,7 +23,7 @@
 
   <section id="coffee-header" class="py-5">
     <div class="text-center ">
-      <h2> Our selection of coffees</h2>
+      <h2> <%= t(".selection") %></h2>
     </div>
   </section >
   <section id="coffee">
@@ -39,13 +39,13 @@
                   <div class="card-img-overlay light-overlay box-card">
 
                        <div class="link-caf-hidden">
-                        <%= link_to "Discover", product_path(product), class: "btn btn-outline-secondary text-right" %>
+                        <%= link_to t(".discover"), product_path(product), class: "btn btn-outline-secondary text-right" %>
 
                        </div>
 
                        <h4 class="card-title text-white"><%= product.origin.upcase %></h4>
                        <div class="link-caf">
-                        <%= link_to "Discover", product_path(product), class: "btn cof-btn btn-outline-secondary text-right" %>
+                        <%= link_to t(".discover"), product_path(product), class: "btn cof-btn btn-outline-secondary text-right" %>
 
                        </div>
 
@@ -105,13 +105,13 @@
 
       </div>
       <div class="col-lg-6 subscribe-text">
-        <h2 class="mb-5 text-center" >Get your coffee at your doorstep, or offer it</h2>
+        <h2 class="mb-5 text-center" ><%= t(".subscribe_text") %></h2>
         <div class="subscribe-buttons d-flex justify-content-around px-5">
           <button class="btn btn-warning">
-            Subscribe
+            <%= t(".subscribe") %>
           </button>
           <button class="btn btn-warning">
-            Send a gift!
+            <%= t(".gift") %>
           </button>
         </div>
       </div>
@@ -122,16 +122,16 @@
 
     <div class="row brewing-section py-5 px-5 align-items-center">
       <div class="col-md-6">
-        <h2 class="" >How do you brew?</h2>
-        <h5>Learn the art of<strong> Mocha</strong>, <strong>French press</strong> and other processes with our <strong>
-        <%= link_to "brewing guides", brewing_path, class:"link-brewing" %>
-        </strong>.
+        <h2 class="" ><%= t(".brew_title") %></h2>
+        <h5><%= t(".brew_line_html") %> <strong>
+        <%= link_to t(".brewing_guides"), brewing_path, class:"link-brewing"%>
+        </strong>
         </h5>
 
-        <h5 class="mb-4">Want to try a new way ?
+        <h5 class="mb-4"><%= t(".brew_way") %>
           <br>
-          Check our <strong>
-            <%= link_to "brewing equipment!", products_path, class:"link-brewing" %></strong>
+          <%= t(".check") %> <strong>
+            <%= link_to t(".brewing_eq"), products_path, class:"link-brewing" %></strong>
         </h5>
       </div>
 
@@ -165,7 +165,7 @@
       <div class="row px-0">
         <div class="col-md-4 text-center mb-3">
           <adress>
-            <h3 class="mb-4" >CONTACT US</h3>
+            <h3 class="mb-4" ><%= t(".contact") %></h3>
 
             <p>bravacoffeeroasters@gmail.com
 
@@ -181,7 +181,7 @@
 
         </div>
         <div class="col-md-4 text-center">
-          <h3>FOLLOW BRAVA</h3>
+          <h3><%= t(".follow") %></h3>
           <div class="row justify-content-around px-5 pt-4 mb-3">
           <div class="col-sm-4 mb-2">
           <a href="#"><i class="text-white border rounded-circle py-3 px-3 fab fa-twitter"></i></a>
