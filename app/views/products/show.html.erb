@@ -11,13 +11,16 @@
         <%= image_tag "photo_3.jpg", class:"img-fluid img-light", height: 50  %>
       </div>
       <div class="col-sm-12 col-lg-6 pr-5">
-        <h3><%= @product.origin.upcase%> - <%= @product.name%></h3>
+        <h3><%= @product.origin.upcase%> <%= @product.name%></h3>
 
           <br>
-          <p>Region: <%=@product.region%> </p>
-          <p>Process: <%=@product.process  %> </p>
-          <p>Cupping notes: <%=@product.cupping_notes%></p>
+          <p><%=Product.human_attribute_name("region").capitalize%>: <%=@product.region%> </p>
+          <p><%=Product.human_attribute_name("process").capitalize%>: <%= t('process', process: @product.process)  %> </p>
+          <p><%=Product.human_attribute_name("cupping_notes").capitalize%>: <%= t('cup_notes', cupping_notes:@product.cupping_notes)%></p>
           <p><%=@product.description%></p>
+          <% if current_user && current_user.admin %>
+          <%= link_to 'Edit', edit_product_path(@product) %>
+          <% end %>
       </div>
     </div>
 
@@ -62,7 +65,7 @@
 
 
 
-                <%= label_tag 'Grind options'  %>
+                <%= label_tag Product.human_attribute_name("grind_options") %>
                 <br>
                 <% raw_str = [] %>
                 <% @product.grind_options.each do |item| %>

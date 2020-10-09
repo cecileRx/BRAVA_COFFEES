@@ -85,9 +85,9 @@ Product.create!(
   origin: 'Nicaragua',
   name:'Cerro de Jesus farm',
   region: 'Jalapa, Neuva Segovia',
-  process: 'washed',
-  grind_options: ['Whole Beans','Ground for filter','Ground for Aeropress'],
-  cupping_notes: 'coffee cherry, lemon',
+  process:  I18n.t('process'),
+  grind_options: ['Whole Beans','Filter','Aeropress'],
+  cupping_notes: I18n.t('cup_notes.nica_cp'),
   description: 'Cerro de Jesus or Jesus Mountain Farm is located in Jalapa, Neuva Segovia, on the second highest peak of Nicaragua. The farm spreads through 700 hectares of which about 400 hectares are a beautiful forest reserve.
   In 2017, Jesus Mountain Farm decided to partner with Cafetos de Segovia, a small specialty mill and export company run by two sisters Martha and Ana Albir. The Albir sisters inherited from their father the passion and knowledge to grow their own coffee. Later they acquired a mill and by 2016 they were providing milling and export services to neighboring small coffee farms. This new venture allowed them to contact directly with farms with socially conscious practices and they were also able to focus in separating of coffee by variety.',
    photo:'nicaragua.jpg',
@@ -99,9 +99,9 @@ Product.create!(
   origin: 'Nicaragua',
   name:'Cerro de Jesus farm',
   region: 'Jalapa, Neuva Segovia',
-  process: 'washed',
-  grind_options: ['Whole Beans','Ground for filter','Ground for Aeropress'],
-  cupping_notes: 'coffee cherry, lemon',
+  process:  I18n.t('process'),
+  grind_options: ['Whole Beans','Filter','Aeropress'],
+  cupping_notes: I18n.t('cup_notes.nica_cp'),
   description: 'Cerro de Jesus or Jesus Mountain Farm is located in Jalapa, Neuva Segovia, on the second highest peak of Nicaragua. The farm spreads through 700 hectares of which about 400 hectares are a beautiful forest reserve.
   In 2017, Jesus Mountain Farm decided to partner with Cafetos de Segovia, a small specialty mill and export company run by two sisters Martha and Ana Albir. The Albir sisters inherited from their father the passion and knowledge to grow their own coffee. Later they acquired a mill and by 2016 they were providing milling and export services to neighboring small coffee farms. This new venture allowed them to contact directly with farms with socially conscious practices and they were also able to focus in separating of coffee by variety.',
    photo:'nicaragua.jpg',
@@ -113,7 +113,7 @@ Product.create!(
   origin: 'Colombia',
   name:'FUDAM',
   region:'La Uniõn, Nariño',
-  process:'washed',
+  process: I18n.t('process'),
   grind_options: ['Whole Beans','Ground for filter','Ground for Espresso','Ground for Aeropress'],
   cupping_notes:'tropical fruits, tamarind',
   description: "FUDAM stands for Fundación Agraria y Ambiental Para el Desarrollo Sostentible - a 300 member’s association of organic and Rainforest Alliance certified coffee growers founded in the year 2000.
@@ -128,7 +128,7 @@ Product.create!(
   origin: 'Colombia',
   name:'FUDAM',
   region:'La Uniõn, Nariño',
-  process:'washed',
+  process: I18n.t('process'),
   grind_options: ['Whole Beans','Ground for filter','Ground for Espresso','Ground for Aeropress'],
   cupping_notes:'tropical fruits, tamarind',
   description: "FUDAM stands for Fundación Agraria y Ambiental Para el Desarrollo Sostentible - a 300 member’s association of organic and Rainforest Alliance certified coffee growers founded in the year 2000.
@@ -143,7 +143,7 @@ Product.create!(
   origin: 'Ethiopia',
   name:'Tega & Tula farm',
   region:'Bonga, gifo, Keffa',
-  process:'washed',
+  process: I18n.t('process'),
   grind_options: ['Whole Beans','Ground for filter','Ground for Aeropress'],
   cupping_notes: 'pear, floral',
   description:'Tega & Tula speciality Coffee Farm located at Keffa province bio-reserve, takes its name after the two nearby villages in Woreda, Gibo district, Keffa, Ethiopia. The farm spreads out through 500 hectares where 400 hectares are planted with different coffee varieties. Ethiopian varieties, cultivars from the 70s as well as wild coffee from the Keffa forest, together all contribute for the uniqueness of the coffee grown here.
@@ -157,7 +157,7 @@ Product.create!(
   origin: 'Ethiopia',
   name:'Tega & Tula farm',
   region:'Bonga, gifo, Keffa',
-  process:'washed',
+  process: I18n.t('process'),
   grind_options: ['Whole Beans','Ground for filter','Ground for Aeropress'],
   cupping_notes: 'pear, floral',
   description:'Tega & Tula speciality Coffee Farm located at Keffa province bio-reserve, takes its name after the two nearby villages in Woreda, Gibo district, Keffa, Ethiopia. The farm spreads out through 500 hectares where 400 hectares are planted with different coffee varieties. Ethiopian varieties, cultivars from the 70s as well as wild coffee from the Keffa forest, together all contribute for the uniqueness of the coffee grown here.
@@ -171,7 +171,7 @@ Product.create!(
   origin: 'Colombia',
   name:'AMACA',
   region:'El Tambo, Cauca',
-  process: 'washed',
+  process:  I18n.t('process'),
   grind_options: ['Whole Beans','Ground for filter','Ground for Espresso','Ground for Aeropress'],
   cupping_notes:'caramel, apple',
   description:'AMACA stands for Asociación de Mujeres Productoras Agropecuarias del Cauca, a group of 80 women’ producers who are based in El Tambo, Cauca, Colombia since 1999. This association has registered a steady growth and, today, it counts up to 140 women from three different villages in the same region. All of these women own the land they farm and are the heads of their households.
@@ -185,7 +185,7 @@ Product.create!(
   origin: 'Colombia',
   name:'AMACA',
   region:'El Tambo, Cauca',
-  process: 'washed',
+  process:  I18n.t('process'),
   grind_options: ['Whole Beans','Ground for filter','Ground for Espresso','Ground for Aeropress'],
   cupping_notes:'caramel, apple',
   description:'AMACA stands for Asociación de Mujeres Productoras Agropecuarias del Cauca, a group of 80 women’ producers who are based in El Tambo, Cauca, Colombia since 1999. This association has registered a steady growth and, today, it counts up to 140 women from three different villages in the same region. All of these women own the land they farm and are the heads of their households.

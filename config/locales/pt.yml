@@ -1,4 +1,19 @@
 pt:
+  activerecord:
+    models:
+      product: product
+    attributes:
+      product:
+        name: "nome"
+        region: "região"
+        cupping_notes: "cup notes"
+        grind_options: "grao op"
+        description: "description"
+
+  process: "lavado"
+  cup_notes:
+    nica_cp: 'café, limão'
+    columb_cp: 'ola'
 
   # navbar
   login: "login"

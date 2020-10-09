@@ -29,7 +29,25 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
+
+
 en:
+  activerecord:
+    models:
+      product: product
+    attributes:
+      product:
+        name: "name"
+        region: "region"
+        process: "process"
+        cupping_notes: "cupping notes"
+        grind_options: "grind_options"
+        description: "description"
+
+  process: "washed"
+  cup_notes:
+    nica_cp: 'coffee cherry, lemon'
+    columb_cp: 'hi'
 
   # navbar
   login: "login"

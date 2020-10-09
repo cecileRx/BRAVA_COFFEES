@@ -10,10 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_24_092244) do
+ActiveRecord::Schema.define(version: 2020_10_08_130720) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "admins", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "username"
+    t.index ["email"], name: "index_admins_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+  end
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -43,18 +56,21 @@ ActiveRecord::Schema.define(version: 2020_08_24_092244) do
   end
 
   create_table "products", force: :cascade do |t|
-    t.string "origin"
-    t.string "name"
-    t.string "region"
-    t.string "process"
-    t.text "cupping_notes"
-    t.text "description"
     t.bigint "category_id"
     t.string "photo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "weight"
     t.integer "price_cents", default: 0, null: false
+    t.string "stripe_id_week"
+    t.string "stripe_id_month"
+    t.string "price"
+    t.string "name"
+    t.string "origin"
+    t.string "region"
+    t.string "process"
+    t.text "cupping_notes"
+    t.text "description"
     t.string "grind_options", default: [], array: true
     t.index ["category_id"], name: "index_products_on_category_id"
   end
@@ -70,6 +86,14 @@ ActiveRecord::Schema.define(version: 2020_08_24_092244) do
     t.string "first_name"
     t.string "last_name"
     t.string "username"
+    t.datetime "expires_at"
+    t.string "stripe_id"
+    t.string "stripe_subscription_id"
+    t.string "card_brand"
+    t.string "card_last_4"
+    t.string "card_exp_month"
+    t.string "card_exp_year"
+    t.boolean "admin", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
