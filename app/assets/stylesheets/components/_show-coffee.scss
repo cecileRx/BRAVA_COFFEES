@@ -2,10 +2,30 @@
   border: 1px solid black;
 }
 
+#products-coffees {
+  background-color: rgba(252,252,228,0.3);
+}
+
+.coffee-title {
+  padding-left: 5rem;
+}
+
+#products-coffees .form-group {
+  padding-right: 15rem !important;
+}
+
 .coffee-links {
   :hover {
     background-color: black;
   }
+}
+.coffee_description_text {
+  padding: 0 10%;
+}
+
+.coffee_images_links {
+  align-items: flex-end;
+
 }
 
 #a .card-img-overlay {

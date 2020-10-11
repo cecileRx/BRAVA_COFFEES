@@ -7,20 +7,20 @@
 
     <div class="row pt-5 mb-5">
       <% @equipment_items.each do |item| %>
-        <div class="col-lg-3 col-sm-4 col-6 mb-5 ">
-          <div class="card h-100">
-
-            <%= link_to product_path(item), :style=>'color: gray; text-decoration: none;' do %>
-              <div class=" mb-2">
-                <%= image_tag item.photo , class: "card-img-top", size: "260x260" %>
-                <div class="card-body text-center">
-                  <h5 class="card-title"><%= item.name %></h5>
+        <% if item.name != 'Hario V60 Coffee paper filters 02'%>
+          <div class="col-lg-3 col-sm-4 col-6 mb-5 ">
+            <div class="card h-100">
+              <%= link_to product_path(item), :style=>'color: gray; text-decoration: none;' do %>
+                <div class=" mb-2">
+                  <%= image_tag item.photo , class: "card-img-top", size: "260x260" %>
+                  <div class="card-body text-center">
+                    <h5 class="card-title"><%= item.name %></h5>
+                  </div>
                 </div>
-              </div>
-            <% end %>
-
+              <% end %>
+            </div>
           </div>
-        </div>
+        <% end %>
       <% end %>
     </div>
   </div>

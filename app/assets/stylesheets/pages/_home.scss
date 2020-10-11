@@ -4,11 +4,16 @@ html {
   font-size: min(max(1rem, 4vw), 17px);
 }
 
+
 .body h2 {
   color: $brown;
 }
 .hidden {
  display: none;
+}
+
+#home h2 {
+  color: $brava-text;
 }
 
 #banner {
@@ -27,15 +32,22 @@ html {
 
 #banner .main-text {
   font-family: 'Nunito Sans';
-  font-weight: 700;
+  font-weight: 500;
+  font-size: 18px;
 }
 
 #banner .secondary-text {
   font-family: 'Nunito Sans';
-  font-weight: 500;
-
+  font-weight: 300;
+  font-size: 18px;
 }
 
+#coffee-header h2 {
+  font-family: 'Nunito Sans';
+  font-weight: 500;
+  font-size: 30px;
+
+}
 
 #coffee .card-title  {
   letter-spacing: 0.8rem;
@@ -70,20 +82,25 @@ html {
 
 }
 
-#how-it-works .how-it-works-section {
-  background-color: $dark-cream;
-}
+// #how-it-works .how-it-works-section {
+//   background-color: $dark-cream;
+// }
 
-#how-it-works p.main-text  {
-  color: $dark-brown;
-  font-weight: 800;
-  margin: 0px;
-}
+// #how-it-works .brew_title h2 {
+//   font-weight: 400;
+//   font-size: 32;
+// }
 
-#how-it-works p.secondary-text  {
-  color: $light-brown;
-  margin-top: 2px;
-}
+// #how-it-works p.main-text  {
+//   color: $dark-brown;
+//   font-weight: 800;
+//   margin: 0px;
+// }
+
+// #how-it-works p.secondary-text  {
+//   color: $light-brown;
+//   margin-top: 2px;
+// }
 
 .icon-arrow {
   padding-top: 25px;
@@ -112,7 +129,7 @@ html {
   flex-grow: 1;
   max-width: 50%;
 
-    position: relative;
+  position: relative;
   width: 50%;
   min-height: 1px;
 
@@ -122,22 +139,21 @@ html {
   padding: 0px 83px;
 }
 
-.subscribe-text h2 {
-  font-family: 'Nunito Sans' !important;
-  color: $light-gray;
-}
 
 #brewing .brewing-section {
   background-color: $dark-cream;
 }
 
 #brewing .brewing-section h2{
-  color: $light-brown;
+  font-weight: 400;
+  font-size: 32px;
   margin-bottom: 2rem;
 }
 
 #brewing .brewing-section h5{
-  font-family: 'Nunito Sans'
+  font-family: 'Nunito Sans';
+  font-weight: 300;
+  font-size: 18px;
 }
 
 #brewing .img-fluid.brew-icons {
@@ -150,7 +166,7 @@ html {
 
 #brewing .link-brewing:hover {
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 
 #brewing-section .brewing-icon-section {
@@ -160,6 +176,11 @@ max-width: 25%
 #footer-section {
   background-color: $dark-brown;
   color: rgba(251, 247, 228, 0.95);
+}
+
+#footer-section h3 {
+  font-weight: 400;
+  font-size: 15px;
 }
 
 #footer-section .contact-form {

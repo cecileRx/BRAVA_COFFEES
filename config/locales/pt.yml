@@ -6,14 +6,14 @@ pt:
       product:
         name: "nome"
         region: "região"
-        cupping_notes: "cup notes"
+        cupping_notes: "cupping notes"
         grind_options: "grao op"
         description: "description"
 
   process: "lavado"
   cup_notes:
     nica_cp: 'café, limão'
-    columb_cp: 'ola'
+    columb_cp: 'limão'
 
   # navbar
   login: "login"

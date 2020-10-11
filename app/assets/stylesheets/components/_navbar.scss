@@ -14,11 +14,16 @@
 }
 
 #navbarNav .brava-logo img {
-      width: 160px;
+      width: 135px;
 }
 
 #navbarNav .nav-link {
       color: $brown;
       font-family: 'Nunito Sans';
-      font-weight: 700;
+      font-weight: 300;
+      font-size: 15px;
+}
+
+#navbarNav .nav-link:hover {
+  font-weight: 400;
 }
