@@ -13,7 +13,7 @@ pt:
   process: "lavado"
   cup_notes:
     nica_cp: 'café, limão'
-    columb_cp: 'limão'
+    columb_fudam_cp: 'limão'
 
   # navbar
   login: "login"

@@ -87,7 +87,7 @@ Product.create!(
   region: 'Jalapa, Neuva Segovia',
   process:  I18n.t('process'),
   grind_options: ['Whole Beans','Filter','Aeropress'],
-  cupping_notes: I18n.t('cup_notes.nica_cp'),
+  cupping_notes: I18n.t('nica_cp'),
   description: 'Cerro de Jesus or Jesus Mountain Farm is located in Jalapa, Neuva Segovia, on the second highest peak of Nicaragua. The farm spreads through 700 hectares of which about 400 hectares are a beautiful forest reserve.
   In 2017, Jesus Mountain Farm decided to partner with Cafetos de Segovia, a small specialty mill and export company run by two sisters Martha and Ana Albir. The Albir sisters inherited from their father the passion and knowledge to grow their own coffee. Later they acquired a mill and by 2016 they were providing milling and export services to neighboring small coffee farms. This new venture allowed them to contact directly with farms with socially conscious practices and they were also able to focus in separating of coffee by variety.',
    photo:'nicaragua.jpg',
@@ -101,7 +101,7 @@ Product.create!(
   region: 'Jalapa, Neuva Segovia',
   process:  I18n.t('process'),
   grind_options: ['Whole Beans','Filter','Aeropress'],
-  cupping_notes: I18n.t('cup_notes.nica_cp'),
+  cupping_notes: I18n.t('nica_cp'),
   description: 'Cerro de Jesus or Jesus Mountain Farm is located in Jalapa, Neuva Segovia, on the second highest peak of Nicaragua. The farm spreads through 700 hectares of which about 400 hectares are a beautiful forest reserve.
   In 2017, Jesus Mountain Farm decided to partner with Cafetos de Segovia, a small specialty mill and export company run by two sisters Martha and Ana Albir. The Albir sisters inherited from their father the passion and knowledge to grow their own coffee. Later they acquired a mill and by 2016 they were providing milling and export services to neighboring small coffee farms. This new venture allowed them to contact directly with farms with socially conscious practices and they were also able to focus in separating of coffee by variety.',
    photo:'nicaragua.jpg',
@@ -115,7 +115,7 @@ Product.create!(
   region:'La Uniõn, Nariño',
   process: I18n.t('process'),
   grind_options: ['Whole Beans','Ground for filter','Ground for Espresso','Ground for Aeropress'],
-  cupping_notes:'tropical fruits, tamarind',
+  cupping_notes:I18n.t('columb_fudam_cp'),
   description: "FUDAM stands for Fundación Agraria y Ambiental Para el Desarrollo Sostentible - a 300 member’s association of organic and Rainforest Alliance certified coffee growers founded in the year 2000.
   This group of smallholders lives in and around the municipality of La Unión in Nariño. Villages are at such high altitude that the growing areas, instead of being in higher grounds, lay bellow, surrounded by beautiful high peaks and rough roads.
   Today, FUDAM's growers still firmly believe in the principles of sustainability, the ideal that brought them together. Recently, when asked why they continue to farm organically, despite the pressure to rely on chemical inputs, the association explained: 'This is just how we live; these are our values and our way of life.'",
@@ -130,7 +130,7 @@ Product.create!(
   region:'La Uniõn, Nariño',
   process: I18n.t('process'),
   grind_options: ['Whole Beans','Ground for filter','Ground for Espresso','Ground for Aeropress'],
-  cupping_notes:'tropical fruits, tamarind',
+  cupping_notes:I18n.t('columb_fudam_cp'),
   description: "FUDAM stands for Fundación Agraria y Ambiental Para el Desarrollo Sostentible - a 300 member’s association of organic and Rainforest Alliance certified coffee growers founded in the year 2000.
   This group of smallholders lives in and around the municipality of La Unión in Nariño. Villages are at such high altitude that the growing areas, instead of being in higher grounds, lay bellow, surrounded by beautiful high peaks and rough roads.
   Today, FUDAM's growers still firmly believe in the principles of sustainability, the ideal that brought them together. Recently, when asked why they continue to farm organically, despite the pressure to rely on chemical inputs, the association explained: 'This is just how we live; these are our values and our way of life.'",

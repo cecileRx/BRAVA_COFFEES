@@ -47,7 +47,7 @@ en:
   process: "washed"
   cup_notes:
     nica_cp: 'coffee cherry, lemon'
-    columb_cp: 'hi'
+    columb_fudam_cp: 'tropical fruits, tamarind'
 
   # navbar
   login: "login"

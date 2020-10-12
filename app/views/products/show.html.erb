@@ -14,7 +14,8 @@
       <div class="col-md-6 pr-5 coffee-title">
         <h3><%= @product.origin.upcase%> <%= @product.name%></h3>
 
-        <p><%=Product.human_attribute_name("cupping_notes").capitalize%>: <%= t('.cup_notes', cupping_notes:@product.cupping_notes)%></p>
+        <p><%=Product.human_attribute_name("cupping_notes").capitalize%>: <%= t("cup_notes.#{@product.cupping_notes}") %></p>
+
         <div class="form-group pr-5">
           <%= form_tag order_items_path  class: "coffee_form" do %>
 
