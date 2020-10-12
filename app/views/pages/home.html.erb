@@ -31,7 +31,7 @@
        <% @coffees.each do |product| %>
 
           <div class="col-sm-12 mb-5 px-0">
-            <div class="card  text-white ">
+            <div class="card color-card">
 
                   <div class="card-img  w-100" alt="">
                   <%= image_tag "#{product.photo}", class:"img-fluid img-light"  %>
@@ -43,9 +43,9 @@
 
                        </div>
 
-                       <h4 class="card-title text-white"><%= product.origin.upcase %></h4>
+                       <h4 class="card-title"><%= product.origin.upcase %></h4>
                        <div class="link-caf">
-                        <%= link_to t(".discover"), product_path(product), class: "btn cof-btn btn-outline-secondary text-right" %>
+                        <%= link_to t(".discover"), product_path(product), class: "btn cof-btn btn-outline-secondary text-right button-card" %>
 
                        </div>
 

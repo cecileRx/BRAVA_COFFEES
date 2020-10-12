@@ -4,13 +4,24 @@ html {
   font-size: min(max(1rem, 4vw), 17px);
 }
 
+#fade_message {
+background-color: rgba(252,252,228,0.3) !important;
 
+}
+#home .container {
+   background-color: rgba(252,252,228,0.3) !important;
+}
+
+body {
+   background-color: rgba(252,252,228,0.3);
+}
 .body h2 {
   color: $brown;
 }
 .hidden {
  display: none;
 }
+
 
 #home h2 {
   color: $brava-text;
@@ -49,9 +60,19 @@ html {
 
 }
 
-#coffee .card-title  {
-  letter-spacing: 0.8rem;
+#coffee .link-caf {
+  padding-right: 40px;
+}
 
+#coffee .color-card  {
+  letter-spacing: 0.8rem;
+  color: rgba(251, 247, 228, 0.6);
+}
+
+#coffee .button-card  {
+  letter-spacing: 0.2rem;
+  color: rgba(251, 247, 228, 0.6);
+  padding-right: 10px;
 }
 
 #coffee .box-card {
@@ -69,16 +90,17 @@ html {
 
 #coffee .btn  {
   background-color: rgba(251, 247, 228, 0.3);
+  border: 1px solid rgba(252,252,228,1);
 }
 
 #coffee .btn:hover  {
-  border: 2px solid white;
+  border: 1px solid rgba(252,252,228,0.6);
 }
 
 #coffee .btn.cof-btn:hover{
 
-    font-weight: 800;
-    color: white;
+    font-weight: 600;
+    color:rgba(252,252,228,0.6);
 
 }
 
@@ -137,6 +159,9 @@ html {
 
 .subscribe-text {
   padding: 0px 83px;
+  font-weight: 400;
+  font-size: 32px;
+  margin-bottom: 2rem;
 }
 
 
