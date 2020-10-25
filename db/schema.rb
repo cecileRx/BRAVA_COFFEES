@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_08_130720) do
+ActiveRecord::Schema.define(version: 2020_10_25_200954) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,7 +71,7 @@ ActiveRecord::Schema.define(version: 2020_10_08_130720) do
     t.string "process"
     t.text "cupping_notes"
     t.text "description"
-    t.string "grind_options", default: [], array: true
+    t.string "grind_options"
     t.index ["category_id"], name: "index_products_on_category_id"
   end
 
@@ -86,13 +86,7 @@ ActiveRecord::Schema.define(version: 2020_10_08_130720) do
     t.string "first_name"
     t.string "last_name"
     t.string "username"
-    t.datetime "expires_at"
     t.string "stripe_id"
-    t.string "stripe_subscription_id"
-    t.string "card_brand"
-    t.string "card_last_4"
-    t.string "card_exp_month"
-    t.string "card_exp_year"
     t.boolean "admin", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

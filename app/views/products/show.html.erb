@@ -15,17 +15,17 @@
         <h3><%= t("origin_att.#{@product.origin}").upcase%> <%= @product.name%></h3>
 
         <p><%=Product.human_attribute_name("cupping_notes").capitalize%>: <%= t("cup_notes_att.#{@product.cupping_notes}") %></p>
- <%= @product.grind_options %>
+
         <div class="form-group pr-5">
           <%= form_tag order_items_path  class: "coffee_form" do %>
 
             <%= label_tag Product.human_attribute_name("grind_options") %>
             <br>
             <% raw_str = [] %>
-            <%= grind_choices = t(".grind_options") %>
+            <%grind_choices = t("grind_op_att.#{@product.grind_options}") %>
 
-            <%= t("grind_op_att.#{@product.grind_options}") %>
-            <% @product.grind_options.each do |item| %>
+
+            <% grind_choices.each do |item| %>
               <% raw_str << "<option>#{item}</option>" %>
             <% end %>
             <% raw_str = raw_str.join.to_s %>
