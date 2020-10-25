@@ -12,16 +12,19 @@
 
       </div>
       <div class="col-md-6 pr-5 coffee-title">
-        <h3><%= @product.origin.upcase%> <%= @product.name%></h3>
+        <h3><%= t("origin_att.#{@product.origin}").upcase%> <%= @product.name%></h3>
 
         <p><%=Product.human_attribute_name("cupping_notes").capitalize%>: <%= t("cup_notes_att.#{@product.cupping_notes}") %></p>
-
+ <%= @product.grind_options %>
         <div class="form-group pr-5">
           <%= form_tag order_items_path  class: "coffee_form" do %>
 
             <%= label_tag Product.human_attribute_name("grind_options") %>
             <br>
             <% raw_str = [] %>
+            <%= grind_choices = t(".grind_options") %>
+
+            <%= t("grind_op_att.#{@product.grind_options}") %>
             <% @product.grind_options.each do |item| %>
               <% raw_str << "<option>#{item}</option>" %>
             <% end %>
@@ -29,7 +32,7 @@
             <%= select_tag "grind", raw("#{raw_str}"), multiple: false, class:"coffee_form btn-block form-control-lg"  %>
             <br>
 
-            <%= label_tag 'Weight (gr)'  %>
+            <%= label_tag Product.human_attribute_name("weight")%>
             <%= select_tag "weight", raw("<option>250</option><option>1000</option>"), multiple: false, class:"coffee_form btn-block form-control-lg", id:"selected_weight", onchange: "displayPrice();"  %>
 
             <br>
@@ -58,8 +61,8 @@
         <% if @product.category.name == 'coffee' %>
 
           <p><%=Product.human_attribute_name("region").capitalize%>: <%=@product.region%> </p>
-          <p><%=Product.human_attribute_name("process").capitalize%>: <%= t('process', process: @product.process)  %> </p>
-          <p><%=@product.description%></p>
+          <p><%=Product.human_attribute_name("process").capitalize%>: <%= t("process_att")  %> </p>
+          <p><%= t("description_att.#{@product.description}")%></p>
           <% if current_user && current_user.admin %>
             <%= link_to 'Edit', edit_product_path(@product) %>
           <% end %>

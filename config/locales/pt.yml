@@ -1,4 +1,4 @@
----
+
 pt:
   about_nav: SOBRE NÓS
   activerecord:
@@ -8,9 +8,12 @@ pt:
         description: descrição
         grind_options: moagem
         name: nome
-        process: process
-        region: region
-        origin: origin
+        process: processo
+        region: região
+        origin: origem
+        weight: peso(gr)
+        quantity: quantidade
+
     models:
       product: produto
   brew_nav: PREPARAÇÃO
@@ -18,6 +21,29 @@ pt:
   contact_email: coloque o seu email
   contact_touch: MANTER CONTACTO
   contact_nav: CONTACTO
+
+  process_att: lavado
+
+  grind_op_att:
+    columb_amaca_grind:
+    - Grão
+    - Filtro
+    - Espresso
+    - Aeropress
+    columb_fudam_grind:
+    - Grão
+    - Filtro
+    - Espresso
+    - Aeropress
+    ethiopia_grind:
+    - Grão
+    - Filtro
+    - Aeropress
+    nica_grind:
+    - Grão
+    - Filtro
+    - Aeropress
+
   origin_att:
     columb_amaca_origin: Colombia
     columb_fudam_origin: Colombia
@@ -84,25 +110,6 @@ pt:
   errors:
     messages:
       not_saved: Not saved
-  grind_op_att:
-    columb_amaca_grind:
-    - Grão
-    - Filtro
-    - Espresso
-    - Aeropress
-    columb_fudam_grind:
-    - Grão
-    - Filtro
-    - Espresso
-    - Aeropress
-    ethiopia_grind:
-    - Grão
-    - Filtro
-    - Aeropress
-    nica_grind:
-    - Grão
-    - Filtro
-    - Aeropress
 
   login: entrar
   logout: sair
@@ -207,6 +214,11 @@ pt:
       selection: A nossa selecção de cafés
       subscribe: Subscreva
       subscribe_text: Receba o seu café em casa ou ofereça
+      origin_att:
+        columb_amaca_origin: Colombia
+        columb_fudam_origin: Colombia
+        ethiopia_origin: Etiópia
+        nica_origin: Nicarágua
   process: Process
   process_att: lavado
   shared:

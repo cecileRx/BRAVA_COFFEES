@@ -1,4 +1,4 @@
----
+
 en:
   about_nav: ABOUT
   activerecord:
@@ -11,23 +11,51 @@ en:
         process: process
         region: region
         origin: origin
+        weight: weight(gr)
+
     models:
       product: product
+
   brew_nav: BREWING
   coffees_nav: COFFEES
   contact_email: enter your email
   contact_touch: STAY IN TOUCH
   contact_nav: CONTACT
+
+  process_att: washed
+
   origin_att:
     columb_amaca_origin: Colombia
     columb_fudam_origin: Colombia
     ethiopia_origin: Ethiopia
     nica_origin: Nicaragua
+
   cup_notes_att:
     columb_amaca_cp: caramel, apple
     columb_fudam_cp: tropical fruits, tamarind
     ethiopia_cp: pear, floral
     nica_cp: coffee cherry, lemon
+
+  grind_op_att:
+    columb_amaca_grind:
+    - Whole Beans
+    - filter
+    - Espresso
+    - Aeropress
+    columb_fudam_grind:
+    - Whole Beans
+    - filter
+    - Espresso'
+    - Aeropress
+    ethiopia_grind:
+    - Whole Beans
+    - filter
+    - Aeropress
+    nica_grind:
+    - Whole Beans
+    - Filter
+    - Aeropress
+
   description_att:
     chemex_desc: CHEMEX delivers the purest flavor experience. Made of non-porous
       Borosilicate glass which will not absorb odors or chemical residues. CHEMEX
@@ -88,25 +116,7 @@ en:
   errors:
     messages:
       not_saved: Not saved
-  grind_op_att:
-    columb_amaca_grind:
-    - Whole Beans
-    - filter
-    - Espresso
-    - Aeropress
-    columb_fudam_grind:
-    - Whole Beans
-    - filter
-    - Espresso'
-    - Aeropress
-    ethiopia_grind:
-    - Whole Beans
-    - filter
-    - Aeropress
-    nica_grind:
-    - Whole Beans
-    - Filter
-    - Aeropress
+
   login: login
   logout: Logout
   name_att:
@@ -212,6 +222,7 @@ en:
       selection: Our selection of coffees
       subscribe: Subscribe
       subscribe_text: Get your coffee at your doorstep, or offer it
+
   process: Process
   process_att: washed
   shared:
