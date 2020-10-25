@@ -1,167 +1,222 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
-
-
+---
 en:
+  about_nav: ABOUT
   activerecord:
-    models:
-      product: product
     attributes:
       product:
-        name: "name"
-        region: "region"
-        process: "process"
-        cupping_notes: "cupping notes"
-        grind_options: "grind_options"
-        description: "description"
-
-  process: "washed"
-  cup_notes:
-    nica_cp: 'coffee cherry, lemon'
-    columb_fudam_cp: 'tropical fruits, tamarind'
-
-  # navbar
-  login: "login"
-  logout: "Logout"
-  coffees_nav: "COFFEES"
-  equipment_nav: "EQUIPMENT"
-  brew_nav: "BREWING"
-  about_nav: "ABOUT"
-  subscribe_nav: "SUBSCRIBE"
-  contact_nav: "CONTACT"
-
-  # footer contact_form
-  contact_email: "enter your email"
-  submit_email: "Thanks!"
-
-
+        cupping_notes: cupping notes
+        description: description
+        grind_options: grind_options
+        name: name
+        process: process
+        region: region
+        origin: origin
+    models:
+      product: product
+  brew_nav: BREWING
+  coffees_nav: COFFEES
+  contact_email: enter your email
+  contact_touch: STAY IN TOUCH
+  contact_nav: CONTACT
+  origin_att:
+    columb_amaca_origin: Colombia
+    columb_fudam_origin: Colombia
+    ethiopia_origin: Ethiopia
+    nica_origin: Nicaragua
+  cup_notes_att:
+    columb_amaca_cp: caramel, apple
+    columb_fudam_cp: tropical fruits, tamarind
+    ethiopia_cp: pear, floral
+    nica_cp: coffee cherry, lemon
+  description_att:
+    chemex_desc: CHEMEX delivers the purest flavor experience. Made of non-porous
+      Borosilicate glass which will not absorb odors or chemical residues. CHEMEX
+      pour-over allows coffee to be covered and refrigerated for reheating without
+      losing flavor Simple, easy to use with timeless, elegant design
+    columb_amaca_desc: AMACA stands for Asociación de Mujeres Productoras Agropecuarias
+      del Cauca, a group of 80 women’ producers who are based in El Tambo, Cauca,
+      Colombia since 1999. This association has registered a steady growth and, today,
+      it counts up to 140 women from three different villages in the same region.
+      All of these women own the land they farm and are the heads of their households.
+      The average farm size is one hectare per member, with many even smaller. Most
+      members harvest only fully ripe cherries which are de-pulped on the same day
+      of harvest and are then processed on their farms. Drying is done on raised beds
+      inside parabolic dryers.
+    columb_fudam_desc: 'FUDAM stands for Fundación Agraria y Ambiental Para el Desarrollo
+      Sostentible - a 300 member’s association of organic and Rainforest Alliance
+      certified coffee growers founded in the year 2000. This group of smallholders
+      lives in and around the municipality of La Unión in Nariño. Villages are at
+      such high altitude that the growing areas, instead of being in higher grounds,
+      lay bellow, surrounded by beautiful high peaks and rough roads. Today, FUDAM''s
+      growers still firmly believe in the principles of sustainability, the ideal
+      that brought them together. Recently, when asked why they continue to farm organically,
+      despite the pressure to rely on chemical inputs, the association explained:
+      ''This is just how we live; these are our values and our way of life.'''
+    ethiopia_desc: Tega & Tula speciality Coffee Farm located at Keffa province bio-reserve,
+      takes its name after the two nearby villages in Woreda, Gibo district, Keffa,
+      Ethiopia. The farm spreads out through 500 hectares where 400 hectares are planted
+      with different coffee varieties. Ethiopian varieties, cultivars from the 70s
+      as well as wild coffee from the Keffa forest, together all contribute for the
+      uniqueness of the coffee grown here. Coffee harvest and de-pulping always takes
+      place on the same day. The coffee beans are then fermented underwater for 36
+      hours. Is this anaerobic fermentation that enhances the flavors and aromas of
+      each and every bean. It is then washed in local canals and thereafter, spends
+      between 16 and18 hours soaking in a tank before being spread on the drying tables.
+      It takes washed coffee beans between 7 to 11 days to dry out.
+    chemex_3_filter_desc: Paper filters for chemex 3 cups
+    chemex_6_filter_desc: Paper filters for chemex 6 cups
+    mesh_dripper_desc: Dripper with double mesh filters. It is made solely of stainless steel.
+      The metal filters allow the coffee oil to slowly pour through, letting you enjoy
+      coffee with a deep aroma.
+    hario_01_desc: 'paper filters for V60 - 01 to 02 cups size'
+    hario_02_desc: 'paper filters for V60 - 01 to 04 cups size'
+    kit_v_60_desc: This particular coffee dripper is made of copper - a particularly
+      high-end dripper, but they come in ceramic for maximum heat retention, cost-effective
+      plastic, and heat-proof glass. Also, you can choose from three different sizes
+      01 / 02 and 03, depending on your needs.
+    nica_desc: Cerro de Jesus or Jesus Mountain Farm is located in Jalapa, Neuva Segovia,
+      on the second highest peak of Nicaragua. The farm spreads through 700 hectares
+      of which about 400 hectares are a beautiful forest reserve. In 2017, Jesus Mountain
+      Farm decided to partner with Cafetos de Segovia, a small specialty mill and
+      export company run by two sisters Martha and Ana Albir. The Albir sisters inherited
+      from their father the passion and knowledge to grow their own coffee. Later
+      they acquired a mill and by 2016 they were providing milling and export services
+      to neighboring small coffee farms. This new venture allowed them to contact
+      directly with farms with socially conscious practices and they were also able
+      to focus in separating of coffee by variety.
+  equipment_nav: EQUIPMENT
+  errors:
+    messages:
+      not_saved: Not saved
+  grind_op_att:
+    columb_amaca_grind:
+    - Whole Beans
+    - filter
+    - Espresso
+    - Aeropress
+    columb_fudam_grind:
+    - Whole Beans
+    - filter
+    - Espresso'
+    - Aeropress
+    ethiopia_grind:
+    - Whole Beans
+    - filter
+    - Aeropress
+    nica_grind:
+    - Whole Beans
+    - Filter
+    - Aeropress
+  login: login
+  logout: Logout
+  name_att:
+    Mesh_dripper_name: Double Mesh Metal Dripper 1_2 cups
+    chemex_6_name: Chemex 6 cups
+    chemex_3_name: Chemex 3 cups
+    chemex_3_filter_name: Chemex 3 cups filters
+    chemex_6_filter_name: Chemex 6 cups filters
+    hario_01_name: Hario V60 Coffee paper filters 01
+    hario_02_name: Hario V60 Coffee paper filters 02
+    V60: Kit V60
   pages:
-  # homepage
-    home:
-      brava_intro_1: "Brava is an artisanal specialty coffee roaster."
-      brava_intro_2: "We've taken in our own hands the beautiful mission of offering you just the perfect cup of coffee."
-      brava_intro_3: "Our beans are chosen among the best in the world, produced by agricultural communities with sustainable practices, ethically and environmentally."
-
-      selection: "Our selection of coffees"
-      discover: "Discover"
-
-      subscribe_text: "Get your coffee at your doorstep, or offer it"
-      subscribe: "Subscribe"
-      gift: "Send a gift!"
-
-      brew_title: "How do you brew?"
-      brew_line_html: "Learn the art of<strong> Mocha</strong>, <strong>French press</strong> and other processes with our"
-      brewing_guides: "brewing guides."
-      brew_way: "Want to try a new way ?"
-      check: "Check our"
-      brewing_eq: "brewing equipment!"
-
-  # footer
-      contact: "CONTACT US"
-      follow: "FOLLOW BRAVA"
-      contact_touch: "STAY IN TOUCH"
-
-  # brewing
-    brewing:
-      french_press: "French press"
-      fp_1: "Grind the coffee beans coarsely (think of breadcrumbs) and for each 300gr of water use 22 gr of coffee."
-      fp_2: "Heat the coffee maker with hot water, gradually so as not to break the glass (the infusion temperature drops quickly if the French press is cold and prevents the coffee from getting lukewarm at the end)."
-      fp_3: "Remove the hot water and add the ground coffee."
-      fp_4: "Heat the water to around 96º C. Pour the water and stir a few times."
-      fp_5: "Close the lid and press the plunger down to the water level. Leave to infuse for 4 minutes."
-      fp_6: "After those 4 minutes, push slowly the plunger all the way."
-      fp_7: "Enjoy your coffee!"
-
-      mocha: "Mocha"
-      mocha_guide_html: "<li>Grind the coffee beans.</li>
-          <br>
-          <li>Fill the base of your mocha with hot water up to the line.</li>
-           <br>
-          <li>Place the funnel in the boiler chamber (the base).</li>
-           <br>
-          <li>Fill the funnel filter loosely with coffee grounds without compacting.</li>
-           <br>
-          <li>Screw the upper chamber into the boiler.</li>
-           <br>
-          <li>Place the mocha on the stove over low or medium heat.</li>
-           <br>
-          <li>If you used hot water, after two minutes the coffee will begin to flow; If you used cold water, wait until the upper reservoir is full.</li>
-           <br>
-          <li>When the coffee starts to flow in the upper part, immediately remove it from the heat. The residual heat will be sufficient to finish the infusion.</li>
-           <br>
-          <li>Pour into cups immediately and enjoy!</li>"
-
-      v60: "V60"
-      v_guide_html: "<li>Place the filter paper in the cone and boil the water at about 96ºC</li>
-          <br>
-          <li>Rinse the filter paper. This eliminates any paper taste and heats the server.</li>
-          <br>
-          <li>Add coffee</li>
-          <br>
-          <li>Start with a ratio of 22g of coffee to 300ml of water (3 tbs= 21gr)</li>
-          <br>
-          <li>Pre-prepare the coffee: saturate the ground just enough water to cover the ground coffee in a circular motion and wait 30 seconds for the coffee to “bloom”.</li>
-          <br>
-          <li>Pour the remaining water in a circular motion.</li>
-          <br>
-          <li>After finishing the extraction, stir the coffee a little to mix the flavours and serve</li>
-          <br>
-          <li>The goal is a total extraction time (including 30 seconds before infusion) up to about 3 minutes</li>"
-
-      chemex: "CHEMEX"
-      chemex_html: "<li>Fold the CHEMEX® coffee filter, make sure the three thickness of the filter are across the vent.</li>
-          <br>
-          <li>Coffee ratio should be 19 grams per 250ml, into the filter cone (one teaspoon is approximately 5 grams of coffee).</li>
-          <br>
-          <li>Moisten the filter with warm water to rinse and preheat the coffee maker; as soon as the water is completely drained by the filter, pour it from the coffee maker keeping the filter sealed against the wall of the coffee maker.</li>
-          <br>
-          <li>Pour a small amount of water over the grinded coffee (just enough to wet the surface of the coffee, without floating them, as this pre-wetting allows coffee to “bloom,” and prepare for an even infusion) and wait 30 seconds.</li>
-          <br>
-          <li>Pour the rest of the water slowly in a circular motion into the coffee, but keep the water level well below the top of the coffee maker.</li>
-          <br>
-          <li>Once the desired amount of coffee is brewed, lift the filter with spent grounds out of the brewer and discard.</li>
-          <br>
-          <li>Serve and enjoy! </li>"
-
-      intro_brewing_html: "There is no correct way to prepare a cup of coffee.
-          <br>
-          There are so many variables at play when making a great cup of coffee - water, grind, equipment.. -
-          <br>
-          This is just a suggestion for a starting point.
-          <br><strong>Feel free to play with the weights and preparation times to get the perfect cup!</strong>"
-  # about us
     about:
-      about_text_1_html: "<strong>Brava</strong> is a micro coffee roaster based in Lisbon, founded in 2018 by Joana and Susana out of the desire to find “the perfect cup of coffee”. Following strict principles in the choice of beans, bringing together the best coffees and transforming the characteristics of the grain into unique sensations for the palate, through a careful roasting process."
-      about_text_quote: "We believe that coffee is not a product, but an entire experience."
-      about_text_2_html: "For over 20 years, Joana and Susana, have been involved in the world of restaurants and bars in Lisbon, always looking for the balance between the multiple inspirations they have been collecting on various trips and the experiences the city can offer. On their trips they confirmed that coffee is much more than just a drink. Going to drink a coffee has also means an encounter. Coffee gathers people around, it’s a pretext for sharing and creating
-            bonds. Drinking a specialty coffee takes this experience to a higher level, a coffee of excellence tells a story of community, culture, dedication, involvement and passion."
+      about_text_1_html: "<strong>Brava</strong> is a micro coffee roaster based in
+        Lisbon, founded in 2018 by Joana and Susana out of the desire to find “the
+        perfect cup of coffee”. Following strict principles in the choice of beans,
+        bringing together the best coffees and transforming the characteristics of
+        the grain into unique sensations for the palate, through a careful roasting
+        process."
+      about_text_2_html: For over 20 years, Joana and Susana, have been involved in
+        the world of restaurants and bars in Lisbon, always looking for the balance
+        between the multiple inspirations they have been collecting on various trips
+        and the experiences the city can offer. On their trips they confirmed that
+        coffee is much more than just a drink. Going to drink a coffee has also means
+        an encounter. Coffee gathers people around, it’s a pretext for sharing and
+        creating bonds. Drinking a specialty coffee takes this experience to a higher
+        level, a coffee of excellence tells a story of community, culture, dedication,
+        involvement and passion.
+      about_text_quote: We believe that coffee is not a product, but an entire experience.
+    brewing:
+      chemex: CHEMEX
+      chemex_html: "<li>Fold the CHEMEX® coffee filter, make sure the three thickness
+        of the filter are across the vent.</li> <br> <li>Coffee ratio should be 19
+        grams per 250ml, into the filter cone (one teaspoon is approximately 5 grams
+        of coffee).</li> <br> <li>Moisten the filter with warm water to rinse and
+        preheat the coffee maker; as soon as the water is completely drained by the
+        filter, pour it from the coffee maker keeping the filter sealed against the
+        wall of the coffee maker.</li> <br> <li>Pour a small amount of water over
+        the grinded coffee (just enough to wet the surface of the coffee, without
+        floating them, as this pre-wetting allows coffee to “bloom,” and prepare for
+        an even infusion) and wait 30 seconds.</li> <br> <li>Pour the rest of the
+        water slowly in a circular motion into the coffee, but keep the water level
+        well below the top of the coffee maker.</li> <br> <li>Once the desired amount
+        of coffee is brewed, lift the filter with spent grounds out of the brewer
+        and discard.</li> <br> <li>Serve and enjoy! </li>"
+      fp_1: Grind the coffee beans coarsely (think of breadcrumbs) and for each 300gr
+        of water use 22 gr of coffee.
+      fp_2: Heat the coffee maker with hot water, gradually so as not to break the
+        glass (the infusion temperature drops quickly if the French press is cold
+        and prevents the coffee from getting lukewarm at the end).
+      fp_3: Remove the hot water and add the ground coffee.
+      fp_4: Heat the water to around 96º C. Pour the water and stir a few times.
+      fp_5: Close the lid and press the plunger down to the water level. Leave to
+        infuse for 4 minutes.
+      fp_6: After those 4 minutes, push slowly the plunger all the way.
+      fp_7: Enjoy your coffee!
+      french_press: French press
+      intro_brewing_html: There is no correct way to prepare a cup of coffee. <br>
+        There are so many variables at play when making a great cup of coffee - water,
+        grind, equipment.. - <br> This is just a suggestion for a starting point.
+        <br><strong>Feel free to play with the weights and preparation times to get
+        the perfect cup!</strong>
+      mocha: Mocha
+      mocha_guide_html: "<li>Grind the coffee beans.</li> <br> <li>Fill the base of
+        your mocha with hot water up to the line.</li> <br> <li>Place the funnel in
+        the boiler chamber (the base).</li> <br> <li>Fill the funnel filter loosely
+        with coffee grounds without compacting.</li> <br> <li>Screw the upper chamber
+        into the boiler.</li> <br> <li>Place the mocha on the stove over low or medium
+        heat.</li> <br> <li>If you used hot water, after two minutes the coffee will
+        begin to flow; If you used cold water, wait until the upper reservoir is full.</li>
+        <br> <li>When the coffee starts to flow in the upper part, immediately remove
+        it from the heat. The residual heat will be sufficient to finish the infusion.</li>
+        <br> <li>Pour into cups immediately and enjoy!</li>"
+      v60: V60
+      v_guide_html: "<li>Place the filter paper in the cone and boil the water at
+        about 96ºC</li> <br> <li>Rinse the filter paper. This eliminates any paper
+        taste and heats the server.</li> <br> <li>Add coffee</li> <br> <li>Start with
+        a ratio of 22g of coffee to 300ml of water (3 tbs= 21gr)</li> <br> <li>Pre-prepare
+        the coffee: saturate the ground just enough water to cover the ground coffee
+        in a circular motion and wait 30 seconds for the coffee to “bloom”.</li> <br>
+        <li>Pour the remaining water in a circular motion.</li> <br> <li>After finishing
+        the extraction, stir the coffee a little to mix the flavours and serve</li>
+        <br> <li>The goal is a total extraction time (including 30 seconds before
+        infusion) up to about 3 minutes</li>"
 
+    home:
+      brava_intro_1: Brava is an artisanal specialty coffee roaster.
+      brava_intro_2: We've taken in our own hands the beautiful mission of offering
+        you just the perfect cup of coffee.
+      brava_intro_3: Our beans are chosen among the best in the world, produced by
+        agricultural communities with sustainable practices, ethically and environmentally.
+      brew_line_html: Learn the art of<strong> Mocha</strong>, <strong>French press</strong>
+        and other processes with our
+      brew_title: How do you brew?
+      brew_way: Want to try a new way ?
+      brewing_eq: brewing equipment!
+      brewing_guides: brewing guides.
+      check: Check our
+      contact: CONTACT US
+      discover: Discover
+      follow: FOLLOW BRAVA
+      gift: Send a gift!
+      selection: Our selection of coffees
+      subscribe: Subscribe
+      subscribe_text: Get your coffee at your doorstep, or offer it
+  process: Process
+  process_att: washed
+  shared:
+    navbar:
+      login: Login
+      logout: Logout
+  submit_email: Thanks!
+  subscribe_nav: SUBSCRIBE

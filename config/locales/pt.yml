@@ -1,131 +1,217 @@
+---
 pt:
+  about_nav: SOBRE NÓS
   activerecord:
-    models:
-      product: product
     attributes:
       product:
-        name: "nome"
-        region: "região"
-        cupping_notes: "cupping notes"
-        grind_options: "grao op"
-        description: "description"
+        cupping_notes: notas
+        description: descrição
+        grind_options: moagem
+        name: nome
+        process: process
+        region: region
+        origin: origin
+    models:
+      product: produto
+  brew_nav: PREPARAÇÃO
+  coffees_nav: CAFÉS
+  contact_email: coloque o seu email
+  contact_touch: MANTER CONTACTO
+  contact_nav: CONTACTO
+  origin_att:
+    columb_amaca_origin: Colombia
+    columb_fudam_origin: Colombia
+    ethiopia_origin: Etiópia
+    nica_origin: Nicarágua
+  cup_notes_att:
+    columb_amaca_cp: caramelo, maçã
+    columb_fudam_cp: frutos tropicais, tamarindo
+    ethiopia_cp: pera, floral
+    nica_cp: cereja do café, limão
+  description_att:
+    chemex_desc: CHEMEX delivers the purest flavor experience. Made of non-porous
+      Borosilicate glass which will not absorb odors or chemical residues. CHEMEX
+      pour-over allows coffee to be covered and refrigerated for reheating without
+      losing flavor Simple, easy to use with timeless, elegant design
+    columb_amaca_desc: AMACA – Asociación de Mujeres Productoras Agropecuarias del
+      Cauca, é um grupo de mulheres produtoras de El Tambo, Cauca, Colômbia. Desde
+      1999, a associação foi crescendo e hoje conta com 140 mulheres de três aldeias
+      diferentes na mesma região. Todas são proprietárias da terra que cultivam e
+      são chefes das suas famílias. O tamanho médio da fazenda é de um hectare por
+      membro. A colheita é feita apenas de cerejas maduras que são despolpadas no
+      mesmo dia da apanha e depois são processadas nas próprias fazendas. A secagem
+      é feita em camas elevadas dentro de secadores parabólicos.
+    columb_fudam_desc: 'FUDAM – Fundación Agraria y Ambiental para el Desarrollo Sostentible
+      é uma associação colombiana fundada em 2000, que integra 300 cafeicultores orgânicos
+      certificados pela Rainforest Alliance. Este grupo de pequenos proprietários
+      vive no município de La Unión, em Nariño. As aldeias encontram-se a uma altitude
+      tão elevada que as áreas de cultivo, em vez de estarem nos terrenos mais altos,
+      situam-se mais abaixo, cercadas por belos picos altos e estradas irregulares.
+      Os produtores da FUDAM acreditam firmemente nos princípios da sustentabilidade:
+      ''É assim que vivemos, estes são os nossos valores e o nosso modo de vida.'''
+    ethiopia_desc: Tega & Tula são produtores de café de especialidade localizados
+      na reserva biológica da província de Keffa, na Etiópia. A propriedade estende-se
+      por 500 hectares, dos quais 400 hectares são plantados com diferentes variedades
+      de café. As varietais etíopes, as cultivares dos anos 70 e o café selvagem da
+      floresta Keffa contribuem para a singularidade do café cultivado nesta região.
+      A colheita e despolpagem do café são efetuados no mesmo dia. Os grãos são então
+      fermentados debaixo de água durante 36 horas e é essa fermentação anaeróbica
+      que aprimora os sabores e aromas de cada grão. Em seguida, é lavado em canais
+      locais e, posteriormente, é mantido entre 16 a 18 horas em imersão num tanque
+      antes de ser espalhado nas mesas de secagem. Os grãos de café lavados demoram
+      entre 7 a 11 dias a secar.
+    chemex_3_filter_desc: Filtros de papel para chemex 3 cups
+    chemex_6_filter_desc: Filtros de papel para chemex 6 cups
+    mesh_dripper_desc: Este filtro de malha de aço inoxidável de dupla camada garante o fluxo de ar correto para uma extração uniforme, proporcionando uma chávena de café sem sedimentos e mantendo muitos dos óleos para uma bebida rica e completa.
+    hario_01_desc: Filtros de papel para V60 - 01 to 02 cups
+    hario_02_desc: Filtros de papel para V60 - 01 to 04 cups
+    kit_v_60_desc: This particular coffee dripper is made of copper - a particularly
+      high-end dripper, but they come in ceramic for maximum heat retention, cost-effective
+      plastic, and heat-proof glass. Also, you can choose from three different sizes
+      01 / 02 and 03, depending on your needs.
+    nica_desc: O Cerro de Jesus está localizado em Jalapa, no segundo pico mais alto
+      da Nicarágua. A propriedade estende-se por 700 hectares, dos quais cerca de
+      400 hectares são uma bela reserva florestal. Em 2017, efetuaram uma parceria
+      com a Cafetos de Segovia, uma pequena estação de processamento de café de especialidade
+      e empresa de exportação administrada por Martha e Ana Albir. Estas irmãs, que
+      herdaram do pai a paixão e o conhecimento para cultivar seu próprio café, adquiriram
+      em 2016 a Cafetos de Segovia e começaram a fornecer serviços de processamento
+      e exportação para pequenos produtores de café locais, entrando em contato direto
+      com práticas socialmente conscientes e dedicando-se à separação do café por
+      variedade.
+  equipment_nav: EQUIPAMENTO
 
-  process: "lavado"
-  cup_notes:
-    nica_cp: 'café, limão'
-    columb_fudam_cp: 'limão'
+  errors:
+    messages:
+      not_saved: Not saved
+  grind_op_att:
+    columb_amaca_grind:
+    - Grão
+    - Filtro
+    - Espresso
+    - Aeropress
+    columb_fudam_grind:
+    - Grão
+    - Filtro
+    - Espresso
+    - Aeropress
+    ethiopia_grind:
+    - Grão
+    - Filtro
+    - Aeropress
+    nica_grind:
+    - Grão
+    - Filtro
+    - Aeropress
 
-  # navbar
-  login: "login"
-  logout: "Logout"
-  coffees_nav: "COFFEES"
-  equipment_nav: "EQUIPMENT"
-  brew_nav: "BREWING"
-  about_nav: "ABOUT"
-  subscribe_nav: "SUBSCRIBE"
-  contact_nav: "CONTACT"
-
-  # footer contact_form
-  contact_email: "enter your email"
-  submit_email: "Thanks!"
-
+  login: entrar
+  logout: sair
+  name_att:
+    Mesh_dripper_name: Filtro de malha dupla de aço inoxidável 1_2 cups
+    chemex_6_name: Chemex 6 cups
+    chemex_3_name: Chemex 3 cups
+    chemex_3_filter_name: Filtros Chemex 3 cups
+    chemex_6_filter_name: Filtros Chemex 6 cups
+    hario_01_name: Filtros V60 Hario 01
+    hario_02_name: Filtros V60 Hario 02
+    V60: Kit V60
   pages:
-  # homepage
-    home:
-      brava_intro_1: "Brava é uma torrefatora artesanal de cafés de especialidade."
-      brava_intro_2: "Ela nasce da vontade de encontrar a chávena perfeita."
-      brava_intro_3: "Os nossos grãos são escolhidos de entre os melhores cafés do mundo, produzidos por comunidades agrícolas com práticas sustentáveis, ética e ambientalmente."
-
-      selection: "Our selection of coffees"
-      discover: "Discover"
-
-      subscribe_text: "Get your coffee at your doorstep, or offer it"
-      subscribe: "Subscribe"
-      gift: "Send a gift!"
-
-      brew_title: "How do you brew?"
-      brew_line_html: "Learn the art of<strong> Mocha</strong>, <strong>French press</strong> and other processes with our"
-      brewing_guides: "brewing guides."
-      brew_way: "Want to try a new way ?"
-      check: "Check our"
-      brewing_eq: "brewing equipment!"
-
-  # footer
-      contact: "CONTACT US"
-      follow: "FOLLOW BRAVA"
-      contact_touch: "STAY IN TOUCH"
-
-  # brewing
-    brewing:
-      french_press: "Cafeteira francesa"
-      fp_1: "Moa os grãos de café (tipo pão ralado), usando para cada 300gr de água 22gr de café."
-      fp_2: "Aqueça a cafeteira com água quente, gradualmente para não partir o vidro (a temperatura da infusão baixa rapidamente se a cafeteira estiver fria e, para além de evitar que o café fique morno no final, também ajuda a uma extração adequada)."
-      fp_3: "Remova a água quente e adicione o café moído."
-      fp_4: "Aqueça a água por volta 96ºC, despeje a água e mexa algumas vezes."
-      fp_5: "Feche a tampa e pressione o êmbolo até o nível da água, deixando em infusão 4 minutos."
-      fp_6: "Após esses 4 minutos, empurre lentamente o êmbolo até o fim."
-      fp_7: "Saboreie o seu café!"
-
-      mocha: "Moca"
-      mocha_guide_html: "<li>Moa os grãos de café.</li>
-          <br>
-          <li>Encha a base da sua cafeteira com água quente até a linha.</li>
-           <br>
-          <li>Coloque o funil na base da cafeteira.</li>
-           <br>
-          <li>Encha vagamente o filtro-funil com borra de café sem compactar.</li>
-           <br>
-          <li>Enrosque a câmara superior na caldeira.</li>
-           <br>
-          <li>Coloque a cafeteira no fogão em lume baixo ou médio.</li>
-           <br>
-          <li>Se usou água quente, após dois minutos, o café começará a fluir; se usou água fria, aguarde até o reservatório superior ficar cheio.</li>
-           <br>
-          <li>Quando o café começar a fluir na parte superior, retire-o do lume; o calor residual será suficiente para terminar a infusão.</li>
-           <br>
-          <li>Sirva a chávena e saboreie!</li>"
-
-      v60: "V60"
-      v_guide_html: "<li>Coloque o papel de filtro no cone e ferva a água a cerca de 96ºC</li>
-          <br>
-          <li>Enxague o papel de filtro (assim elimina qualquer gosto de papel e aquece o bule).</li>
-          <br>
-          <li>Adicione o café</li>
-          <br>
-          <li>Comece com uma proporção de 22g de café para 300ml de água (3cs= 21gr)</li>
-          <br>
-          <li>Pré-prepare o café: sature o café com água apenas o suficiente para cobrir o café moído em movimentos circulares e aguarde 30 segundos para café florescer.</li>
-          <br>
-          <li>Deite a restante água em movimentos circulares.</li>
-          <br>
-          <li>Depois de terminar a extração, mexa um pouco o café para misturar os sabores e sirva</li>
-          <br>
-          <li>O objetivo é um tempo total de extração (incluindo 30 segundos antes da infusão) até cerca de 3 minutos</li>"
-
-      chemex: "CHEMEX"
-      chemex_html: "<li>Dobre o filtro de café, certificando-se de que a parte mais espessa do filtro está na abertura </li>
-          <br>
-          <li>Coloque 19gr de café por 250ml de água a 96ºC, no cone do filtro (uma colher de chá equivale a aproximadamente 5gr de café).</li>
-          <br>
-          <li>Humedeça o filtro com água morna para enxaguar e pré-aquecer a Chemex; quando a água for totalmente drenada pelo filtro, despeje-a da cafeteira mantendo o filtro vedado contra a parede da Chemex</li>
-          <br>
-          <li>Despeje um pouco de água sobre o café moído (apenas o suficiente para molhar o café, sem fazê-lo flutuar, o pré-umedecimento permite que o café “floresça” e a infusão seja uniforme) e espere 30 segundos </li>
-          <br>
-          <li>Deite o resto da água lentamente em movimentos circulares, ensopando o café, mas mantendo o nível da água bem abaixo do topo da cafeteira.</li>
-          <br>
-          <li>Uma vez que a quantidade desejada de café é distribuída, retire o filtro e descarte.</li>
-          <br>
-          <li>Sirva e aproveite!</li>"
-
-      intro_brewing_html: "Não há uma maneira certa de se preparar uma chávena de café.
-          <br>
-          Há muitas variáveis em jogo: água, moagem, equipamentos…
-          <br>
-           Estas são apenas sugestões para um ponto de partida.
-          <br><strong>Fique à vontade para experimentar quantidades e tempos de preparação, de forma a obter a “sua” chávena perfeita.</strong>"
-  # about us
     about:
-      about_text_1_html: "<strong>Brava</strong> é uma micro torrefatora baseada em Lisboa, criada em 2018 por Joana e Susana, que nasce da vontade de encontrar “a chávena perfeita”. Segue princípios rigorosos na escolha do grão, reunindo os melhores cafés e transformando as características do grão em sensações únicas para o palato, através de cuidados especiais no processo de torra."
-      about_text_quote: "Acreditamos que o café não é simplesmente um produto, mas toda uma experiência."
-      about_text_2_html: "Há mais de 20 anos que Joana e Susana estão envolvidas no universo da restauração e bares em Lisboa. Os espaços que criam resultam das múltiplas inspirações que foram recolhendo em várias viagens e das novas experiências que a cidade pode oferecer. Nas viagens que fizeram, confirmaram que o café é muito mais do que uma simples bebida. Ir beber café é, um pouco por todo o mundo, um pretexto para o encontro. O café reúne as pessoas à sua volta, acompanha a conversa, estreita laços. Beber um café de especialidade eleva esta experiência, porque um café de excelência conta uma história, de comunidade, de cultura, dedicação, envolvimento e paixão."
-
+      about_text_1_html: "<strong>Brava</strong> é uma micro torrefatora baseada em
+        Lisboa, criada em 2018 por Joana e Susana, que nasce da vontade de encontrar
+        “a chávena perfeita”. Segue princípios rigorosos na escolha do grão, reunindo
+        os melhores cafés e transformando as características do grão em sensações
+        únicas para o palato, através de cuidados especiais no processo de torra."
+      about_text_2_html: Há mais de 20 anos que Joana e Susana estão envolvidas no
+        universo da restauração e bares em Lisboa. Os espaços que criam resultam das
+        múltiplas inspirações que foram recolhendo em várias viagens e das novas experiências
+        que a cidade pode oferecer. Nas viagens que fizeram, confirmaram que o café
+        é muito mais do que uma simples bebida. Ir beber café é, um pouco por todo
+        o mundo, um pretexto para o encontro. O café reúne as pessoas à sua volta,
+        acompanha a conversa, estreita laços. Beber um café de especialidade eleva
+        esta experiência, porque um café de excelência conta uma história, de comunidade,
+        de cultura, dedicação, envolvimento e paixão.
+      about_text_quote: Acreditamos que o café não é simplesmente um produto, mas
+        toda uma experiência.
+    brewing:
+      chemex: CHEMEX
+      chemex_html: "<li>Dobre o filtro de café, certificando-se de que a parte mais
+        espessa do filtro está na abertura </li> <br> <li>Coloque 19gr de café por
+        250ml de água a 96ºC, no cone do filtro (uma colher de chá equivale a aproximadamente
+        5gr de café).</li> <br> <li>Humedeça o filtro com água morna para enxaguar
+        e pré-aquecer a Chemex; quando a água for totalmente drenada pelo filtro,
+        despeje-a da cafeteira mantendo o filtro vedado contra a parede da Chemex</li>
+        <br> <li>Despeje um pouco de água sobre o café moído (apenas o suficiente
+        para molhar o café, sem fazê-lo flutuar, o pré-umedecimento permite que o
+        café “floresça” e a infusão seja uniforme) e espere 30 segundos </li> <br>
+        <li>Deite o resto da água lentamente em movimentos circulares, ensopando o
+        café, mas mantendo o nível da água bem abaixo do topo da cafeteira.</li> <br>
+        <li>Uma vez que a quantidade desejada de café é distribuída, retire o filtro
+        e descarte.</li> <br> <li>Sirva e aproveite!</li>"
+      fp_1: Moa os grãos de café (tipo pão ralado), usando para cada 300gr de água
+        22gr de café.
+      fp_2: Aqueça a cafeteira com água quente, gradualmente para não partir o vidro
+        (a temperatura da infusão baixa rapidamente se a cafeteira estiver fria e,
+        para além de evitar que o café fique morno no final, também ajuda a uma extração
+        adequada).
+      fp_3: Remova a água quente e adicione o café moído.
+      fp_4: Aqueça a água por volta 96ºC, despeje a água e mexa algumas vezes.
+      fp_5: Feche a tampa e pressione o êmbolo até o nível da água, deixando em infusão
+        4 minutos.
+      fp_6: Após esses 4 minutos, empurre lentamente o êmbolo até o fim.
+      fp_7: Saboreie o seu café!
+      french_press: Cafeteira francesa
+      intro_brewing_html: 'Não há uma maneira certa de se preparar uma chávena de
+        café. <br> Há muitas variáveis em jogo: água, moagem, equipamentos… <br> Estas
+        são apenas sugestões para um ponto de partida. <br><strong>Fique à vontade
+        para experimentar quantidades e tempos de preparação, de forma a obter a “sua”
+        chávena perfeita.</strong>'
+      mocha: Moca
+      mocha_guide_html: "<li>Moa os grãos de café.</li> <br> <li>Encha a base da sua
+        cafeteira com água quente até a linha.</li> <br> <li>Coloque o funil na base
+        da cafeteira.</li> <br> <li>Encha vagamente o filtro-funil com borra de café
+        sem compactar.</li> <br> <li>Enrosque a câmara superior na caldeira.</li>
+        <br> <li>Coloque a cafeteira no fogão em lume baixo ou médio.</li> <br> <li>Se
+        usou água quente, após dois minutos, o café começará a fluir; se usou água
+        fria, aguarde até o reservatório superior ficar cheio.</li> <br> <li>Quando
+        o café começar a fluir na parte superior, retire-o do lume; o calor residual
+        será suficiente para terminar a infusão.</li> <br> <li>Sirva a chávena e saboreie!</li>"
+      v60: V60
+      v_guide_html: "<li>Coloque o papel de filtro no cone e ferva a água a cerca
+        de 96ºC</li> <br> <li>Enxague o papel de filtro (assim elimina qualquer gosto
+        de papel e aquece o bule).</li> <br> <li>Adicione o café</li> <br> <li>Comece
+        com uma proporção de 22g de café para 300ml de água (3cs= 21gr)</li> <br>
+        <li>Pré-prepare o café: sature o café com água apenas o suficiente para cobrir
+        o café moído em movimentos circulares e aguarde 30 segundos para café florescer.</li>
+        <br> <li>Deite a restante água em movimentos circulares.</li> <br> <li>Depois
+        de terminar a extração, mexa um pouco o café para misturar os sabores e sirva</li>
+        <br> <li>O objetivo é um tempo total de extração (incluindo 30 segundos antes
+        da infusão) até cerca de 3 minutos</li>"
+    home:
+      brava_intro_1: Brava é uma torrefatora artesanal de cafés de especialidade.
+      brava_intro_2: Ela nasce da vontade de encontrar a chávena perfeita.
+      brava_intro_3: Os nossos grãos são escolhidos de entre os melhores cafés do
+        mundo, produzidos por comunidades agrícolas com práticas sustentáveis, ética
+        e ambientalmente.
+      brew_line_html: Learn the art of<strong> Mocha</strong>, <strong>French press</strong>
+        and other processes with our
+      brew_title: Como fazer a extração?
+      brew_way: Queres experimentar uma nova forma?
+      brewing_eq: Equipamento!
+      brewing_guides: Preparação.
+      check: Ver o nosso
+      contact: CONTACTE-NOS
+      discover: Descubra
+      follow: SEGUE-NOS
+      gift: Oferta!
+      selection: A nossa selecção de cafés
+      subscribe: Subscreva
+      subscribe_text: Receba o seu café em casa ou ofereça
+  process: Process
+  process_att: lavado
+  shared:
+    navbar:
+      login: Entrar
+      logout: Sair
+  submit_email: Obrigada!
+  subscribe_nav: SUBSCRIÇÃO
