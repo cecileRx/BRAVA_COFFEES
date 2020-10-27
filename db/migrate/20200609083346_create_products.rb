@@ -5,6 +5,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :region
       t.string :process
+      t.string :grind_options
       t.text :cupping_notes
       t.text :description
       t.references :category, foreign_key: true
