@@ -11,7 +11,7 @@ pt:
         process: processo
         region: região
         origin: origem
-        weight: peso(gr)
+        weight: peso (gr)
         quantity: quantidade
 
     models:

@@ -11,7 +11,7 @@ en:
         process: process
         region: region
         origin: origin
-        weight: weight(gr)
+        weight: weight (gr)
 
     models:
       product: product

@@ -37,14 +37,14 @@
 
             <br>
 
-            <%= label_tag 'Quantity'%>
+            <%= label_tag Product.human_attribute_name("quantity")%>
             <%= number_field_tag(:quantity, 1, in: 1.0..20.0, step: 1, class:"coffee_form btn-block form-control-lg") %>
             <br>
 
             <%= hidden_field_tag 'product_id', @product.id %>
             <br>
             <div class='d-flex justify-content-between'>
-              <%= submit_tag 'Add to cart', class: 'btn btn-primary' %>
+              <%= submit_tag 'Add to cart', class: 'btn btn-warning' %>
 
               <% version_product = Product.where({name: @product.name, weight: 1000}).first %>
               <p class="hidden_value" id= "hidden_price_max"> <%= version_product.price %></p>
