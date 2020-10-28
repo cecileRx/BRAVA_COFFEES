@@ -15,6 +15,7 @@ background-color: rgba(252,252,228,0.3) !important;
 body {
    background-color: rgba(252,252,228,0.3);
 }
+
 .body h2 {
   color: $brown;
 }
@@ -167,9 +168,20 @@ body {
   margin-bottom: 2rem;
 }
 
+.btn-warning {
+  border-radius: 3px !important;
+  letter-spacing: 0.1rem;
+  color: rgba(251, 247, 228, 0.9);
+
+}
+
+.btn-warning:hover {
+  color: rgb(251, 247, 226);
+}
+
 
 #brewing .brewing-section {
-  background-color: $dark-cream;
+  background-color: #FDFCF1;
 }
 
 #brewing .brewing-section h2{
