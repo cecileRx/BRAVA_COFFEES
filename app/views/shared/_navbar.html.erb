@@ -5,30 +5,40 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
+
     <div class="flex-column container-fluid ">
-      <div class="nav-icons d-flex  align-items-center ml-auto ">
-        <% if @current_order %>
-  <!--         <div id="cart-icon" ><%= link_to order_path(@current_order) do %>
-               <i class="fa fa-shopping-cart"></i>
-              <% end %> -->
-          <div id="cart-icon"><%= link_to "", order_path(@current_order), class: 'fa fa-shopping-cart ml-2 mr-2' %>
-          </div>
-          <div id="cart-count"><%= @current_order.order_items.count %></div>
-        <% end %>
 
-          <div id="login-icon">
-            <% if user_signed_in? %>
+      <div class="icons-box d-flex container-fluid justify-content-between">
 
-                  <%= link_to t(".logout"), destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-
-          <% else %>
-
-              <%= link_to t(".login"), new_user_session_path, class: "nav-link link-style" %>
-
-          <% end %>
+          <div id= 'languages' class="up-nav-left d-flex align-items-center">
+              <div class="pr-2"><%= link_to 'En', root_path(locale: :en) %></div>
+              <div><%= link_to 'Pt', root_path(locale: :pt) %></div>
           </div>
 
-     </div>
+          <div class="up-nav-right d-flex  align-items-center">
+            <% if @current_order %>
+      <!--         <div id="cart-icon" ><%= link_to order_path(@current_order) do %>
+                   <i class="fa fa-shopping-cart"></i>
+                  <% end %> -->
+              <div id="cart-icon"><%= link_to "", order_path(@current_order), class: 'fa fa-shopping-cart ml-2 mr-2' %>
+              </div>
+              <div id="cart-count"><%= @current_order.order_items.count %></div>
+            <% end %>
+
+              <div id="login-icon">
+                <% if user_signed_in? %>
+
+                      <%= link_to t(".logout"), destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+
+              <% else %>
+
+                  <%= link_to t(".login"), new_user_session_path, class: "nav-link link-style" %>
+
+              <% end %>
+              </div>
+          </div>
+
+      </div>
 
       <div class="container-fluid px-0">
           <div class="collapse navbar-collapse" id="navbarNav">
