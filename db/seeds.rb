@@ -85,6 +85,7 @@ Product.create!(
   cupping_notes: 'nica_cp',
   description: 'nica_desc',
   photo: 'nicaragua.jpg',
+  photo_square: 'nica_s.jpg',
   category: coffee)
 
 Product.create!(
@@ -98,6 +99,7 @@ Product.create!(
   cupping_notes: 'nica_cp',
   description: 'nica_desc',
   photo: 'nicaragua.jpg',
+  photo_square: 'nica_s.jpg',
   category: coffee)
 
 Product.create!(
@@ -111,6 +113,7 @@ Product.create!(
   cupping_notes:'columb_fudam_cp',
   description: 'columb_fudam_desc',
   photo: 'columbia_fundam.jpg',
+  photo_square: 'fudam_s.jpg',
   category: coffee)
 
 Product.create!(
@@ -124,6 +127,7 @@ Product.create!(
   cupping_notes: 'columb_fudam_cp',
   description: 'columb_fudam_desc',
   photo: 'columbia_fundam.jpg',
+  photo_square: 'fudam_s.jpg',
   category: coffee)
 
 Product.create!(
@@ -136,8 +140,9 @@ Product.create!(
   grind_options: 'ethiopia_grind',
   cupping_notes: 'ethiopia_cp',
   description: 'ethiopia_desc',
-photo:'ethiopia.jpg',
-category: coffee)
+  photo:'ethiopia.jpg',
+  photo_square: 'etiopia_s.jpg',
+  category: coffee)
 
 Product.create!(
   price_cents: 3880,
@@ -149,8 +154,9 @@ Product.create!(
   grind_options: 'ethiopia_grind',
   cupping_notes: 'ethiopia_cp',
   description: 'ethiopia_desc',
-photo:'ethiopia.jpg',
-category: coffee)
+  photo:'ethiopia.jpg',
+  photo_square: 'etiopia_s.jpg',
+  category: coffee)
 
 Product.create!(
   price_cents: 1041,
@@ -163,6 +169,7 @@ Product.create!(
   cupping_notes: 'columb_amaca_cp',
   description: 'columb_amaca_desc',
   photo: 'columbia_amaca2.jpg',
+  photo_square: 'amaca_s.jpg',
   category: coffee)
 
 Product.create!(
@@ -176,6 +183,7 @@ Product.create!(
   cupping_notes: 'columb_amaca_cp',
   description: 'columb_amaca_desc',
   photo: 'columbia_amaca2.jpg',
+  photo_square: 'amaca_s.jpg',
   category: coffee)
 
 

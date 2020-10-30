@@ -8,7 +8,7 @@
 
     <div class="row pt-4">
       <div class="col-md-6 text-center d-none d-lg-block ">
-        <%= image_tag "photo_4.jpg", class:"img-fluid img-light", height: 50  %>
+        <%= image_tag "#{@product.photo_square}", class:"img-fluid img-light", height: 50  %>
 
       </div>
       <div class="col-md-6 pr-5 coffee-title">
@@ -71,43 +71,14 @@
 
     <div class="coffee_images_links col-md-12 d-flex justify-content-center">
 
-         <%= image_tag "fudam_s.jpg", class: 'mx-2', size: "160x160" %>
-         <%= image_tag "nica_s.jpg", class: 'mx-2', size: "160x160" %>
-         <%= image_tag "etiopia_s.jpg", class: 'mx-2', size: "160x160" %>
-
-
-
-
-    </div>
-
-<!--     <div class="col-md-6 pl-5">
-        <p>You might also like:</p>
           <% @coffees.each do |product| %>
-            <% @product = Product.find(params[:id]) %>
             <% if product.id != @product.id %>
-
-                <div class="col-md-4 mb-5 px-0">
-                  <%= link_to product_path(product) do %>
-
-                   <div class="card  text-white ">
-                      <div class="card-img  w-100" alt="">
-
-                            <%= image_tag "#{product.photo}", class: "img-fluid img-light"  %>
-
-                      </div>
-                      <div class="card-img-overlay light-overlay row align-items-center pr-5">
-                          <div class="col-sm-12">
-
-                           <h6 class="my-auto card-title text-center "><%= product.origin.upcase %></h6>
-                          </div>
-                      </div>
-                   </div>
-                  <% end %>
-                </div>
-
-             <% end %>
+              <%= link_to product_path(product) do %>
+                <%= image_tag "#{product.photo_square}", class: 'mx-2', size: "160x160" %>
+              <% end %>
+            <% end %>
           <% end %>
-      </div> -->
+    </div>
   </div>
 
 
