@@ -121,7 +121,7 @@ pt:
     chemex_6_filter_name: Filtros Chemex 6 cups
     hario_01_name: Filtros V60 Hario 01
     hario_02_name: Filtros V60 Hario 02
-    V60: Kit V60
+    V60_name: Kit V60
   pages:
     about:
       about_text_1_html: "<strong>Brava</strong> é uma micro torrefatora baseada em
@@ -227,3 +227,4 @@ pt:
       logout: Sair
   submit_email: Obrigada!
   subscribe_nav: SUBSCRIÇÃO
+  addcart: Adicionar

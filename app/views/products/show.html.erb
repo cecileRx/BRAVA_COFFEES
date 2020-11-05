@@ -44,7 +44,7 @@
             <%= hidden_field_tag 'product_id', @product.id %>
             <br>
             <div class='d-flex justify-content-between'>
-              <%= submit_tag 'Add to cart', class: 'btn btn-warning' %>
+              <%= submit_tag t("addcart"), class: 'btn btn-warning' %>
 
               <% version_product = Product.where({name: @product.name, weight: 1000}).first %>
               <p class="hidden_value" id= "hidden_price_max"> <%= version_product.price %></p>
@@ -83,7 +83,7 @@
 
 
   <% else %>
-    <% if @product.name != "Hario V60 Coffee paper filters 01" %>
+    <% if @product.name != "hario_01_name" %>
       <div id="a" class="row pt-4 ">
 
           <div class="col-md-6 img-equipment  text-center">
@@ -91,8 +91,8 @@
           </div>
 
           <div class="col-sm-12 col-lg-6 pr-5">
-            <h3><%= @product.name%></h3>
-            <p><%= @product.description %></p>
+            <h3><%= t("name_att.#{@product.name}")%></h3>
+            <p><%= t("description_att.#{@product.description}")%></p>
             <p><%= humanized_money_with_symbol(@product.price) %></p>
 
               <%= form_tag order_items_path do %>
@@ -123,7 +123,7 @@
                  <%= link_to "<", products_path, class: "btn btn-outline-info" %>
                </div>
 
-             <% end %>
+          <% end %>
           </div>
         </div>
         <% else %>
@@ -131,8 +131,8 @@
 
           <div class="col-md-6  img-equipment text-center">
             <%= image_tag @product.photo, class:"img-equipment", size: "260x260" %>
-             <h3><%=@product.name%></h3>
-            <p><%= @product.description %></p>
+            <h3><%= t("name_att.#{@product.name}")%></h3>
+            <p><%= t("description_att.#{@product.description}") %></p>
             <p><%= humanized_money_with_symbol(@product.price) %></p>
 
               <%= form_tag order_items_path do %>
@@ -154,10 +154,10 @@
           </div>
 
           <div class="col-md-6 img-equipment  text-center">
-            <% @product = Product.where(name: 'Hario V60 Coffee paper filters 02').take %>
+            <% @product = Product.where(name: 'hario_02_name').take %>
               <%= image_tag @product.photo, class:"img-equipment", size: "260x260" %>
-               <h3><%=@product.name%></h3>
-              <p><%= @product.description %></p>
+              <h3><%= t("name_att.#{@product.name}")%></h3>
+              <p><%= t("description_att.#{@product.description}")%></p>
               <p><%= humanized_money_with_symbol(@product.price) %></p>
 
             <%= form_tag order_items_path do %>
@@ -179,12 +179,14 @@
           </div>
         </div>
 
-      <% end %>
+      <div class="text-center pb-3">
+       <%= link_to "<", products_path, class: "btn btn-outline-info" %>
+      </div>
+
+    <% end %>
       <br>
 
-     <div class="text-center pb-3">
-       <%= link_to "<", products_path, class: "btn btn-outline-info" %>
-     </div>
+
 
   <% end %>
 

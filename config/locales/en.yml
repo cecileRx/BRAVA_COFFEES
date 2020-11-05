@@ -127,7 +127,7 @@ en:
     chemex_6_filter_name: Chemex 6 cups filters
     hario_01_name: Hario V60 Coffee paper filters 01
     hario_02_name: Hario V60 Coffee paper filters 02
-    V60: Kit V60
+    V60_name: Kit V60
   pages:
     about:
       about_text_1_html: "<strong>Brava</strong> is a micro coffee roaster based in
@@ -231,3 +231,4 @@ en:
       logout: Logout
   submit_email: Thanks!
   subscribe_nav: SUBSCRIBE
+  addcart: Add to Cart
