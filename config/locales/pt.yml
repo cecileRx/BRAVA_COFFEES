@@ -50,10 +50,14 @@ pt:
     ethiopia_origin: Etiópia
     nica_origin: Nicarágua
   cup_notes_att:
-    columb_amaca_cp: caramelo, maçã
-    columb_fudam_cp: frutos tropicais, tamarindo
-    ethiopia_cp: pera, floral
-    nica_cp: cereja do café, limão
+    columb_amaca_cp_html: "Macio e doce com acidez de fruta <br>
+Muito frutado com sabores de caramelo e maçã."
+    columb_fudam_cp_html: "Frutos tropicais com tamarindo, toranja <br>
+  Doces e salgados com acidez de fruta picante e sensação suave."
+    ethiopia_cp_html: "Doce e limpo com sensação suave na boca <br>
+Sabores de pêra e tarte de lima."
+    nica_cp_html: "Equilibrado, doce e cítrico <br>
+Sabores de cereja do café, floral, caramelo e limão."
   description_att:
     chemex_desc: CHEMEX delivers the purest flavor experience. Made of non-porous
       Borosilicate glass which will not absorb odors or chemical residues. CHEMEX

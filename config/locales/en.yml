@@ -31,10 +31,14 @@ en:
     nica_origin: Nicaragua
 
   cup_notes_att:
-    columb_amaca_cp: caramel, apple
-    columb_fudam_cp: tropical fruits, tamarind
-    ethiopia_cp: pear, floral
-    nica_cp: coffee cherry, lemon
+    columb_amaca_cp_html: "Soft and sweet with fruit acidity <br>
+Very fruity with caramel and apple flavors."
+    columb_fudam_cp_html: "Tropical fruits with tamarind <br>
+Sweet and savory with big tangy fruit acidity and a smooth mouthfeel."
+    ethiopia_cp_html: " Sweet and clean with a smooth mouthfeel <br>
+ Pear and tart lime and  flavours."
+    nica_cp_html: "Balanced, sweet and citric <br>
+Coffee cherry, floral, caramel and lemon flavors."
 
   grind_op_att:
     columb_amaca_grind:

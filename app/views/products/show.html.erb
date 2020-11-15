@@ -2,90 +2,101 @@
 <% content_for :meta_description, @product.description %>
 
 
-<div id= "products-coffees" class="container-fluid px-5">
+<div id= "products-coffees" class="container-fluid ">
 <!--   <hr style="color:blue;" > -->
   <% if @product.category.name == 'coffee' %>
 
-    <div class="row pt-4">
-      <div class="col-md-6 text-center d-none d-lg-block ">
-        <%= image_tag "#{@product.photo_square}", class:"img-fluid img-light", height: 50  %>
-
+    <div class="row main-top pt-4">
+      <div class="col-md-6 top-left text-center d-none d-lg-block ">
+        <%= image_tag "#{@product.photo_square}", class:"img-fluid img-light", height: 20  %>
       </div>
-      <div class="col-md-6 pr-5 coffee-title">
-        <h3><%= t("origin_att.#{@product.origin}").upcase%> <%= @product.name%></h3>
-
-        <p><%=Product.human_attribute_name("cupping_notes").capitalize%>: <%= t("cup_notes_att.#{@product.cupping_notes}") %></p>
-
-        <div class="form-group pr-5">
-          <%= form_tag order_items_path  class: "coffee_form" do %>
-
-            <%= label_tag Product.human_attribute_name("grind_options") %>
-            <br>
-            <% raw_str = [] %>
-            <%grind_choices = t("grind_op_att.#{@product.grind_options}") %>
-
-
-            <% grind_choices.each do |item| %>
-              <% raw_str << "<option>#{item}</option>" %>
-            <% end %>
-            <% raw_str = raw_str.join.to_s %>
-            <%= select_tag "grind", raw("#{raw_str}"), multiple: false, class:"coffee_form btn-block form-control-lg"  %>
-            <br>
-
-            <%= label_tag Product.human_attribute_name("weight")%>
-            <%= select_tag "weight", raw("<option>250</option><option>1000</option>"), multiple: false, class:"coffee_form btn-block form-control-lg", id:"selected_weight", onchange: "displayPrice();"  %>
-
-            <br>
-
-            <%= label_tag Product.human_attribute_name("quantity")%>
-            <%= number_field_tag(:quantity, 1, in: 1.0..20.0, step: 1, class:"coffee_form btn-block form-control-lg") %>
-            <br>
-
-            <%= hidden_field_tag 'product_id', @product.id %>
-            <br>
-            <div class='d-flex justify-content-between'>
-              <%= submit_tag t("addcart"), class: 'btn btn-warning' %>
-
-              <% version_product = Product.where({name: @product.name, weight: 1000}).first %>
-              <p class="hidden_value" id= "hidden_price_max"> <%= version_product.price %></p>
-              <p class="hidden_value" id= "hidden_price_min"> <%= @product.price %></p>
-              <p id="display_selected_price"> <%= humanized_money_with_symbol(@product.price) %></p>
-
-            </div>
-          <% end %>
+      <div class="col-md-6 pr-5 top-right coffee-title">
+         <h2 style= "display: inline"><%= t("origin_att.#{@product.origin}").upcase%> </h2> <h3 style= "display: inline"> <%=  @product.name%></h3>
+         <div class="coffee-choices mb-3 mt-2">
+            <h3><%= t("cup_notes_att.#{@product.cupping_notes}") %></h3>
         </div>
+        <div class="row mt-3">
+           <div class="col-md-4">
+              <div class="form-group">
+                <%= form_tag order_items_path  class: "coffee_form" do %>
+
+                <%= label_tag Product.human_attribute_name("grind_options") %>
+
+                <% raw_str = [] %>
+                <%grind_choices = t("grind_op_att.#{@product.grind_options}") %>
+
+
+                <% grind_choices.each do |item| %>
+                  <% raw_str << "<option>#{item}</option>" %>
+                <% end %>
+                <% raw_str = raw_str.join.to_s %>
+                <%= select_tag "grind", raw("#{raw_str}"), multiple: false, class:"coffee_form btn-block form-control-lg"  %>
+
+
+                <%= label_tag Product.human_attribute_name("weight")%>
+                <%= select_tag "weight", raw("<option>250</option><option>1000</option>"), multiple: false, class:"coffee_form btn-block form-control-lg", id:"selected_weight", onchange: "displayPrice();"  %>
+
+
+
+                <%= label_tag Product.human_attribute_name("quantity")%>
+                <%= select_tag("quantity", raw("<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>"), multiple: false, class:"coffee_form btn-block form-control-lg", id:"selected_quantity", onchange: "displayPrice();") %>
+
+
+                <%= hidden_field_tag 'product_id', @product.id %>
+
+                <div class='mt-3'>
+                  <%= submit_tag t("addcart"), class: 'btn btn-block btn-warning' %>
+
+                  <% version_product = Product.where({name: @product.name, weight: 1000}).first %>
+                  <p style="visibility: hidden" id= "hidden_price_max"> <%= version_product.price %></p>
+                  <p style="visibility: hidden" id= "hidden_price_min"> <%= @product.price %></p>
+                </div>
+              <% end %>
+            </div>
+          </div>
+          <div class="col-md-3 text-right" id="display_price">
+            <%= humanized_money_with_symbol(@product.price) %>
+          </div>
+        </div>
+
+        </div>
+      </div>
     </div>
 
-  <div class="row py-5">
-    <div class="coffee_description_text mb-5 col-md-12">
-        <% if @product.category.name == 'coffee' %>
 
-          <p><%=Product.human_attribute_name("region").capitalize%>: <%=@product.region%> </p>
-          <p><%=Product.human_attribute_name("process").capitalize%>: <%= t("process_att")  %> </p>
-          <p><%= t("description_att.#{@product.description}")%></p>
-          <% if current_user && current_user.admin %>
-            <%= link_to 'Edit', edit_product_path(@product) %>
+
+
+   <div class="row py-5">
+      <div class="coffee_description_text mb-5 col-md-12">
+          <% if @product.category.name == 'coffee' %>
+
+            <p><%=Product.human_attribute_name("region").capitalize%>: <%=@product.region%> </p>
+            <p><%=Product.human_attribute_name("process").capitalize%>: <%= t("process_att")  %> </p>
+            <p><%= t("description_att.#{@product.description}")%></p>
+            <% if current_user && current_user.admin %>
+              <%= link_to 'Edit', edit_product_path(@product) %>
+            <% end %>
           <% end %>
-        <% end %>
-    </div>
+      </div>
 
-    <div class="coffee_images_links col-md-12 d-flex justify-content-center">
+      <div class="coffee_images_links col-md-12 d-flex justify-content-center">
 
-          <% @coffees.each do |product| %>
-            <% if product.id != @product.id %>
-              <%= link_to product_path(product) do %>
-                <%= image_tag "#{product.photo_square}", class: 'mx-2', size: "160x160" %>
+            <% @coffees.each do |product| %>
+              <% if product.id != @product.id %>
+                <%= link_to product_path(product) do %>
+                  <%= image_tag "#{product.photo_square}", class: 'mx-2', size: "160x160" %>
+                <% end %>
               <% end %>
             <% end %>
-          <% end %>
-    </div>
-  </div>
+      </div>
+   </div>
 
 
-  <% else %>
+ <% else %>
+
     <% if @product.name != "hario_01_name" %>
-      <div id="a" class="row pt-4 ">
 
+      <div id="a" class="row pt-4 ">
           <div class="col-md-6 img-equipment  text-center">
             <%= image_tag @product.photo, class:"img-equipment" %>
           </div>
@@ -96,37 +107,36 @@
             <p><%= humanized_money_with_symbol(@product.price) %></p>
 
               <%= form_tag order_items_path do %>
+                  <div class="quantity">
 
-                <div class="quantity">
+                    <div class="input-group">
+                      <input type="button" value="-" class="button-minus" data-field="quantity">
+                      <input type="number" step="1" max="" value="1" name="quantity" class="quantity-field">
+                      <input type="button" value="+" class="button-plus" data-field="quantity">
+                    </div>
 
-                  <div class="input-group">
-                    <input type="button" value="-" class="button-minus" data-field="quantity">
-                    <input type="number" step="1" max="" value="1" name="quantity" class="quantity-field">
-                    <input type="button" value="+" class="button-plus" data-field="quantity">
+                    <%= hidden_field_tag 'product_id', @product.id %>
                   </div>
 
-                  <%= hidden_field_tag 'product_id', @product.id %>
-                </div>
+                  <div class="shop-icon">
+                    <%= button_tag(type: "submit", class: " btn btn-outline-info") do %>
+                        <i class="fa fa-shopping-cart"></i>
+                    <% end %>
+                  </div>
 
-                <div class="shop-icon">
-                  <%= button_tag(type: "submit", class: " btn btn-outline-info") do %>
-                      <i class="fa fa-shopping-cart"></i>
-                  <% end %>
-                </div>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
 
-                <br>
-                <br>
-                <br>
-                <br>
+                 <div>
+                   <%= link_to "<", products_path, class: "btn btn-outline-info" %>
+                 </div>
+              <% end %>
 
-               <div>
-                 <%= link_to "<", products_path, class: "btn btn-outline-info" %>
-               </div>
-
-          <% end %>
           </div>
-        </div>
-        <% else %>
+      </div>
+    <% else %>
         <div id="a" class="row pt-4 ">
 
           <div class="col-md-6  img-equipment text-center">

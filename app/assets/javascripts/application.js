@@ -22,7 +22,12 @@ function displayPrice() {
   const selectedWeight = document.querySelector("#selected_weight");
   let sel_weight_val = selectedWeight.value;
   console.log(sel_weight_val);
-  const totalSelectedPrice = document.querySelector("#display_selected_price");
+  const selectedQuantity = document.querySelector("#selected_quantity");
+  let sel_quantity_val = selectedQuantity.value;
+  console.log(sel_quantity_val);
+
+  const totalPrice = document.querySelector("#display_price");
+
 
 
   if (sel_weight_val == '1000') {
@@ -30,10 +35,11 @@ function displayPrice() {
     //convert to float number with . and not with ,
       const maxWeightPrice = parseFloat(document.getElementById("hidden_price_max").textContent.replace(",","."));
 
-      totalSelectedPrice.innerHTML = `${maxWeightPrice} €`;
+      totalPrice.innerHTML = `${maxWeightPrice * sel_quantity_val }€`;
     } else {
       const minWeightPrice = parseFloat(document.getElementById("hidden_price_min").textContent.replace(",","."));
-      totalSelectedPrice.innerHTML = `${minWeightPrice} €`;
+
+      totalPrice.innerHTML = `${minWeightPrice * sel_quantity_val}€`;
     }
 
 }

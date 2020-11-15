@@ -1,10 +1,31 @@
 .coffee_form {
-  border: 1px solid black;
+  border: 1px solid #dcdcdc;
+  margin-bottom: 10px;
 }
 
 #products-coffees {
   background-color: rgba(252,252,228,0.3);
 }
+
+
+#products-coffees .coffee-title h3 {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+#products-coffees .coffee-choices h3 {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #998D85;
+}
+
+#products-coffees .coffee-title h2 {
+  font-family: 'Nunito Sans';
+  font-weight: 500;
+  font-size: 30px;
+  color: #998D85;
+  }
+
 
 .coffee-title {
   padding-left: 5rem;
@@ -12,9 +33,15 @@
 }
 
 #products-coffees .form-group {
-  padding-right: 15rem !important;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
+
+#products-coffees .form_displayed_price {
+  font-size: 16px;
+  padding-top: 12px;
+}
+
+
 
 .coffee-links {
   :hover {
@@ -46,9 +73,5 @@
     margin-bottom: 2rem;
   }
 
-}
-
-.hidden_value {
-  display: none;
 }
 
