@@ -8,6 +8,20 @@
   max-height: 500px;
 }
 
+.img-equipment h4 {
+  margin-top: 2rem;
+  color: $brava-text;
+  font-weight: 200;
+}
+
+.equipment-desc h4 {
+  color: $brava-text;
+  font-weight: 200;
+}
+
+.equipment-desc  {
+  padding: 0 5rem;
+}
 input,
 textarea {
   border: 1px solid #eeeeee;

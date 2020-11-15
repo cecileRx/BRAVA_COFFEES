@@ -1,24 +1,19 @@
 <div id= 'home' class="container">
   <header id ="banner" class="row py-5">
-    <div class="col-md-6 px-0">
-      <div class="banner-img d-none d-md-block pl-5 dark-overlay">
-        <%= image_tag "coffee-contour.png",  class:"d-block img-fluid" %>
-      </div>
-    </div>
-    <div class="col-md-6 align-self-center">
-      <div class="banner-text text-md-right text-sm-center">
-        <h1 class= "h5 main-text pr-4">
-          <%= t(".brava_intro_1") %>
-        </h1>
-        <h1 class= "h5 main-text pr-4">
-          <%= t(".brava_intro_2") %>
+
+    <div class="col-md-12 align-self-center">
+
+        <h1 class= "main-text pr-4">
+          <% t(".brava_intro_1") %>
+          brava is
+          <span
+             class="txt-rotate"
+             data-period="1000"
+             data-rotate='[ "an artisanal specialty coffee roaster.", "simple.", "pretty.", "fun!" ]'></span>
         </h1>
 
-        <h5 class= "secondary-text pr-4">
-           <%= t(".brava_intro_3") %>
-        </h5>
-     </div>
-    </div>
+
+      </div>
   </header>
 
   <section id="coffee-header" class="py-5">
@@ -59,18 +54,14 @@
 
 
   <section class="my-5 container px-0" id="subscribe">
-    <div class="row how-it-works-section pt-3 align-items-center">
-      <div class="col-md-6">
-        <%= image_tag "subscribe.jpg",  class:"d-none d-lg-block img-fluid mb-2" %>
-
-      </div>
-      <div class="col-lg-6 subscribe-text">
+    <div class="row how-it-works-section py-5 text-center align-items-center">
+      <div class="col-md-12 subscribe-text">
         <h2 class="mb-5 text-center" ><%= t(".subscribe_text") %></h2>
-        <div class="subscribe-buttons d-flex justify-content-around px-5">
-          <button class="btn btn-warning">
+        <div class="subscribe-buttons d-flex justify-content-center px-5">
+          <button class="btn btn-warning mx-3">
             <%= t(".subscribe") %>
           </button>
-          <button class="btn btn-warning">
+          <button class="btn btn-warning mx-3">
             <%= t(".gift") %>
           </button>
         </div>

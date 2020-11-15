@@ -36,10 +36,15 @@
                 <%= label_tag Product.human_attribute_name("weight")%>
                 <%= select_tag "weight", raw("<option>250</option><option>1000</option>"), multiple: false, class:"coffee_form btn-block form-control-lg", id:"selected_weight", onchange: "displayPrice();"  %>
 
+                    <div class="input-group">
+                      <input type="button" value="-" class="button-minus" data-field="quantity">
+                      <input type="number" step="1" max="" value="1" name="quantity" class="quantity-field">
+                      <input type="button" value="+" class="button-plus" data-field="quantity">
+                    </div>
 
 
-                <%= label_tag Product.human_attribute_name("quantity")%>
-                <%= select_tag("quantity", raw("<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>"), multiple: false, class:"coffee_form btn-block form-control-lg", id:"selected_quantity", onchange: "displayPrice();") %>
+             <!--    <%= label_tag Product.human_attribute_name("quantity")%>
+                <%= select_tag("quantity", raw("<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>"), multiple: false, class:"coffee_form btn-block form-control-lg", id:"selected_quantity", onchange: "displayPrice();") %> -->
 
 
                 <%= hidden_field_tag 'product_id', @product.id %>
@@ -96,13 +101,13 @@
 
     <% if @product.name != "hario_01_name" %>
 
-      <div id="a" class="row pt-4 ">
+      <div id="a" class="row pt-4 px-5">
           <div class="col-md-6 img-equipment  text-center">
             <%= image_tag @product.photo, class:"img-equipment" %>
           </div>
 
-          <div class="col-sm-12 col-lg-6 pr-5">
-            <h3><%= t("name_att.#{@product.name}")%></h3>
+          <div class="col-sm-12 equipment-desc col-lg-6 ">
+            <h4><%= t("name_att.#{@product.name}")%></h4>
             <p><%= t("description_att.#{@product.description}")%></p>
             <p><%= humanized_money_with_symbol(@product.price) %></p>
 
@@ -137,11 +142,11 @@
           </div>
       </div>
     <% else %>
-        <div id="a" class="row pt-4 ">
+        <div id="a" class="row pt-4 px-5">
 
           <div class="col-md-6  img-equipment text-center">
             <%= image_tag @product.photo, class:"img-equipment", size: "260x260" %>
-            <h3><%= t("name_att.#{@product.name}")%></h3>
+            <h4><%= t("name_att.#{@product.name}")%></h4>
             <p><%= t("description_att.#{@product.description}") %></p>
             <p><%= humanized_money_with_symbol(@product.price) %></p>
 
@@ -166,7 +171,7 @@
           <div class="col-md-6 img-equipment  text-center">
             <% @product = Product.where(name: 'hario_02_name').take %>
               <%= image_tag @product.photo, class:"img-equipment", size: "260x260" %>
-              <h3><%= t("name_att.#{@product.name}")%></h3>
+              <h4><%= t("name_att.#{@product.name}")%></h4>
               <p><%= t("description_att.#{@product.description}")%></p>
               <p><%= humanized_money_with_symbol(@product.price) %></p>
 

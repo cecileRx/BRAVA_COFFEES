@@ -31,8 +31,10 @@ body {
   font-size: 30px;
 }
 
-#banner {
-  background-color: $cream;
+#about .secondary-text {
+  font-family: 'Nunito Sans';
+  font-weight: 300;
+  font-size: 16px;
 }
 
 #banner img {
@@ -47,8 +49,8 @@ body {
 
 #banner .main-text {
   font-family: 'Nunito Sans';
-  font-weight: 500;
-  font-size: 18px;
+  font-weight: 300;
+
 }
 
 #banner .secondary-text {
@@ -140,7 +142,7 @@ body {
   flex-grow: 1;
   max-width: 100%;
 
-    position: relative;
+  position: relative;
   width: 100%;
   min-height: 1px;
   padding-right: 15px;
@@ -159,6 +161,10 @@ body {
   width: 50%;
   min-height: 1px;
 
+}
+
+#subscribe {
+  background-color: #FDFCF1 !important;
 }
 
 .subscribe-text {
