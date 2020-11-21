@@ -1,6 +1,7 @@
 class OrderItemsController < ApplicationController
 
   before_action :set_order_item, only: %I[destroy]
+  before_action :current_order
 
 
 
@@ -16,13 +17,11 @@ class OrderItemsController < ApplicationController
       @product = sel_product
      end
 
-   if current_user.orders.find_by(state: 'pending')
 
-     OrderItem.create!(product: @product, quantity: (params[:quantity]), grind: (params[:grind]), order: current_user.orders.find_by(state: 'pending'))
-   else
-     order = Order.create!(user: current_user, state: 'pending')
-     OrderItem.create!(product: @product,  quantity: (params[:quantity]), grind: (params[:grind]), order: current_user.orders.find_by(state: 'pending'))
-   end
+
+    OrderItem.create!(product: @product, quantity: (params[:quantity]), grind: (params[:grind]), order: @order)
+
+
    respond_to do |format|
      # le redirect_back ets géré par la méthide store_action dans l'application controller
      format.html { redirect_back fallback_location: root_path,  notice: "Added to cart, thanks!"}
