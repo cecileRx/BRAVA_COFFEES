@@ -222,12 +222,34 @@ max-width: 25%
 #footer-section {
   background-color: $dark-brown;
   color: rgba(251, 247, 228, 0.95);
+  padding-top: 7rem;
+  padding-bottom: 2rem;
+}
+
+#footer-section .footer-contact {
+  margin-bottom: 4rem;
+}
+
+#footer-section .footer-follow {
+   margin-bottom: 4rem;
 }
 
 #footer-section h3 {
-  font-weight: 400;
-  font-size: 15px;
+  font-weight: 300;
+  font-size: 18px;
 }
+
+#footer-section .footer-icons a {
+  color: rgba(251, 247, 228, 0.95) !important;
+}
+
+
+#footer-section .fb-icon {
+  padding-left: 1.1rem;
+  padding-right: 1.1rem;
+}
+
+
 
 #footer-section .contact-form {
   background-color: rgba(251, 247, 228, 0) !important;
@@ -237,4 +259,9 @@ max-width: 25%
 
 #footer-section .text-muted  {
   color: rgba(251, 247, 228, 0.55) !important;
+}
+
+#footer-section .copyright {
+  color: #998D85;
+  font-size: 0.9rem;
 }

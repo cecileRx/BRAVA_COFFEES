@@ -111,10 +111,10 @@
 
 </div>
 
-  <footer id="footer-section" class="footer  mt-5 px-0 py-5" >
+  <footer id="footer-section" class="footer mt-5 " >
     <div class="container">
-      <div class="row px-0">
-        <div class="col-md-4 text-center mb-3">
+      <div class="row footer-contact px-0">
+        <div class="col-md-6 mb-3">
           <adress>
             <h3 class="mb-4" ><%= t(".contact") %></h3>
 
@@ -123,34 +123,29 @@
             </p>
             <p>
                 +351 93 123 4567
-              <br>
-                Rua das Magnolias, n.° 1
-              <br>
-                1200-241 Lisboa / Portugal
             </p>
           </adress>
-
         </div>
-        <div class="col-md-4 text-center">
-          <h3><%= t(".follow") %></h3>
-          <div class="row justify-content-around px-5 pt-4 mb-3">
-          <div class="col-sm-4 mb-2">
-          <a href="#"><i class="text-white border rounded-circle py-3 px-3 fab fa-twitter"></i></a>
-          </div>
-          <div class="col-sm-4 mb-2">
-          <a href="https://www.instagram.com/"><i class="text-white border rounded-circle py-3 px-3  fab fa-instagram"></i></a>
-            </div>
-          <div class="col-sm-4 mb-2">
-          <a href="https://www.facebook.com/"><i class="text-white border rounded-circle py-3 px-3 fab fa-facebook-f"></i></a>
-            </div>
-        </div>
-        </div>
-
-        <div id="contact" class="col-md-4">
+        <div id="contact" class="col-md-6">
           <%= render 'contact_form' %>
 
         </div>
-      </div>
+       </div>
+        <div class="row px-0 footer-follow">
+        <div class="col-md-6 ">
+          <h3><%= t(".follow") %></h3>
+
+
+              <div class="d-flex footer-icons mt-4">
+                <a href="https://www.instagram.com/" class="pr-3"><i class="border py-3 px-3  fab fa-instagram"></i></a>
+
+                <a href="https://www.facebook.com/" ><i class="border py-3 fb-icon fab fa-facebook-f"></i></a>
+              </div>
+
+        </div>
+    </div>
+    <div class="copyright mt-5">
+      © 2020 Brava Coffee Roasters. Site by CrX.
     </div>
 
   </footer>
