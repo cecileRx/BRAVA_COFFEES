@@ -59,10 +59,7 @@ Sabores de pêra e tarte de lima."
     nica_cp_html: "Equilibrado, doce e cítrico <br>
 Sabores de cereja do café, floral, caramelo e limão."
   description_att:
-    chemex_desc: CHEMEX delivers the purest flavor experience. Made of non-porous
-      Borosilicate glass which will not absorb odors or chemical residues. CHEMEX
-      pour-over allows coffee to be covered and refrigerated for reheating without
-      losing flavor Simple, easy to use with timeless, elegant design
+    chemex_desc: Um clássico, a Chemex é uma maneira simples e elegante de preparar café de filtro. É uma peça linda feita de vidro não poroso, que não absorve odores ou resíduos químicos. A peça de madeira com o cordão de couro pode ser removida para facilitar a limpeza. Se usada em conjunto com os filtros originais Chemex, o processo de infusão proporcionará a chávena de café perfeita, sem sedimentos ou elementos amargos.Os papéis de filtro não estão incluídos. Pode comprar os filtros de papel aqui.
     columb_amaca_desc: AMACA – Asociación de Mujeres Productoras Agropecuarias del
       Cauca, é um grupo de mulheres produtoras de El Tambo, Cauca, Colômbia. Desde
       1999, a associação foi crescendo e hoje conta com 140 mulheres de três aldeias
@@ -95,10 +92,22 @@ Sabores de cereja do café, floral, caramelo e limão."
     mesh_dripper_desc: Este filtro de malha de aço inoxidável de dupla camada garante o fluxo de ar correto para uma extração uniforme, proporcionando uma chávena de café sem sedimentos e mantendo muitos dos óleos para uma bebida rica e completa.
     hario_01_desc: Filtros de papel para V60 - 01 to 02 cups
     hario_02_desc: Filtros de papel para V60 - 01 to 04 cups
-    kit_v_60_desc: This particular coffee dripper is made of copper - a particularly
-      high-end dripper, but they come in ceramic for maximum heat retention, cost-effective
-      plastic, and heat-proof glass. Also, you can choose from three different sizes
-      01 / 02 and 03, depending on your needs.
+    kit_v_60_desc_html: O Kit Hario V60 contém tudo o que precisa para começar a fazer um saboroso café.<br>
+      <strong>Inclui:</strong><br>
+      <ul>
+        <li>1x02 V60</li>
+        <li>1x bule de vidro</li>
+        <li>1x 40 filtros de papel (02)</li>
+        <li>1x Colher</li>
+      </ul>
+      <strong>Informação adicional:</strong><br>
+      <ul>
+        <li>Pode ir à maquina de lavar</li>
+        <li>Pode ir ao micro-ondas</li>
+        <li>Feito no Japão</li>
+      </ul>
+
+
     nica_desc: O Cerro de Jesus está localizado em Jalapa, no segundo pico mais alto
       da Nicarágua. A propriedade estende-se por 700 hectares, dos quais cerca de
       400 hectares são uma bela reserva florestal. Em 2017, efetuaram uma parceria
@@ -176,7 +185,7 @@ Sabores de cereja do café, floral, caramelo e limão."
         são apenas sugestões para um ponto de partida. <br><strong>Fique à vontade
         para experimentar quantidades e tempos de preparação, de forma a obter a “sua”
         chávena perfeita.</strong>'
-      mocha: Moca
+      mocha: Cafeteira italiana
       mocha_guide_html: "<li>Moa os grãos de café.</li> <br> <li>Encha a base da sua
         cafeteira com água quente até a linha.</li> <br> <li>Coloque o funil na base
         da cafeteira.</li> <br> <li>Encha vagamente o filtro-funil com borra de café
@@ -203,8 +212,7 @@ Sabores de cereja do café, floral, caramelo e limão."
       brava_intro_3: Os nossos grãos são escolhidos de entre os melhores cafés do
         mundo, produzidos por comunidades agrícolas com práticas sustentáveis, ética
         e ambientalmente.
-      brew_line_html: Learn the art of<strong> Mocha</strong>, <strong>French press</strong>
-        and other processes with our
+      brew_line_html: Aprenda a arte da <strong> Cafeteira italiana</strong>, <strong>French press</strong> e outros metodos com nossa
       brew_title: Como fazer a extração?
       brew_way: Queres experimentar uma nova forma?
       brewing_eq: Equipamento!

@@ -102,10 +102,23 @@ Coffee cherry, floral, caramel and lemon flavors."
       coffee with a deep aroma.
     hario_01_desc: 'paper filters for V60 - 01 to 02 cups size'
     hario_02_desc: 'paper filters for V60 - 01 to 04 cups size'
-    kit_v_60_desc: This particular coffee dripper is made of copper - a particularly
-      high-end dripper, but they come in ceramic for maximum heat retention, cost-effective
-      plastic, and heat-proof glass. Also, you can choose from three different sizes
-      01 / 02 and 03, depending on your needs.
+    kit_v_60_desc_html: The Hario V60 Craft Coffee Kit features everything you need to start making great tasting coffee.<br>
+      <strong>Includes:</strong><br>
+      <ul>
+        <li>1 x 02 Hario V60 Dripper</li>
+        <li>1 x 600ml Server</li>
+        <li>1 x Pack of 40 filter papers(02)</li>
+        <li>1 x Scoop</li>
+      </ul>
+      <strong>Additional Info:</strong><br>
+      <ul>
+        <li>Dishwashers safe</li>
+        <li>Microwave safe</li>
+        <li>Made in Japan</li>
+      </ul>
+
+
+
     nica_desc: Cerro de Jesus or Jesus Mountain Farm is located in Jalapa, Neuva Segovia,
       on the second highest peak of Nicaragua. The farm spreads through 700 hectares
       of which about 400 hectares are a beautiful forest reserve. In 2017, Jesus Mountain
@@ -183,12 +196,12 @@ Coffee cherry, floral, caramel and lemon flavors."
         grind, equipment.. - <br> This is just a suggestion for a starting point.
         <br><strong>Feel free to play with the weights and preparation times to get
         the perfect cup!</strong>
-      mocha: Mocha
+      mocha: Moka pot
       mocha_guide_html: "<li>Grind the coffee beans.</li> <br> <li>Fill the base of
-        your mocha with hot water up to the line.</li> <br> <li>Place the funnel in
+        your moka pot with hot water up to the line.</li> <br> <li>Place the funnel in
         the boiler chamber (the base).</li> <br> <li>Fill the funnel filter loosely
         with coffee grounds without compacting.</li> <br> <li>Screw the upper chamber
-        into the boiler.</li> <br> <li>Place the mocha on the stove over low or medium
+        into the boiler.</li> <br> <li>Place the moka pot on the stove over low or medium
         heat.</li> <br> <li>If you used hot water, after two minutes the coffee will
         begin to flow; If you used cold water, wait until the upper reservoir is full.</li>
         <br> <li>When the coffee starts to flow in the upper part, immediately remove
@@ -212,7 +225,7 @@ Coffee cherry, floral, caramel and lemon flavors."
         you just the perfect cup of coffee.
       brava_intro_3: Our beans are chosen among the best in the world, produced by
         agricultural communities with sustainable practices, ethically and environmentally.
-      brew_line_html: Learn the art of<strong> Mocha</strong>, <strong>French press</strong>
+      brew_line_html: Learn the art of<strong> Moka pot</strong>, <strong>French press</strong>
         and other processes with our
       brew_title: How do you brew?
       brew_way: Want to try a new way ?

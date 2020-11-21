@@ -32,7 +32,7 @@ Product.create!(
 
 Product.create!(
   name: 'V60_name',
-  description: 'kit_v_60_desc',
+  description: 'kit_v_60_desc_html',
   photo: 'Kit_V60.jpg',
   price_cents: 3999,
   category: equipment)
