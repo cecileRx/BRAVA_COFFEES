@@ -1,10 +1,15 @@
 class ApplicationController < ActionController::Base
-  # before_action :set_locale
+
+  protect_from_forgery with: :exception
   around_action :switch_locale
+
+  before_action :configure_permitted_parameters, if: :devise_controller?
+
+  before_action  :current_cart
 
 
   after_action :store_action
-  before_action :configure_permitted_parameters, if: :devise_controller?
+
 
   def switch_locale(&action)
   locale = params[:locale] || I18n.default_locale
@@ -20,17 +25,34 @@ class ApplicationController < ActionController::Base
     { locale: I18n.locale == I18n.default_locale ? nil : I18n.locale }
   end
 
-  def current_order
-    if user_signed_in?
-      @order = @current_user.order
-    else
-        if session[:order]
-          @order = Order.find(session[:order])
-        else
-          @order = Order.create
-          session[:order] = @order.id
+
+  # def current_user
+  #   if session[:user_id]
+  #     @user = User.find(session[:user_id])
+  #   end
+  # end
+
+
+
+
+  def current_cart
+
+        if session[:cart_id]
+          cart = Cart.find(session[:cart_id])
+          if cart.present?
+            @current_cart = cart
+          else
+            session[:cart_id] = nil
+          end
         end
-    end
+
+
+        if session[:cart_id] == nil
+          @current_cart = Cart.create
+          session[:cart_id] = @current_cart.id
+        end
+
+
   end
 
 

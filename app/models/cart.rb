@@ -1,5 +1,5 @@
-class Order < ApplicationRecord
-  belongs_to :user, optional: true
+class Cart < ApplicationRecord
   has_many :order_items, dependent: :destroy
+  has_many :products, through: :order_items
   monetize :amount_cents_cents
 end
