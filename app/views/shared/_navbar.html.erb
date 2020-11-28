@@ -16,14 +16,10 @@
           </div>
 
           <div class="up-nav-right d-flex  align-items-center">
-            <% if @current_order %>
-      <!--         <div id="cart-icon" ><%= link_to order_path(@current_order) do %>
-                   <i class="fa fa-shopping-cart"></i>
-                  <% end %> -->
-              <div id="cart-icon"><%= link_to "", order_path(@current_order), class: 'fa fa-shopping-cart ml-2 mr-2' %>
-              </div>
-              <div id="cart-count"><%= @current_order.order_items.count %></div>
-            <% end %>
+
+
+
+
 
               <div id="login-icon">
                 <% if user_signed_in? %>
@@ -36,6 +32,7 @@
 
               <% end %>
               </div>
+
           </div>
 
       </div>
