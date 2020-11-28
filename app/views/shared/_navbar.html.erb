@@ -17,8 +17,16 @@
 
           <div class="up-nav-right d-flex  align-items-center">
 
-
-
+             <div id="cart-icon" >
+              <%= link_to cart_path(@current_cart) do %>
+                  <i class="fa fa-shopping-cart"></i>
+                    <% if @current_cart.amount_cents_cents == 0 %>
+                      <%= 0 %>
+                    <% else %>
+                      <%= @current_cart.products.count %>
+                    <% end %>
+                  <% end %>
+              </div>
 
 
               <div id="login-icon">

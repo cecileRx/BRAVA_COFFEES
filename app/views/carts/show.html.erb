@@ -29,14 +29,14 @@
       <% end %>
       <div class="text-right pr-5"><b id="total_price_euros">Total: <%= @cart.amount_cents %> €</b></div>
 
-      <div id = "purchase-button" class="text-center">
-       <%= link_to "Proceed to checkout", new_order_path %><br>
+      <div id = "purchase-button" class="text-center mb-5 pt-5">
+       <%= link_to "Proceed to checkout", new_order_path, class: "btn btn-outline-primary" %><br>
       </div>
 
     </div>
   </div>
 </div>
-<div class="container text-left mt-5 ml-5">
-  <%= link_to "Empty cart", cart_path(@current_cart),method: :delete, data: {confirm: "Are you sure?"} %>
-  <%= link_to "Back", root_path, class: "btn btn-primary" %>
+<div class="container text-center shop-buttons mt-5" >
+  <%= link_to "Empty cart", cart_path(@current_cart), class: "btn btn-primary  mr-5", style: "color:#FDFCF1;", method: :delete, data: {confirm: "Are you sure?"} %>
+  <%= link_to "Continue shopping", root_path, class: "btn btn-primary", style: "color:#FDFCF1;" %>
 </div>
