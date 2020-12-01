@@ -1,46 +1,78 @@
+<div id="order-show" class="container">
 
-<h3>hello <%=current_user.username %></h3>
-<h1>wanna pay <%= @order.amount_cents%> ? </h1>
+  <div class="row">
+     <div class="order_summary col-md-4">
+        <h3 class="mb-3">Order Summary</h3>
 
-  <%= form_tag order_path(@order), :method => :put, class: "coffee_form" do %>
+          <% @order.order_items.each do |item| %>
+          <p class= "item_name"><%= item.quantity %>  <%= t("name_att.#{item.product.name}") %></p>
+            <% if item.weight != nil %>
+              <p class= "item_weight"> <%= item.weight%> gr </p>
+            <% end %>
+          <% end %>
 
-
-    <% if @order.shipping_zone != nil %>
-       <p>your delivery zone is :<%= @order.shipping_zone%></p>
-    <% else %>
-      <%= label_tag Order.human_attribute_name("shipping_zone") %>
-
-      <%= select_tag "shipping_zone", raw("<option>Portugal</option><option>Rest of Europe</option>"), multiple: false, class:"coffee_form btn-block form-control-lg", id:"selected_shipping_zone", onchange: "displayPriceOrder();"  %>
-    <% end %>
-      <% if @order.shipping_zone == 'Portugal' && @order.shipping_method == nil%>
-        <%= label_tag Product.human_attribute_name("shipping_method")%>
-
-        <%= select_tag "shipping_method", raw("<option>regular mail</option><option>registered mail</option>"), multiple: false, class:"coffee_form btn-block form-control-lg", id:"selected_shipping_method"%>
-        <div class='mt-3'>
-        <%= submit_tag t("addcart"), class: 'btn btn-block btn-warning' %>
+        <hr>
+        <div class= 'd-flex justify-content-between'>
+           <p>Subtotal</p>
+           <p><%= @order.amount_cents%>€</p>
+        </div>
+        <div class= 'd-flex justify-content-between'>
+           <p>Shipping</p>
+           <p><%= @order.shipping_cost%>€</p>
+        </div>
+        <hr>
+        <div class= 'd-flex justify-content-between'>
+           <p>Total</p>
+           <p><%= @order.shipping_cost + @order.amount_cents %>€</p>
+        </div>
       </div>
+    <div class="order_summary col-md-3">
+    </div>
+    <div class="shipping_selection col-md-4 mt-5">
+      <%= form_tag order_path(@order), :method => :put, class: "order_form" do %>
 
-      <% elsif @order.shipping_zone == 'Rest of Europe'%>
-          <p>For any other European country, the shipping method is <%= @order.shipping_method%> only</p>
-       <% end %>
+
+        <% if @order.shipping_zone != nil %>
+           <p>Your order will be delivered in <%= @order.shipping_zone%></p>
+        <% else %>
+          <% label_tag Order.human_attribute_name("shipping_zone") %>
+          <p>Please select a Shipping Zone:</p>
+          <%= select_tag "shipping_zone", raw("<option>Portugal</option><option>Rest of Europe</option>"), multiple: false, class:"coffee_form btn-block form-control-lg", id:"selected_shipping_zone", onchange: "displayPriceOrder();"  %>
+          <div class='mt-3'>
+            <%= submit_tag t("savecont"), class: 'btn btn-block btn-warning' %>
+          </div>
+        <% end %>
+          <% if @order.shipping_zone == 'Portugal' && @order.shipping_method == nil%>
+            <% label_tag Product.human_attribute_name("shipping_method")%>
+            <p>Please select a Shipping Method:</p>
+
+            <%= select_tag "shipping_method", raw("<option>regular mail</option><option>registered mail</option>"), multiple: false, class:"coffee_form btn-block form-control-lg", id:"selected_shipping_method"%>
+            <div class='mt-3'>
+            <%= submit_tag t("savecont"), class: 'btn btn-block btn-warning' %>
+          </div>
+
+          <% elsif @order.shipping_zone == 'Rest of Europe'%>
+              <p>For any other European country, the shipping method is <%= @order.shipping_method%> only</p>
+           <% end %>
 
 
-  <% end %>
-
-  <%= @order.shipping_cost %>
-
-<% if @order.shipping_method != nil %>
- <button id="pay" class="text-center btn btn-primary mt-3">Pay</button>
-      <script src="https://js.stripe.com/v3/">
-
-      </script>
-      <script>
-        const paymentButton = document.getElementById('pay');
-        paymentButton.addEventListener('click', () => {
-          const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
-          stripe.redirectToCheckout({
-            sessionId: '<%= @session.id %>'
-          });
-        });
-      </script>
       <% end %>
+
+    <% if @order.shipping_method != nil %>
+     <button id="pay" class="text-center btn btn-primary mt-3">Pay</button>
+          <script src="https://js.stripe.com/v3/">
+
+          </script>
+          <script>
+            const paymentButton = document.getElementById('pay');
+            paymentButton.addEventListener('click', () => {
+              const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
+              stripe.redirectToCheckout({
+                sessionId: '<%= @session.id %>'
+              });
+            });
+          </script>
+          <% end %>
+    </div>
+  </div>
+</div>

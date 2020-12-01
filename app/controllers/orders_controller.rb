@@ -60,49 +60,51 @@ class OrdersController < ApplicationController
     set_shipping_cost = @order.order_items
     shipping_cost_amount = 0
 
-
-# calcul des shipping cost pour le Portugal
-    if @order.shipping_zone == 'Portugal'
-      # calcul des shipping cost pour le Portugal en regular mail
-      if @order.shipping_method != 'registered mail'
-        if set_shipping_cost.any? { |val| val[:weight] == 1000 }
-          if shipment_score < 4
-            shipping_cost_amount = 360
-          else
-            shipping_cost_amount = 0
-          end
-
-        else
-          if shipment_score > 7
-            shipping_cost_amount = 0
-          elsif shipment_score > 2
-            shipping_cost_amount = 360
-          else
-            shipping_cost_amount = 160
-          end
-        end
-      else
-        # calcul des shipping cost pour le Portugal en registered mail
-        if @order.amount_cents_cents > 5000
-          shipping_cost_amount = 0
-        elsif shipment_score > 7
-          shipping_cost_amount = 595
-        else
-          shipping_cost_amount = 355
-        end
-      end
-# calcul des shipping cost pour le reste de l'Europe
+    if @order.shipping_zone == nil
+       shipping_cost_amount = 0
     else
-       if @order.amount_cents_cents > 7000
-          shipping_cost_amount = 0
-        elsif shipment_score > 7
-          shipping_cost_amount = 1785
-        elsif shipment_score > 2
-          shipping_cost_amount = 1150
-        else
-          shipping_cost_amount = 760
-        end
+  # calcul des shipping cost pour le Portugal
+      if @order.shipping_zone == 'Portugal'
+        # calcul des shipping cost pour le Portugal en regular mail
+        if @order.shipping_method != 'registered mail'
+          if set_shipping_cost.any? { |val| val[:weight] == 1000 }
+            if shipment_score < 4
+              shipping_cost_amount = 360
+            else
+              shipping_cost_amount = 0
+            end
 
+          else
+            if shipment_score > 7
+              shipping_cost_amount = 0
+            elsif shipment_score > 2
+              shipping_cost_amount = 360
+            else
+              shipping_cost_amount = 160
+            end
+          end
+        else
+          # calcul des shipping cost pour le Portugal en registered mail
+          if @order.amount_cents_cents > 5000
+            shipping_cost_amount = 0
+          elsif shipment_score > 7
+            shipping_cost_amount = 595
+          else
+            shipping_cost_amount = 355
+          end
+        end
+  # calcul des shipping cost pour le reste de l'Europe
+      else
+         if @order.amount_cents_cents > 7000
+            shipping_cost_amount = 0
+          elsif shipment_score > 7
+            shipping_cost_amount = 1785
+          elsif shipment_score > 2
+            shipping_cost_amount = 1150
+          else
+            shipping_cost_amount = 760
+          end
+       end
     end
 
 
