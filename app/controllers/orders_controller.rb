@@ -87,7 +87,7 @@ class OrdersController < ApplicationController
           # calcul des shipping cost pour le Portugal en registered mail
           if @order.amount_cents_cents > 5000
             shipping_cost_amount = 0
-          elsif shipment_score > 7
+          elsif shipment_score > 4
             shipping_cost_amount = 595
           else
             shipping_cost_amount = 355
@@ -99,7 +99,7 @@ class OrdersController < ApplicationController
             shipping_cost_amount = 0
           elsif shipment_score > 7
             shipping_cost_amount = 1785
-          elsif shipment_score > 3
+          elsif shipment_score > 2
             shipping_cost_amount = 1150
           else
             shipping_cost_amount = 760

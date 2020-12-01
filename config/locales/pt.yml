@@ -33,19 +33,24 @@ pt:
     - Filtro
     - Espresso
     - Aeropress
+    - French press
     columb_fudam_grind:
     - Grão
     - Filtro
     - Espresso
     - Aeropress
+    - French press
     ethiopia_grind:
     - Grão
     - Filtro
     - Aeropress
+    - French press
     nica_grind:
     - Grão
     - Filtro
     - Aeropress
+    - French press
+    - Espresso
 
   origin_att:
     columb_amaca_origin: Colombia

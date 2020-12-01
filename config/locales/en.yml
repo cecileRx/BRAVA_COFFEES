@@ -49,19 +49,24 @@ Coffee cherry, floral, caramel and lemon flavors."
     - filter
     - Espresso
     - Aeropress
+    - French press
     columb_fudam_grind:
     - Whole Beans
     - filter
-    - Espresso'
+    - Espresso
     - Aeropress
+    - French press
     ethiopia_grind:
     - Whole Beans
     - filter
     - Aeropress
+    - French press
     nica_grind:
     - Whole Beans
     - Filter
     - Aeropress
+    - French press
+    - Espresso
 
   description_att:
     chemex_desc: CHEMEX delivers the purest flavor experience. Made of non-porous
