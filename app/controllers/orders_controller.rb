@@ -41,6 +41,7 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
     @user = current_user
 
+
     line_items_order = @order.order_items.map { |item|{
       "name" => item.product.name,
       "amount" => item.product.price_cents,
@@ -59,22 +60,51 @@ class OrdersController < ApplicationController
     set_shipping_cost = @order.order_items
     shipping_cost_amount = 0
 
-    if set_shipping_cost.any? { |val| val[:weight] == 1000 }
-      if shipment_score < 4
-        shipping_cost_amount = 360
-      else
-        shipping_cost_amount = 0
-      end
 
-    else
-      if shipment_score > 7
-        shipping_cost_amount = 0
-      elsif shipment_score > 2
-        shipping_cost_amount = 360
+# calcul des shipping cost pour le Portugal
+    if @order.shipping_zone == 'Portugal'
+      # calcul des shipping cost pour le Portugal en regular mail
+      if @order.shipping_method != 'registered mail'
+        if set_shipping_cost.any? { |val| val[:weight] == 1000 }
+          if shipment_score < 4
+            shipping_cost_amount = 360
+          else
+            shipping_cost_amount = 0
+          end
+
+        else
+          if shipment_score > 7
+            shipping_cost_amount = 0
+          elsif shipment_score > 2
+            shipping_cost_amount = 360
+          else
+            shipping_cost_amount = 160
+          end
+        end
       else
-        shipping_cost_amount = 160
+        # calcul des shipping cost pour le Portugal en registered mail
+        if @order.amount_cents_cents > 5000
+          shipping_cost_amount = 0
+        elsif shipment_score > 7
+          shipping_cost_amount = 595
+        else
+          shipping_cost_amount = 355
+        end
       end
+# calcul des shipping cost pour le reste de l'Europe
+    else
+       if @order.amount_cents_cents > 7000
+          shipping_cost_amount = 0
+        elsif shipment_score > 7
+          shipping_cost_amount = 1785
+        elsif shipment_score > 2
+          shipping_cost_amount = 1150
+        else
+          shipping_cost_amount = 760
+        end
+
     end
+
 
     @order.shipping_cost_cents = shipping_cost_amount
 
@@ -84,7 +114,7 @@ class OrdersController < ApplicationController
       amount: @order.shipping_cost_cents,
       currency: 'eur',
       quantity: 1,
-      description: 'shipping_costs'
+      description: "#{@order.shipping_zone} - #{@order.shipping_method}"
     }
 
     line_items_order << shipping_costs
@@ -122,8 +152,17 @@ class OrdersController < ApplicationController
   def update
 
     @order = Order.find(params[:id])
-    @order.shipping_method = params[:shipping_method]
-    @order.shipping_zone = params[:shipping_zone]
+    if @order.shipping_zone == nil
+      @order.shipping_zone = params[:shipping_zone]
+    end
+    if  @order.shipping_zone == 'Rest of Europe'
+      @order.shipping_method = "Registered mail"
+    else
+      @order.shipping_method = params[:shipping_method]
+    end
+
+
+
     @order.save
 
     redirect_to order_path(@order)

@@ -4,15 +4,26 @@
 
   <%= form_tag order_path(@order), :method => :put, class: "coffee_form" do %>
 
-    <%= label_tag Order.human_attribute_name("shipping_zone") %>
 
-    <%= select_tag "shipping_zone", raw("<option>Portugal</option><option>Rest of Europe</option>"), multiple: false, class:"coffee_form btn-block form-control-lg", id:"selected_shipping_zone", onchange: "displayPriceOrder();"  %>
+    <% if @order.shipping_zone != nil %>
+       <p>your delivery zone is :<%= @order.shipping_zone%></p>
+    <% else %>
+      <%= label_tag Order.human_attribute_name("shipping_zone") %>
 
-    <%= label_tag Product.human_attribute_name("shipping_method")%>
-    <%= select_tag "shipping_method", raw("<option>regular mail</option><option>registered mail</option>"), multiple: false, class:"coffee_form btn-block form-control-lg", id:"selected_weight"%>
+      <%= select_tag "shipping_zone", raw("<option>Portugal</option><option>Rest of Europe</option>"), multiple: false, class:"coffee_form btn-block form-control-lg", id:"selected_shipping_zone", onchange: "displayPriceOrder();"  %>
+    <% end %>
+      <% if @order.shipping_zone == 'Portugal' && @order.shipping_method == nil%>
+        <%= label_tag Product.human_attribute_name("shipping_method")%>
 
-    <div class='mt-3'>
-      <%= submit_tag t("addcart"), class: 'btn btn-block btn-warning' %>
+        <%= select_tag "shipping_method", raw("<option>regular mail</option><option>registered mail</option>"), multiple: false, class:"coffee_form btn-block form-control-lg", id:"selected_shipping_method"%>
+        <div class='mt-3'>
+        <%= submit_tag t("addcart"), class: 'btn btn-block btn-warning' %>
+      </div>
+
+      <% elsif @order.shipping_zone == 'Rest of Europe'%>
+          <p>For any other European country, the shipping method is <%= @order.shipping_method%> only</p>
+       <% end %>
+
 
   <% end %>
 
