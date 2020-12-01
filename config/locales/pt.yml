@@ -13,6 +13,9 @@ pt:
         origin: origem
         weight: peso (gr)
         quantity: quantidade
+      order:
+        shipping_zone: zona de entregas
+        shipping_method: tipo de correio
 
     models:
       product: produto

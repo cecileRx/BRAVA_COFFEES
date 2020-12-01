@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_27_160405) do
+ActiveRecord::Schema.define(version: 2020_12_01_100429) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(version: 2020_11_27_160405) do
     t.integer "quantity", default: 1
     t.string "grind"
     t.integer "cart_id"
+    t.integer "weight"
+    t.integer "shipping_points"
     t.index ["order_id"], name: "index_order_items_on_order_id"
     t.index ["product_id"], name: "index_order_items_on_product_id"
   end
@@ -46,6 +48,9 @@ ActiveRecord::Schema.define(version: 2020_11_27_160405) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "shipping_zone"
+    t.string "shipping_method"
+    t.integer "shipping_cost_cents", default: 0, null: false
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
@@ -64,6 +69,7 @@ ActiveRecord::Schema.define(version: 2020_11_27_160405) do
     t.integer "weight"
     t.integer "price_cents", default: 0, null: false
     t.string "photo_square"
+    t.integer "shipping_points"
     t.index ["category_id"], name: "index_products_on_category_id"
   end
 

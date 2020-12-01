@@ -28,11 +28,11 @@
       </div>
       <% end %>
       <div class="text-right pr-5"><b id="total_price_euros">Total: <%= @cart.amount_cents %> €</b></div>
+ <%= form_tag orders_path,  class: "coffee_form" do %>
+      <%= hidden_field_tag 'cart_id', @cart.id %>
+        <%= submit_tag "Proceed to checkout", class: 'btn btn-outline-primary' %>
 
-      <div id = "purchase-button" class="text-center mb-5 pt-5">
-       <%= link_to "Proceed to checkout", new_order_path, class: "btn btn-outline-primary" %><br>
-      </div>
-
+  <% end %>
     </div>
   </div>
 </div>

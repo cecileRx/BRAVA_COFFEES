@@ -6,11 +6,8 @@ class OrdersController < ApplicationController
     @orders = Order.all
   end
 
-  def show
-    @order = Order.find(params[:id])
-  end
 
-  def new
+  def create
     @order = Order.new
 
     total = []
@@ -36,6 +33,14 @@ class OrdersController < ApplicationController
     Cart.destroy(session[:cart_id])
     session[:cart_id] = nil
 
+    redirect_to order_path(@order)
+
+  end
+
+  def show
+    @order = Order.find(params[:id])
+    @user = current_user
+
     line_items_order = @order.order_items.map { |item|{
       "name" => item.product.name,
       "amount" => item.product.price_cents,
@@ -44,6 +49,45 @@ class OrdersController < ApplicationController
       "description" => item.grind
       }
     }
+
+    testshipment = []
+    @order.order_items.each do |item|
+      testshipment << item.shipping_points
+    end
+    shipment_score = testshipment.sum
+
+    set_shipping_cost = @order.order_items
+    shipping_cost_amount = 0
+
+    if set_shipping_cost.any? { |val| val[:weight] == 1000 }
+      if shipment_score < 4
+        shipping_cost_amount = 360
+      else
+        shipping_cost_amount = 0
+      end
+
+    else
+      if shipment_score > 7
+        shipping_cost_amount = 0
+      elsif shipment_score > 2
+        shipping_cost_amount = 360
+      else
+        shipping_cost_amount = 160
+      end
+    end
+
+    @order.shipping_cost_cents = shipping_cost_amount
+
+
+    shipping_costs = {
+      name: 'shipping_costs',
+      amount: @order.shipping_cost_cents,
+      currency: 'eur',
+      quantity: 1,
+      description: 'shipping_costs'
+    }
+
+    line_items_order << shipping_costs
 
 
     @session = Stripe::Checkout::Session.create(
@@ -67,12 +111,25 @@ class OrdersController < ApplicationController
 
       },
     })
-       @user.stripe_id = customer.id
-       @user.save
-       @order.checkout_session_id = @session.id
-       @order.save
 
+
+   @user.stripe_id = customer.id
+   @user.save
+   @order.checkout_session_id = @session.id
+   @order.save
   end
+
+  def update
+
+    @order = Order.find(params[:id])
+    @order.shipping_method = params[:shipping_method]
+    @order.shipping_zone = params[:shipping_zone]
+    @order.save
+
+    redirect_to order_path(@order)
+  end
+
+
 
 
 end

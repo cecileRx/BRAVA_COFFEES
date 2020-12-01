@@ -12,6 +12,7 @@ class OrderItemsController < ApplicationController
        @product = Product.where({name: chosen_product.name, weight: 250}).first
      elsif
        @product = Product.where({name: chosen_product.name, weight: 1000}).first
+
      else
       @product = chosen_product
      end
@@ -21,6 +22,11 @@ class OrderItemsController < ApplicationController
       @order_item.product = @product
       @order_item.grind = params[:grind]
       @order_item.quantity = params[:quantity]
+      @order_item.shipping_points = @product.shipping_points * params[:quantity].to_i
+
+     if @product.category.name == 'coffee'
+       @order_item.weight = params[:weight].to_i
+     end
 
 
      @order_item.save!

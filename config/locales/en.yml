@@ -12,6 +12,9 @@ en:
         region: region
         origin: origin
         weight: weight (gr)
+      order:
+        shipping_zone: shipping zone
+        shipping_method: shipping method
 
     models:
       product: product

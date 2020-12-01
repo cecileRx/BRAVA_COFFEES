@@ -21,6 +21,7 @@ Product.create!(
   description: 'chemex_desc',
   photo: 'chemex_3_cups.jpg',
   price_cents: 4369,
+  shipping_points: 2,
   category: equipment)
 
 Product.create!(
@@ -28,6 +29,7 @@ Product.create!(
   description: 'chemex_desc',
   photo: 'chemex_6_cups.jpg',
   price_cents: 4949,
+  shipping_points: 2,
   category: equipment)
 
 Product.create!(
@@ -35,6 +37,7 @@ Product.create!(
   description: 'kit_v_60_desc_html',
   photo: 'Kit_V60.jpg',
   price_cents: 3999,
+  shipping_points: 2,
   category: equipment)
 
 Product.create!(
@@ -42,12 +45,14 @@ Product.create!(
   description: 'chemex_3_filter_desc',
   photo: 'Filtro_Chemex_3_cups.jpg',
   price_cents: 1239,
+  shipping_points: 2,
   category: equipment)
 
 Product.create!(
   name: 'chemex_6_filter_name',
   description: 'chemex_6_filter_desc',
   photo: 'Filtro_Chemex_6_cups.jpg',
+  shipping_points: 2,
   price_cents: 1239,
   category: equipment)
 
@@ -56,6 +61,7 @@ Product.create!(
   description: 'hario_01_desc',
   photo: 'Hario_V60_Filters.jpg',
   price_cents: 329,
+  shipping_points: 1,
   category: equipment)
 
 Product.create!(
@@ -63,6 +69,7 @@ Product.create!(
   photo: 'Hario_V60_Filters.jpg',
   description: 'hario_02_desc',
   price_cents: 349,
+  shipping_points: 1,
   category: equipment)
 
 Product.create!(
@@ -70,6 +77,7 @@ Product.create!(
   description: 'mesh_dripper_desc',
   photo: 'Mesh_Metal_Dripper_2_cups.jpg',
   price_cents: 3289,
+  shipping_points: 2,
   category: equipment)
 
 puts 'Creating coffees...'
@@ -77,6 +85,7 @@ puts 'Creating coffees...'
 Product.create!(
   weight: 250,
   price_cents: 1250,
+  shipping_points: 2,
   origin: 'nica_origin',
   name:'Cerro de Jesus farm',
   region: 'Jalapa, Neuva Segovia',
@@ -91,6 +100,7 @@ Product.create!(
 Product.create!(
   weight: 1000,
   price_cents: 4366,
+  shipping_points: 4,
   origin: 'nica_origin',
   name:'Cerro de Jesus farm',
   region: 'Jalapa, Neuva Segovia',
@@ -105,6 +115,7 @@ Product.create!(
 Product.create!(
   weight: 250,
   price_cents: 900,
+  shipping_points: 2,
   origin: 'columb_fudam_origin',
   name:'FUDAM',
   region:'La Uniõn, Nariño',
@@ -119,6 +130,7 @@ Product.create!(
 Product.create!(
   weight: 1000,
   price_cents: 2960,
+  shipping_points: 4,
   origin: 'columb_fudam_origin',
   name:'FUDAM',
   region:'La Uniõn, Nariño',
@@ -133,6 +145,7 @@ Product.create!(
 Product.create!(
   weight: 250,
   price_cents: 1130,
+  shipping_points: 2,
   origin: 'ethiopia_origin',
   name:'Tega & Tula farm',
   region:'Bonga, gifo, Keffa',
@@ -147,6 +160,7 @@ Product.create!(
 Product.create!(
   price_cents: 3880,
   weight: 1000,
+  shipping_points: 4,
   origin: 'ethiopia_origin',
   name:'Tega & Tula farm',
   region:'Bonga, gifo, Keffa',
@@ -160,6 +174,7 @@ Product.create!(
 
 Product.create!(
   price_cents: 1041,
+  shipping_points: 2,
   weight: 250,
   origin: 'columb_amaca_origin',
   name:'AMACA',
@@ -174,6 +189,7 @@ Product.create!(
 
 Product.create!(
   price_cents: 3524,
+  shipping_points: 4,
   weight: 1000,
   origin: 'columb_amaca_origin',
   name:'AMACA',
