@@ -68,7 +68,7 @@ class OrdersController < ApplicationController
         # calcul des shipping cost pour le Portugal en regular mail
         if @order.shipping_method != 'registered mail'
           if set_shipping_cost.any? { |val| val[:weight] == 1000 }
-            if shipment_score < 4
+            if shipment_score < 5
               shipping_cost_amount = 360
             else
               shipping_cost_amount = 0
@@ -77,7 +77,7 @@ class OrdersController < ApplicationController
           else
             if shipment_score > 7
               shipping_cost_amount = 0
-            elsif shipment_score > 2
+            elsif shipment_score > 3
               shipping_cost_amount = 360
             else
               shipping_cost_amount = 160
@@ -99,7 +99,7 @@ class OrdersController < ApplicationController
             shipping_cost_amount = 0
           elsif shipment_score > 7
             shipping_cost_amount = 1785
-          elsif shipment_score > 2
+          elsif shipment_score > 3
             shipping_cost_amount = 1150
           else
             shipping_cost_amount = 760
