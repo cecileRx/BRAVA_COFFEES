@@ -256,7 +256,29 @@ Coffee cherry, floral, caramel and lemon flavors."
       sub_discover_desc_html: For <strong>3 months</strong> receive a bag of your preferred coffee every month allowing you to build a strong relationship. Try different extraction methods, proportions and recipes.
       sub-discover-coffee-select: Select your coffee
       sub-discover-grind-select: select your grind
+  carts:
+    show:
+      shop-cart: Shopping cart
+      checkout: Proceed to checout
+      empty-cart: Empty cart
+      continue-shop: Continue shopping
 
+  orders:
+    show:
+      order-sum: Order Summary
+      shipping: Shipping
+      ship-zone-tag: Your order will be delivered in
+      ship-zone-select: Please select a Shipping Zone
+      ship-method-select: Please select a Shipping Method
+      ship-europe: Rest of Europe
+      europe-mail-tag: For any other European country, the shipping method is Registered mail
+
+  messages:
+    new:
+      checkout-sum: Checkout summary
+      command: Your command of
+      is: is
+      purchase-thanks: Thanks for your purchase, we are preparing your command right away!
 
 
 
@@ -272,3 +294,4 @@ Coffee cherry, floral, caramel and lemon flavors."
   addcart: Add to Cart
   savecont: Save & continue
   subscribe: Subscribe
+  pay: pay

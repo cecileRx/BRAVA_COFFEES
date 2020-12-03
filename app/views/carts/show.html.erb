@@ -1,7 +1,7 @@
 <div class="container order-show-container d-flex justify-content-center">
   <div class="card col-10 col-lg-6">
     <div class="card-body">
-      <h2 class="text-center">Shopping Cart</h2>
+      <h2 class="text-center"><%=t(".shop-cart")%></h2>
 
       <hr class="mb-3">
       <% @cart.order_items.each do |item| %>
@@ -32,13 +32,13 @@
 
    <%= form_tag orders_path,  class: "cart_form mt-5 text-right" do %>
       <%= hidden_field_tag 'cart_id', @cart.id %>
-        <%= submit_tag "Proceed to checkout", class: 'btn btn-outline-primary' %>
+        <%= submit_tag t(".checkout"), class: 'btn btn-outline-primary' %>
    <% end %>
 
     </div>
   </div>
 </div>
 <div class="container text-center shop-buttons mt-5" >
-  <%= link_to "Empty cart", cart_path(@current_cart), class: "btn btn-primary  mr-5", style: "color:#FDFCF1;", method: :delete, data: {confirm: "Are you sure?"} %>
-  <%= link_to "Continue shopping", root_path, class: "btn btn-primary", style: "color:#FDFCF1;" %>
+  <%= link_to t(".empty-cart"), cart_path(@current_cart), class: "btn btn-primary  mr-5", style: "color:#FDFCF1;", method: :delete, data: {confirm: "Are you sure?"} %>
+  <%= link_to t(".continue-shop"), root_path, class: "btn btn-primary", style: "color:#FDFCF1;" %>
 </div>

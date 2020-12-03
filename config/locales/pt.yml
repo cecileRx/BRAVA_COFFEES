@@ -14,7 +14,7 @@ pt:
         weight: peso (gr)
         quantity: quantidade
       order:
-        shipping_zone: zona de entregas
+        shipping_zone: zona de envio
         shipping_method: tipo de correio
 
     models:
@@ -248,8 +248,31 @@ Sabores de cereja do café, floral, caramelo e limão."
       sub-discover-coffee-select: Seleccione o seu café
       sub-discover-grind-select: Seleccione a sua moagem
 
+  carts:
+    show:
+      shop-cart: Carrinho
+      checkout: Prosseguir para pagamento
+      empty-cart: Carrinho vazio
+      continue-shop: Continuar compras
 
-  process: Process
+  orders:
+    show:
+      order-sum: Total no carrinho
+      shipping: Transportes
+      ship-zone-tag:  A sua ordem será entregue em
+      ship-zone-select: Selecione a zona de envio
+      ship-method-select: Selecione o tipo de correio
+      ship-europe: Resto da Europa
+      europe-mail-tag: Para qualquer outro pais na Europa, só correio registado
+
+  messages:
+    new:
+      checkout-sum: Total de compras
+      command: A sua encomenda de
+      is: está
+      purchase-thanks: Obrigada por adquirir os nossos produtos. Vamos  já preparar a sua encomenda!
+
+  process: processo
   process_att: lavado
   shared:
     navbar:
@@ -258,5 +281,5 @@ Sabores de cereja do café, floral, caramelo e limão."
   submit_email: Obrigada!
   subscribe_nav: SUBSCRIÇÃO
   addcart: Adicionar
-  savecont: Registar & continuar
+  savecont: Gravar & continuar
   subscribe: Subscreva
