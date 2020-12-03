@@ -1,0 +1,20 @@
+<div id= "subscriptions">
+  <div class="container">
+
+
+      <% @subscriptions.each do |item| %>
+        <p><%= item.name %></p>
+        <p><%= item.item_choice%></p>
+        <p><%= item.grind%></p>
+
+        <% s = item.current_period_start %>
+        <p> <%=s.strftime("%A %d %B %Y" )%></p>
+        <% n = item.current_period_start + 3.months %>
+        <p> <%=n.strftime("%A %d %B %Y" )  %> </p>
+
+        <p><%= item.user.username%></p>
+        <p><%= item.user.stripe_id%></p>
+        <% end %>
+
+  </div>
+</div>

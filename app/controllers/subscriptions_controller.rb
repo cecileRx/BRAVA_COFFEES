@@ -2,6 +2,17 @@ class SubscriptionsController < ApplicationController
 
   before_action :authenticate_user!, except: [:new]
 
+  def index
+    @user = current_user
+
+    if @user.admin?
+      @subscriptions = Subscription.all
+    else
+      redirect_to root_url
+
+    end
+  end
+
   def new
     @subscription = Subscription.new
     coffee_items = Product.joins(:category).where("categories.name = 'coffee'")
