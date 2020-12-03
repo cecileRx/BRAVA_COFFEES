@@ -238,6 +238,17 @@ Sabores de cereja do café, floral, caramelo e limão."
         columb_fudam_origin: Colombia
         ethiopia_origin: Etiópia
         nica_origin: Nicarágua
+
+  subscriptions:
+    new:
+      sub-discover-title: Desenvolva uma relação!
+      sub-adventure-title: Viagem ao mundo dos sabores!
+      sub-adventure-desc_html: Esta subscrição leva-o a uma viagem por diferentes países e sabores.<br>Recebe um  pacote diferente de café cada mês, durante 3 meses.
+      sub-discover-desc_html:  Durante <strong>3 meses</strong> receba um pacote de café cada mês permitindo que construa uma relação com o café. Experimente diferentes métodos de extração, proporções e receitas.
+      sub-discover-coffee-select: Seleccione o seu café
+      sub-discover-grind-select: Seleccione a sua moagem
+
+
   process: Process
   process_att: lavado
   shared:
@@ -248,3 +259,4 @@ Sabores de cereja do café, floral, caramelo e limão."
   subscribe_nav: SUBSCRIÇÃO
   addcart: Adicionar
   savecont: Registar & continuar
+  subscribe: Subscreva

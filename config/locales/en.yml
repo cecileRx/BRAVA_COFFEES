@@ -248,6 +248,19 @@ Coffee cherry, floral, caramel and lemon flavors."
       subscribe: Subscribe
       subscribe_text: Get your coffee at your doorstep, or offer it
 
+  subscriptions:
+    new:
+      sub-discover-title: Develop a relationship!
+      sub-adventure-title: Journey into the world of flavours!
+      sub_adventure_desc_html: This subscription takes you on a journey through different countries and flavours.<br>Receive a different package of coffee each month, for 3 months.
+      sub_discover_desc_html: For <strong>3 months</strong> receive a bag of your preferred coffee every month allowing you to build a strong relationship. Try different extraction methods, proportions and recipes.
+      sub-discover-coffee-select: Select your coffee
+      sub-discover-grind-select: select your grind
+
+
+
+
+
   process: Process
   process_att: washed
   shared:
@@ -258,3 +271,4 @@ Coffee cherry, floral, caramel and lemon flavors."
   subscribe_nav: SUBSCRIBE
   addcart: Add to Cart
   savecont: Save & continue
+  subscribe: Subscribe

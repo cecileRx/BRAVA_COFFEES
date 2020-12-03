@@ -1,0 +1,94 @@
+<div id= "subscriptions" class="container ">
+
+ <h3 class="text-center mb-5">Subscription Plans</h3>
+
+ <div class="row">
+    <div class="col-md-6">
+        <div class="card" style="width: 30rem;">
+        <div class="card-body">
+
+          <h5 class="card-title sub-card-title">Roasters Discovery </h5>
+          <h6 class="card-subtitle mb-2 text-muted"> <%=t(".sub-discover-title")%></h6>
+          <p class="card-text sub-card-text mb-4"><%=t(".sub-discover-desc_html")%></p>
+
+          <div class="discovery-card">
+
+              <div class="card-price d-flex">
+                <p class="sub-card-weight mr-4">250g / 11€ </p>
+                <p class="sub-card-weight">1000g / 39€ </p>
+              </div>
+              <div class="form-group">
+                  <%= form_tag subscriptions_path class: "subscription_form" do %>
+
+                    <%= label_tag t(".sub-discover-coffee-select") %>
+                    <% coffee_select = [] %>
+                    <% @coffee_choice.each do |item| %>
+                      <% coffee_select << "<option>#{item.name}</option>"%>
+                    <% end %>
+                    <% coffee_select = coffee_select.join.to_s %>
+                    <%= select_tag "coffees", raw("#{coffee_select}"), multiple: false, class:"coffee_form btn-block form-control-lg"  %>
+
+                    <%= label_tag t(".sub-discover-grind-select") %>
+                    <%= select_tag "grind", raw("<option>Whole beans</option><option>Filter</option><option>Espresso</option><option>Aeropress</option><option>French press</option>"), multiple: false, class:"coffee_form btn-block form-control-lg", id:"selected_grind"  %>
+
+                    <%= label_tag Product.human_attribute_name("weight")%>
+                    <%= select_tag "weight", raw("<option>250</option><option>1000</option>"), multiple: false, class:"coffee_form btn-block form-control-lg", id:"selected_weight"%>
+
+                     <%= hidden_field_tag :name , "Discovery" %>
+
+                    <div class='mt-5'>
+                      <%= submit_tag t("subscribe"), class: 'btn btn-block btn-warning' %>
+                    </div>
+                  <% end %>
+                </div>
+
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-6">
+      <div class="card" style="width: 30rem;">
+        <div class="card-body">
+
+          <h5 class="card-title sub-card-title">Roasters Adventure </h5>
+          <h6 class="card-subtitle mb-2 text-muted"> <%=t(".sub-adventure-title")%></h6>
+          <p class="card-text sub-card-text mb-4"><%=t(".sub-adventure-desc_html")%></p>
+
+          <div class="adventure-card">
+
+              <div class="card-price-adventure d-flex">
+                <p class="sub-card-weight mr-4">250g / 12,5€ </p>
+                <p class="sub-card-weight">1000g / 46€ </p>
+              </div>
+              <div class="form-group">
+                  <%= form_tag subscriptions_path class: "subscription_form" do %>
+
+
+                    <%= label_tag t(".sub-discover-grind-select") %>
+                    <%= select_tag "grind", raw("<option>Whole beans</option><option>Filter</option><option>Espresso</option><option>Aeropress</option><option>French press</option>"), multiple: false, class:"coffee_form btn-block form-control-lg", id:"selected_grind"  %>
+
+                    <%= label_tag Product.human_attribute_name("weight")%>
+                    <%= select_tag "weight", raw("<option>250</option><option>1000</option>"), multiple: false, class:"coffee_form btn-block form-control-lg", id:"selected_weight"%>
+
+                     <%= hidden_field_tag :name , "Adventure" %>
+
+                    <div class='mt-5'>
+                      <%= submit_tag t("subscribe"), class: 'btn btn-block btn-warning' %>
+                    </div>
+                  <% end %>
+                </div>
+
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+   </div>
+
+</div>
