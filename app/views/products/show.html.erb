@@ -84,13 +84,16 @@
           <% end %>
       </div>
 
-      <div class="coffee_images_links col-md-12 d-flex justify-content-center">
+      <div class="coffee_images_links col-md-12 d-flex pb-4 justify-content-center">
 
             <% @coffees.each do |product| %>
               <% if product.id != @product.id %>
                 <%= link_to product_path(product) do %>
+                <div class="text-center">
                   <%= image_tag "#{product.photo_square}", class: 'mx-2', size: "160x160" %>
+                  <p> <%= product.name %></p>
                 <% end %>
+                </div>
               <% end %>
             <% end %>
       </div>

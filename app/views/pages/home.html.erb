@@ -17,8 +17,8 @@
   </header>
 
   <section id="coffee-header" class="py-5">
-    <div class="text-center ">
-      <h2> <%= t(".selection") %></h2>
+    <div class="text-center">
+      <h2 class="px-5" > <%= t(".selection") %></h2>
     </div>
   </section >
   <section id="coffee">
@@ -37,9 +37,10 @@
                         <%= link_to t(".discover"), product_path(product), class: "btn btn-outline-secondary text-right" %>
 
                        </div>
-
+                      <div class="text-center">
                        <h4 class="card-title"><%= t("origin_att.#{product.origin}").upcase %></h4>
-
+                       <p><%=product.name%></p>
+                      </div>
                        <div class="link-caf">
                         <%= link_to t(".discover"), product_path(product), class: "btn cof-btn btn-outline-secondary text-right button-card" %>
 
