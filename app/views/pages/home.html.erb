@@ -58,9 +58,8 @@
       <div class="col-md-12 subscribe-text">
         <h2 class="mb-5 text-center" ><%= t(".subscribe_text") %></h2>
         <div class="subscribe-buttons d-flex justify-content-center px-5">
-          <button class="btn btn-warning mx-3">
-            <%= t(".subscribe") %>
-          </button>
+            <%= link_to t(".subscribe"), new_subscription_path, class: "btn btn-warning mx-3" %>
+
           <button class="btn btn-warning mx-3">
             <%= t(".gift") %>
           </button>
