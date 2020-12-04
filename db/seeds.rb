@@ -72,14 +72,6 @@ Product.create!(
   shipping_points: 1,
   category: equipment)
 
-Product.create!(
-  name: 'Mesh_dripper_name',
-  description: 'mesh_dripper_desc',
-  photo: 'Mesh_Metal_Dripper_2_cups.jpg',
-  price_cents: 3289,
-  shipping_points: 2,
-  category: equipment)
-
 puts 'Creating coffees...'
 
 Product.create!(

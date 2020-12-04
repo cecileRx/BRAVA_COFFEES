@@ -31,13 +31,13 @@ pt:
     columb_amaca_grind:
     - Grão
     - Filtro
-    - Espresso
+    - Expresso
     - Aeropress
     - French press
     columb_fudam_grind:
     - Grão
     - Filtro
-    - Espresso
+    - Expresso
     - Aeropress
     - French press
     ethiopia_grind:
@@ -50,7 +50,7 @@ pt:
     - Filtro
     - Aeropress
     - French press
-    - Espresso
+    - Expresso
 
   origin_att:
     columb_amaca_origin: Colombia
@@ -58,13 +58,13 @@ pt:
     ethiopia_origin: Etiópia
     nica_origin: Nicarágua
   cup_notes_att:
-    columb_amaca_cp_html: "Macio e doce com acidez de fruta <br>
-Muito frutado com sabores de caramelo e maçã."
-    columb_fudam_cp_html: "Frutos tropicais com tamarindo, toranja <br>
+    columb_amaca_cp_html: "Macio e doce com acidez de fruta. <br>
+Muito frutado, com sabores de caramelo e maçã."
+    columb_fudam_cp_html: "Frutos tropicais, com tamarindo e toranja.<br>
   Doces e salgados com acidez de fruta picante e sensação suave."
-    ethiopia_cp_html: "Doce e limpo com sensação suave na boca <br>
-Sabores de pêra e tarte de lima."
-    nica_cp_html: "Equilibrado, doce e cítrico <br>
+    ethiopia_cp_html: "Doce e limpo com sensação suave na boca. <br>
+Sabores de pera e tarte de lima."
+    nica_cp_html: "Equilibrado, doce e cítrico.<br>
 Sabores de cereja do café, floral, caramelo e limão."
   description_att:
     chemex_desc: Um clássico, a Chemex é uma maneira simples e elegante de preparar café de filtro. É uma peça linda feita de vidro não poroso, que não absorve odores ou resíduos químicos. A peça de madeira com o cordão de couro pode ser removida para facilitar a limpeza. Se usada em conjunto com os filtros originais Chemex, o processo de infusão proporcionará a chávena de café perfeita, sem sedimentos ou elementos amargos.Os papéis de filtro não estão incluídos. Pode comprar os filtros de papel aqui.
@@ -95,13 +95,13 @@ Sabores de cereja do café, floral, caramelo e limão."
       locais e, posteriormente, é mantido entre 16 a 18 horas em imersão num tanque
       antes de ser espalhado nas mesas de secagem. Os grãos de café lavados demoram
       entre 7 a 11 dias a secar.
-    chemex_3_filter_desc: Filtros de papel para chemex 3 cups
-    chemex_6_filter_desc: Filtros de papel para chemex 6 cups
+    chemex_3_filter_desc: Filtros de papel para Chemex 3 cups.
+    chemex_6_filter_desc: Filtros de papel para Chemex 6 cups.
     mesh_dripper_desc: Este filtro de malha de aço inoxidável de dupla camada garante o fluxo de ar correto para uma extração uniforme, proporcionando uma chávena de café sem sedimentos e mantendo muitos dos óleos para uma bebida rica e completa.
-    hario_01_desc: Filtros de papel para V60 - 01 to 02 cups
-    hario_02_desc: Filtros de papel para V60 - 01 to 04 cups
-    kit_v_60_desc_html: O Kit Hario V60 contém tudo o que precisa para começar a fazer um saboroso café.<br>
-      <strong>Inclui:</strong><br>
+    hario_01_desc: Filtros de papel para V60 - 1 to 2 cups
+    hario_02_desc: Filtros de papel para V60 - 1 to 4 cups
+    kit_v_60_desc_html: O Kit Hario V60 contém tudo o que precisa para começar a fazer um saboroso café.<br><br>
+      <strong>Inclui:</strong>
       <ul>
         <li>1x02 V60</li>
         <li>1x bule de vidro</li>
@@ -142,7 +142,7 @@ Sabores de cereja do café, floral, caramelo e limão."
     chemex_6_filter_name: Filtros Chemex 6 cups
     hario_01_name: Filtros V60 Hario 01
     hario_02_name: Filtros V60 Hario 02
-    V60_name: Kit V60
+    V60_name: Hario Kit V60
   pages:
     about:
       about_text_1_html: "<strong>Brava</strong> é uma micro torrefatora baseada em
@@ -153,7 +153,7 @@ Sabores de cereja do café, floral, caramelo e limão."
       about_text_2_html: Há mais de 20 anos que Joana e Susana estão envolvidas no
         universo da restauração e bares em Lisboa. Os espaços que criam resultam das
         múltiplas inspirações que foram recolhendo em várias viagens e das novas experiências
-        que a cidade pode oferecer. Nas viagens que fizeram, confirmaram que o café
+        que a cidade pode oferecer. Nessas viagens, confirmaram que o café
         é muito mais do que uma simples bebida. Ir beber café é, um pouco por todo
         o mundo, um pretexto para o encontro. O café reúne as pessoas à sua volta,
         acompanha a conversa, estreita laços. Beber um café de especialidade eleva
@@ -189,7 +189,7 @@ Sabores de cereja do café, floral, caramelo e limão."
       fp_6: Após esses 4 minutos, empurre lentamente o êmbolo até o fim.
       fp_7: Saboreie o seu café!
       french_press: French press
-      intro_brewing_html: 'Há muitas variáveis em jogo: água, moagem, equipamentos… <br> Estas
+      intro_brewing_html: 'Há muitas variáveis em jogo: água, moagem, equipamentos.<br> Estas
         são apenas sugestões para um ponto de partida. <br><strong>Fique à vontade
         para experimentar quantidades e tempos de preparação, de forma a obter a “sua”
         chávena perfeita.</strong>'
@@ -243,8 +243,8 @@ Sabores de cereja do café, floral, caramelo e limão."
     new:
       sub-discover-title: Desenvolva uma relação!
       sub-adventure-title: Viagem ao mundo dos sabores!
-      sub-adventure-desc_html: Esta subscrição leva-o a uma viagem por diferentes países e sabores.<br>Recebe um  pacote diferente de café cada mês, durante 3 meses.
-      sub-discover-desc_html:  Durante <strong>3 meses</strong> receba um pacote de café cada mês permitindo que construa uma relação com o café. Experimente diferentes métodos de extração, proporções e receitas.
+      sub_adventure_desc_html: Receba todos os meses uma seleção Brava, durante três meses. Esta opção permite-lhe conhecer melhor a variedade e sabores dos nossos cafés.
+      sub_discover_desc_html: Receba uma vez por mês o seu café preferido, durante três meses. Experimente diferentes métodos de extração, proporções e receitas.
       sub-discover-coffee-select: Seleccione o seu café
       sub-discover-grind-select: Seleccione a sua moagem
 
@@ -257,20 +257,20 @@ Sabores de cereja do café, floral, caramelo e limão."
 
   orders:
     show:
-      order-sum: Total no carrinho
+      order-sum: Resumo da encomenda
       shipping: Transportes
-      ship-zone-tag:  A sua ordem será entregue em
+      ship-zone-tag:  A sua encomenda será entregue em
       ship-zone-select: Selecione a zona de envio
-      ship-method-select: Selecione o tipo de correio
+      ship-method-select: Selecione o modo de envio
       ship-europe: Resto da Europa
-      europe-mail-tag: Para qualquer outro pais na Europa, só correio registado
+      europe-mail-tag: Para qualquer outro pais na Europa, apenas enviamos em correio registado.
 
   messages:
     new:
       checkout-sum: Total de compras
       command: A sua encomenda de
       is: está
-      purchase-thanks: Obrigada por adquirir os nossos produtos. Vamos  já preparar a sua encomenda!
+      purchase-thanks: Obrigada por adquirir os nossos produtos. Vamos já preparar a sua encomenda!
 
   process: processo
   process_att: lavado
@@ -281,5 +281,5 @@ Sabores de cereja do café, floral, caramelo e limão."
   submit_email: Obrigada!
   subscribe_nav: SUBSCRIÇÃO
   addcart: Adicionar
-  savecont: Gravar & continuar
+  savecont: Continuar
   subscribe: Subscreva

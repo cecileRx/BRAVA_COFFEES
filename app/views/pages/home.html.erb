@@ -41,8 +41,8 @@
 
                        </div>
                       <div class="text-center">
-                       <h4 class="card-title"><%= t("origin_att.#{product.origin}").upcase %></h4>
-                       <p><%=product.name%></p>
+                       <h4 class="card-title text-center"><%= t("origin_att.#{product.origin}").upcase %></h4>
+                       <p class="card-sub-title"><%=product.name.upcase%></p>
                       </div>
                        <div class="link-caf">
                         <%= link_to t(".discover"), product_path(product), class: "btn cof-btn btn-outline-secondary text-right button-card" %>

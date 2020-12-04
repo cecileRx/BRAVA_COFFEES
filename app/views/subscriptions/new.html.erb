@@ -9,15 +9,15 @@
 
           <h5 class="card-title sub-card-title">Roasters Discovery </h5>
           <h6 class="card-subtitle mb-2 text-muted"> <%=t(".sub-discover-title")%></h6>
-          <p class="card-text sub-card-text mb-4"><%=t(".sub-discover-desc_html")%></p>
+          <p class="card-text sub-card-text mb-4"><%=t(".sub_discover_desc_html")%></p>
 
           <div class="discovery-card">
 
-              <div class="card-price d-flex">
-                <p class="sub-card-weight mr-4">250g / 11€ </p>
-                <p class="sub-card-weight">1000g / 39€ </p>
+              <div class="card-price">
+                <p class="sub-card-weight mr-4">250 gr - 11€ </p>
+                <p class="sub-card-weight">1000 gr - 39€ </p>
               </div>
-              <div class="form-group">
+              <div class="form-group sub-select">
                   <%= form_tag subscriptions_path class: "subscription_form" do %>
 
                     <%= label_tag t(".sub-discover-coffee-select") %>
@@ -55,15 +55,15 @@
 
           <h5 class="card-title sub-card-title">Roasters Adventure </h5>
           <h6 class="card-subtitle mb-2 text-muted"> <%=t(".sub-adventure-title")%></h6>
-          <p class="card-text sub-card-text mb-4"><%=t(".sub-adventure-desc_html")%></p>
+          <p class="card-text sub-card-text mb-4"><%=t(".sub_adventure_desc_html")%></p>
 
           <div class="adventure-card">
 
-              <div class="card-price-adventure d-flex">
-                <p class="sub-card-weight mr-4">250g / 12,5€ </p>
-                <p class="sub-card-weight">1000g / 46€ </p>
+              <div class="card-price-adventure">
+                <p class="sub-card-weight mr-4">250 gr - 12,5€ </p>
+                <p class="sub-card-weight">1000 gr - 46€ </p>
               </div>
-              <div class="form-group">
+              <div class="form-group sub-select">
                   <%= form_tag subscriptions_path class: "subscription_form" do %>
 
 

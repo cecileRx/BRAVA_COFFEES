@@ -34,45 +34,45 @@ en:
     nica_origin: Nicaragua
 
   cup_notes_att:
-    columb_amaca_cp_html: "Soft and sweet with fruit acidity <br>
+    columb_amaca_cp_html: "Soft and sweet with fruit acidity. <br>
 Very fruity with caramel and apple flavors."
-    columb_fudam_cp_html: "Tropical fruits with tamarind <br>
+    columb_fudam_cp_html: "Tropical fruits with tamarind. <br>
 Sweet and savory with big tangy fruit acidity and a smooth mouthfeel."
     ethiopia_cp_html: " Sweet and clean with a smooth mouthfeel <br>
- Pear and tart lime and  flavours."
-    nica_cp_html: "Balanced, sweet and citric <br>
+ Pear and tart lime flavours."
+    nica_cp_html: "Balanced, sweet and citric.<br>
 Coffee cherry, floral, caramel and lemon flavors."
 
   grind_op_att:
     columb_amaca_grind:
-    - Whole Beans
-    - filter
-    - Espresso
+    - Whole beans
+    - Filter
+    - Expresso
     - Aeropress
     - French press
     columb_fudam_grind:
-    - Whole Beans
-    - filter
-    - Espresso
+    - Whole beans
+    - Filter
+    - Expresso
     - Aeropress
     - French press
     ethiopia_grind:
-    - Whole Beans
-    - filter
-    - Aeropress
-    - French press
-    nica_grind:
-    - Whole Beans
+    - Whole beans
     - Filter
     - Aeropress
     - French press
-    - Espresso
+    nica_grind:
+    - Whole beans
+    - Filter
+    - Aeropress
+    - French press
+    - Expresso
 
   description_att:
-    chemex_desc: CHEMEX delivers the purest flavor experience. Made of non-porous
+    chemex_desc: CHEMEX delivers the purest flavor experience. It's made of non-porous
       Borosilicate glass which will not absorb odors or chemical residues. CHEMEX
       pour-over allows coffee to be covered and refrigerated for reheating without
-      losing flavor Simple, easy to use with timeless, elegant design
+      losing flavor Simple, easy to use with timeless, elegant design.
     columb_amaca_desc: AMACA stands for Asociación de Mujeres Productoras Agropecuarias
       del Cauca, a group of 80 women’ producers who are based in El Tambo, Cauca,
       Colombia since 1999. This association has registered a steady growth and, today,
@@ -103,15 +103,15 @@ Coffee cherry, floral, caramel and lemon flavors."
       each and every bean. It is then washed in local canals and thereafter, spends
       between 16 and18 hours soaking in a tank before being spread on the drying tables.
       It takes washed coffee beans between 7 to 11 days to dry out.
-    chemex_3_filter_desc: Paper filters for chemex 3 cups
-    chemex_6_filter_desc: Paper filters for chemex 6 cups
+    chemex_3_filter_desc: Paper filters for Chemex 3 cups.
+    chemex_6_filter_desc: Paper filters for Chemex 6 cups.
     mesh_dripper_desc: Dripper with double mesh filters. It is made solely of stainless steel.
       The metal filters allow the coffee oil to slowly pour through, letting you enjoy
       coffee with a deep aroma.
-    hario_01_desc: 'paper filters for V60 - 01 to 02 cups size'
-    hario_02_desc: 'paper filters for V60 - 01 to 04 cups size'
-    kit_v_60_desc_html: The Hario V60 Craft Coffee Kit features everything you need to start making great tasting coffee.<br>
-      <strong>Includes:</strong><br>
+    hario_01_desc: 'Paper filters for V60 - 1 to 2 cups size'
+    hario_02_desc: 'Paper filters for V60 - 1 to 4 cups size'
+    kit_v_60_desc_html: The Hario V60 Craft Coffee Kit features everything you need to start making great tasting coffee.<br><br>
+      <strong>Includes:</strong>
       <ul>
         <li>1 x 02 Hario V60 Dripper</li>
         <li>1 x 600ml Server</li>
@@ -150,32 +150,31 @@ Coffee cherry, floral, caramel and lemon flavors."
     chemex_3_name: Chemex 3 cups
     chemex_3_filter_name: Chemex 3 cups filters
     chemex_6_filter_name: Chemex 6 cups filters
-    hario_01_name: Hario V60 Coffee paper filters 01
-    hario_02_name: Hario V60 Coffee paper filters 02
-    V60_name: Kit V60
+    hario_01_name: Hario V60 paper filters 01
+    hario_02_name: Hario V60 paper filters 02
+    V60_name: Hario Kit V60
   pages:
     about:
       about_text_1_html: "<strong>Brava</strong> is a micro coffee roaster based in
         Lisbon, founded in 2018 by Joana and Susana out of the desire to find “the
         perfect cup of coffee”. Following strict principles in the choice of beans,
         bringing together the best coffees and transforming the characteristics of
-        the grain into unique sensations for the palate, through a careful roasting
-        process."
-      about_text_2_html: For over 20 years, Joana and Susana, have been involved in
+        the grain, through a careful roasting process into unique sensations for the palate."
+      about_text_2_html: For over 20 years, Joana and Susana have been involved in
         the world of restaurants and bars in Lisbon, always looking for the balance
-        between the multiple inspirations they have been collecting on various trips
-        and the experiences the city can offer. On their trips they confirmed that
-        coffee is much more than just a drink. Going to drink a coffee has also means
+        between the multiple inspirations they've been collecting on various trips
+        and the experiences the city can offer. On their travels they confirmed that
+        coffee is much more than just a drink. Going to drink a coffee also means
         an encounter. Coffee gathers people around, it’s a pretext for sharing and
         creating bonds. Drinking a specialty coffee takes this experience to a higher
         level, a coffee of excellence tells a story of community, culture, dedication,
         involvement and passion.
-      about_text_quote: We believe that coffee is not a product, but an entire experience.
+      about_text_quote: For us coffee is not just a product, it's an entire experience.
     brewing:
       chemex: CHEMEX
-      chemex_html: "<li>Fold the CHEMEX® coffee filter, make sure the three thickness
-        of the filter are across the vent.</li> <br> <li>Coffee ratio should be 19
-        grams per 250ml, into the filter cone (one teaspoon is approximately 5 grams
+      chemex_html: "<li>Fold the coffee filter, making sure the most thick part
+        of the filter is across the vent.</li> <br> <li>Coffee ratio should be 19
+        grams per 250ml into the filter cone (one teaspoon is approximately 5 grams
         of coffee).</li> <br> <li>Moisten the filter with warm water to rinse and
         preheat the coffee maker; as soon as the water is completely drained by the
         filter, pour it from the coffee maker keeping the filter sealed against the
@@ -200,10 +199,10 @@ Coffee cherry, floral, caramel and lemon flavors."
       fp_7: Enjoy your coffee!
       french_press: French press
       intro_brewing_html:
-        There are so many variables at play when making a great cup of coffee - water,
-        grind, equipment.. - <br> This is just a suggestion for a starting point.
-        <br><strong>Feel free to play with the weights and preparation times to get
-        the perfect cup!</strong>
+        <strong>There are many variables at play when making a great cup of coffee - water,
+        grind, equipment.<br> These are just suggestions for a starting point.
+        <br><br>Feel free to play with the weights and preparation times to get
+        your perfect cup!</strong>
       mocha: Moka pot
       mocha_guide_html: "<li>Grind the coffee beans.</li> <br> <li>Fill the base of
         your moka pot with hot water up to the line.</li> <br> <li>Place the funnel in
@@ -217,15 +216,15 @@ Coffee cherry, floral, caramel and lemon flavors."
         <br> <li>Pour into cups immediately and enjoy!</li>"
       v60: V60
       v_guide_html: "<li>Place the filter paper in the cone and boil the water at
-        about 96ºC</li> <br> <li>Rinse the filter paper. This eliminates any paper
-        taste and heats the server.</li> <br> <li>Add coffee</li> <br> <li>Start with
-        a ratio of 22g of coffee to 300ml of water (3 tbs= 21gr)</li> <br> <li>Pre-prepare
+        about 96ºC.</li> <br> <li>Rinse the filter paper, this eliminates any paper
+        taste and heats the server.</li> <br> <li>Add coffee.</li> <br> <li>Start with
+        a ratio of 22g of coffee to 300ml of water (3 tbs= 21gr).</li> <br> <li>Pre-prepare
         the coffee: saturate the ground just enough water to cover the ground coffee
         in a circular motion and wait 30 seconds for the coffee to “bloom”.</li> <br>
         <li>Pour the remaining water in a circular motion.</li> <br> <li>After finishing
-        the extraction, stir the coffee a little to mix the flavours and serve</li>
+        the extraction, stir the coffee a little to mix the flavours and serve.</li>
         <br> <li>The goal is a total extraction time (including 30 seconds before
-        infusion) up to about 3 minutes</li>"
+        infusion) up to about 3 minutes.</li>"
 
     home:
       brava_intro_1: Brava is an artisanal specialty coffee roaster.
@@ -252,14 +251,14 @@ Coffee cherry, floral, caramel and lemon flavors."
     new:
       sub-discover-title: Develop a relationship!
       sub-adventure-title: Journey into the world of flavours!
-      sub_adventure_desc_html: This subscription takes you on a journey through different countries and flavours.<br>Receive a different package of coffee each month, for 3 months.
-      sub_discover_desc_html: For <strong>3 months</strong> receive a bag of your preferred coffee every month allowing you to build a strong relationship. Try different extraction methods, proportions and recipes.
+      sub_adventure_desc_html: Receive each month a different package, for a period of three monthes. This adventure takes you on a journey through different countries and flavours.<br>
+      sub_discover_desc_html: Receive each month your favorite coffee, for a period of three monthes. You can try different extraction methods, proportions and recipes.
       sub-discover-coffee-select: Select your coffee
       sub-discover-grind-select: select your grind
   carts:
     show:
       shop-cart: Shopping cart
-      checkout: Proceed to checout
+      checkout: Proceed to checkout
       empty-cart: Empty cart
       continue-shop: Continue shopping
 
