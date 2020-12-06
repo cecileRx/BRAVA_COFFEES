@@ -19,7 +19,7 @@ puts 'Creating equipments...'
 Product.create!(
   name: 'hario_skerton_grinder_name',
   description: 'hario_skerton_grinder_desc',
-  photo: 'hario_skerton_grinder',
+  photo: 'hario_skerton_grinder.jpg',
   price_cents: 4478,
   shipping_points: 2,
   category: equipment)
@@ -27,7 +27,7 @@ Product.create!(
 Product.create!(
   name: 'hario_V60_ceramic_dripper_name',
   description: 'hario_V60_ceramic_dripper_desc',
-  photo: 'hario_V60_ceramic_dripper',
+  photo: 'hario_V60_ceramic_dripper.jpg',
   price_cents: 2919,
   shipping_points: 2,
   category: equipment)
@@ -35,7 +35,7 @@ Product.create!(
 Product.create!(
   name: 'hario_V60_glass_dripper_name',
   description: 'hario_V60_glass_dripper_desc',
-  photo: 'hario_V60_glass_dripper',
+  photo: 'hario_V60_glass_dripper.jpg',
   price_cents: 5199,
   shipping_points: 2,
   category: equipment)
@@ -43,7 +43,7 @@ Product.create!(
 Product.create!(
   name: 'hario_V60_server_name',
   description: 'hario_V60_server_desc',
-  photo: 'hario_V60_server',
+  photo: 'hario_V60_server.jpg',
   price_cents: 2919,
   shipping_points: 2,
   category: equipment)
@@ -51,7 +51,7 @@ Product.create!(
 Product.create!(
   name: 'uchi_mugg_name',
   description: 'uchi_mugg_desc',
-  photo: 'uchi_mugg',
+  photo: 'uchi_mugg.jpg',
   price_cents: 2919,
   shipping_points: 2,
   category: equipment)
