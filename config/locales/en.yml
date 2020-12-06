@@ -69,6 +69,11 @@ Coffee cherry, floral, caramel and lemon flavors."
     - Expresso
 
   description_att:
+    hario_skerton_grinder_desc: One of the secrets to making excellent coffee at home is to grind the fresh beans before preparing them or just like us, always take them on the road. Compact, it can be easily adjusted depending on your preferences and the coffee preparation method.
+    hario_V60_ceramic_dripper_desc: The V60 has a conical shape for deeper layers of coffee beans, producing a rich umami flavor. The single large hole offers maximum freedom - pour water quickly for a light taste or slowly if you like rich coffee. The V60 is made of Arita-yaki, a traditional style of Japanese ceramics with 400 years of history. Each is handmade by a local artisan.
+    hario_V60_glass_dripper_desc: The V60 has a conical shape for deeper layers of coffee beans, producing a rich umami flavor. The single large hole offers maximum freedom - pour water quickly for a light taste or slowly if you like rich coffee.
+    hario_V60_server_desc: The Hario V60 Server is a server perfectly designed for manual coffee preparation at home. Made entirely of durable heat-resistant Japanese glass. In addition, it was equipped with a silicone-coated glass lid, which allows the ready brew to remain hot for a long time. It is fully compatible with all products in the Hario V60 series, especially recommended with the Hario V60-02 dripper. The server is also microwave safe. Capacity - 600 ml
+    uchi_mugg_desc: Stylish and functional reusable travel mug. Maintains the temperature of the coffee for a long time. Capacity - 350ml
     chemex_desc: CHEMEX delivers the purest flavor experience. It's made of non-porous
       Borosilicate glass which will not absorb odors or chemical residues. CHEMEX
       pour-over allows coffee to be covered and refrigerated for reheating without
@@ -146,6 +151,11 @@ Coffee cherry, floral, caramel and lemon flavors."
   logout: Logout
   name_att:
     Mesh_dripper_name: Double Mesh Metal Dripper 1_2 cups
+    hario_skerton_grinder_name: Hario Skerton Plus grinder
+    hario_V60_ceramic_dripper_name: Hario V60 ceramic dripper
+    hario_V60_glass_dripper_name: Hario V60 glass dripper
+    hario_V60_server_name: Hario V60 Server
+    uchi_mugg_name: Uchi Mugg
     chemex_6_name: Chemex 6 cups
     chemex_3_name: Chemex 3 cups
     chemex_3_filter_name: Chemex 3 cups filters

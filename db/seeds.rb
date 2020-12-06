@@ -17,6 +17,46 @@ equipment = Category.create!(name: 'equipment')
 puts 'Creating equipments...'
 
 Product.create!(
+  name: 'hario_skerton_grinder_name',
+  description: 'hario_skerton_grinder_desc',
+  photo: 'hario_skerton_grinder',
+  price_cents: 4478,
+  shipping_points: 2,
+  category: equipment)
+
+Product.create!(
+  name: 'hario_V60_ceramic_dripper_name',
+  description: 'hario_V60_ceramic_dripper_desc',
+  photo: 'hario_V60_ceramic_dripper',
+  price_cents: 2919,
+  shipping_points: 2,
+  category: equipment)
+
+Product.create!(
+  name: 'hario_V60_glass_dripper_name',
+  description: 'hario_V60_glass_dripper_desc',
+  photo: 'hario_V60_glass_dripper',
+  price_cents: 5199,
+  shipping_points: 2,
+  category: equipment)
+
+Product.create!(
+  name: 'hario_V60_server_name',
+  description: 'hario_V60_server_desc',
+  photo: 'hario_V60_server',
+  price_cents: 2919,
+  shipping_points: 2,
+  category: equipment)
+
+Product.create!(
+  name: 'uchi_mugg_name',
+  description: 'uchi_mugg_desc',
+  photo: 'uchi_mugg',
+  price_cents: 2919,
+  shipping_points: 2,
+  category: equipment)
+
+Product.create!(
   name: 'chemex_3_name',
   description: 'chemex_desc',
   photo: 'chemex_3_cups.jpg',
