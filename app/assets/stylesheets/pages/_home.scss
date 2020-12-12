@@ -37,11 +37,12 @@ body {
   font-size: 16px;
 }
 
-#banner img {
-  opacity: 0.8;
+
+#banner .main-title  {
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: $light-gray;
 }
-
-
 #banner h3 {
   font-size: 1.4rem;
   color: $brown;
@@ -50,7 +51,6 @@ body {
 #banner .main-text {
   font-family: 'Nunito Sans';
   font-weight: 300;
-
 }
 
 #banner .secondary-text {
@@ -62,9 +62,7 @@ body {
 #coffee-header h2 {
   font-family: 'Nunito Sans';
   font-weight: 500;
-  font-size: 30px;
-
-
+  font-size: 28px;
 }
 
 #coffee .link-caf {

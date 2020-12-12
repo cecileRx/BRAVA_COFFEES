@@ -26,7 +26,7 @@ Product.create!(
 
 Product.create!(
   name: 'hario_V60_ceramic_dripper_name',
-  description: 'hario_V60_ceramic_dripper_desc',
+  description: 'hario_V60_ceramic_dripper_desc_html',
   photo: 'hario_V60_ceramic_dripper.jpg',
   price_cents: 2919,
   shipping_points: 2,
@@ -34,7 +34,7 @@ Product.create!(
 
 Product.create!(
   name: 'hario_V60_glass_dripper_name',
-  description: 'hario_V60_glass_dripper_desc',
+  description: 'hario_V60_glass_dripper_desc_html',
   photo: 'hario_V60_glass_dripper.jpg',
   price_cents: 5199,
   shipping_points: 2,
@@ -58,7 +58,7 @@ Product.create!(
 
 Product.create!(
   name: 'chemex_3_name',
-  description: 'chemex_desc',
+  description: 'chemex_desc_html',
   photo: 'chemex_3_cups.jpg',
   price_cents: 4369,
   shipping_points: 2,
@@ -66,7 +66,7 @@ Product.create!(
 
 Product.create!(
   name: 'chemex_6_name',
-  description: 'chemex_desc',
+  description: 'chemex_desc_html',
   photo: 'chemex_6_cups.jpg',
   price_cents: 4949,
   shipping_points: 2,
@@ -106,9 +106,9 @@ Product.create!(
 
 Product.create!(
   name: 'hario_02_name',
-  photo: 'Hario_V60_Filters.jpg',
+  photo: 'Hario_V60_Filters2.jpg',
   description: 'hario_02_desc',
-  price_cents: 349,
+  price_cents: 659,
   shipping_points: 1,
   category: equipment)
 

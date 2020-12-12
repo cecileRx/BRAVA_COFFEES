@@ -70,14 +70,18 @@ Coffee cherry, floral, caramel and lemon flavors."
 
   description_att:
     hario_skerton_grinder_desc: One of the secrets to making excellent coffee at home is to grind the fresh beans before preparing them or just like us, always take them on the road. Compact, it can be easily adjusted depending on your preferences and the coffee preparation method.
-    hario_V60_ceramic_dripper_desc: The V60 has a conical shape for deeper layers of coffee beans, producing a rich umami flavor. The single large hole offers maximum freedom - pour water quickly for a light taste or slowly if you like rich coffee. The V60 is made of Arita-yaki, a traditional style of Japanese ceramics with 400 years of history. Each is handmade by a local artisan.
-    hario_V60_glass_dripper_desc: The V60 has a conical shape for deeper layers of coffee beans, producing a rich umami flavor. The single large hole offers maximum freedom - pour water quickly for a light taste or slowly if you like rich coffee.
+    hario_V60_ceramic_dripper_desc_html: The V60 has a conical shape for deeper layers of coffee beans, producing a rich umami flavor. The single large hole offers maximum freedom - pour water quickly for a light taste or slowly if you like rich coffee. The V60 is made of Arita-yaki, a traditional style of Japanese ceramics with 400 years of history. Each is handmade by a local artisan.<br>
+      Filters are not included. You can shop filter papers here.<br>We recommend 72-75g of coffee per litre of water. Extraction time of 3-4 minutes.
+    hario_V60_glass_dripper_desc_html: The V60 has a conical shape for deeper layers of coffee beans, producing a rich umami flavor. The single large hole offers maximum freedom - pour water quickly for a light taste or slowly if you like rich coffee.<br>
+      Filters are not included. You can shop filter papers here.<br>We recommend 72-75g of coffee per litre of water. Extraction time of 3-4 minutes.
     hario_V60_server_desc: The Hario V60 Server is a server perfectly designed for manual coffee preparation at home. Made entirely of durable heat-resistant Japanese glass. In addition, it was equipped with a silicone-coated glass lid, which allows the ready brew to remain hot for a long time. It is fully compatible with all products in the Hario V60 series, especially recommended with the Hario V60-02 dripper. The server is also microwave safe. Capacity - 600 ml
     uchi_mugg_desc: Stylish and functional reusable travel mug. Maintains the temperature of the coffee for a long time. Capacity - 350ml
-    chemex_desc: CHEMEX delivers the purest flavor experience. It's made of non-porous
+    chemex_desc_html: CHEMEX delivers the purest flavor experience. It's made of non-porous
       Borosilicate glass which will not absorb odors or chemical residues. CHEMEX
       pour-over allows coffee to be covered and refrigerated for reheating without
-      losing flavor Simple, easy to use with timeless, elegant design.
+      losing flavor Simple, easy to use with timeless, elegant design.<br>
+      Filters are not included. You can shop filter papers here.<br>We recommend 72-75g of coffee per litre of water. Extraction time of 3-4 minutes.
+
     columb_amaca_desc: AMACA stands for Asociación de Mujeres Productoras Agropecuarias
       del Cauca, a group of 80 women’ producers who are based in El Tambo, Cauca,
       Colombia since 1999. This association has registered a steady growth and, today,
@@ -160,8 +164,8 @@ Coffee cherry, floral, caramel and lemon flavors."
     chemex_3_name: Chemex 3 cups
     chemex_3_filter_name: Chemex 3 cups filters
     chemex_6_filter_name: Chemex 6 cups filters
-    hario_01_name: Hario V60 paper filters 01
-    hario_02_name: Hario V60 paper filters 02
+    hario_01_name: Hario V60 paper filters
+    hario_02_name: Hario V60 paper filters
     V60_name: Hario Kit V60
   pages:
     about:
@@ -183,7 +187,7 @@ Coffee cherry, floral, caramel and lemon flavors."
     brewing:
       chemex: CHEMEX
       chemex_html: "<li>Fold the coffee filter, making sure the most thick part
-        of the filter is across the vent.</li> <br> <li>Coffee ratio should be 19
+        of the filter is across the vent.</li> <br> <li>Coffee ratio should be 18
         grams per 250ml into the filter cone (one teaspoon is approximately 5 grams
         of coffee).</li> <br> <li>Moisten the filter with warm water to rinse and
         preheat the coffee maker; as soon as the water is completely drained by the
@@ -196,7 +200,7 @@ Coffee cherry, floral, caramel and lemon flavors."
         well below the top of the coffee maker.</li> <br> <li>Once the desired amount
         of coffee is brewed, lift the filter with spent grounds out of the brewer
         and discard.</li> <br> <li>Serve and enjoy! </li>"
-      fp_1: Grind the coffee beans coarsely (think of breadcrumbs) and for each 300gr
+      fp_1: Grind the coffee beans coarsely and for each 300gr
         of water use 22 gr of coffee.
       fp_2: Heat the coffee maker with hot water, gradually so as not to break the
         glass (the infusion temperature drops quickly if the French press is cold
@@ -225,8 +229,7 @@ Coffee cherry, floral, caramel and lemon flavors."
         it from the heat. The residual heat will be sufficient to finish the infusion.</li>
         <br> <li>Pour into cups immediately and enjoy!</li>"
       v60: V60
-      v_guide_html: "<li>Place the filter paper in the cone and boil the water at
-        about 96ºC.</li> <br> <li>Rinse the filter paper, this eliminates any paper
+      v_guide_html: "<li>Place the filter paper in the cone and boil the water at a temperature between 94° and 96ºC.</li> <br> <li>Rinse the filter paper, this eliminates any paper
         taste and heats the server.</li> <br> <li>Add coffee.</li> <br> <li>Start with
         a ratio of 22g of coffee to 300ml of water (3 tbs= 21gr).</li> <br> <li>Pre-prepare
         the coffee: saturate the ground just enough water to cover the ground coffee

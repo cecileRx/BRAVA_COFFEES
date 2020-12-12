@@ -68,11 +68,11 @@ Sabores de pera e tarte de lima."
 Sabores de cereja do café, floral, caramelo e limão."
   description_att:
     hario_skerton_grinder_desc: Um dos segredos para fazer um excelente café em casa é moer os grãos frescos antes de prepará-los ou tal como nós, levar sempre em viagem. Compacto, pode ser facilmente ajustado dependendo de suas preferências e do método de preparação do café.
-    hario_V60_ceramic_dripper_desc: O V60 tem um formato cónico para camadas mais profundas de grãos de café, produzindo um rico sabor umami. O único orifício grande oferece liberdade máxima - despeje água rapidamente para um sabor leve ou lentamente se você gosta de um café rico. O V60 é feito de Arita-yaki, um estilo tradicional de cerâmica japonesa com 400 anos de história. Cada um é feito à mão por um artesão local.
-    hario_V60_glass_dripper_desc: O V60 tem um formato cónico para camadas mais profundas de grãos de café, produzindo um rico sabor umami. O único orifício grande oferece liberdade máxima - despeje água rapidamente para um sabor leve ou lentamente se você gosta de um café rico.
-    hario_V60_server_desc: O Hario V60 S é uma cafeteira perfeitamente desenhada para a preparação manual do café em casa. Feita inteiramente de vidro japonês resistente ao calor durável. Além disso, foi equipada com uma tampa de vidro revestida de silicone, que permite que a bebida permaneça quente por muito tempo. É totalmente compatível com todos os produtos da série Hario V60, especialmente recomendado com o dripper Hario V60-02. Capacidade - 600 ml
+    hario_V60_ceramic_dripper_desc_html: O V60 tem um formato cónico para camadas mais profundas de grãos de café, produzindo um rico sabor umami. O único orifício grande oferece liberdade máxima - despeje água rapidamente para um sabor leve ou lentamente se você gosta de um café rico. O V60 é feito de Arita-yaki, um estilo tradicional de cerâmica japonesa com 400 anos de história. Cada um é feito à mão por um artesão local.<br>Os papéis de filtro não estão incluídos. Pode comprar os filtros de papel aqui.<br>Recomendamos 72-75g de café por litro de água. Tempo de extracção de 3-4 minutos.
+    hario_V60_glass_dripper_desc_html: O V60 tem um formato cónico para camadas mais profundas de grãos de café, produzindo um rico sabor umami. O único orifício grande oferece liberdade máxima - despeje água rapidamente para um sabor leve ou lentamente se você gosta de um café rico.<br>Os papéis de filtro não estão incluídos. Pode comprar os filtros de papel aqui.<br>Recomendamos 72-75g de café por litro de água. Tempo de extracção de 3-4 minutos.
+    hario_V60_server_desc: O Hario V60 S é uma cafeteira perfeitamente desenhada para a preparação manual do café em casa. Feita inteiramente de vidro japonês resistente ao calor durável. Além disso, foi equipada com uma tampa de vidro revestida de silicone, que permitse que a bebida permaneça quente por muito tempo. É totalmente compatível com todos os produtos da série Hario V60, especialmente recomendado com o dripper Hario V60-02. Capacidade - 600 ml
     uchi_mugg_desc: Caneca de viagem reutilizável com estilo e funcional. Mantém a temperatura do café por muito tempo. Capacidade -350ml
-    chemex_desc: Um clássico, a Chemex é uma maneira simples e elegante de preparar café de filtro. É uma peça linda feita de vidro não poroso, que não absorve odores ou resíduos químicos. A peça de madeira com o cordão de couro pode ser removida para facilitar a limpeza. Se usada em conjunto com os filtros originais Chemex, o processo de infusão proporcionará a chávena de café perfeita, sem sedimentos ou elementos amargos.Os papéis de filtro não estão incluídos. Pode comprar os filtros de papel aqui.
+    chemex_desc_html: Um clássico, a Chemex é uma maneira simples e elegante de preparar café de filtro. É uma peça linda feita de vidro não poroso, que não absorve odores ou resíduos químicos. A peça de madeira com o cordão de couro pode ser removida para facilitar a limpeza. Se usada em conjunto com os filtros originais Chemex, o processo de infusão proporcionará a chávena de café perfeita, sem sedimentos ou elementos amargos.<br>Os papéis de filtro não estão incluídos. Pode comprar os filtros de papel aqui.<br>Recomendamos 72-75g de café por litro de água. Tempo de extracção de 3-4 minutos.
     columb_amaca_desc: AMACA – Asociación de Mujeres Productoras Agropecuarias del
       Cauca, é um grupo de mulheres produtoras de El Tambo, Cauca, Colômbia. Desde
       1999, a associação foi crescendo e hoje conta com 140 mulheres de três aldeias
@@ -150,8 +150,8 @@ Sabores de cereja do café, floral, caramelo e limão."
     chemex_3_name: Chemex 3 cups
     chemex_3_filter_name: Filtros Chemex 3 cups
     chemex_6_filter_name: Filtros Chemex 6 cups
-    hario_01_name: Filtros V60 Hario 01
-    hario_02_name: Filtros V60 Hario 02
+    hario_01_name: Filtros V60 Hario
+    hario_02_name: Filtros V60 Hario
     V60_name: Hario Kit V60
   pages:
     about:
@@ -174,7 +174,7 @@ Sabores de cereja do café, floral, caramelo e limão."
     brewing:
       chemex: CHEMEX
       chemex_html: "<li>Dobre o filtro de café, certificando-se de que a parte mais
-        espessa do filtro está na abertura </li> <br> <li>Coloque 19gr de café por
+        espessa do filtro está na abertura </li> <br> <li>Coloque 18gr de café por
         250ml de água a 96ºC, no cone do filtro (uma colher de chá equivale a aproximadamente
         5gr de café).</li> <br> <li>Humedeça o filtro com água morna para enxaguar
         e pré-aquecer a Chemex; quando a água for totalmente drenada pelo filtro,
@@ -186,7 +186,7 @@ Sabores de cereja do café, floral, caramelo e limão."
         café, mas mantendo o nível da água bem abaixo do topo da cafeteira.</li> <br>
         <li>Uma vez que a quantidade desejada de café é distribuída, retire o filtro
         e descarte.</li> <br> <li>Sirva e aproveite!</li>"
-      fp_1: Moa os grãos de café (tipo pão ralado), usando para cada 300gr de água
+      fp_1: Moa os grãos de café, usando para cada 300gr de água
         22gr de café.
       fp_2: Aqueça a cafeteira com água quente, gradualmente para não partir o vidro
         (a temperatura da infusão baixa rapidamente se a cafeteira estiver fria e,
@@ -214,8 +214,7 @@ Sabores de cereja do café, floral, caramelo e limão."
         o café começar a fluir na parte superior, retire-o do lume; o calor residual
         será suficiente para terminar a infusão.</li> <br> <li>Sirva a chávena e saboreie!</li>"
       v60: V60
-      v_guide_html: "<li>Coloque o papel de filtro no cone e ferva a água a cerca
-        de 96ºC</li> <br> <li>Enxague o papel de filtro (assim elimina qualquer gosto
+      v_guide_html: "<li>Coloque o papel de filtro no cone e ferva a água a  uma temperatura entre 94° e 96ºC.</li> <br> <li>Enxague o papel de filtro (assim elimina qualquer gosto
         de papel e aquece o bule).</li> <br> <li>Adicione o café</li> <br> <li>Comece
         com uma proporção de 22g de café para 300ml de água (3cs= 21gr)</li> <br>
         <li>Pré-prepare o café: sature o café com água apenas o suficiente para cobrir
