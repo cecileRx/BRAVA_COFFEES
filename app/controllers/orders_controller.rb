@@ -18,22 +18,24 @@ class OrdersController < ApplicationController
 
     @order.amount_cents_cents = total.sum
 
+    if @order.amount_cents_cents == 0
+      redirect_to root_path
+    else
+      @current_cart.order_items.each do |item|
+        @order.order_items << item
+        item.cart_id = nil
+      end
+
+      @user = current_user
+      @order.user_id = @user.id
+      @order.save
 
 
-    @current_cart.order_items.each do |item|
-      @order.order_items << item
-      item.cart_id = nil
+      Cart.destroy(session[:cart_id])
+      session[:cart_id] = nil
+
+      redirect_to order_path(@order)
     end
-
-    @user = current_user
-    @order.user_id = @user.id
-    @order.save
-
-
-    Cart.destroy(session[:cart_id])
-    session[:cart_id] = nil
-
-    redirect_to order_path(@order)
 
   end
 
@@ -126,7 +128,7 @@ class OrdersController < ApplicationController
       payment_method_types: ['card'],
 
       shipping_address_collection: {
-        allowed_countries: ['US', 'CA', 'FR', 'PT', 'ES']
+        allowed_countries: ['UK', 'BE', 'CZ', 'FR', 'DK', 'DE', 'EE', 'IE', 'EL', 'HR', 'IT', 'CY', 'LV', 'LT', 'LU', 'HU', 'MT', 'NL', 'AT', 'PL', 'RO', 'SI', 'SK', 'FI', 'SE', 'IS', 'LI', 'NO', 'CH', 'PT', 'ES', 'ME', 'MK', 'AL', 'RS', 'TR', 'DZ', 'MA', 'IL']
       },
       customer_email: current_user.email,
 

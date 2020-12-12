@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'brava-test@brava.com'
+  default from: 'info@bravacoffeeroasters.com'
   layout 'mailer'
 end
