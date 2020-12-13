@@ -128,7 +128,7 @@ class OrdersController < ApplicationController
       payment_method_types: ['card'],
 
       shipping_address_collection: {
-        allowed_countries: ['GB', 'BE', 'CZ', 'FR', 'DK', 'DE', 'EE', 'IE', 'EL', 'HR', 'IT', 'CY', 'LV', 'LT', 'LU', 'HU', 'MT', 'NL', 'AT', 'PL', 'RO', 'SI', 'SK', 'FI', 'SE', 'IS', 'LI', 'NO', 'CH', 'PT', 'ES', 'ME', 'MK', 'AL', 'RS', 'TR', 'DZ', 'MA', 'IL']
+        allowed_countries: ['GB', 'BE', 'CZ', 'FR', 'DK', 'DE', 'EE', 'IE', 'HR', 'IT', 'CY', 'LV', 'LT', 'LU', 'HU', 'MT', 'NL', 'AT', 'PL', 'RO', 'SI', 'SK', 'FI', 'SE', 'IS', 'LI', 'NO', 'CH', 'PT', 'ES', 'ME', 'MK', 'AL', 'RS', 'TR', 'DZ', 'MA', 'IL']
       },
       customer_email: current_user.email,
 
