@@ -1,5 +1,5 @@
 Rails.application.configure do
-  config.action_mailer.default_url_options = { host: "https://protected-escarpment-80325.herokuapp.com" }
+  config.action_mailer.default_url_options = { host: "http://localhost:3000" }
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -94,13 +94,13 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-
+  config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-  :user_name => ENV["SG_EMAIL"],
-  :password => ENV["SG_PASSWORD"],
-  :domain => 'https://protected-escarpment-80325.herokuapp.com',
-  :address => 'smtp.sendgrid.net',
+  :user_name =>  ENV['MAILGUN_SMTP_LOGIN'],
+  :password => ENV['MAILGUN_SMTP_PASSWORD'],
+  :domain => 'protected-escarpment-80325.herokuapp.com',
+  :address => 'smtp.mailgun.org',
   :port => 587,
   :authentication => :plain,
   :enable_starttls_auto => true
