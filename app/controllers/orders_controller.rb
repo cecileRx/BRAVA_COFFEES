@@ -123,6 +123,16 @@ class OrdersController < ApplicationController
 
     line_items_order << shipping_costs
 
+     if @user.stripe_id != nil
+      customer = Stripe::Customer.retrieve(@user.stripe_id)
+    else
+      customer = Stripe::Customer.create({
+        email: current_user.email,
+        name: current_user.username
+      })
+
+     end
+
 
     @session = Stripe::Checkout::Session.create(
       payment_method_types: ['card'],
@@ -130,28 +140,23 @@ class OrdersController < ApplicationController
       shipping_address_collection: {
         allowed_countries: ['GB', 'BE', 'CZ', 'FR', 'DK', 'DE', 'EE', 'IE', 'HR', 'IT', 'CY', 'LV', 'LT', 'LU', 'HU', 'MT', 'NL', 'AT', 'PL', 'RO', 'SI', 'SK', 'FI', 'SE', 'IS', 'LI', 'NO', 'CH', 'PT', 'ES', 'ME', 'MK', 'AL', 'RS', 'TR', 'DZ', 'MA', 'IL']
       },
-      customer_email: current_user.email,
+
+      customer: customer.id,
 
       line_items: line_items_order,
 
       success_url: new_order_message_url(@order),
       cancel_url: order_url(@order)
-    )
+      )
 
-    customer = Stripe::Customer.create({
-      email: current_user.email,
-      name: current_user.username,
-      metadata: {
-
-      },
-    })
+       @user.stripe_id = customer.id
+       @user.save
 
 
-   @user.stripe_id = customer.id
-   @user.save
    @order.checkout_session_id = @session.id
    @order.save
-  end
+
+end
 
   def update
 
