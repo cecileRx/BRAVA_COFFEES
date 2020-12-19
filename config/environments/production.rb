@@ -99,7 +99,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
   :user_name =>  ENV['MAILGUN_SMTP_LOGIN'],
   :password => ENV['MAILGUN_SMTP_PASSWORD'],
-  :domain => 'protected-escarpment-80325.herokuapp.com',
+  :domain => 'mg.bravacoffeeroasters.com',
   :address => 'smtp.eu.mailgun.org',
   :port => 587,
   :authentication => :plain,
