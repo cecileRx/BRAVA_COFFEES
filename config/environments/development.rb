@@ -8,7 +8,7 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:              'smtp.mailgun.org',
+    address:              'smtp.eu.mailgun.org',
     port:                 587,
     domain:               'mg.bravacoffeeroasters.com',
     user_name:            ENV['MAILGUN_SMTP_LOGIN'],

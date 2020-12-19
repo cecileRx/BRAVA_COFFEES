@@ -1,5 +1,5 @@
 Rails.application.configure do
-  config.action_mailer.default_url_options = { host: "http://localhost:3000" }
+  config.action_mailer.default_url_options = { host: "wwww.bravacoffeeroasters.com" }
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -100,7 +100,7 @@ Rails.application.configure do
   :user_name =>  ENV['MAILGUN_SMTP_LOGIN'],
   :password => ENV['MAILGUN_SMTP_PASSWORD'],
   :domain => 'protected-escarpment-80325.herokuapp.com',
-  :address => 'smtp.mailgun.org',
+  :address => 'smtp.eu.mailgun.org',
   :port => 587,
   :authentication => :plain,
   :enable_starttls_auto => true
