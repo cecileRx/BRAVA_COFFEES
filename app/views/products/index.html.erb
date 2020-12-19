@@ -12,9 +12,9 @@
             <div class="card h-100">
               <%= link_to product_path(item), :style=>'color: gray; text-decoration: none;' do %>
                 <div class=" mb-2">
-                  <%= image_tag item.photo , class: "card-img-top", size: "260x260" %>
+                  <%= image_tag item.photo , class: "card-img-top img-fluid"  %>
                   <div class="card-body text-center">
-                    <h5 class="card-title"><%= t("name_att.#{item.name}") %></h5>
+                    <h5 class="card-title equip-desc"><%= t("name_att.#{item.name}") %></h5>
                   </div>
                 </div>
               <% end %>

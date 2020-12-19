@@ -114,25 +114,6 @@ body {
 
 }
 
-// #how-it-works .how-it-works-section {
-//   background-color: $dark-cream;
-// }
-
-// #how-it-works .brew_title h2 {
-//   font-weight: 400;
-//   font-size: 32;
-// }
-
-// #how-it-works p.main-text  {
-//   color: $dark-brown;
-//   font-weight: 800;
-//   margin: 0px;
-// }
-
-// #how-it-works p.secondary-text  {
-//   color: $light-brown;
-//   margin-top: 2px;
-// }
 
 .icon-arrow {
   padding-top: 25px;
@@ -167,7 +148,7 @@ body {
 
 }
 
-#subscribe {
+#subscribe .sub-color {
   background-color: #FDFCF1 !important;
 }
 
@@ -181,7 +162,6 @@ body {
 .btn-warning {
   border-radius: 3px !important;
   letter-spacing: 0.1rem;
-  color: rgba(251, 247, 228, 0.9);
 
 }
 
@@ -191,7 +171,7 @@ body {
 
 
 #brewing .brewing-section {
-  background-color: #FDFCF1;
+  background-color: #FDFCF1 !important;
 }
 
 #brewing .brewing-section h2{
@@ -270,68 +250,6 @@ max-width: 25%
   font-size: 0.9rem;
 }
 
-.wordCarousel {
-    font-size: 36px;
-    font-weight: 100;
-    color: #939393;
-    div {
-        overflow: hidden;
-        position: relative;
-        float: right;
-        height: 65px;
-        padding-top: 10px;
-        margin-top: -10px;
-
-        ul {
-          padding-inline-start: 10px !important;
-        }
-        li {
-
-            color: #ccc;
-            font-weight: 200;
-            height: 45px;
-            margin-bottom: 45px;
-            display: block;
-        }
-    }
-}
-
-.flip2 { animation: flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
-.flip3 { animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
-.flip4 { animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
-
-@keyframes flip2 {
-    0% { margin-top: -180px; }
-    5% { margin-top: -90px;  }
-    50% { margin-top: -90px; }
-    55% { margin-top: 0px; }
-    99.99% { margin-top: 0px; }
-    100% { margin-top: -270px; }
-}
-
-@keyframes flip3 {
-    0% { margin-top: -270px; }
-    5% { margin-top: -180px; }
-    33% { margin-top: -180px; }
-    38% { margin-top: -90px; }
-    66% { margin-top: -90px; }
-    71% { margin-top: 0px; }
-    99.99% { margin-top: 0px; }
-    100% { margin-top: -270px; }
-}
-
-@keyframes flip4 {
-    0% { margin-top: -360px; }
-    5% { margin-top: -270px; }
-    25% { margin-top: -270px; }
-    30% { margin-top: -180px; }
-    50% { margin-top: -180px; }
-    55% { margin-top: -90px; }
-    75% { margin-top: -90px; }
-    80% { margin-top: 0px; }
-    99.99% { margin-top: 0px; }
-    100% { margin-top: -270px; }
-}
 
 
 

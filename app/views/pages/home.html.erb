@@ -43,8 +43,8 @@
   </section >
 
 
-  <section class="my-5 container px-0" id="subscribe">
-    <div class="row how-it-works-section py-5 text-center align-items-center">
+  <section class="my-5 w-100" id="subscribe">
+    <div class="row sub-color py-5 text-center align-items-center">
       <div class="col-md-12 subscribe-text">
         <h2 class="mb-5 text-center" ><%= t(".subscribe_text") %></h2>
         <div class="subscribe-buttons d-flex justify-content-center px-5">
@@ -58,9 +58,9 @@
     </div>
   </section>
 
-  <section id="brewing" class="my-5 container px-0">
+  <section id="brewing" class="my-5">
 
-    <div class="row brewing-section py-5 px-5 align-items-center">
+    <div class="row brewing-section py-5 align-items-center">
       <div class="col-md-6">
         <h2><%= t(".brew_title") %></h2>
         <h5><%= t(".brew_line_html") %> <b><strong>
@@ -75,21 +75,28 @@
         </h5>
       </div>
 
-      <div class="col-md-6 pl-5 text-center">
+      <div class="col-md-6 pl-5 text-center px-5">
         <div class="d-flex justify-content-between align-items-center">
           <div class="brewing-pic-icons">
+            <%= link_to brewing_path(:anchor => "chemex") do %>
+              <%= image_tag "chemex_symbol_negative.png",  class:"img-fluid brew-icons mb-2 " %>
+            <% end %>
 
-            <%= image_tag "espresso_symbol_negative.png",  class:"img-fluid brew-icons mb-2" %>
-
           </div>
           <div class="brewing-pic-icons">
-            <%= image_tag "filter_coffee_symbol_negative.png",  class:"img-fluid brew-icons mb-2" %>
+            <%= link_to brewing_path(:anchor => "french-press") do %>
+              <%= image_tag "french_press_symbol_negative.png",  class:"img-fluid brew-icons mb-2 pb-2" %>
+            <% end %>
           </div>
           <div class="brewing-pic-icons">
-            <%= image_tag "french_press_symbol_negative.png",  class:"img-fluid brew-icons mb-2" %>
+            <%= link_to brewing_path(:anchor => "V60") do %>
+              <%= image_tag "V60_symbol_negative.png",  class:"img-fluid brew-icons mb-2" %>
+            <% end %>
           </div>
           <div class="brewing-pic-icons">
-            <%= image_tag "moca_symbol_negative.png",  class:"img-fluid brew-icons mb-2" %>
+            <%= link_to brewing_path(:anchor => "moca") do %>
+              <%= image_tag "moca_symbol_negative.png",  class:"img-fluid brew-icons mb-2" %>
+            <% end %>
           </div>
 
         </div>

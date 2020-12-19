@@ -205,7 +205,7 @@ Product.create!(
   category: coffee)
 
 Product.create!(
-  price_cents: 1041,
+  price_cents: 1040,
   shipping_points: 2,
   weight: 250,
   origin: 'columb_amaca_origin',
