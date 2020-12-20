@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   devise_for :users, :controllers => { :registrations => 'users/registrations'}
 
-  scope '(:locale)', locale: /en|pt/ do
+  scope '(:locale)', locale: /pt|en/ do
     root to: 'pages#home'
 
     resources :products, only: [:index, :show, :edit, :update]
