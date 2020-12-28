@@ -1,47 +1,45 @@
 <div id= 'home' class="container">
-  <header id ="banner" class=" text-center py-5">
+  <header id ="banner" class=" text-center pb-5">
 
       <h2 class="main-title"><%= t(".brava_intro_1") %></h2>
 
   </header>
 
-  <section id="coffee-header" class="py-5">
+  <section id="coffee-header" class="pb-5 d-none d-md-block">
     <div class="text-center">
       <h2 class="px-5" > <%= t(".selection") %></h2>
     </div>
   </section >
+
   <section id="coffee">
-    <div class="row mb-4">
-       <% @coffees.each do |product| %>
+    <div class="row">
+      <% @coffees.each do |product| %>
+       <%= link_to product_path(product) do %>
+        <div class="col-sm-12 mb-4 py-4" style=" background-image: url(<%= asset_path "#{product.photo}" %>)">
+          <div class="row">
+            <div class="cof-main-title text-center col-md-6 offset-md-3">
+              <h4 class="card-title text-center">
+                <%= t("origin_att.#{product.origin}").upcase %>
+             </h4>
+              <p class="card-sub-title mb-2">
+                <%=product.name.upcase%>
+              </p>
+              <% end %>
+            </div>
 
-          <div class="col-sm-12 mb-5 px-0">
-            <div class="card color-card">
+            <div class="cof-second-title text-center col-md-3 pt-3 align-items-center d-none d-md-block ">
 
-                  <div class="card-img  w-100" alt="">
-                  <%= image_tag "#{product.photo}", class:"img-fluid img-light"  %>
-                  </div>
-                  <div class="card-img-overlay light-overlay box-card">
+                  <%= link_to t(".discover"), product_path(product), class: "btn cof-btn btn-outline-secondary button-card" %>
 
-                       <div class="link-caf-hidden">
-                        <%= link_to t(".discover"), product_path(product), class: "btn btn-outline-secondary text-right" %>
+            </div>
 
-                       </div>
-                      <div class="text-center">
-                       <h4 class="card-title text-center"><%= t("origin_att.#{product.origin}").upcase %></h4>
-                       <p class="card-sub-title"><%=product.name.upcase%></p>
-                      </div>
-                       <div class="link-caf">
-                        <%= link_to t(".discover"), product_path(product), class: "btn cof-btn btn-outline-secondary text-right button-card" %>
-
-                       </div>
-
-                  </div>
-              </div>
           </div>
-       <% end %>
-    </div>
-  </section >
 
+        </div>
+      <% end %>
+    </div>
+
+  </section>
 
   <section class="my-5 w-100" id="subscribe">
     <div class="row sub-color py-5 text-center align-items-center">
@@ -49,19 +47,17 @@
         <h2 class="mb-5 text-center" ><%= t(".subscribe_text") %></h2>
         <div class="subscribe-buttons d-flex justify-content-center px-5">
             <%= link_to t(".subscribe"), new_subscription_path, class: "btn btn-warning mx-3" %>
-
-          <button class="btn btn-warning mx-3">
-            <%= t(".gift") %>
-          </button>
+        <div class="subscribe-buttons d-flex justify-content-center">
+            <%= link_to t(".gift"), new_subscription_path, class: "btn btn-warning px-4" %>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="brewing" class="my-5">
+  <section id="brewing" class="mb-5">
 
     <div class="row brewing-section py-5 align-items-center">
-      <div class="col-md-6">
+      <div class="col-md-6 text-center text-md-left">
         <h2><%= t(".brew_title") %></h2>
         <h5><%= t(".brew_line_html") %> <b><strong>
         <%= link_to t(".brewing_guides"), brewing_path, class:"link-brewing"%>
@@ -75,7 +71,7 @@
         </h5>
       </div>
 
-      <div class="col-md-6 pl-5 text-center px-5">
+      <div class="col-md-6 pl-5 text-center px-5 mt-3">
         <div class="d-flex justify-content-between align-items-center">
           <div class="brewing-pic-icons">
             <%= link_to brewing_path(:anchor => "chemex") do %>
@@ -110,7 +106,7 @@
   <footer id="footer-section" class="footer mt-5 " >
     <div class="container">
       <div class="row footer-contact px-0">
-        <div class="col-md-6 mb-3">
+        <div class="col-md-6 text-center text-md-left mb-5">
           <adress>
             <h3 class="mb-4" ><%= t(".contact") %></h3>
 
@@ -128,15 +124,14 @@
         </div>
        </div>
         <div class="row px-0 footer-follow">
-        <div class="col-md-6 ">
+        <div class="col-md-6 text-center text-md-left">
           <h3><%= t(".follow") %></h3>
 
+          <div class="d-flex footer-icons justify-content-center justify-content-md-start mt-4">
+            <a href="https://www.instagram.com/bravacoffeeroasters/" target="_blank" class="pr-3"><i class="border py-3 px-3  fab fa-instagram"></i></a>
 
-              <div class="d-flex footer-icons mt-4">
-                <a href="https://www.instagram.com/bravacoffeeroasters/" target="_blank" class="pr-3"><i class="border py-3 px-3  fab fa-instagram"></i></a>
-
-                <a href="https://www.facebook.com/bravacoffeeroasters/" target="_blank" ><i class="border py-3 fb-icon fab fa-facebook-f"></i></a>
-              </div>
+            <a href="https://www.facebook.com/bravacoffeeroasters/" target="_blank" ><i class="border py-3 fb-icon fab fa-facebook-f"></i></a>
+          </div>
 
         </div>
     </div>

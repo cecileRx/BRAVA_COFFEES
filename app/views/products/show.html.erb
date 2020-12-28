@@ -7,8 +7,8 @@
   <% if @product.category.name == 'coffee' %>
 
     <div class="row main-top pt-4">
-      <div class="col-md-6 top-left text-center d-none d-lg-block ">
-        <%= image_tag "#{@product.photo_square}", class:"img-fluid img-light", height: 20  %>
+      <div class="col-md-6 top-left text-center d-block">
+        <%= image_tag "#{@product.photo_square}", class:"img-fluid pic img-light", height: 20  %>
       </div>
       <div class="col-md-6 pr-5 top-right coffee-title">
          <h2 style= "display: inline"><%= t("origin_att.#{@product.origin}").upcase%> </h2> <h3 style= "display: inline"> <%=  @product.name%></h3>
@@ -84,14 +84,18 @@
           <% end %>
       </div>
 
-      <div class="coffee_images_links col-md-12 d-flex pb-4 justify-content-center">
+      <div class="coffee_images_links col-md-12 d-flex pb-4 pl-2 justify-content-center">
 
             <% @coffees.each do |product| %>
               <% if product.id != @product.id %>
                 <%= link_to product_path(product) do %>
                 <div class="text-center">
-                  <%= image_tag "#{product.photo_square}", class: 'mx-2', size: "160x160" %>
-                  <p> <%= product.name %></p>
+                  <%= image_tag "#{product.photo_square}", class: 'mx-2 pic-gallery'%>
+                  <% if product.name.include?("farm")%>
+                    <p class="px-3"><%= product.name.gsub(/farm/, "")%></p>
+                   <% else %>
+                    <p><%= product.name%></p>
+                  <% end %>
                 <% end %>
                 </div>
               <% end %>
@@ -104,7 +108,7 @@
 
     <% if @product.name != "hario_01_name" %>
 
-      <div id="a" class="row pt-4 px-5">
+      <div id="a" class="row equip-row pt-4 px-5">
           <div class="col-md-6 img-equipment mb-4 text-center">
             <%= image_tag @product.photo, class:"img-equipment" %>
           </div>
@@ -126,20 +130,17 @@
                     <%= hidden_field_tag 'product_id', @product.id %>
                   </div>
 
-                  <div class="shop-icon">
-                    <%= button_tag(type: "submit", class: " btn btn-outline-info") do %>
-                        <i class="fa fa-shopping-cart"></i>
-                    <% end %>
-                  </div>
-
-                  <br>
-                  <br>
-                  <br>
-                  <br>
-
-                 <div>
+                  <div class="d-flex justify-content-between">
+                    <div class="shop-icon">
+                      <%= button_tag(type: "submit", class: " btn btn-outline-info") do %>
+                          <i class="fa fa-shopping-cart"></i>
+                      <% end %>
+                    </div>
+                    <div>
                    <%= link_to "<", products_path, class: "btn btn-outline-info" %>
-                 </div>
+                    </div>
+
+                  </div>
               <% end %>
 
           </div>
@@ -171,7 +172,7 @@
              <% end %>
           </div>
 
-          <div class="col-md-6 img-equipment  text-center">
+          <div class="col-md-6 img-equipment mt-3 text-center">
             <% @product = Product.where(name: 'hario_02_name').take %>
               <%= image_tag @product.photo, class:"img-equipment", size: "260x260" %>
               <h4><%= t("name_att.#{@product.name}")%></h4>
@@ -189,7 +190,7 @@
                 <%= hidden_field_tag 'product_id', @product.id %>
               </div>
               <div class="shop-icon">
-                <%= button_tag(type: "submit", class: " btn btn-outline-info") do %>
+                <%= button_tag(type: "submit", class: "btn btn-outline-info") do %>
                     <i class="fa fa-shopping-cart"></i>
                 <% end %>
               </div>
@@ -197,7 +198,7 @@
           </div>
         </div>
 
-      <div class="text-center pb-3">
+      <div class="text-center pb-3 mt-3">
        <%= link_to "<", products_path, class: "btn btn-outline-info" %>
       </div>
 

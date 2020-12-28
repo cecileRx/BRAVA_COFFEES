@@ -1,4 +1,4 @@
-  <nav class="navbar main-nav sticky-top navbar-expand-sm navbar-light bg-white mb-5" id="main-nav">
+  <nav class="navbar main-nav sticky-top navbar-expand-md navbar-light bg-white mb-5" id="main-nav">
 
 
     <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
@@ -15,7 +15,14 @@
               <div><%= link_to 'Pt', root_path(locale: :pt) %></div>
           </div>
 
-          <div class="up-nav-right d-flex  align-items-center">
+           <div class="d-sm-block d-md-none">
+              <%= link_to root_path  do %>
+                    <%= image_tag "Brava_Logo.png", class: "logo-small-device" %>
+                 <% end %>
+
+           </div>
+
+          <div class="up-nav-right d-flex align-items-center">
 
              <div id="cart-icon" >
               <%= link_to cart_path(@current_cart) do %>

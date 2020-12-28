@@ -11,6 +11,18 @@
   max-width: 600px;
   max-height: 500px;
 }
+@media (max-device-width: 600px) {
+  .img-equipment img {
+  max-width: 230px;
+  max-height: 230px;
+  }
+  .equip-row {
+    padding-top: 0 !important;;
+  }
+  .equipment-desc {
+    padding: 0 !important;
+  }
+}
 
 .img-equipment h4 {
   margin-top: 2rem;

@@ -19,6 +19,7 @@ body {
 .body h2 {
   color: $brown;
 }
+
 .hidden {
  display: none;
 }
@@ -43,6 +44,9 @@ body {
   font-weight: 300;
   color: $light-gray;
 }
+
+
+
 #banner h3 {
   font-size: 1.4rem;
   color: $brown;
@@ -53,11 +57,24 @@ body {
   font-weight: 300;
 }
 
+@media (max-device-width: 600px) {
+  #banner .main-title {
+    font-size: 1.4rem;
+  }
+  #home h2 {
+    font-size: 1.6rem;
+  }
+  #brewing .brewing-section h2 {
+    font-size: 1.6rem !important;
+  }
+}
+
 #banner .secondary-text {
   font-family: 'Nunito Sans';
   font-weight: 300;
   font-size: 18px;
 }
+
 
 #coffee-header h2 {
   font-family: 'Nunito Sans';
@@ -65,14 +82,13 @@ body {
   font-size: 28px;
 }
 
-#coffee .link-caf {
-  padding-right: 40px;
-}
-
-#coffee .color-card  {
+#coffee a {
+  text-decoration: none;
   letter-spacing: 0.6rem;
   color: rgba(251, 247, 228, 0.6);
+
 }
+
 
 #coffee .button-card  {
   letter-spacing: 0.2rem;
@@ -93,10 +109,6 @@ body {
   font-size: 0.8rem;
 }
 
-
-.box-card .link-caf-hidden{
-    visibility: hidden
-}
 
 #coffee .btn  {
   background-color: rgba(251, 247, 228, 0.3);
@@ -162,8 +174,9 @@ body {
 .btn-warning {
   border-radius: 3px !important;
   letter-spacing: 0.1rem;
-
+  color: #FDFCF1 !important;
 }
+
 
 .btn-warning:hover {
   color: rgb(251, 247, 226);
