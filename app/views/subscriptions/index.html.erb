@@ -3,17 +3,36 @@
 
 
       <% @subscriptions.each do |item| %>
-        <p><%= item.name %></p>
+      <div class="d-flex mb-5">
+        <div class="one px-3">
+          <p class="sub-index-title">Subscription:</p>
+          <p><%= item.name %></p>
+        </div>
+        <div class="two px-3">
+         <p class="sub-index-title" >Item Name:</p>
         <p><%= item.item_choice%></p>
-        <p><%= item.grind%></p>
-
-        <% s = item.current_period_start %>
-        <p> <%=s.strftime("%A %d %B %Y" )%></p>
+        </div>
+        <div class="three px-3">
+          <p class="sub-index-title"> Grind</p>
+           <p><%= item.grind%></p>
+        </div>
+        <div class="three px-3">
+          <% s = item.current_period_start %>
+          <p class="sub-index-title"> Start date:</p>
+          <p> <%=s.strftime("%A %d %B %Y" )%></p>
+       </div>
+        <div class="three px-3">
         <% n = item.current_period_start + 3.months %>
-        <p> <%=n.strftime("%A %d %B %Y" )  %> </p>
-
-        <p><%= item.user.username%></p>
-        <p><%= item.user.stripe_id%></p>
+          <p class="sub-index-title"> End date:</p>
+          <p> <%=n.strftime("%A %d %B %Y" )  %> </p>
+        </div>
+        <div class="three px-3">
+          <p class="sub-index-title"> User information:</p>
+          <p> username: <%= item.user.username%></p>
+           <p>email: <%= item.user.email%></p>
+          <p>stripe_id: <%= item.user.stripe_id%></p>
+        </div>
+          </div>
         <% end %>
 
   </div>
