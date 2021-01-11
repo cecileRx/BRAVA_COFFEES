@@ -1,0 +1,93 @@
+
+
+<% dashboard_orders = @orders.sort_by(&:created_at) %>
+<div id= "dashboard-products" class="container">
+  <% dashboard_orders.each do |item| %>
+  <div class="mb-5">
+    <h5 class= "font-weight-bold"> Order N°<%= item.id %> </h5>
+    <div class="d-flex justify-content-between my-3">
+         <div class="px-3" >
+              <p class="order-index-subtitles font-weight-bold">Date:</p>
+              <p><%= item.created_at.strftime("%d %B %Y" )%></p>
+          </div>
+          <div class="px-3">
+             <p class="order-index-titles font-weight-bold" >Order Total price:</p>
+            <p><%= item.amount_cents%> €</p>
+          </div>
+          <div class="px-3">
+             <p class="order-index-subtitles font-weight-bold" >Customer:</p>
+             <% stripe_session_data = Stripe::Checkout::Session.retrieve("#{item.checkout_session_id}")%>
+             <p><%= stripe_session_data.shipping.name%></p>
+             <p><%= item.user.email%></p>
+          </div>
+      </div>
+
+          <div class="px-3">
+             <p class="order-index-titles font-weight-bold" >Order details:</p>
+                <div class="d-flex">
+                    <div class="px-2 w-25 ">
+                      <p class="order-index-subtitles font-weight-bold">Item Name:</p>
+                    </div>
+                    <div class="px-2 w-25">
+                       <p class="order-index-subtitles font-weight-bold"> Unit Price:</p>
+                    </div>
+                    <div class="px-2 w-25">
+                       <p class="order-index-subtitles font-weight-bold"> Grind choice:</p>
+                    </div>
+                    <div class="px-2 w-25">
+                       <p class="order-index-subtitles font-weight-bold"> Weight choice:</p>
+                    </div>
+                  </div>
+
+               <% item.order_items.each do |orderitem| %>
+
+                  <div class="d-flex">
+                    <div class="px-2 w-25">
+                      <p><%=t("name_att.#{orderitem.product.name}")%></p>
+                    </div>
+                    <div class="px-2 w-25">
+                      <p> <%=orderitem.product.price%> €</p>
+                    </div>
+                    <div class="px-2 w-25">
+                      <p> <%=orderitem.grind %></p>
+                    </div>
+                    <div class="px-2 w-25">
+                      <p> <%=orderitem.weight %> gr</p>
+                    </div>
+                  </div>
+              <% end %>
+          </div>
+          <div class="px-3 mt-5">
+            <p class="order-index-titles font-weight-bold" >Shipment details:</p>
+            <div class="d-flex">
+              <div class="px-2 w-25 ">
+                <p class="order-index-subtitles font-weight-bold">Shipping zone:</p>
+                 <p> <%=item.shipping_zone%></p>
+              </div>
+              <div class="px-2 w-25 ">
+                <p class="order-index-subtitles font-weight-bold">Shipping method:</p>
+                 <p> <%=item.shipping_method%></p>
+              </div>
+              <div class="px-2 w-25 ">
+                 <p class="order-index-subtitles font-weight-bold">Shipping cost:</p>
+                 <p> <%=item.shipping_cost%> €</p>
+              </div>
+              <div class="px-2 w-25 ">
+                  <p class="order-index-subtitles font-weight-bold">Address:</p>
+                <% stripe_session_data = Stripe::Checkout::Session.retrieve("#{item.checkout_session_id}")
+                 %>
+                 <p> <%=stripe_session_data.shipping.address.line1%> </p>
+                 <p> <%=stripe_session_data.shipping.address.line2%> </p>
+                 <p> <%=stripe_session_data.shipping.address.postal_code%> <%=stripe_session_data.shipping.address.city%> </p>
+                 <p> <%=stripe_session_data.shipping.address.country%> </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        <hr>
+      </div>
+    <% end %>
+
+</div>

@@ -3,7 +3,15 @@ class OrdersController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @orders = Order.all
+
+    @user = current_user
+     if @user.admin?
+      @orders = Order.where(state: 'stripe payment done')
+
+    else
+      redirect_to root_url
+    end
+
   end
 
 
@@ -145,8 +153,8 @@ class OrdersController < ApplicationController
 
       line_items: line_items_order,
 
-      success_url: new_order_message_url(@order),
-      cancel_url: order_url(@order)
+      success_url: order_messages_url(@order),
+      cancel_url:  order_failure_message_url(@order)
       )
 
        @user.stripe_id = customer.id
@@ -170,11 +178,24 @@ end
       @order.shipping_method = params[:shipping_method]
     end
 
-
-
     @order.save
-
     redirect_to order_path(@order)
+  end
+
+  def messages
+    @order = Order.find(params[:order_id])
+    @order.state = 'stripe payment done'
+    @order.save
+  end
+
+  def failure_message
+     @order = Order.find(params[:order_id])
+     if @order.state == 'stripe payment done'
+      redirect_to root_path
+     else
+       @order.state = 'Payment failure'
+       @order.save
+   end
   end
 
 end

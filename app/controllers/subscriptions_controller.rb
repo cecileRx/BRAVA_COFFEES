@@ -29,7 +29,8 @@ class SubscriptionsController < ApplicationController
     if params[:name] == 'Discovery' && params[:weight] == '250'
       @subscription.price_id = 'price_1HxtBpJoAorz6CW7akEOvvjd'
     elsif params[:name] == 'Discovery' && params[:weight] == '1000'
-      @subscription.price_id = 'price_1HxtBpJoAorz6CW7aQiQywTa'
+      @subscription.price_id = 'price_1HuCWZJoAorz6CW7MefdKVA5'
+      # @subscription.price_id = 'price_1HxtBpJoAorz6CW7aQiQywTa'
     elsif params[:name] == 'Adventure' && params[:weight] == '250'
       @subscription.price_id = 'price_1HxtBGJoAorz6CW7HHc868Fh'
     else
@@ -70,7 +71,7 @@ class SubscriptionsController < ApplicationController
         price: @subscription.price_id,
         }],
       customer_email: current_user.email,
-      success_url: root_url,
+      success_url: subscription_messages_url(@subscription),
       cancel_url: root_url
     )
 
@@ -84,6 +85,11 @@ class SubscriptionsController < ApplicationController
 
      @user.stripe_id = customer.id
      @user.save
+  end
+
+  def messages
+    @subscription = Subscription.find(params[:subscription_id])
+
   end
 
 

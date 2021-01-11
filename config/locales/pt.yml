@@ -31,13 +31,15 @@ pt:
     columb_amaca_grind:
     - Grão
     - Filtro
-    - Expresso
+    - Moka
+    - Espresso
     - Aeropress
     - French press
     columb_fudam_grind:
     - Grão
     - Filtro
-    - Expresso
+    - Moka
+    - Espresso
     - Aeropress
     - French press
     ethiopia_grind:
@@ -48,9 +50,11 @@ pt:
     nica_grind:
     - Grão
     - Filtro
+    - Moka
     - Aeropress
     - French press
-    - Expresso
+    - Espresso
+
 
   origin_att:
     columb_amaca_origin: Colombia
@@ -153,6 +157,7 @@ Sabores de cereja do café, floral, caramelo e limão."
     hario_01_name: Filtros V60 Hario
     hario_02_name: Filtros V60 Hario
     V60_name: Hario Kit V60
+
   pages:
     about:
       about_text_1_html: "<strong>Brava</strong> é uma micro torrefatora baseada em
@@ -249,13 +254,19 @@ Sabores de cereja do café, floral, caramelo e limão."
         nica_origin: Nicarágua
 
   subscriptions:
+    subscription: subscriçao
     new:
+      subscription: subscriçao
       sub-discover-title: Desenvolva uma relação!
       sub-adventure-title: Viagem ao mundo dos sabores!
       sub_adventure_desc_html: Receba todos os meses uma seleção Brava, durante três meses. Esta opção permite-lhe conhecer melhor a variedade e sabores dos nossos cafés.
       sub_discover_desc_html: Receba uma vez por mês o seu café preferido, durante três meses. Experimente diferentes métodos de extração, proporções e receitas.
       sub-discover-coffee-select: Seleccione o seu café
       sub-discover-grind-select: Seleccione a sua moagem
+
+    messages:
+      checkout-sum: Total de compras
+      purchase-thanks: Obrigada por adquirir os nossos produtos. Vamos já preparar a sua encomenda!
 
   carts:
     show:
@@ -274,11 +285,15 @@ Sabores de cereja do café, floral, caramelo e limão."
       ship-europe: Resto da Europa
       europe-mail-tag: Para qualquer outro pais na Europa, apenas enviamos em correio registado.
 
-  messages:
-    new:
+    failure_message:
       checkout-sum: Total de compras
-      command: A sua encomenda de
-      is: está
+      command: o seu pagamento de
+      isnot: encontrou um problema de pagamento
+      purchase-error: Talvez alguns problemas com os seus dados de pagamento? Se o erro persistir, estamos aqui para o ajudar! Contacte-nos em bravacoffeeroasters@gmail.com
+    messages:
+      checkout-sum: Total de compras
+      command: o seu pagamento de
+      is: foi processado com sucesso
       purchase-thanks: Obrigada por adquirir os nossos produtos. Vamos já preparar a sua encomenda!
 
   process: processo
