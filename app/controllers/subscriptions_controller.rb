@@ -29,8 +29,8 @@ class SubscriptionsController < ApplicationController
     if params[:name] == 'Discovery' && params[:weight] == '250'
       @subscription.price_id = 'price_1HxtBpJoAorz6CW7akEOvvjd'
     elsif params[:name] == 'Discovery' && params[:weight] == '1000'
-      @subscription.price_id = 'price_1HuCWZJoAorz6CW7MefdKVA5'
-      # @subscription.price_id = 'price_1HxtBpJoAorz6CW7aQiQywTa'
+      # @subscription.price_id = 'price_1HuCWZJoAorz6CW7MefdKVA5'
+      @subscription.price_id = 'price_1HxtBpJoAorz6CW7aQiQywTa'
     elsif params[:name] == 'Adventure' && params[:weight] == '250'
       @subscription.price_id = 'price_1HxtBGJoAorz6CW7HHc868Fh'
     else

@@ -5,13 +5,29 @@ class OrdersController < ApplicationController
   def index
 
     @user = current_user
-     if @user.admin?
-      @orders = Order.where(state: 'stripe payment done')
+    if @user.admin?
+        orders = Order.all
+        paid_orders = []
+        orders.each do |item|
+          if item.checkout_session_id != nil
+             paid_orders << item
+          end
+        end
+
+        @stripe_paid_orders = []
+        paid_orders.each do |item|
+          stripe_orders = Stripe::Checkout::Session
+          stripe_details_orders = stripe_orders.retrieve("#{item.checkout_session_id}")
+
+          if stripe_details_orders.payment_status == 'paid'
+             @stripe_paid_orders << item
+          end
+
+        end
 
     else
       redirect_to root_url
     end
-
   end
 
 
