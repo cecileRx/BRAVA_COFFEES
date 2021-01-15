@@ -7,19 +7,17 @@ class OrdersController < ApplicationController
     @user = current_user
     if @user.admin?
         orders = Order.all
-        paid_orders = []
+        pending_orders = []
         orders.each do |item|
           if item.checkout_session_id != nil
-             paid_orders << item
+             pending_orders << item
           end
         end
 
         @stripe_paid_orders = []
-        paid_orders.each do |item|
-          stripe_orders = Stripe::Checkout::Session
-          stripe_details_orders = stripe_orders.retrieve("#{item.checkout_session_id}")
+        pending_orders.each do |item|
+          if Stripe::Checkout::Session.retrieve("#{item.checkout_session_id}").payment_status  == 'paid'
 
-          if stripe_details_orders.payment_status == 'paid'
              @stripe_paid_orders << item
           end
 

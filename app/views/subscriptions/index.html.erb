@@ -7,6 +7,11 @@
         <div class="one px-3">
           <p class="sub-index-title">Subscription:</p>
           <p><%= item.name %></p>
+          <p><%= item.stripe_id%> </p>
+          <% if item.stripe_id != nil %>
+          <% payment_status = Stripe::Checkout::Session.retrieve("#{item.stripe_id}").payment_status %>
+          <%= payment_status %>
+          <% end %>
         </div>
         <div class="two px-3">
          <p class="sub-index-title" >Item Name:</p>
@@ -30,7 +35,7 @@
           <p class="sub-index-title"> User information:</p>
           <p> username: <%= item.user.username%></p>
            <p>email: <%= item.user.email%></p>
-          <p>stripe_id: <%= item.user.stripe_id%></p>
+          <p>customer_id: <%= item.user.stripe_id%></p>
         </div>
           </div>
         <% end %>

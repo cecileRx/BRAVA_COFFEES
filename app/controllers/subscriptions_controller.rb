@@ -6,7 +6,22 @@ class SubscriptionsController < ApplicationController
     @user = current_user
 
     if @user.admin?
-      @subscriptions = Subscription.all
+      subscriptions = Subscription.all
+
+      pending_subscriptions = []
+      subscriptions.each do |item|
+        if item.stripe_id != nil
+          pending_subscriptions << item
+        end
+      end
+
+      @subscriptions = []
+      pending_subscriptions.each do |item|
+        if Stripe::Checkout::Session.retrieve("#{item.stripe_id}").payment_status  == 'paid'
+          @subscriptions << item
+        end
+      end
+
     else
       redirect_to root_url
 
@@ -85,10 +100,13 @@ class SubscriptionsController < ApplicationController
 
      @user.stripe_id = customer.id
      @user.save
+     @subscription.stripe_id = @session.id
+     @subscription.save
   end
 
   def messages
     @subscription = Subscription.find(params[:subscription_id])
+
 
   end
 

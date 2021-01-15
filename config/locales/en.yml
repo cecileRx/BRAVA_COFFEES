@@ -47,12 +47,15 @@ Coffee cherry, floral, caramel and lemon flavors."
     columb_amaca_grind:
     - Whole beans
     - Filter
+    - Moka
     - Espresso
     - Aeropress
     - French press
+
     columb_fudam_grind:
     - Whole beans
     - Filter
+    - Moka
     - Espresso
     - Aeropress
     - French press
@@ -64,6 +67,7 @@ Coffee cherry, floral, caramel and lemon flavors."
     nica_grind:
     - Whole beans
     - Filter
+    - Moka
     - Aeropress
     - French press
     - Espresso
