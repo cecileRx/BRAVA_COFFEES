@@ -18,7 +18,11 @@
               </div>
               <div class="px-3">
                  <p class="order-index-titles font-weight-bold" >First payment:</p>
-                <p><%= stripe_session_data.amount_total%> €</p>
+                 <% amount= stripe_session_data.amount_total.to_f %>
+
+                <p><%= amount /100 %> €</p>
+
+
               </div>
               <div class="px-3">
                  <p class="order-index-subtitles font-weight-bold" >Customer:</p>

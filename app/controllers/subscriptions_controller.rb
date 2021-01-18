@@ -28,6 +28,7 @@ class SubscriptionsController < ApplicationController
     end
   end
 
+
   def new
     @subscription = Subscription.new
     coffee_items = Product.joins(:category).where("categories.name = 'coffee'")
