@@ -16,6 +16,8 @@ pt:
       order:
         shipping_zone: zona de envio
         shipping_method: tipo de correio
+        collect_address: ponto de recolha
+
 
     models:
       product: produto
@@ -243,8 +245,8 @@ Sabores de cereja do café, floral, caramelo e limão."
       contact: CONTACTE-NOS
       discover: Descubra
       follow: SEGUE-NOS
-      gift: Oferta!
-      selection: Os cafés que seleccionamos cuidadosamente e torramos artesanalmente para si
+      gift: Ofereça!
+      selection: Cafés selecionados e torrados artesanalmente para si
       subscribe: Subscreva já!
       subscribe_text: Receba o seu café em casa ou ofereça
       origin_att:
@@ -256,7 +258,7 @@ Sabores de cereja do café, floral, caramelo e limão."
   subscriptions:
     subscription: subscriçao
     new:
-      subscription: subscriçao
+      subscription: Planos de Subscrição
       sub-discover-title: Desenvolva uma relação!
       sub-adventure-title: Viagem ao mundo dos sabores!
       sub_adventure_desc_html: Receba todos os meses uma seleção Brava, durante três meses. Esta opção permite-lhe conhecer melhor a variedade e sabores dos nossos cafés.
@@ -284,6 +286,9 @@ Sabores de cereja do café, floral, caramelo e limão."
       ship-method-select: Selecione o modo de envio
       ship-europe: Resto da Europa
       europe-mail-tag: Para qualquer outro pais na Europa, apenas enviamos em correio registado.
+      pickup-select: Prefere levantar nos nossos parceiros
+      pickup-address: Selecione o seu ponto de recolha
+      pickup-message: Devido à pandemia poderá haver alteração de horários. Entraremos em contacto para confirmar a entrega no seu ponto de recolha
 
     failure_message:
       checkout-sum: Total de compras

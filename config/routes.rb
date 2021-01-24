@@ -31,8 +31,10 @@ Rails.application.routes.draw do
 
    # resources :order_items
     resources :orders
+
     resources :orders do
        resources :payments, only: :new
+       get :renew, to: "renew"
        get :messages, to: "new_order_message"
        get :failure_message, to: "failure_order_message"
     end

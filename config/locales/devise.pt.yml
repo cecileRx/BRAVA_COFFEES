@@ -7,7 +7,7 @@ pt:
 
   devise:
     failure:
-      unauthenticated: 'Para continuar, deve fazer login ou registrar-se.'
+      unauthenticated: 'Para continuar, deve fazer login ou registar-se.'
       unconfirmed: 'Antes de continuar, deve confirmar a sua conta.'
       locked: 'A sua conta está bloqueada.'
       invalid: 'O endereço de correio electrónico ou a palavra-passe inválido.'

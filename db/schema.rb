@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_16_140232) do
+ActiveRecord::Schema.define(version: 2021_01_18_165631) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2021_01_16_140232) do
     t.string "shipping_zone"
     t.string "shipping_method"
     t.integer "shipping_cost_cents", default: 0, null: false
+    t.text "collect_address"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 

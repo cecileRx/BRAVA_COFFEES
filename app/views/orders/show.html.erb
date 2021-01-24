@@ -25,29 +25,43 @@
            <p>Total</p>
            <p><%= @order.shipping_cost + @order.amount_cents %>€</p>
         </div>
+      <div class="mt-4 ">
+        <%= image_tag "brava_coffees_packaging.jpg",  class:"d-block img-fluid" %>
+      </div>
       </div>
     <div class="order_summary col-md-3">
     </div>
     <div class="shipping_selection col-md-4 mt-5">
-      <%= form_tag order_path(@order), :method => :put, class: "order_form" do %>
+      <div class="shipping_area">
 
 
-        <% if @order.shipping_zone != nil %>
-           <p> <%=t(".ship-zone-tag")%> <%= @order.shipping_zone%></p>
-        <% else %>
+        <%= form_tag order_path(@order), :method => :put, class: "order_form" do %>
+
+         <% if @order.shipping_zone == nil && @order.collect_address == nil%>
+
           <% label_tag Order.human_attribute_name("shipping_zone") %>
-          <p><%=t(".ship-zone-select")%></p>
+          <h5 class="mb-3"><%=t(".ship-zone-select")%>:</h5>
           <%= select_tag "shipping_zone", raw("<option>Portugal</option><option>Rest of Europe</option>"), multiple: false, class:"coffee_form btn-block form-control-lg", id:"selected_shipping_zone" %>
+
           <div class='mt-3'>
+
             <%= submit_tag t("savecont"), class: 'btn btn-block btn-warning' %>
           </div>
-        <% end %>
+
+      <% end %>
+
           <% if @order.shipping_zone == 'Portugal' && @order.shipping_method == nil%>
+           <% label_tag Order.human_attribute_name("shipping_zone") %>
+          <p><%=t(".ship-zone-select")%></p>
+          <%= select_tag "shipping_zone", raw("<option>Portugal</option>"), multiple: false, class:"coffee_form btn-block form-control-lg", id:"selected_shipping_zone" %>
+
             <% label_tag Product.human_attribute_name("shipping_method")%>
             <p> <%= t(".ship-method-select")%></p>
 
             <%= select_tag "shipping_method", raw("<option>regular mail</option><option>registered mail</option>"), multiple: false, class:"coffee_form btn-block form-control-lg", id:"selected_shipping_method"%>
+
             <div class='mt-3'>
+
             <%= submit_tag t("savecont"), class: 'btn btn-block btn-warning' %>
           </div>
 
@@ -55,24 +69,74 @@
               <p>For any other European country, the shipping method is Registered mail only</p>
            <% end %>
 
+           <% if @order.shipping_zone != 'Rest of Europe' && @order.shipping_method != nil %>
+            <p><%=t(".ship-zone-tag") %> <%= "#{@order.shipping_zone}" %>-<%= "#{@order.shipping_method}" %> </p>
+
+           <% end %>
+        <% end %>
+
+      <%= form_tag order_path(@order), :method => :put, class: "order_form" do %>
+      <% if @order.collect_address == nil %>
+      <h5 class= "mt-5"><%=t(".pickup-select")%>?</h5>
+      <p><%=t(".pickup-address")%></p>
+
+      <% label_tag Product.human_attribute_name("collect_address")%>
+      <%= select_tag "collect_address", raw("<option>FUMEIRO DE SANTA CATARINA -
+           Travessa do alcaide 4c
+          1200-013 Lisboa
+          Horário - 3a a sábado- das 18.30h às 22.30h</option><option>PADARIA TERRAPĀO -
+          Rua Ângela Pinto 40d
+          Mercado de Arroios loja 8
+          1900-221 Lisboa
+          Horário - 2ª a Domingo - das 7.30h às 15.30h
+          </option><option>ESTRELA DA BICA -
+          Travessa do Cabral 33
+          1200-075 Lisboa
+          Horário - 3ª a sábado - 18h às 24h</option><option>QUIOSQUE PIMENTA -
+          Museu da Lisboa
+          Campo Grande, 245
+          1700-091 Lisboa
+          Horário -3ªa 6ª- 10h às 18h
+                        Weekend - 10h às 19h</option><option>BALSA -
+          Rua Manuel Soares Guedes 7A
+          1170-206 Lisboa
+          Horário -terça a sábado das 10h às 16h</option>
+          "), multiple: false, class:"coffee_form btn-block form-control-lg", id:"selected_collect_address" %>
+      <div class='mt-3'>
+
+      <%= submit_tag t("savecont"), class: 'btn btn-block btn-warning mb-4' %>
+       </div>
+        <% else %>
+        <p class="mt-5"><%=t(".pickup-message")%>: </p>
+        <p class="bold">  <%= "#{@order.collect_address}"%></p>
 
       <% end %>
+      <% end %>
 
-    <% if @order.shipping_method != nil %>
-     <button id="pay" class="text-center btn btn-primary mt-3">Pay</button>
+  <div class="d-flex justify-content-between mt-5 mb-4 mx-2">
+    <div>
+    <% if @order.shipping_method || @order.collect_address != nil %>
+     <button id="pay" class="mt-4 text-center btn btn-primary ">Pay</button>
           <script src="https://js.stripe.com/v3/">
 
           </script>
           <script>
             const paymentButton = document.getElementById('pay');
             paymentButton.addEventListener('click', () => {
-              const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
+              const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_TEST_KEY'] %>');
               stripe.redirectToCheckout({
-                sessionId: '<%= @session.id %>'
+                sessionId: '<%=@order.checkout_session_id %>'
               });
             });
           </script>
           <% end %>
+          </div>
+          <div>
+          <%= link_to 'RESET OPTIONS',  order_renew_url(@order), class: 'mt-4 btn btn-outline-primary' %>
+          </div>
+      </div>
+      </div>
+
     </div>
   </div>
 </div>

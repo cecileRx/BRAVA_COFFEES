@@ -15,6 +15,8 @@ en:
       order:
         shipping_zone: shipping zone
         shipping_method: shipping method
+        collect_address: collection point
+
 
     models:
       product: product
@@ -260,13 +262,14 @@ Coffee cherry, floral, caramel and lemon flavors."
       discover: Discover
       follow: FOLLOW BRAVA
       gift: Send a gift!
-      selection: The coffees we select carefully and roast by hand for you
+      selection: Coffees carefully selected and hand-roasted for you
       subscribe: Subscribe now!
       subscribe_text: Get your coffee at your doorstep, or offer it
 
   subscriptions:
     subscription: subscription
     new:
+      subscription: Subscription Plans
       sub-discover-title: Develop a relationship!
       sub-adventure-title: Journey into the world of flavours!
       sub_adventure_desc_html: Receive each month a different package, for a period of three monthes. This adventure takes you on a journey through different countries and flavours.<br>
@@ -288,10 +291,13 @@ Coffee cherry, floral, caramel and lemon flavors."
       order-sum: Order Summary
       shipping: Shipping
       ship-zone-tag: Your order will be delivered in
-      ship-zone-select: Please select a Shipping Zone
-      ship-method-select: Please select a Shipping Method
+      ship-zone-select: Select a shipping zone
+      ship-method-select: Select a shipping method
       ship-europe: Rest of Europe
       europe-mail-tag: For any other European country, the shipping method is Registered mail
+      pickup-select: Do you prefer to pick up
+      pickup-address: Select your collection point
+      pickup-message: Due to the pandemic, there may be changes in schedules. We will contact you to confirm delivery at your collection point
 
     failure_message:
       checkout-sum: Checkout summary
