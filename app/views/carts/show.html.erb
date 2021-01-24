@@ -38,7 +38,7 @@
     </div>
   </div>
 </div>
-<div class="container text-center shop-buttons mt-5" >
+<div class="d-flex justify-content-center shop-buttons mt-5" >
   <%= link_to t(".empty-cart"), cart_path(@current_cart), class: "btn btn-primary  mr-5", style: "color:#FDFCF1;", method: :delete, data: {confirm: "Are you sure?"} %>
   <%= link_to t(".continue-shop"), root_path, class: "btn btn-primary", style: "color:#FDFCF1;" %>
 </div>

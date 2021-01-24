@@ -29,7 +29,7 @@
                     <%= select_tag "coffees", raw("#{coffee_select}"), multiple: false, class:"coffee_form btn-block form-control-lg"  %>
 
                     <%= label_tag t(".sub-discover-grind-select") %>
-                    <%= select_tag "grind", raw("<option>Whole beans</option><option>Filter</option><option>Espresso</option><option>Aeropress</option><option>French press</option>"), multiple: false, class:"coffee_form btn-block form-control-lg", id:"selected_grind"  %>
+                    <%= select_tag "grind", raw("<option>Whole beans</option><option>Filter</option><option>Espresso</option><option>Moka</option><option>Aeropress</option><option>French press</option>"), multiple: false, class:"coffee_form btn-block form-control-lg", id:"selected_grind"  %>
 
                     <%= label_tag Product.human_attribute_name("weight")%>
                     <%= select_tag "weight", raw("<option>250</option><option>1000</option>"), multiple: false, class:"coffee_form btn-block form-control-lg", id:"selected_weight"%>
@@ -68,7 +68,7 @@
 
 
                     <%= label_tag t(".sub-discover-grind-select") %>
-                    <%= select_tag "grind", raw("<option>Whole beans</option><option>Filter</option><option>Espresso</option><option>Aeropress</option><option>French press</option>"), multiple: false, class:"coffee_form btn-block form-control-lg", id:"selected_grind"  %>
+                    <%= select_tag "grind", raw("<option>Whole beans</option><option>Filter</option><option>Espresso</option><option>Moka</option><option>Aeropress</option><option>French press</option>"), multiple: false, class:"coffee_form btn-block form-control-lg", id:"selected_grind"  %>
 
                     <%= label_tag Product.human_attribute_name("weight")%>
                     <%= select_tag "weight", raw("<option>250</option><option>1000</option>"), multiple: false, class:"coffee_form btn-block form-control-lg", id:"selected_weight"%>
