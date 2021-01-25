@@ -123,14 +123,16 @@ end
        @user.save
 
        @order.checkout_session_id = @session.id
+       @order.shipping_costs = 0
        @order.save
 
     else
 
-       testshipment = []
-    @order.order_items.each do |item|
-      testshipment << item.shipping_points
-    end
+      testshipment = []
+      @order.order_items.each do |item|
+        testshipment << item.shipping_points
+      end
+
     shipment_score = testshipment.sum
 
     set_shipping_cost = @order.order_items

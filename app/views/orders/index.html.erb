@@ -12,7 +12,7 @@
           </div>
           <div class="px-3">
              <p class="order-index-titles font-weight-bold" >Order Total price:</p>
-            <p><%= item.amount_cents%> €</p>
+            <p><%= item.amount_cents + item.shipping_cost%> €</p>
           </div>
           <div class="px-3">
              <p class="order-index-subtitles font-weight-bold" >Customer:</p>
