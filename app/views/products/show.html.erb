@@ -72,11 +72,13 @@
           <% if @product.category.name == 'coffee' %>
 
             <p><%=Product.human_attribute_name("region").capitalize%>: <%=@product.region%> </p>
-            <p><%=Product.human_attribute_name("process").capitalize%>: <%= t("process_att")  %> </p>
+            <p><%=Product.human_attribute_name("process").capitalize%>: <%= t("process_att")  %></p>
             <p><%= t("description_att.#{@product.description}")%></p>
+
             <% if current_user && current_user.admin %>
               <%= link_to 'Edit', edit_product_path(@product) %>
             <% end %>
+
           <% end %>
       </div>
 
@@ -84,16 +86,19 @@
 
             <% @coffees.each do |product| %>
               <% if product.id != @product.id %>
-                <%= link_to product_path(product) do %>
-                <div class="text-center">
-                  <%= image_tag "#{product.photo_square}", class: 'mx-2 pic-gallery'%>
-                  <% if product.name.include?("farm")%>
-                    <p class="px-3"><%= product.name.gsub(/farm/, "")%></p>
-                   <% else %>
-                    <p><%= product.name%></p>
+               <% if product.name != 'AMACA' && product.name != 'FUDAM' %>
+
+                  <%= link_to product_path(product) do %>
+                    <div class="text-center">
+                      <%= image_tag "#{product.photo_square}", class: 'mx-2 pic-gallery'%>
+                      <% if product.name.include?("farm")%>
+                        <p class="px-3"><%= product.name.gsub(/farm/, "")%></p>
+                        <% else %>
+                         <p><%= product.name%></p>
+                        <% end %>
+                    </div>
                   <% end %>
                 <% end %>
-                </div>
               <% end %>
             <% end %>
       </div>
