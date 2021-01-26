@@ -14,22 +14,42 @@
   <section id="coffee">
     <div class="row">
       <% @coffees.each do |product| %>
-       <%= link_to product_path(product) do %>
-        <div class="col-sm-12 mb-4 py-4" style=" background-image: url(<%= asset_path "#{product.photo}" %>)">
-          <div class="row">
-            <div class="cof-main-title text-center col-md-6 offset-md-3">
-              <h4 class="card-title text-center">
-                <%= t("origin_att.#{product.origin}").upcase %>
-             </h4>
-              <p class="card-sub-title mb-2">
-                <%=product.name.upcase%>
-              </p>
-              <% end %>
+       <% if product.name != 'AMACA' && product.name != 'FUDAM' %>
+
+         <%= link_to product_path(product) do %>
+          <div class="col-sm-12 mb-4 py-4" style=" background-image: url(<%= asset_path "#{product.photo}" %>)">
+            <div class="row">
+              <div class="cof-main-title text-center col-md-6 offset-md-3">
+                <h4 class="card-title text-center">
+                  <%= t("origin_att.#{product.origin}").upcase %>
+               </h4>
+                <p class="card-sub-title mb-2">
+                  <%=product.name.upcase%>
+                </p>
+          <% end %>
+        <% else %>
+
+            <div class="col-sm-12 mb-4 py-4" style=" background-image: url(<%= asset_path "#{product.photo}" %>)">
+            <div class="row">
+              <div class="cof-main-title text-center col-md-6 offset-md-3">
+                <h4 class="card-title text-center out-of-stock">
+                  <%= t("origin_att.#{product.origin}").upcase %>
+               </h4>
+                <p class="card-sub-title out-of-stock mb-2">
+                  <%=product.name.upcase%>
+                </p>
+
+          <% end %>
+
             </div>
 
             <div class="cof-second-title text-center col-md-3 pt-3 align-items-center d-none d-md-block ">
-
+              <% if product.name != 'AMACA' && product.name != 'FUDAM' %>
                   <%= link_to t(".discover"), product_path(product), class: "btn cof-btn btn-outline-secondary button-card" %>
+
+              <% else %>
+                <%= link_to 'out of stock', root_path, class: "btn cof-btn btn-outline-secondary disabled button-card" , :disabled => true %>
+              <% end %>
 
             </div>
 

@@ -89,6 +89,12 @@ body {
 
 }
 
+#coffee .out-of-stock {
+  color: rgba(251, 247, 228, 0.6);
+  text-decoration: none;
+  letter-spacing: 0.6rem;
+}
+
 
 #coffee .button-card  {
   letter-spacing: 0.2rem;
@@ -109,6 +115,11 @@ body {
   font-size: 0.8rem;
 }
 
+#coffee .card-sub-title {
+  letter-spacing: 0.2rem;
+  font-size: 0.8rem;
+  color: rgba(251, 247, 228, 0.6);
+}
 
 #coffee .btn  {
   background-color: rgba(251, 247, 228, 0.3);
