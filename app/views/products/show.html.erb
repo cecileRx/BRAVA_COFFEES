@@ -45,13 +45,23 @@
 
                 <%= hidden_field_tag 'product_id', @product.id %>
 
-                <div class='mt-3'>
-                  <%= submit_tag t("addcart"), class: 'btn btn-block btn-warning' %>
+                <% if @product.name != 'AMACA' %>
+                  <div class='mt-3'>
+                    <%= submit_tag t("addcart"), class: 'btn btn-block btn-warning' %>
 
-                  <% version_product = Product.where({name: @product.name, weight: 1000}).first %>
-                  <p style="visibility: hidden" id= "hidden_price_max"> <%= version_product.price %></p>
-                  <p style="visibility: hidden" id= "hidden_price_min"> <%= @product.price %></p>
-                </div>
+                    <% version_product = Product.where({name: @product.name, weight: 1000}).first %>
+                    <p style="visibility: hidden" id= "hidden_price_max"> <%= version_product.price %></p>
+                    <p style="visibility: hidden" id= "hidden_price_min"> <%= @product.price %></p>
+                  </div>
+                <% else %>
+                  <div class='mt-3'>
+                    <%= submit_tag t("addcart"), class: 'btn disabled btn-block btn-warning', :disabled => true  %>
+
+                    <% version_product = Product.where({name: @product.name, weight: 1000}).first %>
+                    <p style="visibility: hidden" id= "hidden_price_max"> <%= version_product.price %></p>
+                    <p style="visibility: hidden" id= "hidden_price_min"> <%= @product.price %></p>
+                  </div>
+                 <% end %>
               <% end %>
             </div>
           </div>
@@ -75,10 +85,6 @@
             <p><%=Product.human_attribute_name("process").capitalize%>: <%= t("process_att")  %></p>
             <p><%= t("description_att.#{@product.description}")%></p>
 
-            <% if current_user && current_user.admin %>
-              <%= link_to 'Edit', edit_product_path(@product) %>
-            <% end %>
-
           <% end %>
       </div>
 
@@ -86,7 +92,7 @@
 
             <% @coffees.each do |product| %>
               <% if product.id != @product.id %>
-               <% if product.name != 'AMACA' && product.name != 'FUDAM' %>
+               <% if product.name != 'AMACA' %>
 
                   <%= link_to product_path(product) do %>
                     <div class="text-center">
