@@ -123,7 +123,7 @@ end
        @user.save
 
        @order.checkout_session_id = @session.id
-       @order.shipping_costs = 0
+       @order.shipping_cost = 0
        @order.save
 
     else
