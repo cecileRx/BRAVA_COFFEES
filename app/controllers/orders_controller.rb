@@ -236,13 +236,13 @@ end
 
   def messages
     @order = Order.find(params[:order_id])
-    @order.state = 'stripe payment done'
-    @order.save
+
+    # OrderMailer.with(order: @order).new_order_email.deliver_later
   end
 
   def failure_message
      @order = Order.find(params[:order_id])
-     if @order.state == 'stripe payment done'
+     if @order.state == 'paid'
       redirect_to root_path
      else
        @order.state = 'Payment failure'

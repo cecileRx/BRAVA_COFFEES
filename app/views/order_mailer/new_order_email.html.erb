@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <% if @order.shipping_zone != nil  %>
+      <p> <%= t(".mail_thanks") %> <%= @order.id %>, <%= @user.username %>!</p>
+      <p>
+      Order details<br>
+      --------------------------
+      </p>
+
+        On va mettre tous les détails bientôt
+      <p>
+      Message:<br>
+      ---------- Hello there, we are going to send you the coffee!!-------
+      </p>
+      <% else %>
+      <%= @order.collect_address %>
+    <% end %>
+  </body>
+</html>

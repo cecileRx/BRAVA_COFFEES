@@ -173,6 +173,12 @@ Coffee cherry, floral, caramel and lemon flavors."
     hario_01_name: Hario V60 paper filters
     hario_02_name: Hario V60 paper filters
     V60_name: Hario Kit V60
+
+  order_mailer:
+    mail_subject: "Thanks for your order"
+    new_order_email:
+      mail_thanks: "Thanks for your order N°"
+
   pages:
     about:
       about_text_1_html: "<strong>Brava</strong> is a micro coffee roaster based in

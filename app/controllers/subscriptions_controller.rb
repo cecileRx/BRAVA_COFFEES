@@ -57,7 +57,7 @@ class SubscriptionsController < ApplicationController
     @subscription.grind= params[:grind]
     @subscription.name= params[:name]
     @subscription.current_period_start = DateTime.now
-    @subscription.current_period_end = DateTime.now + 3.months
+    @subscription.current_period_end = DateTime.now + 2.months
     @subscription.user_id = @user.id
     @subscription.save
 

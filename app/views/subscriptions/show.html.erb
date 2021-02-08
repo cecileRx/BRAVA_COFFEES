@@ -1,15 +1,13 @@
 <div class="container">
   <h3>You have chosen a <%= @subscription.name%> subscription </h3>
 
-  <p> You'll receive your package every month </p>
+  <p> You'll receive your package every month for 3 months</p>
 
   <p class= "sub-summary-title text-muted"> First payment </p>
   <% s = @subscription.current_period_start %>
   <p> <%=s.strftime("%A %d %B %Y" )  %> </p>
-  <p class= "sub-summary-title text-muted"> Next payment </p>
-  <% n = @subscription.current_period_start + 1.months %>
-  <p> <%=n.strftime("%A %d %B %Y" )  %> </p>
-  <p class= "sub-summary-title text-muted"> End of Subscription </p>
+
+  <p class= "sub-summary-title text-muted"> Last payment </p>
   <% e = @subscription.current_period_end  %>
   <p> <%=e.strftime("%A %d %B %Y" )  %> </p>
 
@@ -20,7 +18,7 @@
     <script>
       const paymentButton = document.getElementById('pay');
       paymentButton.addEventListener('click', () => {
-        const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
+       var stripe = Stripe('<%= Rails.configuration.stripe[:publishable_key] %>');
         stripe.redirectToCheckout({
           sessionId: '<%= @session.id %>'
         });

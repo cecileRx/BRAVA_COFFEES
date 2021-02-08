@@ -160,6 +160,12 @@ Sabores de cereja do café, floral, caramelo e limão."
     hario_02_name: Filtros V60 Hario
     V60_name: Hario Kit V60
 
+
+  order_mailer:
+    mail_subject: "Obrigada por a sua encomenda"
+    new_order_email:
+      mail_thanks: "Obrigada por a sua encomenda N°"
+
   pages:
     about:
       about_text_1_html: "<strong>Brava</strong> é uma micro torrefatora baseada em
