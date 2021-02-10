@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_18_165631) do
+ActiveRecord::Schema.define(version: 2021_02_08_181606) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -81,8 +81,8 @@ ActiveRecord::Schema.define(version: 2021_01_18_165631) do
     t.datetime "current_period_end"
     t.string "item_choice"
     t.string "grind"
-    t.boolean "active", default: true
-    t.string "stripe_id"
+    t.boolean "active", default: false
+    t.string "checkout_session_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"

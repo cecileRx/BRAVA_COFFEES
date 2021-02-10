@@ -10,14 +10,14 @@ class SubscriptionsController < ApplicationController
 
       pending_subscriptions = []
       subscriptions.each do |item|
-        if item.stripe_id != nil
+        if item.checkout_session_id != nil
           pending_subscriptions << item
         end
       end
 
       @subscriptions = []
       pending_subscriptions.each do |item|
-        if Stripe::Checkout::Session.retrieve("#{item.stripe_id}").payment_status  == 'paid'
+        if Stripe::Checkout::Session.retrieve("#{item.checkout_session_id}").payment_status  == 'paid'
           @subscriptions << item
         end
       end
@@ -45,7 +45,10 @@ class SubscriptionsController < ApplicationController
     if params[:name] == 'Discovery' && params[:weight] == '250'
       @subscription.price_id = 'price_1HxtBpJoAorz6CW7akEOvvjd'
     elsif params[:name] == 'Discovery' && params[:weight] == '1000'
-      # @subscription.price_id = 'price_1HuCWZJoAorz6CW7MefdKVA5'
+      # subscription Discovery 1000 mode test
+      ## @subscription.price_id = 'price_1HuCWZJoAorz6CW7MefdKVA5'
+      # subscription PLAN_TEST quotidien
+      ## @subscription.price_id = 'price_1IJLsyJoAorz6CW7PTXjAnIV'
       @subscription.price_id = 'price_1HxtBpJoAorz6CW7aQiQywTa'
     elsif params[:name] == 'Adventure' && params[:weight] == '250'
       @subscription.price_id = 'price_1HxtBGJoAorz6CW7HHc868Fh'
@@ -101,7 +104,7 @@ class SubscriptionsController < ApplicationController
 
      @user.stripe_id = customer.id
      @user.save
-     @subscription.stripe_id = @session.id
+     @subscription.checkout_session_id = @session.id
      @subscription.save
   end
 
