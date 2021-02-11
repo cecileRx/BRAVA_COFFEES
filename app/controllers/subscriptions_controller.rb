@@ -48,7 +48,8 @@ class SubscriptionsController < ApplicationController
       # subscription Discovery 1000 mode test
       ## @subscription.price_id = 'price_1HuCWZJoAorz6CW7MefdKVA5'
       # subscription PLAN_TEST quotidien
-      ## @subscription.price_id = 'price_1IJLsyJoAorz6CW7PTXjAnIV'
+      # @subscription.price_id = 'price_1IJLsyJoAorz6CW7PTXjAnIV'
+      # subscription Discovery 1000
       @subscription.price_id = 'price_1HxtBpJoAorz6CW7aQiQywTa'
     elsif params[:name] == 'Adventure' && params[:weight] == '250'
       @subscription.price_id = 'price_1HxtBGJoAorz6CW7HHc868Fh'

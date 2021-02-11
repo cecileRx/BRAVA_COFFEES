@@ -19,7 +19,7 @@ class StripeCheckoutSessionService
                 quantity: 1,
               },
             ],
-            iterations: 2,
+            iterations: 3,
           },
         ],
       })
