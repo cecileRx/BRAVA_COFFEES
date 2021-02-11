@@ -64,9 +64,7 @@ class OrdersController < ApplicationController
   def show
     @order = Order.find(params[:id])
     @user = current_user
-
-
-end
+  end
 
   def update
 
@@ -105,7 +103,7 @@ end
     else
       @order.shipping_method = params[:shipping_method]
     end
-
+#Pick and Collect option:
     if @order.collect_address != nil && @order.shipping_method == nil
 
       @session = Stripe::Checkout::Session.create(
@@ -127,63 +125,64 @@ end
        @order.save
 
     else
+#shipping option:
 
       testshipment = []
       @order.order_items.each do |item|
         testshipment << item.shipping_points
       end
 
-    shipment_score = testshipment.sum
+      shipment_score = testshipment.sum
 
-    set_shipping_cost = @order.order_items
-    shipping_cost_amount = 0
+      set_shipping_cost = @order.order_items
+      shipping_cost_amount = 0
 
-    if @order.shipping_zone == nil || @order.collect_address != nil
-       shipping_cost_amount = 0
-    else
-  # calcul des shipping cost pour le Portugal
-      if @order.shipping_zone == 'Portugal'
-        # calcul des shipping cost pour le Portugal en regular mail
-        if @order.shipping_method != 'registered mail'
-          if set_shipping_cost.any? { |val| val[:weight] == 1000 }
-            if shipment_score < 5
-              shipping_cost_amount = 360
-            else
-              shipping_cost_amount = 0
-            end
-
-          else
-            if shipment_score > 7
-              shipping_cost_amount = 0
-            elsif shipment_score > 3
-              shipping_cost_amount = 450
-            else
-              shipping_cost_amount = 250
-            end
-          end
-        else
-          # calcul des shipping cost pour le Portugal en registered mail
-          if @order.amount_cents_cents > 5000
-            shipping_cost_amount = 0
-          elsif shipment_score > 4
-            shipping_cost_amount = 560
-          else
-            shipping_cost_amount = 550
-          end
-        end
-  # calcul des shipping cost pour le reste de l'Europe
+      if @order.shipping_zone == nil || @order.collect_address != nil
+         shipping_cost_amount = 0
       else
-         if @order.amount_cents_cents > 7000
-            shipping_cost_amount = 0
-          elsif shipment_score > 7
-            shipping_cost_amount = 1790
-          elsif shipment_score > 2
-            shipping_cost_amount = 1150
+    # calcul des shipping cost pour le Portugal
+        if @order.shipping_zone == 'Portugal'
+          # calcul des shipping cost pour le Portugal en regular mail
+          if @order.shipping_method != 'registered mail'
+            if set_shipping_cost.any? { |val| val[:weight] == 1000 }
+              if shipment_score < 5
+                shipping_cost_amount = 360
+              else
+                shipping_cost_amount = 0
+              end
+
+            else
+              if shipment_score > 7
+                shipping_cost_amount = 0
+              elsif shipment_score > 3
+                shipping_cost_amount = 450
+              else
+                shipping_cost_amount = 250
+              end
+            end
           else
-            shipping_cost_amount = 870
+            # calcul des shipping cost pour le Portugal en registered mail
+            if @order.amount_cents_cents > 5000
+              shipping_cost_amount = 0
+            elsif shipment_score > 4
+              shipping_cost_amount = 560
+            else
+              shipping_cost_amount = 550
+            end
           end
-       end
-    end
+    # calcul des shipping cost pour le reste de l'Europe
+        else
+           if @order.amount_cents_cents > 7000
+              shipping_cost_amount = 0
+            elsif shipment_score > 7
+              shipping_cost_amount = 1790
+            elsif shipment_score > 2
+              shipping_cost_amount = 1150
+            else
+              shipping_cost_amount = 870
+            end
+         end
+      end
 
 
    @order.shipping_cost_cents = shipping_cost_amount

@@ -46,7 +46,7 @@ class SubscriptionsController < ApplicationController
       @subscription.price_id = 'price_1HxtBpJoAorz6CW7akEOvvjd'
     elsif params[:name] == 'Discovery' && params[:weight] == '1000'
       # subscription Discovery 1000 mode test
-      ## @subscription.price_id = 'price_1HuCWZJoAorz6CW7MefdKVA5'
+      #@subscription.price_id = 'price_1HuCWZJoAorz6CW7MefdKVA5'
       # subscription PLAN_TEST quotidien
       # @subscription.price_id = 'price_1IJLsyJoAorz6CW7PTXjAnIV'
       # subscription Discovery 1000
@@ -72,7 +72,6 @@ class SubscriptionsController < ApplicationController
     @subscription = Subscription.find(params[:id])
     @user = current_user
 
-
     line_items_subscription = {
       name: @subscription.item_choice,
       description: @subscription.grind,
@@ -95,16 +94,19 @@ class SubscriptionsController < ApplicationController
       cancel_url: root_url
     )
 
-    customer = Stripe::Customer.create({
-      email: current_user.email,
-      name: current_user.username,
-      metadata: {
+    if @user.stripe_id != nil
+      customer = Stripe::Customer.retrieve(@user.stripe_id)
+    else
+      customer = Stripe::Customer.create({
+        email: current_user.email,
+        name: current_user.username
+      })
+      @user.stripe_id = customer.id
+      @user.save
 
-      },
-    })
+    end
 
-     @user.stripe_id = customer.id
-     @user.save
+
      @subscription.checkout_session_id = @session.id
      @subscription.save
   end

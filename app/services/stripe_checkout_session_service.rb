@@ -7,22 +7,22 @@ class StripeCheckoutSessionService
       sub_id = session.subscription
       subscription.update(stripe_subscription_id: "#{sub_id}")
 
-      Stripe::SubscriptionSchedule.create({
-        customer: session.customer,
-        start_date: 'now',
-        end_behavior: 'cancel',
-        phases: [
-          {
-            items: [
-              {
-                price: subscription.price_id,
-                quantity: 1,
-              },
-            ],
-            iterations: 3,
-          },
-        ],
-      })
+      # Stripe::SubscriptionSchedule.create({
+      #   customer: session.customer,
+      #   start_date: 'now',
+      #   end_behavior: 'cancel',
+      #   phases: [
+      #     {
+      #       items: [
+      #         {
+      #           price: subscription.price_id,
+      #           quantity: 1,
+      #         },
+      #       ],
+      #       iterations: 3,
+      #     },
+      #   ],
+      # })
 
     else
       order = Order.find_by(checkout_session_id: event.data.object.id)
