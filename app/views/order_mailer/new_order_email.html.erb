@@ -4,19 +4,16 @@
   </head>
   <body>
     <% if @order.shipping_zone != nil  %>
-      <p> <%= t(".mail_thanks") %> <%= @order.id %>, <%= @user.username %>!</p>
-      <p>
-      Order details<br>
-      --------------------------
-      </p>
+      <p><%= t(".mail_hello") %>, <%= @user.username %>!</p>
+      <p><%= t(".mail_thanks_1")%></p>
 
-        On va mettre tous les détails bientôt
-      <p>
-      Message:<br>
-      ---------- Hello there, we are going to send you the coffee!!-------
-      </p>
+
+      <p><%= t(".mail_thanks_2")%></p>
+
+
       <% else %>
       <%= @order.collect_address %>
     <% end %>
+    <p><%= image_tag "Brava_Logo.png", class: "logo-small-device", height: "50" %></p>
   </body>
 </html>

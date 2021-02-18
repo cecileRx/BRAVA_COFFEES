@@ -41,7 +41,9 @@ class OrdersController < ApplicationController
     @order.amount_cents_cents = total.sum
 
     if @order.amount_cents_cents == 0
-      redirect_to root_path
+       Cart.destroy(session[:cart_id])
+       session[:cart_id] = nil
+       redirect_to root_path
     else
       @current_cart.order_items.each do |item|
         @order.order_items << item

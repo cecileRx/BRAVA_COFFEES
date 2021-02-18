@@ -38,7 +38,11 @@ class ApplicationController < ActionController::Base
   def current_cart
 
         if session[:cart_id]
-          cart = Cart.find(session[:cart_id])
+          cart = Cart.find_by_id(session[:cart_id])
+          if cart == nil
+            session[:cart_id] = nil
+          end
+
           if cart.present?
             @current_cart = cart
           else

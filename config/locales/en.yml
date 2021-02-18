@@ -175,9 +175,13 @@ Coffee cherry, floral, caramel and lemon flavors."
     V60_name: Hario Kit V60
 
   order_mailer:
-    mail_subject: "Thanks for your order"
+    mail_subject: "BRAVA COFFEE ROASTERS - Thanks for your order"
     new_order_email:
-      mail_thanks: "Thanks for your order N°"
+      mail_hello: "Hi"
+      mail_thanks_1: "Thank you for choosing Brava Coffee Roasters. We are preparing your order."
+      mail_thanks_2: "*** NOTE *** As CTT is currently processing a large number of orders, there may be some delay in delivery."
+
+
 
   pages:
     about:
