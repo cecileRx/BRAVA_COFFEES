@@ -3,17 +3,10 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <% if @order.shipping_zone != nil  %>
+
       <p><%= t(".mail_hello") %>, <%= @user.username %>!</p>
-      <p><%= t(".mail_thanks_1")%></p>
+      <p><%= t(".mail_thanks_1_html")%></p>
 
-
-      <p><%= t(".mail_thanks_2")%></p>
-
-
-      <% else %>
-      <%= @order.collect_address %>
-    <% end %>
     <p><%= image_tag "Brava_Logo.png", class: "logo-small-device", height: "50" %></p>
   </body>
 </html>

@@ -178,10 +178,10 @@ Coffee cherry, floral, caramel and lemon flavors."
     mail_subject: "BRAVA COFFEE ROASTERS - Thanks for your order"
     new_order_email:
       mail_hello: "Hi"
-      mail_thanks_1: "Thank you for choosing Brava Coffee Roasters. We are preparing your order."
-      mail_thanks_2: "*** NOTE *** As CTT is currently processing a large number of orders, there may be some delay in delivery."
-
-
+      mail_thanks_1_html: "Thank you for choosing Brava Coffee Roasters. <br>
+      We will inform you by email when your order is ready to be dispatched.<br>
+      If you prefer receiving your order updates by sms please provide us your phone number, in reply to this email.<br>
+      Warm regards,"
 
   pages:
     about:

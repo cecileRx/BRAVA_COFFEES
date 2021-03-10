@@ -238,7 +238,7 @@ class OrdersController < ApplicationController
   def messages
     @order = Order.find(params[:order_id])
 
-    # OrderMailer.with(order: @order).new_order_email.deliver_later
+    OrderMailer.with(order: @order).new_order_email.deliver_later
   end
 
   def failure_message
