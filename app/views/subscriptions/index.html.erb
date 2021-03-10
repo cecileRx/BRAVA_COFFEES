@@ -4,7 +4,7 @@
     <% dashboard_subscriptions = @subscriptions.sort_by(&:created_at) %>
     <div id= "dashboard-products" class="container">
       <% dashboard_subscriptions.each do |item| %>
-      <% stripe_session_data = Stripe::Checkout::Session.retrieve("#{item.stripe_subscription_id}")%>
+      <% stripe_session_data = Stripe::Checkout::Session.retrieve("#{item.checkout_session_id}")%>
       <div class="mb-5">
         <h5 class= "font-weight-bold"> Subscription N°<%= item.id %> - <%= item.name %> </h5>
         <div class="d-flex justify-content-between my-3">
