@@ -5,7 +5,7 @@ class OrderItemsController < ApplicationController
  def create
    chosen_weight = params[:weight].to_i
    chosen_product = Product.find(params[:product_id])
-   current_cart = @current_cart
+
 
 
      if chosen_weight == 250
@@ -18,7 +18,15 @@ class OrderItemsController < ApplicationController
      end
 
       @order_item = OrderItem.new
-      @order_item.cart = current_cart
+
+
+      if session[:cart_id] == nil
+          @current_cart = Cart.create
+          session[:cart_id] = @current_cart.id
+      end
+
+
+      @order_item.cart_id = @current_cart.id
       @order_item.product = @product
       @order_item.grind = params[:grind]
       @order_item.quantity = params[:quantity]
@@ -30,6 +38,7 @@ class OrderItemsController < ApplicationController
 
 
      @order_item.save!
+
 
     redirect_to cart_path(current_cart)
   end

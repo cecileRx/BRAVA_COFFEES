@@ -33,17 +33,23 @@ class OrdersController < ApplicationController
     @order = Order.new
 
     total = []
-    @current_cart.order_items.each do |item|
 
-      total << item.product.price_cents * item.quantity.to_i
-    end
+    if @current_cart != nil
+      @current_cart.order_items.each do |item|
 
-    @order.amount_cents_cents = total.sum
+        total << item.product.price_cents * item.quantity.to_i
+      end
 
-    if @order.amount_cents_cents == 0
-       Cart.destroy(session[:cart_id])
+      @order.amount_cents_cents = total.sum
+    else
        session[:cart_id] = nil
        redirect_to root_path
+    end
+
+    if session[:cart_id] == nil
+      @current_cart = Cart.create
+      session[:cart_id] = @current_cart.id
+
     else
       @current_cart.order_items.each do |item|
         @order.order_items << item

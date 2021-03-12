@@ -6,14 +6,6 @@ class PagesController < ApplicationController
     @products = Product.all
     coffees_items = Product.joins(:category).where("categories.name = 'coffee'")
     @coffees = coffees_items.select { |coffee| coffee.weight == 250 }
-    @cart = @current_cart
-    total = []
-    @cart.order_items.each do |item|
-
-      total << item.product.price_cents * item.quantity.to_i
-    end
-
-    @cart.amount_cents_cents = total.sum
 
   end
 
