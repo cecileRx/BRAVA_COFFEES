@@ -182,6 +182,10 @@ Coffee cherry, floral, caramel and lemon flavors."
       We will inform you by email when your order is ready to be dispatched.<br>
       If you prefer receiving your order updates by sms please provide us your phone number, in reply to this email.<br>
       Warm regards,"
+      mail_thanks_text: "Thank you for choosing Brava Coffee Roasters.
+      We will inform you by email when your order is ready to be dispatched.
+      If you prefer receiving your order updates by sms please provide us your phone number, in reply to this email.
+      Warm regards, Brava Team"
 
   pages:
     about:

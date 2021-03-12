@@ -164,11 +164,15 @@ Sabores de cereja do café, floral, caramelo e limão."
   order_mailer:
     mail_subject: "BRAVA COFFEE ROASTERS - Obrigada por a sua encomenda"
     new_order_email:
-      mail_hello: Óla
+      mail_hello: Olá
       mail_thanks_1_html: "Obrigada por escolher a Brava Coffee Roasters.<br>
       Vamos enviar-lhe um email quando a sua encomenda estiver pronta.<br>
       Se preferir receber as atualizações por sms, pode enviar-nos o seu número de telefone em resposta a este email. <br>
-      Até breve,<br>Brava team"
+      Até breve,"
+      mail_thanks_text: "Obrigada por escolher a Brava Coffee Roasters.
+      Vamos enviar-lhe um email quando a sua encomenda estiver pronta.
+      Se preferir receber as atualizações por sms, pode enviar-nos o seu número de telefone em resposta a este email.
+      Até breve, Brava Team"
 
 
   pages:
