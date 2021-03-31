@@ -1,6 +1,6 @@
 
 
-<% dashboard_orders = @stripe_paid_orders.sort_by(&:created_at) %>
+<% dashboard_orders = @stripe_paid_orders.sort_by(&:created_at).reverse %>
 <div id= "dashboard-products" class="container">
   <% dashboard_orders.each do |item| %>
   <div class="mb-5">
