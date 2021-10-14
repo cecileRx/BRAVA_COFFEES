@@ -245,6 +245,7 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:order_id])
 
     OrderMailer.with(order: @order).new_order_email.deliver_later
+    OrderMailer.with(order: @order).admin_order_email.deliver_later
   end
 
   def failure_message
