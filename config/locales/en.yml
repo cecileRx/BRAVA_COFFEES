@@ -22,7 +22,7 @@ en:
       product: product
 
   brew_nav: BREWING
-  coffees_nav: COFFEES
+  coffees_nav: COFFEE
   contact_email: enter your email
   contact_touch: STAY IN TOUCH
   contact_nav: CONTACT
@@ -317,6 +317,11 @@ Coffee cherry, floral, caramel and lemon flavors."
 
   like: "You might also like :"
   process: Process
+  region_att:
+    nica_region: Jalapa, Neuva Segovia
+    columb_region: La Uniõn, Nariño
+    ethiopia_region: Bonga, gifo, Keffa
+    brasil_region: Center-West of Goiás
   process_att:
     process_att_1: washed
     process_att_2: pulped

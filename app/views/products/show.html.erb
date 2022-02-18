@@ -45,7 +45,7 @@
 
                 <%= hidden_field_tag 'product_id', @product.id %>
 
-                <% if @product.name != 'AMACA' %>
+                <% if @product.name != 'Tega & Tula farm' %>
                   <div class='mt-3'>
                     <%= submit_tag t("addcart"), class: 'btn btn-block btn-warning' %>
 
@@ -60,6 +60,7 @@
                     <% version_product = Product.where({name: @product.name, weight: 1000}).first %>
                     <p style="visibility: hidden" id= "hidden_price_max"> <%= version_product.price %></p>
                     <p style="visibility: hidden" id= "hidden_price_min"> <%= @product.price %></p>
+                    <p>OUT OF STOCK</p>
                   </div>
                  <% end %>
               <% end %>
@@ -81,7 +82,7 @@
       <div class="coffee_description_text mb-5 col-md-12">
           <% if @product.category.name == 'coffee' %>
 
-            <p><%=Product.human_attribute_name("region").capitalize%>: <%=@product.region%> </p>
+            <p><%=Product.human_attribute_name("region").capitalize%>: <%=t("region_att.#{@product.region}")%> </p>
             <p><%=Product.human_attribute_name("process").capitalize%>: <%= t("process_att.#{@product.process}")  %></p>
             <p><%= t("description_att.#{@product.description}")%></p>
 

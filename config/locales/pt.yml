@@ -311,6 +311,11 @@ Sabores de cereja do café, floral, caramelo e limão."
       purchase-thanks: Obrigada por adquirir os nossos produtos. Vamos já preparar a sua encomenda!
   like: "Também poderá gostar :"
   process: processo
+  region_att:
+    nica_region: Jalapa, Neuva Segovia
+    columb_region: La Uniõn, Nariño
+    ethiopia_region: Bonga, gifo, Keffa
+    brasil_region: Centro oeste Goiano
   shared:
     navbar:
       login: Entrar
