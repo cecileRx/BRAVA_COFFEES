@@ -27,17 +27,14 @@ en:
   contact_touch: STAY IN TOUCH
   contact_nav: CONTACT
 
-  process_att: washed
-
   origin_att:
-    columb_amaca_origin: Colombia
+    brasil_origin: Brazil
     columb_fudam_origin: Colombia
     ethiopia_origin: Ethiopia
     nica_origin: Nicaragua
 
   cup_notes_att:
-    columb_amaca_cp_html: "Soft and sweet with fruit acidity. <br>
-Very fruity with caramel and apple flavors."
+    brasil_cp_html: "Sweet, Cocoa and Nutty."
     columb_fudam_cp_html: "Tropical fruits with tamarind. <br>
 Sweet and savory with big tangy fruit acidity and a smooth mouthfeel."
     ethiopia_cp_html: " Sweet and clean with a smooth mouthfeel <br>
@@ -46,12 +43,11 @@ Sweet and savory with big tangy fruit acidity and a smooth mouthfeel."
 Coffee cherry, floral, caramel and lemon flavors."
 
   grind_op_att:
-    columb_amaca_grind:
+    brasil_grind:
     - Whole beans
     - Filter
     - Moka
     - Espresso
-    - Aeropress
     - French press
 
     columb_fudam_grind:
@@ -88,15 +84,6 @@ Coffee cherry, floral, caramel and lemon flavors."
       losing flavor Simple, easy to use with timeless, elegant design.<br>
       Filters are not included.<br>We recommend 72-75g of coffee per litre of water. Extraction time of 3-4 minutes.
 
-    columb_amaca_desc: AMACA stands for Asociación de Mujeres Productoras Agropecuarias
-      del Cauca, a group of 80 women’ producers who are based in El Tambo, Cauca,
-      Colombia since 1999. This association has registered a steady growth and, today,
-      it counts up to 140 women from three different villages in the same region.
-      All of these women own the land they farm and are the heads of their households.
-      The average farm size is one hectare per member, with many even smaller. Most
-      members harvest only fully ripe cherries which are de-pulped on the same day
-      of harvest and are then processed on their farms. Drying is done on raised beds
-      inside parabolic dryers.
     columb_fudam_desc: 'FUDAM stands for Fundación Agraria y Ambiental Para el Desarrollo
       Sostentible - a 300 member’s association of organic and Rainforest Alliance
       certified coffee growers founded in the year 2000. This group of smallholders
@@ -118,6 +105,8 @@ Coffee cherry, floral, caramel and lemon flavors."
       each and every bean. It is then washed in local canals and thereafter, spends
       between 16 and18 hours soaking in a tank before being spread on the drying tables.
       It takes washed coffee beans between 7 to 11 days to dry out.
+    brasil_desc: In the heart of Brazil, in the Center-West of Goiás, 180 km from the capital Brasília, we can find Fazenda Bagagem. Managed by the Orioli family, it has been producing 150 hectares of coffee since 2007, focusing on specialty coffees, with sustainable production practices that have earned them the UTZ Sustainability certification, Rainforest Alliance and BSCA - Brazilian Specialty Coffee Association. n the region, the ideal natural resources for coffee production abound :climate, soil, rainfall and altitudes. Located at an altitude of 1050-1100 meters, the harvest begins in June and lasts until August/September.  After being carefully processed, the coffee dries in terraces and suspended terraces on the farm itself, where it is also stored in wooden bins before being bagged. In the words of owner Álvaro Orioli, “Goiás is a region with an excellent climate for coffee production. The fruit ripens more slowly, concentrates sugars, has a fruity aroma and, in some cases, even floral aromas, which is something that is much sought after in coffee”.
+
     chemex_3_filter_desc: Paper filters for Chemex 3 cups.
     chemex_6_filter_desc: Paper filters for Chemex 6 cups.
     mesh_dripper_desc: Dripper with double mesh filters. It is made solely of stainless steel.
@@ -328,7 +317,9 @@ Coffee cherry, floral, caramel and lemon flavors."
 
   like: "You might also like :"
   process: Process
-  process_att: washed
+  process_att:
+    process_att_1: washed
+    process_att_2: pulped
   shared:
     navbar:
       login: Login

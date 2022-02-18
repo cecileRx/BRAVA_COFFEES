@@ -82,7 +82,7 @@
           <% if @product.category.name == 'coffee' %>
 
             <p><%=Product.human_attribute_name("region").capitalize%>: <%=@product.region%> </p>
-            <p><%=Product.human_attribute_name("process").capitalize%>: <%= t("process_att")  %></p>
+            <p><%=Product.human_attribute_name("process").capitalize%>: <%= t("process_att.#{@product.process}")  %></p>
             <p><%= t("description_att.#{@product.description}")%></p>
 
           <% end %>
@@ -92,8 +92,6 @@
 
             <% @coffees.each do |product| %>
               <% if product.id != @product.id %>
-               <% if product.name != 'AMACA' %>
-
                   <%= link_to product_path(product) do %>
                     <div class="text-center">
                       <%= image_tag "#{product.photo_square}", class: 'mx-2 pic-gallery'%>
@@ -104,7 +102,6 @@
                         <% end %>
                     </div>
                   <% end %>
-                <% end %>
               <% end %>
             <% end %>
       </div>

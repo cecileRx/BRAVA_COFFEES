@@ -19,23 +19,24 @@ pt:
         collect_address: ponto de recolha
 
 
-    models:
-      product: produto
-  brew_nav: PREPARAÇÃO
-  coffees_nav: CAFÉS
-  contact_email: coloque o seu email
-  contact_touch: MANTER CONTACTO
-  contact_nav: CONTACTO
+  models:
+    product: produto
+    brew_nav: PREPARAÇÃO
+    coffees_nav: CAFÉS
+    contact_email: coloque o seu email
+    contact_touch: MANTER CONTACTO
+    contact_nav: CONTACTO
 
-  process_att: lavado
+  process_att:
+    process_att_1: lavado
+    process_att_2: pulped
 
   grind_op_att:
-    columb_amaca_grind:
+    brasil_grind:
     - Grão
     - Filtro
     - Moka
     - Espresso
-    - Aeropress
     - French press
     columb_fudam_grind:
     - Grão
@@ -59,13 +60,12 @@ pt:
 
 
   origin_att:
-    columb_amaca_origin: Colombia
+    brasil_origin: Brasil
     columb_fudam_origin: Colombia
     ethiopia_origin: Etiópia
     nica_origin: Nicarágua
   cup_notes_att:
-    columb_amaca_cp_html: "Macio e doce com acidez de fruta. <br>
-Muito frutado, com sabores de caramelo e maçã."
+    brasil_cp_html: "Notes-Doce, Cacau e Amêndoa."
     columb_fudam_cp_html: "Frutos tropicais, com tamarindo e toranja.<br>
   Doces e salgados com acidez de fruta picante e sensação suave."
     ethiopia_cp_html: "Doce e limpo com sensação suave na boca. <br>
@@ -79,14 +79,8 @@ Sabores de cereja do café, floral, caramelo e limão."
     hario_V60_server_desc: O Hario V60 S é uma cafeteira perfeitamente desenhada para a preparação manual do café em casa. Feita inteiramente de vidro japonês resistente ao calor durável. Além disso, foi equipada com uma tampa de vidro revestida de silicone, que permitse que a bebida permaneça quente por muito tempo. É totalmente compatível com todos os produtos da série Hario V60, especialmente recomendado com o dripper Hario V60-02. Capacidade - 600 ml
     uchi_mugg_desc: Caneca de viagem reutilizável com estilo e funcional. Mantém a temperatura do café por muito tempo. Capacidade -350ml
     chemex_desc_html: Um clássico, a Chemex é uma maneira simples e elegante de preparar café de filtro. É uma peça linda feita de vidro não poroso, que não absorve odores ou resíduos químicos. A peça de madeira com o cordão de couro pode ser removida para facilitar a limpeza. Se usada em conjunto com os filtros originais Chemex, o processo de infusão proporcionará a chávena de café perfeita, sem sedimentos ou elementos amargos.<br>Os papéis de filtro não estão incluídos.<br>Recomendamos 72-75g de café por litro de água. Tempo de extracção de 3-4 minutos.
-    columb_amaca_desc: AMACA – Asociación de Mujeres Productoras Agropecuarias del
-      Cauca, é um grupo de mulheres produtoras de El Tambo, Cauca, Colômbia. Desde
-      1999, a associação foi crescendo e hoje conta com 140 mulheres de três aldeias
-      diferentes na mesma região. Todas são proprietárias da terra que cultivam e
-      são chefes das suas famílias. O tamanho médio da fazenda é de um hectare por
-      membro. A colheita é feita apenas de cerejas maduras que são despolpadas no
-      mesmo dia da apanha e depois são processadas nas próprias fazendas. A secagem
-      é feita em camas elevadas dentro de secadores parabólicos.
+    brasil_desc: No coração do Brasil, no Centro Oeste Goiano, a 180 km da capital Brasília, podemos encontrar a Fazenda Bagagem. Gerida pela família Orioli, produz 150 hectares de café desde 2007, focando-se em cafés de especialidade, com práticas sustentáveis de produção que lhes valeram a certificação de Sustentabilidade UTZ, Rainforest Alliance e BSCA - Associação Brasileira de Café Especial.Na região abundam os recursos naturais ideais para a produção de café :clima, solo, chuvas e altitudes. Localizada a 1050-1100 metros de altitude, a colheita começa em junho e estende-se até agosto/setembro. Depois de cuidadosamente processado, o café seca em terreiros e terreiros suspensos na própria quinta, onde é também armazenado em tulhas de madeira antes de ser ensacado. Nas palavras do proprietário Álvaro Orioli, “Goiás é uma região com clima excelente para a produção de café. O fruto amadurece mais devagar, concentra açúcares, tem aroma de frutas e, em alguns casos, até aromas florais, que é algo que se busca muito no café”.
+
     columb_fudam_desc: 'FUDAM – Fundación Agraria y Ambiental para el Desarrollo Sostentible
       é uma associação colombiana fundada em 2000, que integra 300 cafeicultores orgânicos
       certificados pela Rainforest Alliance. Este grupo de pequenos proprietários
@@ -317,7 +311,6 @@ Sabores de cereja do café, floral, caramelo e limão."
       purchase-thanks: Obrigada por adquirir os nossos produtos. Vamos já preparar a sua encomenda!
   like: "Também poderá gostar :"
   process: processo
-  process_att: lavado
   shared:
     navbar:
       login: Entrar
