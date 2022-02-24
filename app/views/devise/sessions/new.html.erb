@@ -2,7 +2,7 @@
 <div class="container" id= "log-devise">
   <div class="row justify-content-around pb-5">
     <div class="col-md-4 ">
-      <h2 class="log-devise-title mb-4">Already in Brava</h2>
+      <h2 class="log-devise-title mb-4"><%=t("signin-message")%></h2>
       <h4><%= t(".login") %></h4>
 
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -27,7 +27,7 @@
       <% end %>
     </div>
     <div class="col-md-4">
-           <h2 class="log-devise-title mb-4">First time in Brava</h2>
+           <h2 class="log-devise-title mb-4"><%=t("signup-message")%></h2>
             <h4 class="mb-4">Welcome!</h4>
 
 

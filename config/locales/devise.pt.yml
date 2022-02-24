@@ -12,6 +12,7 @@ pt:
       locked: 'A sua conta está bloqueada.'
       invalid: 'O endereço de correio electrónico ou a palavra-passe inválido.'
       invalid_token: 'O token de autentificação não é válido.'
+      not_found_in_database: "%{authentication_keys} ou password inválidos."
       timeout: 'A sua sessão expirou, por favor faça login novamente para puder continuar.'
       inactive: 'A sua conta ainda não foi ativada.'
     sessions:
