@@ -21,11 +21,13 @@ pt:
 
   models:
     product: produto
-    brew_nav: PREPARAÇÃO
-    coffees_nav: CAFÉS
-    contact_email: coloque o seu email
-    contact_touch: MANTER CONTACTO
-    contact_nav: CONTACTO
+
+  brew_nav: PREPARAÇÃO
+  coffees_nav: CAFÉS
+  contact_email: coloque o seu email
+  contact_touch: MANTER CONTACTO
+  contact_nav: CONTACTO
+
 
   process_att:
     process_att_1: lavado
