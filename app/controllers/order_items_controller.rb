@@ -39,8 +39,8 @@ class OrderItemsController < ApplicationController
 
      @order_item.save!
 
-
-    redirect_to cart_path(current_cart)
+    flash[:notice] = t("add-item")
+    redirect_back(fallback_location: root_path)
   end
 
 

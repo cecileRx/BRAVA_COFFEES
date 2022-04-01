@@ -1,5 +1,7 @@
 class CartsController < ApplicationController
 
+  around_action :catch_not_found
+
   def show
     @cart = @current_cart
     total = []
@@ -23,5 +25,13 @@ class CartsController < ApplicationController
     @cart.destroy
     session[:cart_id] = nil
     redirect_to root_path
+  end
+
+  private
+
+  def catch_not_found
+    yield
+  rescue ActiveRecord::RecordNotFound
+    redirect_to root_url, :flash => { :error => "Record not found." }
   end
 end

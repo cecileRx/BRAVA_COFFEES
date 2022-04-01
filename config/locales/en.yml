@@ -1,5 +1,6 @@
 
 en:
+  add-item: Your item has been added to cart
   about_nav: ABOUT
   activerecord:
     attributes:
@@ -337,3 +338,4 @@ Coffee cherry, floral, caramel and lemon flavors."
   pay: pay
   signin-message: Already in Brava
   signup-message: First time in Brava
+

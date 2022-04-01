@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-
+  around_action :catch_not_found
 
   def index
     @products = Product.all
@@ -32,8 +32,12 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
   end
 
-  # def product_params
-  #   params.require(:product).permit(:photo, :price_cents, :stripe_id_week, :stripe_id_month, :price, :name, :origin, :region, :process, :grind_options, :cupping_notes, :description)
-  # end
+  private
+
+  def catch_not_found
+    yield
+  rescue ActiveRecord::RecordNotFound
+    redirect_to root_url, :flash => { :error => "Record not found." }
+  end
 
 end

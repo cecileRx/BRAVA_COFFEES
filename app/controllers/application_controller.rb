@@ -6,8 +6,6 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   before_action  :current_cart
-
-
   after_action :store_action
 
 
@@ -17,22 +15,9 @@ class ApplicationController < ActionController::Base
   end
 
 
-  # def set_locale
-  #   I18n.locale = params.fetch(:locale, I18n.default_locale).to_sym
-  # end
-
   def default_url_options
     { locale: I18n.locale == I18n.default_locale ? nil : I18n.locale }
   end
-
-
-  # def current_user
-  #   if session[:user_id]
-  #     @user = User.find(session[:user_id])
-  #   end
-  # end
-
-
 
 
   def current_cart

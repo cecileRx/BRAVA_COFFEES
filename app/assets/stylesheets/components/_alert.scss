@@ -1,6 +1,13 @@
 .alert {
   position: fixed;
-  bottom: 16px;
+  bottom: 740px;
+  right: 16px;
+  z-index: 1000;
+}
+
+.alert-cart {
+  position: fixed;
+  bottom: 116px;
   right: 16px;
   z-index: 1000;
 }

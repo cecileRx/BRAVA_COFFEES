@@ -1,5 +1,6 @@
 
 pt:
+  add-item: o seu artigo foi adicionado ao carrinho de compras
   about_nav: SOBRE NÓS
   activerecord:
     attributes:
@@ -241,6 +242,7 @@ Sabores de cereja do café, floral, caramelo e limão."
         de terminar a extração, mexa um pouco o café para misturar os sabores e sirva</li>
         <br> <li>O objetivo é um tempo total de extração (incluindo 30 segundos antes
         da infusão) até cerca de 3 minutos</li>"
+
     home:
       brava_intro_1: Brava é uma torrefatora artesanal de cafés de especialidade.
       brava_intro_2: Ela nasce da vontade de encontrar a chávena perfeita.
@@ -329,3 +331,4 @@ Sabores de cereja do café, floral, caramelo e limão."
   subscribe: Subscreva
   signin-message: Iniciar sessão na sua conta
   signup-message: Criar conta
+
