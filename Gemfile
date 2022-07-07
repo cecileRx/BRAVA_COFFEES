@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.3'
+ruby '2.7.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.4', '>= 5.2.4.4'
+gem 'rails', '~> 6.0'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
@@ -31,6 +31,8 @@ gem 'redis', '~> 4.0'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
+# yanked v0.3.5
+gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

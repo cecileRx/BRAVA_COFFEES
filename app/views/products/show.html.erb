@@ -82,8 +82,11 @@
       <div class="coffee_description_text mb-5 col-md-12">
           <% if @product.category.name == 'coffee' %>
 
-            <p><%=Product.human_attribute_name("region").capitalize%>: <%=t("region_att.#{@product.region}")%> </p>
-            <p><%=Product.human_attribute_name("process").capitalize%>: <%= t("process_att.#{@product.process}")  %></p>
+            <p class="small_line"><strong><%=Product.human_attribute_name("region").capitalize%></strong>: <%=t("region_att.#{@product.region}")%> </p>
+            <p class="small_line"><strong><%=Product.human_attribute_name("altitude").capitalize%></strong>: <%= @product.altitude  %></p>
+            <p class="small_line"><strong><%=Product.human_attribute_name("process").capitalize%></strong>: <%= t("process_att.#{@product.process}")  %></p>
+            <p class="small_line"><strong><%=Product.human_attribute_name("variety").capitalize%></strong>: <%= @product.variety %></p>
+            <p class="small_line"><strong><%=Product.human_attribute_name("certification").capitalize%></strong>: <%= @product.certification %></p>
             <p><%= t("description_att.#{@product.description}")%></p>
 
           <% end %>

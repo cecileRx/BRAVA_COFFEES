@@ -9,6 +9,9 @@ en:
         description: description
         grind_options: grind_options
         name: name
+        variety: variety
+        altitude: altitude
+        certification: certification
         process: process
         region: region
         origin: origin
@@ -35,7 +38,7 @@ en:
     nica_origin: Nicaragua
 
   cup_notes_att:
-    brasil_cp_html: "Sweet, Cocoa and Nutty."
+    brasil_cp_html: "Cocoa, Caramel and Dried fruit."
     columb_fudam_cp_html: "Tropical fruits with tamarind. <br>
 Sweet and savory with big tangy fruit acidity and a smooth mouthfeel."
     ethiopia_cp_html: " Sweet and clean with a smooth mouthfeel <br>
@@ -324,8 +327,9 @@ Coffee cherry, floral, caramel and lemon flavors."
     ethiopia_region: Bonga, gifo, Keffa
     brasil_region: Center-West of Goiás
   process_att:
-    process_att_1: washed
-    process_att_2: pulped
+    process_att_1: Washed
+    process_att_2: Pulped
+    process_att_3: Honey
   shared:
     navbar:
       login: Login
