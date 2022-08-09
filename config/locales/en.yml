@@ -167,6 +167,18 @@ Coffee cherry, floral, caramel and lemon flavors."
     hario_02_name: Hario V60 paper filters
     V60_name: Hario Kit V60
 
+  subscription_mailer:
+    mail_subject: "BRAVA COFFEE ROASTERS - Thanks for your subscription"
+    new_subscription_email:
+      mail_hello: "Hi"
+      mail_thanks_1_html: "Thank you for choosing Brava Coffee Roasters. <br>
+      We will inform you by email when your first pacakage is ready to be dispatched.<br>
+      If you prefer receiving your order updates by sms please provide us your phone number, in reply to this email.<br>
+      Warm regards,"
+      mail_thanks_text: "Thank you for choosing Brava Coffee Roasters.
+      We will inform you by email when your first pacakage  is ready to be dispatched.
+      If you prefer receiving your order updates by sms please provide us your phone number, in reply to this email.
+      Warm regards, Brava Team"
   order_mailer:
     mail_subject: "BRAVA COFFEE ROASTERS - Thanks for your order"
     new_order_email:

@@ -33,7 +33,7 @@ class SubscriptionsController < ApplicationController
     @subscription = Subscription.new
     coffee_items = Product.joins(:category).where("categories.name = 'coffee'")
 
-    @coffee_choice = coffee_items.select { |coffee| coffee.weight == 250 }
+    @coffee_choice = coffee_items.select { |coffee| coffee.weight == 250 && coffee.name != 'Tega & Tula farm'}
 
   end
 
@@ -46,9 +46,10 @@ class SubscriptionsController < ApplicationController
       @subscription.price_id = 'price_1HxtBpJoAorz6CW7akEOvvjd'
     elsif params[:name] == 'Discovery' && params[:weight] == '1000'
 
-      @subscription.price_id = 'price_1HxtBpJoAorz6CW7aQiQywTa'
+       @subscription.price_id = 'price_1HxtBpJoAorz6CW7aQiQywTa'
     elsif params[:name] == 'Adventure' && params[:weight] == '250'
-      @subscription.price_id = 'price_1HxtBGJoAorz6CW7HHc868Fh'
+       @subscription.price_id = 'price_1HxtBGJoAorz6CW7HHc868Fh'
+
     else
       @subscription.price_id = 'price_1HxtBGJoAorz6CW7poQ8akoe'
     end
@@ -109,6 +110,8 @@ class SubscriptionsController < ApplicationController
 
   def messages
     @subscription = Subscription.find(params[:subscription_id])
+    SubscriptionMailer.with(subscription: @subscription).new_subscription_email.deliver_later
+    SubscriptionMailer.with(subscription: @subscription).admin_subscription_email.deliver_later
 
 
   end

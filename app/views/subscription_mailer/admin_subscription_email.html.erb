@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+      <p> Hello Joana, </p>
+      <p>You have a new Subscription from <%= @user.username %>! </p>
+      <p><strong>Date:</strong> <%= @subscription.created_at.strftime("%d %B %Y" ) %></p>
+      <br>
+      <p><strong><u>CUSTOMER INFO :</u></strong></p>
+      <p><strong>Email: </strong><%= @user.email %></p>
+      <p><strong>Name: </strong><%=@stripe_session_data.shipping.name%></p>
+
+      <br>
+      <hr>
+
+      <p><strong><u>SUBSCRIPTION INFO :</u></strong></p>
+
+          <p><strong> Subscription <%= @subscription.name %>
+          <p><strong>Subscription Details:</strong></p>
+          <% if @subscription.item_choice != nil%>
+           <p><%= @subscription.item_choice%></p>
+           <% end %>
+          <p> <%= @subscription.grind %></p>
+
+
+
+
+          <div class="d-flex justify-content-between my-3">
+             <div class="px-3" >
+                  <p class="order-index-subtitles font-weight-bold">Start Date:</p>
+                  <% s = @subscription.current_period_start %>
+                  <p> <%=s.strftime("%A %d %B %Y" )%></p>
+                  <p class="order-index-subtitles font-weight-bold">End Date:</p>
+                  <% n = @subscription.current_period_start + 3.months %>
+                 <p> <%=n.strftime("%A %d %B %Y" )  %> </p>
+              </div>
+              <div class="px-3">
+                 <p class="order-index-titles font-weight-bold" >First payment:</p>
+                 <% amount= @stripe_session_data.amount_total.to_f %>
+
+                <p><%= amount /100 %> €</p>
+              </div>
+
+        <hr>
+        <p><strong><u>DELIVERY INFO :</u></strong></p>
+
+          <p> <%=@stripe_session_data.shipping.name%></p>
+              <p><strong>Address of delivery:</strong></p>
+              <p> <%=@stripe_session_data.shipping.address.line1%> </p>
+              <p> <%=@stripe_session_data.shipping.address.line2%> </p>
+              <p> <%=@stripe_session_data.shipping.address.postal_code%> <%=@stripe_session_data.shipping.address.city%> </p>
+              <p> <%=@stripe_session_data.shipping.address.country%> </p>
+
+            <hr>
+      <p>Have a nice delivery ;) </p>
+      <p>Beijos</p>
+
+      <p><%= image_tag attachments['Brava_Logo_mail.png'].url %></p>
+      <p><%=  link_to "www.bravacoffeeroasters.com", "https://www.bravacoffeeroasters.com" %></p>
+       <div class="d-flex justify-content-center justify-content-md-start mt-4 mr-5">
+          <%= link_to "https://www.facebook.com/bravacoffeeroasters/" do %>
+           <%= image_tag attachments['facebook-square-brands.png'].url %>
+          <% end %>
+          <%= link_to "https://www.instagram.com/bravacoffeeroasters/" do %>
+           <%= image_tag attachments['instagram-square-brands.png'].url %>
+          <% end %>
+      </div>
+  </body>
+</html>
