@@ -31,7 +31,7 @@
             </div>
 
             <div class="cof-second-title text-center col-md-3 pt-3 align-items-center d-none d-md-block ">
-              <% if product.name != 'Tega & Tula farm' %>
+              <% if product.name != 'Tega & Tula farm' && product.name != 'Cerro de Jesus farm' %>
                   <%= link_to t(".discover"), product_path(product), class: "btn cof-btn btn-outline-secondary button-card" %>
 
               <% else %>
@@ -145,7 +145,7 @@
     </div>
 
     <div class="copyright mt-5">
-      © 2021 Brava Coffee Roasters. Site by CrX.
+      © 2022 Brava Coffee Roasters. Site by CrX
     </div>
 
   </footer>

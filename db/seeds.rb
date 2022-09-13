@@ -217,7 +217,7 @@ Product.create!(
   category: coffee)
 
 Product.create!(
-  price_cents: 910,
+  price_cents: 920,
   shipping_points: 2,
   weight: 250,
   origin: 'brasil_origin',
@@ -235,7 +235,7 @@ Product.create!(
   category: coffee)
 
 Product.create!(
-  price_cents: 2670,
+  price_cents: 2680,
   shipping_points: 4,
   weight: 1000,
   origin: 'brasil_origin',

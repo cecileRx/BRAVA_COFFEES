@@ -316,7 +316,7 @@ Coffee cherry, floral, caramel and lemon flavors."
       europe-mail-tag: For any other European country, the shipping method is Registered mail
       pickup-select: Do you prefer to pick up
       pickup-address: Select your collection point
-      pickup-message: Due to the pandemic, there may be changes in schedules. We will contact you to confirm delivery at your collection point
+      pickup-message: Thanks! We will contact you to confirm delivery at your collection point
 
     failure_message:
       checkout-sum: Checkout summary

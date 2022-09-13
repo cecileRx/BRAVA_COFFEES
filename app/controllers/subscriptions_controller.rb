@@ -33,7 +33,7 @@ class SubscriptionsController < ApplicationController
     @subscription = Subscription.new
     coffee_items = Product.joins(:category).where("categories.name = 'coffee'")
 
-    @coffee_choice = coffee_items.select { |coffee| coffee.weight == 250 && coffee.name != 'Tega & Tula farm'}
+    @coffee_choice = coffee_items.select { |coffee| coffee.weight == 250 && coffee.name != 'Tega & Tula farm' && coffee.name != 'Cerro de Jesus farm'}
 
   end
 

@@ -45,7 +45,7 @@
 
                 <%= hidden_field_tag 'product_id', @product.id %>
 
-                <% if @product.name != 'Tega & Tula farm' %>
+                <% if @product.name != 'Tega & Tula farm' && @product.name != 'Cerro de Jesus farm' %>
                   <div class='mt-3'>
                     <%= submit_tag t("addcart"), class: 'btn btn-block btn-warning' %>
 
