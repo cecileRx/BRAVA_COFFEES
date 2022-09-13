@@ -259,7 +259,8 @@ Sabores de cereja do café, floral, caramelo e limão."
         da infusão) até cerca de 3 minutos</li>"
 
     home:
-      brava_intro_1: Brava é uma torrefatora artesanal de cafés de especialidade.
+      brava_intro_0: Brava
+      brava_intro_1: é uma torrefatora artesanal de cafés de especialidade
       brava_intro_2: Ela nasce da vontade de encontrar a chávena perfeita.
       brava_intro_3: Os nossos grãos são escolhidos de entre os melhores cafés do
         mundo, produzidos por comunidades agrícolas com práticas sustentáveis, ética

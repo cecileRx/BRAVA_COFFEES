@@ -39,12 +39,98 @@ body {
 }
 
 
-#banner .main-title  {
-  font-size: 2.2rem;
-  font-weight: 300;
-  color: $light-gray;
-}
 
+
+.escape  {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+@media (min-device-width: 600px) {
+  .escape {
+      color: #c4c4c4;
+      font-family: 'Nunito Sans';
+      font-weight: 300;
+      font-size: 2rem;
+    }
+
+  .escape:first-of-type {
+
+      animation: showup 10s 1;
+    }
+
+    .escape:last-of-type {
+
+      animation: reveal 10s 1;
+    }
+
+    .escape:last-of-type span {
+
+      animation: slidein 10s 1;
+    }
+
+    @keyframes showup {
+      0% {
+        opacity: 0;
+      }
+
+      20% {
+        opacity: 1;
+      }
+
+      80% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slidein {
+      0% {
+        margin-left: -800px;
+      }
+
+      20% {
+        margin-left: -800px;
+      }
+
+      35% {
+        margin-left: 0px;
+      }
+
+      100% {
+        margin-left: 0px;
+      }
+    }
+
+    @keyframes reveal {
+      0% {
+        opacity: 0;
+        width: 0px;
+      }
+
+      20% {
+        opacity: 1;
+        width: 0px;
+      }
+
+      30% {
+        width: 900px;
+      }
+
+      80% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 1;
+        width: 900px;
+      }
+    }
+
+}
 
 
 #banner h3 {
@@ -58,9 +144,16 @@ body {
 }
 
 @media (max-device-width: 600px) {
-  #banner .main-title {
-    font-size: 1.4rem;
-  }
+  .escape {
+      color: $brava-text;
+      font-family: 'Nunito Sans';
+      font-weight: 300;
+      font-size: 1.2rem;
+      width: 60%;
+      white-space: initial;
+    }
+
+
   #home h2 {
     font-size: 1.6rem;
   }

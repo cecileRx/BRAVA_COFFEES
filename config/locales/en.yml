@@ -265,7 +265,8 @@ Coffee cherry, floral, caramel and lemon flavors."
         infusion) up to about 3 minutes.</li>"
 
     home:
-      brava_intro_1: Brava is an artisanal specialty coffee roaster.
+      brava_intro_0: Brava
+      brava_intro_1: is an artisanal specialty coffee roaster
       brava_intro_2: We've taken in our own hands the beautiful mission of offering
         you just the perfect cup of coffee.
       brava_intro_3: Our beans are chosen among the best in the world, produced by
