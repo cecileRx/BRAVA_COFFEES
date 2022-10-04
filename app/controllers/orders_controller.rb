@@ -165,7 +165,7 @@ class OrdersController < ApplicationController
               elsif shipment_score > 3
                 shipping_cost_amount = 450
               else
-                shipping_cost_amount = 250
+                shipping_cost_amount = 335
               end
             end
           else
