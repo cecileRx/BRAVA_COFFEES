@@ -114,41 +114,6 @@ Product.create!(
 
 puts 'Creating coffees...'
 
-Product.create!(
-  weight: 250,
-  price_cents: 1250,
-  shipping_points: 2,
-  origin: 'nica_origin',
-  name:'Cerro de Jesus farm',
-  region: 'nica_region',
-  variety: 'Marsellesa',
-  certification: 'Rainforest Alliance, Organic',
-  altitude: '960-1450 masl',
-  process:  'process_att_1',
-  grind_options: 'nica_grind',
-  cupping_notes: 'nica_cp_html',
-  description: 'nica_desc',
-  photo: 'nicaragua.jpg',
-  photo_square: 'nica_s.jpg',
-  category: coffee)
-
-Product.create!(
-  weight: 1000,
-  price_cents: 4366,
-  shipping_points: 4,
-  origin: 'nica_origin',
-  name:'Cerro de Jesus farm',
-  region: 'nica_region',
-  variety: 'Marsellesa',
-  certification: 'Rainforest Alliance, Organic',
-  altitude: '960-1450 masl',
-  process:  'process_att_1',
-  grind_options: 'nica_grind',
-  cupping_notes: 'nica_cp_html',
-  description: 'nica_desc',
-  photo: 'nicaragua.jpg',
-  photo_square: 'nica_s.jpg',
-  category: coffee)
 
 Product.create!(
   weight: 250,
@@ -170,7 +135,7 @@ Product.create!(
 
 Product.create!(
   weight: 1000,
-  price_cents: 2960,
+  price_cents: 3250,
   shipping_points: 4,
   origin: 'columb_fudam_origin',
   name:'FUDAM',
@@ -235,7 +200,7 @@ Product.create!(
   category: coffee)
 
 Product.create!(
-  price_cents: 2680,
+  price_cents: 3300,
   shipping_points: 4,
   weight: 1000,
   origin: 'brasil_origin',
