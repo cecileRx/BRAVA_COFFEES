@@ -135,7 +135,7 @@ Product.create!(
 
 Product.create!(
   weight: 1000,
-  price_cents: 3250,
+  price_cents: 3400,
   shipping_points: 4,
   origin: 'columb_fudam_origin',
   name:'FUDAM',
@@ -149,36 +149,6 @@ Product.create!(
   description: 'columb_fudam_desc',
   photo: 'columbia_fundam.jpg',
   photo_square: 'fudam_s.jpg',
-  category: coffee)
-
-Product.create!(
-  weight: 250,
-  price_cents: 1130,
-  shipping_points: 2,
-  origin: 'ethiopia_origin',
-  name:'Tega & Tula farm',
-  region:'ethiopia_region',
-  process: 'process_att_1',
-  grind_options: 'ethiopia_grind',
-  cupping_notes: 'ethiopia_cp_html',
-  description: 'ethiopia_desc',
-  photo:'ethiopia.jpg',
-  photo_square: 'etiopia_s.jpg',
-  category: coffee)
-
-Product.create!(
-  price_cents: 3880,
-  weight: 1000,
-  shipping_points: 4,
-  origin: 'ethiopia_origin',
-  name:'Tega & Tula farm',
-  region:'ethiopia_region',
-  process: 'process_att_1',
-  grind_options: 'ethiopia_grind',
-  cupping_notes: 'ethiopia_cp_html',
-  description: 'ethiopia_desc',
-  photo:'ethiopia.jpg',
-  photo_square: 'etiopia_s.jpg',
   category: coffee)
 
 Product.create!(
@@ -200,7 +170,7 @@ Product.create!(
   category: coffee)
 
 Product.create!(
-  price_cents: 3300,
+  price_cents: 3500,
   shipping_points: 4,
   weight: 1000,
   origin: 'brasil_origin',
@@ -215,6 +185,42 @@ Product.create!(
   description: 'brasil_desc',
   photo: 'brasil_home.jpg',
   photo_square: 'brasil_s.jpg',
+  category: coffee)
+
+  Product.create!(
+  price_cents: 930,
+  shipping_points: 2,
+  weight: 250,
+  origin: 'brasil_origin',
+  name:'Fazenda Bagagem farm',
+  region:'brasil_region',
+  variety: 'yellow Catuaí',
+  certification: 'Direct trade/ UTZ/ Rainforest/ BSCA',
+  altitude: '1100 masl',
+  process:  'process_att_4',
+  grind_options: 'brasil_grind',
+  cupping_notes: 'brasil2_cp_html',
+  description: 'brasil_desc',
+  photo: 'nicaragua.jpg',
+  photo_square: 'Ilustr_Brasil_2_s.jpg',
+  category: coffee)
+
+  Product.create!(
+  price_cents: 3550,
+  shipping_points: 4,
+  weight: 1000,
+  origin: 'brasil_origin',
+  name:'Fazenda Bagagem farm',
+  region:'brasil_region',
+  variety: 'yellow Catuaí',
+  certification: 'Direct trade/ UTZ/ Rainforest/ BSCA',
+  altitude: '1100 masl',
+  process:  'process_att_4',
+  grind_options: 'brasil_grind',
+  cupping_notes: 'brasil2_cp_html',
+  description: 'brasil_desc',
+  photo: 'nicaragua.jpg',
+  photo_square: 'Ilustr_Brasil_2_s.jpg',
   category: coffee)
 
 

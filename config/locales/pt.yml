@@ -71,7 +71,8 @@ pt:
     ethiopia_origin: Etiópia
     nica_origin: Nicarágua
   cup_notes_att:
-    brasil_cp_html: "Cacau, caramelo and frutos secos."
+    brasil_cp_html: "Cacau, caramelo e frutos secos."
+    brasil2_cp_html: "Doce, Caramelo, Fruitado e Chá preto."
     columb_fudam_cp_html: "Frutos tropicais, com tamarindo e toranja.<br>
   Doces e salgados com acidez de fruta picante e sensação suave."
     ethiopia_cp_html: "Doce e limpo com sensação suave na boca. <br>
@@ -335,6 +336,7 @@ Sabores de cereja do café, floral, caramelo e limão."
     process_att_1: washed
     process_att_2: pulped
     process_att_3: honey
+    process_att_4: Natural
   region_att:
     nica_region: Jalapa, Neuva Segovia
     columb_region: La Uniõn, Nariño

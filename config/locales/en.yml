@@ -39,6 +39,7 @@ en:
 
   cup_notes_att:
     brasil_cp_html: "Cocoa, Caramel and Dried fruit."
+    brasil2_cp_html: "Sweet, Caramel, Fruity and Black tea."
     columb_fudam_cp_html: "Tropical fruits with tamarind. <br>
 Sweet and savory with big tangy fruit acidity and a smooth mouthfeel."
     ethiopia_cp_html: " Sweet and clean with a smooth mouthfeel <br>
@@ -343,6 +344,7 @@ Coffee cherry, floral, caramel and lemon flavors."
     process_att_1: Washed
     process_att_2: Pulped
     process_att_3: Honey
+    process_att_4: Natural
   shared:
     navbar:
       login: Login
