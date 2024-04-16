@@ -115,41 +115,41 @@ Product.create!(
 puts 'Creating coffees...'
 
 
-Product.create!(
-  weight: 250,
-  price_cents: 900,
-  shipping_points: 2,
-  origin: 'columb_fudam_origin',
-  name:'FUDAM',
-  region:'columb_region',
-  variety: 'Castillo, Caturra',
-  certification: 'Rainforest Alliance, Organic',
-  altitude: '1700-2100 masl',
-  process: 'process_att_1',
-  grind_options: 'columb_fudam_grind',
-  cupping_notes:'columb_fudam_cp_html',
-  description: 'columb_fudam_desc',
-  photo: 'columbia_fundam.jpg',
-  photo_square: 'fudam_s.jpg',
-  category: coffee)
+# Product.create!(
+#   weight: 250,
+#   price_cents: 900,
+#   shipping_points: 2,
+#   origin: 'columb_fudam_origin',
+#   name:'FUDAM',
+#   region:'columb_region',
+#   variety: 'Castillo, Caturra',
+#   certification: 'Rainforest Alliance, Organic',
+#   altitude: '1700-2100 masl',
+#   process: 'process_att_1',
+#   grind_options: 'columb_fudam_grind',
+#   cupping_notes:'columb_fudam_cp_html',
+#   description: 'columb_fudam_desc',
+#   photo: 'columbia_fundam.jpg',
+#   photo_square: 'fudam_s.jpg',
+#   category: coffee)
 
-Product.create!(
-  weight: 1000,
-  price_cents: 3400,
-  shipping_points: 4,
-  origin: 'columb_fudam_origin',
-  name:'FUDAM',
-  region:'columb_region',
-  variety: 'Castillo, Caturra',
-  certification: 'Rainforest Alliance, Organic',
-  altitude: '1700-2100 masl',
-  process: 'process_att_1',
-  grind_options: 'columb_fudam_grind',
-  cupping_notes: 'columb_fudam_cp_html',
-  description: 'columb_fudam_desc',
-  photo: 'columbia_fundam.jpg',
-  photo_square: 'fudam_s.jpg',
-  category: coffee)
+# Product.create!(
+#   weight: 1000,
+#   price_cents: 3400,
+#   shipping_points: 4,
+#   origin: 'columb_fudam_origin',
+#   name:'FUDAM',
+#   region:'columb_region',
+#   variety: 'Castillo, Caturra',
+#   certification: 'Rainforest Alliance, Organic',
+#   altitude: '1700-2100 masl',
+#   process: 'process_att_1',
+#   grind_options: 'columb_fudam_grind',
+#   cupping_notes: 'columb_fudam_cp_html',
+#   description: 'columb_fudam_desc',
+#   photo: 'columbia_fundam.jpg',
+#   photo_square: 'fudam_s.jpg',
+#   category: coffee)
 
 Product.create!(
   price_cents: 920,
@@ -187,41 +187,41 @@ Product.create!(
   photo_square: 'brasil_s.jpg',
   category: coffee)
 
-  Product.create!(
-  price_cents: 930,
-  shipping_points: 2,
-  weight: 250,
-  origin: 'brasil_origin',
-  name:'Fazenda Bagagem farm',
-  region:'brasil_region',
-  variety: 'yellow Catuaí',
-  certification: 'Direct trade/ UTZ/ Rainforest/ BSCA',
-  altitude: '1100 masl',
-  process:  'process_att_4',
-  grind_options: 'brasil_grind',
-  cupping_notes: 'brasil2_cp_html',
-  description: 'brasil_desc',
-  photo: 'nicaragua.jpg',
-  photo_square: 'Ilustr_Brasil_2_s.jpg',
-  category: coffee)
+  # Product.create!(
+  # price_cents: 930,
+  # shipping_points: 2,
+  # weight: 250,
+  # origin: 'brasil_origin',
+  # name:'Fazenda Bagagem farm',
+  # region:'brasil_region',
+  # variety: 'yellow Catuaí',
+  # certification: 'Direct trade/ UTZ/ Rainforest/ BSCA',
+  # altitude: '1100 masl',
+  # process:  'process_att_4',
+  # grind_options: 'brasil_grind',
+  # cupping_notes: 'brasil2_cp_html',
+  # description: 'brasil_desc',
+  # photo: 'nicaragua.jpg',
+  # photo_square: 'Ilustr_Brasil_2_s.jpg',
+  # category: coffee)
 
-  Product.create!(
-  price_cents: 3550,
-  shipping_points: 4,
-  weight: 1000,
-  origin: 'brasil_origin',
-  name:'Fazenda Bagagem farm',
-  region:'brasil_region',
-  variety: 'yellow Catuaí',
-  certification: 'Direct trade/ UTZ/ Rainforest/ BSCA',
-  altitude: '1100 masl',
-  process:  'process_att_4',
-  grind_options: 'brasil_grind',
-  cupping_notes: 'brasil2_cp_html',
-  description: 'brasil_desc',
-  photo: 'nicaragua.jpg',
-  photo_square: 'Ilustr_Brasil_2_s.jpg',
-  category: coffee)
+  # Product.create!(
+  # price_cents: 3550,
+  # shipping_points: 4,
+  # weight: 1000,
+  # origin: 'brasil_origin',
+  # name:'Fazenda Bagagem farm',
+  # region:'brasil_region',
+  # variety: 'yellow Catuaí',
+  # certification: 'Direct trade/ UTZ/ Rainforest/ BSCA',
+  # altitude: '1100 masl',
+  # process:  'process_att_4',
+  # grind_options: 'brasil_grind',
+  # cupping_notes: 'brasil2_cp_html',
+  # description: 'brasil_desc',
+  # photo: 'nicaragua.jpg',
+  # photo_square: 'Ilustr_Brasil_2_s.jpg',
+  # category: coffee)
 
 
 puts 'Finished!'
